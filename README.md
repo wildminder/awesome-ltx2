@@ -11,11 +11,11 @@ LTX-2 models are available in various formats including full weights, transforme
 
 | Name | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `dev` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/blob/main/ltx-2-19b-dev.safetensors)
-| `dev` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/blob/main/ltx-2-19b-dev-fp8.safetensors)
-| `dev` | fp4 | 20 GB | [Link](https://huggingface.co/Lightricks/LTX-2/blob/main/ltx-2-19b-dev-fp4.safetensors)
-| `distilled` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/blob/main/ltx-2-19b-distilled.safetensors)
-| `distilled` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/blob/main/ltx-2-19b-distilled-fp8.safetensors)
+| `dev` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors)
+| `dev` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors)
+| `dev` | fp4 | 20 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp4.safetensors)
+| `distilled` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled.safetensors)
+| `distilled` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors)
   
 ### GGUF Quantized Models
 These models are optimized for lower memory usage. Note that in ComfyUI, these are typically loaded as transformer-only models.
@@ -67,10 +67,10 @@ Official and optimized versions for ComfyUI.
 ### **Gemma-3-12b Abliterated**
 Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2), modified specifically for compatibility with LTX-2. The [original model](https://huggingface.co/mlabonne/gemma-3-12b-it-abliterated-v2)
 
-| Model Name | Size | Download |
-| :--- | :---: | :---: |
-| `gemma_ablit_fixed_bf16.safetensors` | 23.5 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_bf16.safetensors?download=true) |
-| `gemma_ablit_fixed_fp8.safetensors` | 13.8 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_fp8.safetensors?download=true) |
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `Gemma ablit fixed` | bf16 | 23.5 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_bf16.safetensors?download=true) |
+| `Gemma ablit fixed` | fp8 | 13.8 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_fp8.safetensors?download=true) |
 
 ---
 
@@ -78,20 +78,28 @@ Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://hu
 
 Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy). For alternative way to load the models in Comfy
 
+### Diffusion Models (Transformer Only)
+
+| Name | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `dev` | bf16 | 37.8 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/diffusion_models/ltx-2-19b-dev_transformer_only_bf16.safetensors)
+| `dev` | fp8 | 21.6 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/diffusion_models/ltx-2-19b-dev-fp8_transformer_only.safetensors)
+| `distilled` | fp8 | 21.6 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/diffusion_models/ltx-2-19b-distilled-fp8_transformer_only.safetensors)
+
+
+
 ### VAE (Video & Audio)
 | Component | Precision | Size | Download Link |
 | :--- | :---: | :---: | :---: |
 | **Video VAE** | BF16 | 2.49 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_video_vae_bf16.safetensors?download=true) |
 | **Audio VAE** | BF16 | 218 MB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_audio_vae_bf16.safetensors?download=true) |
 
-### Diffusion Models (Transformer Only)
-*   [ltx-2-19b-dev-bf16](https://huggingface.co/Kijai/LTXV2_comfy/blob/main/diffusion_models/ltx-2-19b-dev_transformer_only_bf16.safetensors)
-*   [ltx-2-19b-dev-fp8](https://huggingface.co/Kijai/LTXV2_comfy/blob/main/diffusion_models/ltx-2-19b-dev-fp8_transformer_only.safetensors)
-*   [ltx-2-19b-distilled-fp8](https://huggingface.co/Kijai/LTXV2_comfy/blob/main/diffusion_models/ltx-2-19b-distilled-fp8_transformer_only.safetensors)
-
 ### Embedding Connectors
-*   [Dev BF16 Connector](https://huggingface.co/Kijai/LTXV2_comfy/blob/main/text_encoders/ltx-2-19b-embeddings_connector_dev_bf16.safetensors)
-*   [Distill BF16 Connector](https://huggingface.co/Kijai/LTXV2_comfy/blob/main/text_encoders/ltx-2-19b-embeddings_connector_distill_bf16.safetensors)
+
+| Name | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `Connector dev` | bf16 | 2.86 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/text_encoders/ltx-2-19b-embeddings_connector_dev_bf16.safetensors)
+| `Connector distilled` | bf16 | 2.86 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/text_encoders/ltx-2-19b-embeddings_connector_distill_bf16.safetensors)
 
 ---
 
