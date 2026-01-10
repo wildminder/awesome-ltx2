@@ -11,15 +11,38 @@ LTX-2 models are available in various formats including full weights, transforme
 
 | Name | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `dev` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors)
-| `dev` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors)
-| `dev` | fp4 | 20 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp4.safetensors)
-| `distilled` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled.safetensors)
-| `distilled` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors)
-  
+| `ltx-2-19b dev` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors)
+| `ltx-2-19b dev` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors)
+| `ltx-2-19b dev` | fp4 | 20 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp4.safetensors)
+| `ltx-2-19b distilled` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled.safetensors)
+| `ltx-2-19b distilled` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors)
+
+#### **Distilled LoRA**
+
+| Rank | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `384` | bf16 | 7.67 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-lora-384.safetensors)
+| `242` | bf16 | 4.88 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora-resized_dynamic_fro095_avg_rank_242_bf16.safetensors) |
+| `175` | bf16 | 3.58 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors) |
+| `175` | fp8 | 1.79 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_fp8.safetensors) |
+
+#### **Spatial Upscaler** 
+Required for current two-stage pipeline implementations in this repository. Download to `COMFYUI_ROOT_FOLDER/models/latent_upscale_models` folder.
+  * [`ltx-2-spatial-upscaler-x2-1.0.safetensors`](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-spatial-upscaler-x2-1.0.safetensors)
+
+#### **Temporal Upscaler** 
+Required for current two-stage pipeline implementations in this repository. Download to `COMFYUI_ROOT_FOLDER/models/latent_upscale_models` folder.
+  * [`ltx-2-temporal-upscaler-x2-1.0.safetensors`](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-temporal-upscaler-x2-1.0.safetensors)
+
+
+---
+
 ### GGUF Quantized Models
 These models are optimized for lower memory usage. Note that in ComfyUI, these are typically loaded as transformer-only models.
 
+<details>
+  <summary>QuantStack</summary>
+  
 #### [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF)
 
 | Model | Quant | Size | Download |
@@ -34,6 +57,11 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | LTX-2-dev | Q6_K | 16.6 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q6_K.gguf) |
 | LTX-2-dev | Q8_0 | 21.1 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q8_0.gguf) |
 
+</details>
+
+<details>
+  <summary>Unsloth </summary>
+  
 #### [Unsloth GGUFs](https://huggingface.co/unsloth/LTX-2-GGUF)
 
 | Model | Quant | Size | Download |
@@ -55,6 +83,11 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | ltx-2-19b-dev | Q6_K | 16 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q6_K.gguf) |
 | ltx-2-19b-dev | Q8_0 | 20.4 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q8_0.gguf) |
 
+</details>
+
+<details>
+  <summary>Vantage</summary>
+  
 #### [Vantage AI GGUFs](https://huggingface.co/vantagewithai/)
 
 | Model | Quant | Size | Download |
@@ -84,14 +117,9 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | ltx-2-19b-distilled | Q6_K | 15.9 GB | [Download](https://huggingface.co/vantagewithai/LTX-2-GGUF/resolve/main/distilled/ltx-2-19b-distilled-Q6_K.gguf) |
 | ltx-2-19b-distilled | Q8_0 | 20.4 GB | [Download](https://huggingface.co/vantagewithai/LTX-2-GGUF/resolve/main/distilled/ltx-2-19b-distilled-Q8_0.gguf) |
 
-### Distilled LoRA
+</details>
+  
 
-| Rank | Precision | Size | Download |
-| :--- | :---: | :---: | :---: |
-| `384` | bf16 | 7.67 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-lora-384.safetensors)
-| `242` | bf16 | 4.88 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora-resized_dynamic_fro095_avg_rank_242_bf16.safetensors) |
-| `175` | bf16 | 3.58 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors) |
-| `175` | fp8 | 1.79 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_fp8.safetensors) |
 
 ---
 
