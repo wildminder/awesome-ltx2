@@ -139,6 +139,19 @@ Official and optimized versions for ComfyUI.
 * `gemma_3_12B_it_fp4_mixed`: 90% fp4 layers
 
 ### **Gemma-3-12b Abliterated**
+
+#### Why Choose Abliterated Encoders?
+Standard Gemma models often incorporate safety alignment that "sanitizes" or weakens specific concepts within prompt embeddings. Even when the model doesn't explicitly refuse a request, this internal filtering can dilute creative intent. For LTX-2 video generation, using a standard encoder often results in:
+
+*   **Reduced Prompt Adherence:** Key stylistic or descriptive terms may be ignored or weakened.
+*   **Visual Softening:** Visual intensity and fine details are often "muted" to fit generic safety profiles.
+*   **Concept Dilution:** Complex or niche creative requests are subtly altered, leading to less faithful representations of your vision.
+
+**Abliteration** bypasses these restrictive alignment layers, allowing the encoder to translate your prompts into embeddings with maximum fidelity. This ensures LTX-2 receives the most accurate and un-filtered instructions possible.
+
+<details>
+  <summary>Gemma-3-12b-Abliterated</summary>
+
 Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2), modified specifically for compatibility with LTX-2. The [original model](https://huggingface.co/mlabonne/gemma-3-12b-it-abliterated-v2)
 
 | Model | Precision | Size | Download |
@@ -146,6 +159,32 @@ Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://hu
 | `Gemma ablit fixed` | bf16 | 23.5 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_bf16.safetensors?download=true) |
 | `Gemma ablit fixed` | fp8 | 13.8 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_fp8.safetensors?download=true) |
 
+</details>
+
+ <details>
+  <summary>Gemma 3 12B IT Heretic</summary>
+
+#### Safetensors
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `Gemma_3_12B_it Heretic` | bf16 | 23.5 GB | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic.safetensors) |
+| `Gemma_3_12B_it Heretic` | fp8 | 12.8 GB | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors) |
+
+
+#### GGUF
+
+| Quant | Size | Quality | Recommendation  | Download |
+|-------| :---: | :---: |----------------| :---: |
+| `F16` | 22GB | Lossless | Reference, same as original | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-f16.gguf) |
+| `Q8_0` | 12GB | Excellent | Best quality quantization | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q8_0.gguf) |
+| `Q6_K` | 9.0GB | Very Good | High quality, good compression | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q6_K.gguf) |
+| `Q5_K_M` | 7.9GB | Good | Balanced quality/size | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_S.gguf) |
+| `Q5_K_S` | 7.7GB | Good | Slightly smaller Q5 | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_M.gguf) |
+| `Q4_K_M` | 6.8GB | Good | Still useful | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_S.gguf) |
+| `Q4_K_S` | 6.5GB | Decent | Smaller Q4 variant | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
+| `Q3_K_M` | 5.6GB | Acceptable | For very low VRAM only | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
+
+</details>
 ---
 
 ## Separated Components
