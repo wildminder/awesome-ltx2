@@ -226,6 +226,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy), 
 *   [LTX-2-19b-LoRA-SPROUT](https://huggingface.co/oumoumad/LTX-2-19b-LoRA-SPROUT)
 *   [Hydraulic press](https://huggingface.co/kabachuha/ltx2-hydraulic-press)
 *   [Cakeify](https://huggingface.co/kabachuha/ltx2-cakeify)
+*   [Big Anime Breasts](https://huggingface.co/kabachuha/ltx2-big-anime-breasts)
 * [HERO CAM](https://huggingface.co/Nebsh/LTX2_Herocam_Lora)
 * [Animatediff V1](https://huggingface.co/Nebsh/LTX2_Animatediff_style)
 * [PUSH TO GLASS](https://huggingface.co/Nebsh/LTX2_Pushtoglass)
