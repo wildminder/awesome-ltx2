@@ -82,6 +82,8 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | :--- | :--- | :--- | :--- |
 | ltx-2-19b-dev | BF16 | 37.8 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-BF16.gguf) |
 | ltx-2-19b-dev | F16 | 37.8 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-F16.gguf) |
+| ltx-2-19b-dev | UD-Q2_K_L | 10.1 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-UD-Q2_K_L.gguf) |
+| ltx-2-19b-dev | UD-Q2_K_XL | 11.6 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-UD-Q2_K_XL.gguf) |
 | ltx-2-19b-dev | Q2_K | 8.1 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q2_K.gguf) |
 | ltx-2-19b-dev | Q3_K_L | 10.7 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_L.gguf) |
 | ltx-2-19b-dev | Q3_K_M | 10.1 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_M.gguf) |
@@ -251,6 +253,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy), 
 *   [IC luminance map](https://huggingface.co/oumoumad/ltx-2_IC_LUMIPARTICLES)
 *   [Yoshiaki Kawajiri Retro Anime](https://huggingface.co/tarn59/Yoshiaki_Kawajiri_Retro_Anime_LTX2)
 *   [DonaldTrump](https://huggingface.co/Playtime-AI/LTX-2.DonaldTrump)
+*   [WHATUSEE](https://huggingface.co/o-8-o/WHATUSEE_LTX-2-19B_LoRA)
 * [HERO CAM](https://huggingface.co/Nebsh/LTX2_Herocam_Lora)
 * [Animatediff V1](https://huggingface.co/Nebsh/LTX2_Animatediff_style)
 * [PUSH TO GLASS](https://huggingface.co/Nebsh/LTX2_Pushtoglass)
