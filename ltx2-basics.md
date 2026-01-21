@@ -39,5 +39,36 @@ Common settings balance quality, speed, and hardware limits (VRAM/RAM).
 *   **`--reserve-vram 2`** (or 1-5): Recommended for 24GB cards (RTX 3090/4090) to leave overhead for VAE decoding.
 *   **`--cache-none`**: Forces VRAM offloading between steps. Recommended for systems with lower RAM/VRAM to prevent freezes.
 
+
+## Quality & Performance Guide
+
+To achieve production-grade results while maintaining reasonable generation times, the **2-Stage Generation Pipeline** is recommended.
+
+### The 2-Stage Pipeline
+The 2-stage approach involves generating a base video at a lower resolution and then upscaling it. This method is superior to native 1-stage generation for two key reasons:
+
+1.  **Superior Motion Quality:** Native high-res generation often results in static motion or "mushy" details. The 2-stage pipeline utilizes a **Temporal Upscaler** to double the frame rate (e.g., 24fps $\to$ 48fps), significantly reducing "texture smearing" and "jiggle" in high-motion scenes.
+2.  **Drastic Speed Improvements:** Generating 1080p in a single stage is extremely VRAM intensive. On consumer hardware (RTX 3090/4090), this often triggers offloading to system RAM, causing the system to freeze or generations to take upwards of **8 minutes**.
+    *   *Comparison:* A 2-stage pass (Base Gen + Upscale) typically completes in **under 3 minutes**.
+
+### Optimized Configuration
+For the best balance of fidelity and speed, apply the following settings:
+
+#### **Stage 1: Base Generation**
+*   **Resolution:** 540p or 720p
+*   **Model:** Full **Dev model**
+*   **Steps:** 20–40 steps
+*   **Goal:** Establish solid composition and fluid motion vectors.
+
+#### **Stage 2: Upscaling & Refinement**
+*   **Components:** Use **Spatial and Temporal Latent Upscalers** combined with the **Distilled LoRA**.
+*   **Steps:** 3–8 steps (Fast refinement)
+*   **CFG:** 1.0
+*   **Goal:** Add fine texture details and sharpen the image without recalculating the scene geometry.
+
+### The "48 FPS" Fix
+To eliminate latent compression artifacts, **set your Stage 2 frame rate to 48 or 50 FPS.**
+*   *Why?* Doubling the frame rate during the upscaling phase is the most effective method to counteract lossy compression, resulting in crisp, clear visuals.
+
   
 ## Workflows
