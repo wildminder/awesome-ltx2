@@ -18,6 +18,14 @@
 
 ### Split files
 
+Loading splitted files:
+
+| GGUF | Safetensors |
+| :--- | :--- |
+| <img alt="gguf" src="https://github.com/user-attachments/assets/61a7c429-f366-4176-af3b-28631358fa96" /> | <img alt="image" src="https://github.com/user-attachments/assets/8d7e0165-301f-4a8b-b163-2e091b67f7f5" /> |
+
+
+
 ### Settings
 
 Common settings balance quality, speed, and hardware limits (VRAM/RAM).
