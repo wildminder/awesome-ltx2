@@ -19,27 +19,27 @@ LTX-2 models are available in various formats including full weights, transforme
 
 | Name | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `ltx-2-19b dev` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors)
-| `ltx-2-19b dev` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors)
-| `ltx-2-19b dev` | fp4 | 20 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp4.safetensors)
-| `ltx-2-19b distilled` | bf16 | 43.3 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled.safetensors)
-| `ltx-2-19b distilled` | fp8 | 27.1 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors)
-
+| `ltx-2-19b dev` | bf16 | 43.3 GB | [Lightricks](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors)
+| `ltx-2-19b dev` | fp8 | 27.1 GB | [Lightricks](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors)
+| `ltx-2-19b dev` | fp4 | 20 GB | [Lightricks](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp4.safetensors)
+| `ltx-2-19b distilled` | bf16 | 43.3 GB | [Lightricks](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled.safetensors)
+| `ltx-2-19b distilled` | fp8 | 27.1 GB | [Lightricks](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors)
+| `ltx-2-19b distilled` | nvfp4 | 20 GB | [szwagros](https://huggingface.co/szwagros/ltx-2-dist-nvfp4/resolve/main/ltx-2-19b-distilled-nvfp4-fixed-calibrated.safetensors)
 
 Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GPUs. For WangGP in Pinokio
 
 | Name | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `ltx-2-19b dev` | fp8_e5m2 | 27.1 GB | [Link](https://huggingface.co/progmars/ltx-2-19b-dev-fp8_e5m2)
+| `ltx-2-19b dev` | fp8_e5m2 | 27.1 GB | [Lightricks](https://huggingface.co/progmars/ltx-2-19b-dev-fp8_e5m2)
 
 #### **Distilled LoRA**
 
 | Rank | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `384` | bf16 | 7.67 GB | [Link](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-lora-384.safetensors)
-| `242` | bf16 | 4.88 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora-resized_dynamic_fro095_avg_rank_242_bf16.safetensors) |
-| `175` | bf16 | 3.58 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors) |
-| `175` | fp8 | 1.79 GB | [Link](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_fp8.safetensors) |
+| `384` | bf16 | 7.67 GB | [Lightricks](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-lora-384.safetensors)
+| `242` | bf16 | 4.88 GB | [Lightricks](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora-resized_dynamic_fro095_avg_rank_242_bf16.safetensors) |
+| `175` | bf16 | 3.58 GB | [Lightricks](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors) |
+| `175` | fp8 | 1.79 GB | [Lightricks](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_fp8.safetensors) |
 
 #### **Spatial Upscaler** 
 Required for current two-stage pipeline implementations in this repository. Download to `COMFYUI_ROOT_FOLDER/models/latent_upscale_models` folder.
@@ -61,15 +61,15 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 | Model | Quant | Size | Download |
 | :--- | :---: | :---: | :---: |
-| LTX-2-dev | Q2_K | 8.03 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q2_K.gguf) |
-| LTX-2-dev | Q3_K_M | 10.3 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q3_K_M.gguf) |
-| LTX-2-dev | Q3_K_S | 9.57 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q3_K_S.gguf) |
-| LTX-2-dev | Q4_K_M | 13.4 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q4_K_M.gguf) |
-| LTX-2-dev | Q4_K_S | 12.3 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q4_K_S.gguf) |
-| LTX-2-dev | Q5_K_M | 15 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q5_K_M.gguf) |
-| LTX-2-dev | Q5_K_S | 14.2 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q5_K_S.gguf) |
-| LTX-2-dev | Q6_K | 16.6 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q6_K.gguf) |
-| LTX-2-dev | Q8_0 | 21.1 GB | [Download](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q8_0.gguf) |
+| LTX-2-dev | Q2_K | 8.03 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q2_K.gguf) |
+| LTX-2-dev | Q3_K_M | 10.3 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q3_K_M.gguf) |
+| LTX-2-dev | Q3_K_S | 9.57 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q3_K_S.gguf) |
+| LTX-2-dev | Q4_K_M | 13.4 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q4_K_M.gguf) |
+| LTX-2-dev | Q4_K_S | 12.3 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q4_K_S.gguf) |
+| LTX-2-dev | Q5_K_M | 15 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q5_K_M.gguf) |
+| LTX-2-dev | Q5_K_S | 14.2 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q5_K_S.gguf) |
+| LTX-2-dev | Q6_K | 16.6 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q6_K.gguf) |
+| LTX-2-dev | Q8_0 | 21.1 GB | [QuantStack](https://huggingface.co/QuantStack/LTX-2-GGUF/resolve/main/LTX-2-dev/LTX-2-dev-Q8_0.gguf) |
 
 </details>
 
@@ -80,24 +80,24 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 | Model | Quant | Size | Download |
 | :--- | :--- | :--- | :--- |
-| ltx-2-19b-dev | BF16 | 37.8 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-BF16.gguf) |
-| ltx-2-19b-dev | F16 | 37.8 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-F16.gguf) |
-| ltx-2-19b-dev | UD-Q2_K_L | 10.1 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-UD-Q2_K_L.gguf) |
-| ltx-2-19b-dev | UD-Q2_K_XL | 11.6 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-UD-Q2_K_XL.gguf) |
-| ltx-2-19b-dev | Q2_K | 8.1 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q2_K.gguf) |
-| ltx-2-19b-dev | Q3_K_L | 10.7 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_L.gguf) |
-| ltx-2-19b-dev | Q3_K_M | 10.1 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_M.gguf) |
-| ltx-2-19b-dev | Q3_K_S | 9.47 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_S.gguf) |
-| ltx-2-19b-dev | Q4_0 | 11.3 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_0.gguf) |
-| ltx-2-19b-dev | Q4_1 | 12.3 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_1.gguf) |
-| ltx-2-19b-dev | Q4_K_M | 12.8 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_K_M.gguf) |
-| ltx-2-19b-dev | Q4_K_S | 11.9 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_K_S.gguf) |
-| ltx-2-19b-dev | Q5_0 | 13.7 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_0.gguf) |
-| ltx-2-19b-dev | Q5_1 | 14.6 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_1.gguf) |
-| ltx-2-19b-dev | Q5_K_M | 14.3 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_K_M.gguf) |
-| ltx-2-19b-dev | Q5_K_S | 13.6 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_K_S.gguf) |
-| ltx-2-19b-dev | Q6_K | 16 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q6_K.gguf) |
-| ltx-2-19b-dev | Q8_0 | 20.4 GB | [Download](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q8_0.gguf) |
+| ltx-2-19b-dev | BF16 | 37.8 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-BF16.gguf) |
+| ltx-2-19b-dev | F16 | 37.8 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-F16.gguf) |
+| ltx-2-19b-dev | UD-Q2_K_L | 10.1 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-UD-Q2_K_L.gguf) |
+| ltx-2-19b-dev | UD-Q2_K_XL | 11.6 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-UD-Q2_K_XL.gguf) |
+| ltx-2-19b-dev | Q2_K | 8.1 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q2_K.gguf) |
+| ltx-2-19b-dev | Q3_K_L | 10.7 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_L.gguf) |
+| ltx-2-19b-dev | Q3_K_M | 10.1 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_M.gguf) |
+| ltx-2-19b-dev | Q3_K_S | 9.47 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q3_K_S.gguf) |
+| ltx-2-19b-dev | Q4_0 | 11.3 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_0.gguf) |
+| ltx-2-19b-dev | Q4_1 | 12.3 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_1.gguf) |
+| ltx-2-19b-dev | Q4_K_M | 12.8 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_K_M.gguf) |
+| ltx-2-19b-dev | Q4_K_S | 11.9 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q4_K_S.gguf) |
+| ltx-2-19b-dev | Q5_0 | 13.7 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_0.gguf) |
+| ltx-2-19b-dev | Q5_1 | 14.6 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_1.gguf) |
+| ltx-2-19b-dev | Q5_K_M | 14.3 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_K_M.gguf) |
+| ltx-2-19b-dev | Q5_K_S | 13.6 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_K_S.gguf) |
+| ltx-2-19b-dev | Q6_K | 16 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q6_K.gguf) |
+| ltx-2-19b-dev | Q8_0 | 20.4 GB | [Unsloth](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q8_0.gguf) |
 
 </details>
 
@@ -146,10 +146,10 @@ Official and optimized versions for ComfyUI.
 
 | Model Name | Size | Download |
 | :--- | :--- | :---: |
-| `gemma_3_12B_it.safetensors` | 24.4 GB | [Link](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it.safetensors?download=true) |
-| `gemma_3_12B_it_fpmixed.safetensors` | 13.7 GB | [Link](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fpmixed.safetensors?download=true) |
-| `gemma_3_12B_it_fp8_scaled.safetensors` | 13.2 GB | [Link](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp8_scaled.safetensors?download=true) |
-| `gemma_3_12B_it_fp4_mixed.safetensors` |  9.5 GB | [Link](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors?download=true) |
+| `gemma_3_12B_it.safetensors` | 24.4 GB | [ComfyUI](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it.safetensors?download=true) |
+| `gemma_3_12B_it_fpmixed.safetensors` | 13.7 GB | [ComfyUI](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fpmixed.safetensors?download=true) |
+| `gemma_3_12B_it_fp8_scaled.safetensors` | 13.2 GB | [ComfyUI](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp8_scaled.safetensors?download=true) |
+| `gemma_3_12B_it_fp4_mixed.safetensors` |  9.5 GB | [ComfyUI](https://huggingface.co/Comfy-Org/ltx-2/resolve/main/split_files/text_encoders/gemma_3_12B_it_fp4_mixed.safetensors?download=true) |
 
 * `gemma_3_12B_it_fpmixed`: Experimental quant. Should be better than the fp8 scaled
 * `gemma_3_12B_it_fp4_mixed`: 90% fp4 layers
@@ -172,8 +172,8 @@ Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://hu
 
 | Model | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `Gemma ablit fixed` | bf16 | 23.5 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_bf16.safetensors?download=true) |
-| `Gemma ablit fixed` | fp8 | 13.8 GB | [Link](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_fp8.safetensors?download=true) |
+| `Gemma ablit fixed` | bf16 | 23.5 GB | [FusionCow](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_bf16.safetensors?download=true) |
+| `Gemma ablit fixed` | fp8 | 13.8 GB | [FusionCow](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_fp8.safetensors?download=true) |
 
 </details>
 
@@ -185,22 +185,22 @@ Models by [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic)
 #### Safetensors
 | Model | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| `Gemma_3_12B_it Heretic` | bf16 | 23.5 GB | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic.safetensors) |
-| `Gemma_3_12B_it Heretic` | fp8 | 12.8 GB | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors) |
+| `Gemma_3_12B_it Heretic` | bf16 | 23.5 GB | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic.safetensors) |
+| `Gemma_3_12B_it Heretic` | fp8 | 12.8 GB | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors) |
 
 
 #### GGUF
 
 | Quant | Size | Quality | Recommendation  | Download |
 |-------| :---: | :---: |----------------| :---: |
-| `F16` | 22GB | Lossless | Reference, same as original | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-f16.gguf) |
-| `Q8_0` | 12GB | Excellent | Best quality quantization | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q8_0.gguf) |
-| `Q6_K` | 9.0GB | Very Good | High quality, good compression | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q6_K.gguf) |
-| `Q5_K_M` | 7.9GB | Good | Balanced quality/size | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_S.gguf) |
-| `Q5_K_S` | 7.7GB | Good | Slightly smaller Q5 | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_M.gguf) |
-| `Q4_K_M` | 6.8GB | Good | Still useful | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_S.gguf) |
-| `Q4_K_S` | 6.5GB | Decent | Smaller Q4 variant | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
-| `Q3_K_M` | 5.6GB | Acceptable | For very low VRAM only | [Link](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
+| `F16` | 22GB | Lossless | Reference, same as original | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-f16.gguf) |
+| `Q8_0` | 12GB | Excellent | Best quality quantization | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q8_0.gguf) |
+| `Q6_K` | 9.0GB | Very Good | High quality, good compression | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q6_K.gguf) |
+| `Q5_K_M` | 7.9GB | Good | Balanced quality/size | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_S.gguf) |
+| `Q5_K_S` | 7.7GB | Good | Slightly smaller Q5 | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_M.gguf) |
+| `Q4_K_M` | 6.8GB | Good | Still useful | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_S.gguf) |
+| `Q4_K_S` | 6.5GB | Decent | Smaller Q4 variant | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
+| `Q3_K_M` | 5.6GB | Acceptable | For very low VRAM only | [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
 
 </details>
 
@@ -208,7 +208,7 @@ Models by [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic)
 
 ## Separated Components
 
-Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy), [Vantage with AI](https://huggingface.co/vantagewithai/LTX-2-Split). For alternative way to load the models in Comfy
+Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy). For alternative way to load the models in Comfy
 
 ### Diffusion Models (Transformer Only)
 
@@ -306,22 +306,26 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy), 
 
 Good collection by [RuneXX](https://huggingface.co/RuneXX)
 
-* [First Last Frame v2 (experimental)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20First%20Last%20Frame%20v2%20(experimental).json)
-* [First Middle Last Frame v2 (experimental)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20First%20Middle%20Last%20Frame%20v2%20(experimental).json)
+* [First Last Frame (guide node)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20First%20Last%20Frame%20(guide%20node).json)
+* [First Last Frame (in-place node)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20First%20Last%20Frame%20(in-place%20node).json)
+* [First Middle Last Frame (guide node)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20First%20Middle%20Last%20Frame%20(guide%20node).json)
 * [I2V Basic (GGUF)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Basic%20(GGUF).json)
-* [I2V Basic (beta test sampler previews)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Basic%20(beta%20test%20sampler%20previews).json)
-* [I2V Basic (custom audio)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Basic%20(custom%20audio).json)
 * [I2V Basic](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Basic.json)
-* [I2V Simple (no upscale)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Simple%20(no%20upscale).json)
-* [I2V Simple (with upscale)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Simple%20(with%20upscale))
+* [I2V IC-Control (pose)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20IC-Control%20(pose).json)
 * [I2V Talking Avatar (voice clone Qwen-TTS)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20Talking%20Avatar%20(voice%20clone%20Qwen-TTS).json)
 * [I2V and T2V (beta test sampler previews)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20and%20T2V%20(beta%20test%20sampler%20previews).json)
+* [I2V and T2V Basic (Custom Audio)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20and%20T2V%20Basic%20(Custom%20Audio).json)
+* [I2V and T2V IC-Control (All-In-One Pose Canny Depth)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20and%20T2V%20IC-Control%20(All-In-One%20Pose%20Canny%20Depth).json)
+* [I2V and T2V Simple (1-pass K-Sampler)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20and%20T2V%20Simple%20(1-pass%20K-Sampler).json)
+* [I2V and T2V Simple (1-pass)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20I2V%20and%20T2V%20Simple%20(1-pass).json)
 * [T2V Basic (GGUF)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20T2V%20Basic%20(GGUF).json)
-* [T2V Basic (custom audio)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20T2V%20Basic%20(custom%20audio).json)
 * [T2V Basic (low vram)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20T2V%20Basic%20(low%20vram).json)
 * [T2V Basic](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20T2V%20Basic.json)
 * [T2V Talking Avatar (voice clone Qwen-TTS)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20T2V%20Talking%20Avatar%20(voice%20clone%20Qwen-TTS).json)
 * [V2A Foley (add sound to any video)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20V2A%20Foley%20(add%20sound%20to%20any%20video).json)
 * [V2V (extend any video)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/LTX-2%20-%20V2V%20(extend%20any%20video).json)
+
+
+
   
 
