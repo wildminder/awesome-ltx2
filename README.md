@@ -520,6 +520,12 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 
 ### ▣ Enchancer, special
 
+* Lightricks LTX-2.3
+  * [LipDub IC-LoRA](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-LipDub) - Enables lip dubbing on top of LTX-2.3 for video dubbing via joint audio-visual diffusion (based on JustDubIt research)
+* OmerHagawa
+  * [Greenscreen Avatar IC-LoRA](https://huggingface.co/OmerHagawa/ltx2-greenscreen-avatar-ic-lora-vertical-v1) - Greenscreen avatar IC-LoRA for vertical video
+* systms
+  * [SYSTMS FLW IC-LoRA](https://huggingface.co/systms/SYSTMS-FLW-IC-LORA-LTX-2.3) - Seamless shot-to-shot transitions IC-LoRA with trigger word `FLW`, uses gray frames (RGB 127,127,127) between clips
 * [LTX-2.3-IC-LoRA-Colorizer](https://huggingface.co/DoctorDiffusion/LTX-2.3-IC-LoRA-Colorizer) by [DoctorDiffusion](https://huggingface.co/DoctorDiffusion) (331 MB) - Colorize black and white videos
 * [JUST-DUB-IT](https://huggingface.co/justdubit/justdubit)
 * [Best-Face-Swap-Video](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video)
@@ -583,6 +589,12 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * Uses "Singularity" prompting framework with 7-block bilingual structure
 
 ### ▣ Styles
+* OmerHagawa
+  * [LTX2 UME PixelArt LoRA](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) - Pixel art style LoRA for LTX-2
+* Playtime-AI
+  * [Commission LTX-2.3 MtF Transformation](https://huggingface.co/Playtime-AI/Commission_LTX-2.3-MtF_Transformation_v2.1) - MtF transformation style LoRA for LTX 2.3
+* Andro0s
+  * [Pixar Toon Style LoRA](https://huggingface.co/Andro0s/LTX_2.3_Pixar_Toon_Style_LoRa) - Pixar-style CGI toon cinematic look with trigger word `P1x4r`
 * Cseti
   * [Arcane-Jinx v1](https://huggingface.co/Cseti/LTX2.3-22B_Arcane-Jinx_v1) - Style LoRA inspired by Arcane's Jinx character design
   * [ReStyle IC-LoRA](https://huggingface.co/Cseti/LTX2.3-22B_ReStyle_IC-LoRA) - Image-guided style transfer IC-LoRA that re-renders videos in a target style while preserving original content and motion
@@ -823,6 +835,17 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [V2V ReTake recreate any section of any video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 * [V2V Video-Edit remove add replace restyle EditAnything-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora.json)
 * [V2V High Dynamic Range IC-HDR-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_high_dynamic_range_IC-HDR-lora.json)
+* [V2V Just-Dub-It multilanguage dubbing IC-Lora-LipDub](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just-Dub-It_multilanguage_dubbing_IC-Lora-LipDub.json)
+
+**Music-Video-Creator:**
+* [I2V T2V Music-Video multi-scene full render](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video_multi-scene_full_render.json)
+* [I2V T2V Music-Video multi-scene save per segment](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video_multi-scene_save_per_segment.json)
+* [I2V T2V Music-Video Prompt-Relay multi-scene save per segment](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video_Prompt-Relay_multi-scene_save_per_segment.json)
+  * **Helper-Workflows:**
+    * [AceStep-XL create music from a prompt](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/Helper-Workflows/AceStep-XL_create_music_from_a_prompt.json)
+    * [Flux-Klein transform firstframe](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/Helper-Workflows/Flux-Klein_transform_firstframe.json)
+    * [Qwen-Image transform firstframe next scene or different angle LoRA](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/Helper-Workflows/Qwen-Image_transform_firstframe_next_scene_or_different_angle_lora.json)
+    * [Video merge combine with interpolate upscale](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/Helper-Workflows/Video_merge_combine_with_interpolate_upscale.json)
 
 **Others:**
 * [I2V T2V Basic custom audio with Gemma-API example](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Others/LTX-2.3_-_I2V_T2V_Basic_custom_audio_with_Gemma-API_example.json)
@@ -860,10 +883,6 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [I2V TV2V Transfer Body Movements IC-Union-Control-lora SDPose](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Control-reference/LTX-2.3_-_IV2V_TV2V_transfer_body_movements_IC-Union-Control-lora_SDPose.json)
 * [I2V TV2V Transfer Body Movements IC-RealisDance-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Control-reference/LTX-2.3_-_IV2V_TV2V_transfer_body_movements_IC-RealisDance-lora.json)
 
-**Music-Video-Creator:**
-
-* [I2V T2V Music-Video-Creator Multi-Scene Custom Audio](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video-Creator_multi-scene_custom_audio.json)
-* [I2V T2V Music-Video-Creator Multi-Scene Custom Audio Low RAM](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video-Creator_multi-scene_custom_audio_Low_RAM.json)
 
 **Helper-Workflows:**
 
