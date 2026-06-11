@@ -7,7 +7,6 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
 
 <div align="center">
 
-[![Stargazers][stars-shield]][stars-url]
 [![Telegram][telegram-shield]][telegram-url]
 [![X][x-shield]][x-url]
 
