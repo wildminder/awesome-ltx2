@@ -95,7 +95,7 @@ Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GP
 | **2.3** | `384` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 7.61 GB | [![](https://img.shields.io/badge/Lightricks_v1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384.safetensors) ┊ [![](https://img.shields.io/badge/Lightricks_v1.1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384-1.1.safetensors) |
 | **2.3** | `208` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 4.97 GB | [![](https://img.shields.io/badge/drbaph-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/drbaph/LTX-2.3-FP8/resolve/main/LoRA/ltx-2.3-22b-distilled-lora-resized_dynamic_rank_208_fro095_bf16.safetensors) |
 | **2.3** | `159` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 3.83 GB | [![](https://img.shields.io/badge/drbaph-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/drbaph/LTX-2.3-FP8/resolve/main/LoRA/ltx-2.3-22b-distilled-lora-resized_dynamic_rank_159_fro09_bf16.safetensors) |
-| **2.3** | `111` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 2.74 GB | [![](https://img.shields.io/badge/Kijai_v1.1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/loras/ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors) |
+| **2.3** | `111` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 2.74 GB | [![](https://img.shields.io/badge/Kijai_v1.1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/loras/ltx-2.3-22b-distilled-1.1_lora-dynamic_fro09_avg_rank_111_bf16.safetensors) ┊ [![](https://img.shields.io/badge/Comfy--Org_v1.1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Comfy-Org/ltx-2.3/resolve/main/split_files/loras/ltx_2.3_22b_distilled_1.1_lora_dynamic_fro09_avg_rank_111_bf16.safetensors) |
 | **2.3** | `105` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 2.59 GB | [![](https://img.shields.io/badge/Kijai-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/loras/ltx-2.3-22b-distilled-lora-dynamic_fro09_avg_rank_105_bf16.safetensors) |
 | | | | | |
 | **2** | `384` | ![bf16](https://img.shields.io/badge/bf16-0077cc?style=flat-square) | 7.67 GB | [![](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-lora-384.safetensors) |
@@ -587,6 +587,17 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * Comprehensive optimizer for LTX2.3 I2V and First/Last Frame workflows
   * Features: Limb Evolution, Shot Injection, Natural Expression, Physical Integrity, Cross-Style Potential
   * Uses "Singularity" prompting framework with 7-block bilingual structure
+* yuvraj108c
+  * [LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction](https://huggingface.co/yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction) - IC-LoRA porting Any Trajectory Instruction (ATI) to LTX-2.3; lets users draw motion paths on an input image and have the model generate videos following those trajectories (splines). Trained on 25 video pairs at 768x768x81 bucket size, 3000 steps.
+* zghhui
+  * [OmniNFT RL-LoRA](https://huggingface.co/zghhui/OmniNFT) - Modality-wise Omni Diffusion Negative-aware Fine-Tuning RL-LoRA for joint audio-video generation (paper arXiv:2605.12480). Provides both LTX-2 and LTX-2.3 variants.
+  * [LTX-2.3-OmniNFT-RL-LoRA (Kijai mirror)](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/loras/LTX-2.3-OmniNFT-RL-Lora_bf16.safetensors) - Same OmniNFT RL-LoRA repackaged by Kijai in bf16 (588 MB).
+* VetoBugger
+  * [LTX2.3-CrispLora](https://huggingface.co/VetoBugger/LTX2.3-CrispLora) - Crisp enhancement LoRA for LTX-2.3 (`LTX2.3_Crisp_Enhance.safetensors`).
+* SyFeee
+  * [LTX-2.3 Dual-Character LoRA](https://huggingface.co/SyFeee/LTX2.3-Dual-Character-en) - Image-to-video character-consistency LoRA tuned for two-character dialogue scenes and multi-shot cinematic generation. Works for ancient Chinese fantasy, modern urban, and 3D anime styles. Recommended strength 0.7-0.9 standalone, 0.3-0.5 when stacked with style LoRAs.
+* WarmBloodAban
+  * [Singularity LTX-2.3 OmniCine V1](https://huggingface.co/WarmBloodAban/Singularity-LTX-2.3_OmniCine_V1) - Updated V1 of the OmniCine integrated optimization framework. Restructures LTX-Video 2.3 generation logic with focus on I2V, First/Last Frame, and Reference-to-Video workflows. Nearly 100,000 training steps. Includes `Singularity-LTX-2.3_OmniCine_V1.safetensors` (2.57 GB) and `Singularity-LTX-2.3_OmniCine_V1nsf.safetensors` (2.57 GB, NSF variant).
 
 ### ▣ Styles
 * OmerHagawa
@@ -648,9 +659,26 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * Playtime-AI
   * [DonaldTrump](https://huggingface.co/Playtime-AI/LTX-2.DonaldTrump)
   * [Rick_and_Morty](https://huggingface.co/Playtime-AI/LTX-2.3-Rick_and_Morty-BETA) - BETA LoRA for Rick and Morty animated style
+  * [LTX-2.3-Rick_And_Morty_v2](https://huggingface.co/Playtime-AI/LTX-2.3-Rick_And_Morty_v2) - Updated Rick and Morty v2 LoRA trained on the Smith and Rick Sanchez characters (undertrained; voices/clothing can be off; v3 in training)
   * [LTX-2.3-Wednesday_Addams](https://huggingface.co/Playtime-AI/LTX-2.3-Wednesday_Addams)
   * [LTX-2.3-Kermit_the_Frog](https://huggingface.co/Playtime-AI/LTX-2.3-Kermit_the_Frog)
   * [LTX-2.3-Jenna_Coleman](https://huggingface.co/Playtime-AI/LTX-2.3-Jenna_Coleman)
+  * [LTX-2.3-Marge_Simpson](https://huggingface.co/Playtime-AI/LTX-2.3-Marge_Simpson) - Marge Simpson character LoRA trained on the base LTX-2.3 Dev model. Trigger words: `2d animation`, `Marge Simpson` (use `2d animation` to avoid getting 3D animation)
+  * [LTX-2.3-Bender](https://huggingface.co/Playtime-AI/LTX-2.3-Bender) - Bender (Futurama) character LoRA. Trigger words: `2d animation`, `Bender the bending robot`
+* SOLRICKS
+  * [LTX-2.3-Yesilcam-Turkish-Cinema](https://huggingface.co/SOLRICKS/LTX-2.3-Yesilcam-Turkish-Cinema) - Nostalgic Yeşilçam Turkish cinema visual style with warm cinematic tones and classic film atmosphere. Recommended strength 0.7.
+  * [ltx-2-3-ue5-style-lora](https://huggingface.co/SOLRICKS/ltx-2-3-ue5-style-lora) - Unreal Engine 5 (UE5) cinematic style LoRA. Trigger word: `ue5_style`.
+* SyFeee Chinese Drama Pack
+  * [ltx2.3-chinese-drama-charlora](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-charlora) - Character LoRA trained on 78 episodes of Chinese historical drama; specialises base model for live-action, photoreal cinematic generation in Han dynasty / wuxia settings. Trigger words: `char_0_person` through `char_9_person`. Recommended strength 0.8–0.9.
+  * [ltx2.3-chinese-drama-iclora-canny](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-canny) - IC-LoRA conditioning on Canny edge/line-art video; controls scene composition and architectural layout from reference outlines. Use with `char_0_person` for character reference.
+  * [ltx2.3-chinese-drama-iclora-depth](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-depth) - IC-LoRA conditioning on monocular depth video (Depth-Anything-3); transfers 3D geometric structure from reference to generated video. Strong on interior scenes.
+  * [ltx2.3-chinese-drama-iclora-pose](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-pose) - IC-LoRA conditioning on DWPose 133-keypoint skeleton render; transfers pose from reference video while preserving Chinese drama style. Stackable with character LoRA.
+* mxturbo
+  * [Formula1-Cockpit-T-Cam-LTX2.3](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) - LoRA trained on 1.6L V6 Turbo Hybrid Era F1 T-Cam onboard footage. Generates cockpit/T-cam onboard video. Trigger: `16LV6HybridF1` (car type); follow the "T-cam onboard view..." / "AT-cam onboard view..." prompt style.
+* chsengni
+  * [ltx2.3-fpv-motion](https://huggingface.co/chsengni/ltx2.3-fpv-motion) - Smoother FPV (First Person View) camera movements and improved low-speed flight shots.
+* EllaPriest45
+  * [LTX2.3-characters](https://huggingface.co/EllaPriest45/LTX2.3-characters) - Massive collection of 70+ per-character LoRAs (Abigail Spencer, Adam Driver, Alexandra Daddario, Ana de Armas, Anne Hathaway, Brad Pitt, Cate Blanchett, Chris Evans, Emma Stone, Emma Watson, Eva Green, Gal Gadot, etc.) for LTX-2.3 (Apache 2.0). Each `Name - LTX2.3.safetensors` ~327 MB.
 * TheBurgstall
   * [LTX-2.3-Body-Positivity](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora)
   * [LTX-2.3-Googly-Eyes](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
@@ -759,43 +787,6 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 
 ## ▓  Workflow & Technical Notes
 
-### ❖ Lightricks
-
-**[LTX-2.3](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.3)**:
-* [ICLoRA Motion Track Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-iclora-motion-track-control.json)
-* [Union Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-ic-lora-union-control.json)
-* [Single Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-single-stage-t2v.json)
-* [Two Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-two-stage-t2v.json)
-
-**[LTX-2](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.0)**:
-* [Text to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-t2v-full.json)
-* [Text to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-t2v-distilled.json)
-* [Image to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-i2v-full.json)
-* [Image to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-i2v-distilled.json)
-* [ICLoRA](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-iclora.json)
-* [Video to Video](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v.json)
-* [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v-detailer.json)
-
-### ❖ vrgamedevgirl84
-
-**[vrgamedevgirl84](https://huggingface.co/vrgamedevgirl84) LTX 2.3 Music Video Creator:**
-
-* [Music Video Creator Workflow](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Music_Video_Creator_ComfyUI)
-  * Prompt Creator Workflow - Audio upload, beat detection, scene timing, lyrics analysis, style selection, prompt generation
-  * Text-to-Video Workflow - LoRA integration, advanced prompt controls, Remake Mode, video stitching
-  * Image-to-Video Workflow - Uses Z-Image Turbo and LTX 2.3
-  * Requirements: ComfyUI, LTX 2.3 models, Z-Image Turbo model, FFmpeg, vrgamedevgirl custom nodes
-  
-### ❖ ComfyUI
-
-* [Text-to-video](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v.json)
-* [Text-to-video Distilled (faster, 8 steps)](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v_distilled.json)
-* [Image-to-video](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v_distilled.json)
-* [Image-to-video Distilled (faster, 8 steps)](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_i2v_distilled.json)
-* [Depth control](https://github.com/Comfy-Org/workflow_templates/raw/refs/heads/main/templates/video_ltx2_depth_to_video.json)
-* [Canny control](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_canny_to_video.json)
-* [Pose control](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_pose_to_video.json)
-
 ### ❖ RuneXX
 
 **[RuneXX](https://huggingface.co/RuneXX/LTX-2.3-Workflows) LTX-2.3 Workflows:**
@@ -836,6 +827,8 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [V2V Video-Edit remove add replace restyle EditAnything-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora.json)
 * [V2V High Dynamic Range IC-HDR-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_high_dynamic_range_IC-HDR-lora.json)
 * [V2V Just-Dub-It multilanguage dubbing IC-Lora-LipDub](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just-Dub-It_multilanguage_dubbing_IC-Lora-LipDub.json)
+* [V2V Inpainting Inpaint-T2V-lora Sam3-Masking](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_inpainting_Inpaint-T2V-lora_Sam3-Masking.json)
+* [V2V Shot-to-Shot Transition Systms-FLW-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_shot-to-shot-transition_Systms-FLW-lora.json)
 
 **Music-Video-Creator:**
 * [I2V T2V Music-Video multi-scene full render](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video_multi-scene_full_render.json)
@@ -920,6 +913,46 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [V2V Just Dub It (experimental)(translate speech auto dubbing)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20V2V%20Just%20Dub%20It%20(experimental)(translate%20speech%20auto%20dubbing).json)
 * [V2V Just Dub It (with voice clone)(auto dubbing translation)(experimental)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20V2V%20Just%20Dub%20It%20(with%20voice%20clone)(auto%20dubbing%20translation)(experimental).json)
 </details>
+
+<p id="wf" align="center">═══●═══●═══●═══●═══●═══●═══●═══●═══</p>
+
+### ❖ Lightricks
+
+**[LTX-2.3](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.3)**:
+* [ICLoRA Motion Track Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-iclora-motion-track-control.json)
+* [Union Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-ic-lora-union-control.json)
+* [Single Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-single-stage-t2v.json)
+* [Two Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-two-stage-t2v.json)
+
+**[LTX-2](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.0)**:
+* [Text to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-t2v-full.json)
+* [Text to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-t2v-distilled.json)
+* [Image to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-i2v-full.json)
+* [Image to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-i2v-distilled.json)
+* [ICLoRA](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-iclora.json)
+* [Video to Video](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v.json)
+* [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v-detailer.json)
+
+### ❖ vrgamedevgirl84
+
+**[vrgamedevgirl84](https://huggingface.co/vrgamedevgirl84) LTX 2.3 Music Video Creator:**
+
+* [Music Video Creator Workflow](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Music_Video_Creator_ComfyUI)
+  * Prompt Creator Workflow - Audio upload, beat detection, scene timing, lyrics analysis, style selection, prompt generation
+  * Text-to-Video Workflow - LoRA integration, advanced prompt controls, Remake Mode, video stitching
+  * Image-to-Video Workflow - Uses Z-Image Turbo and LTX 2.3
+  * Requirements: ComfyUI, LTX 2.3 models, Z-Image Turbo model, FFmpeg, vrgamedevgirl custom nodes
+  
+### ❖ ComfyUI
+
+* [Text-to-video](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v.json)
+* [Text-to-video Distilled (faster, 8 steps)](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v_distilled.json)
+* [Image-to-video](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v_distilled.json)
+* [Image-to-video Distilled (faster, 8 steps)](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_i2v_distilled.json)
+* [Depth control](https://github.com/Comfy-Org/workflow_templates/raw/refs/heads/main/templates/video_ltx2_depth_to_video.json)
+* [Canny control](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_canny_to_video.json)
+* [Pose control](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_pose_to_video.json)
+
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [stars-shield]: https://img.shields.io/github/stars/wildminder/awesome-ltx2.svg?style=for-the-badge
