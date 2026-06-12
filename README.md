@@ -667,6 +667,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * SOLRICKS
   * [LTX-2.3-Yesilcam-Turkish-Cinema](https://huggingface.co/SOLRICKS/LTX-2.3-Yesilcam-Turkish-Cinema) - Nostalgic Yeşilçam Turkish cinema visual style with warm cinematic tones and classic film atmosphere. Recommended strength 0.7.
   * [ltx-2-3-ue5-style-lora](https://huggingface.co/SOLRICKS/ltx-2-3-ue5-style-lora) - Unreal Engine 5 (UE5) cinematic style LoRA. Trigger word: `ue5_style`.
+  * [Sci-Fi Cinema](https://huggingface.co/SOLRICKS/ltx-2.3-sci-fi-cinema) - a cinematic science-fiction style LoRA for LTXV / LTX-2.3. Trigger word: `srx_scifilm`.
 * SyFeee Chinese Drama Pack
   * [ltx2.3-chinese-drama-charlora](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-charlora) - Character LoRA trained on 78 episodes of Chinese historical drama; specialises base model for live-action, photoreal cinematic generation in Han dynasty / wuxia settings. Trigger words: `char_0_person` through `char_9_person`. Recommended strength 0.8–0.9.
   * [ltx2.3-chinese-drama-iclora-canny](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-canny) - IC-LoRA conditioning on Canny edge/line-art video; controls scene composition and architectural layout from reference outlines. Use with `char_0_person` for character reference.
