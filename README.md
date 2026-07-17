@@ -106,11 +106,15 @@ Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GP
 
 Experimental distilled LoRAs optimized for finetunes and I2V workflows. These LoRAs avoid the issues of the massive rank 384 official LoRA which can be counterproductive with conditioned inputs and finetunes.
 
-| LoRA | Rank | Size | Description |
-|:---|:---|:---:|:---|
-| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil36` | 36 | 739 MB | Compact LoRA with dynamic ceiling at 36 |
-| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe` | 72 | 662 MB | Cond-safe version with cross-attention bridges, adaln/scale-shift tables, gate logits, and prompt scale-shift zeroed. Much better suited for I2V and input conditioned workflows. Can use 1.0 strength safely on first pass I2V. |
-| `ltx-2.3-22b-distilled-lora-fro90_ceil72` | 72 | 1.4 GB | Standard version with higher dynamic ceiling |
+| LoRA | Rank | Size | Description | Download |
+|:---|:---|:---:|:---|:---|
+| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil36` | 36 | 739 MB | Compact LoRA with dynamic ceiling at 36 | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil36.safetensors) |
+| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe` | 72 | 662 MB | Cond-safe version with cross-attention bridges, adaln/scale-shift tables, gate logits, and prompt scale-shift zeroed. Much better suited for I2V and input conditioned workflows. Can use 1.0 strength safely on first pass I2V. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors) |
+| `ltx-2.3-22b-distilled-lora-fro90_ceil72` | 72 | 1.4 GB | Standard version with higher dynamic ceiling | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-fro90_ceil72.safetensors) |
+| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil32_condsafe` | 32 | 363 MB | Cond-safe variant with the lowest dynamic ceiling (32) in the family. Most permissive for input-conditioned workflows; pairs with rank-32 finetune distilled bases. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil32_condsafe.safetensors) |
+| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil52_condsafe` | 52 | 464 MB | Cond-safe variant with a medium dynamic ceiling (52). Useful as an intermediate strength between ceil32 and ceil72 condsafe rows. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil52_condsafe.safetensors) |
+| `ltx-2.3-22b-distilled-lora-1.1_rank72_energy` | 72 | 1.6 GB | Standard ceiling variant tuned for energy-aware sampling (target sigma schedule for the official DMD-style distillation). Pairs with rank-72 finetune distillation. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_rank72_energy.safetensors) |
+| `ltx-2.3-22b-distilled-lora-1.1_rank96_energy` | 96 | 2.2 GB | Higher-rank energy-aware variant (96) of the rank-72 energy LoRA. Targets the same energy schedule; gives a fuller update at higher storage cost. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_rank96_energy.safetensors) |
 
 **Notes:**
 - Lower rank LoRAs (72 and below) can be used at 1.0 strength safely for I2V first pass, with upscale pass at 0.4-0.5 strength
@@ -555,15 +559,20 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [IC-LoRA-Cameraman v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1) - Transfers camera movements (zoom, pan, tilt, orbit) from reference video to generated output
   * [IC-LoRA-EditRefVid v1](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-EditRefVid_v1) - Edit reference video IC-LoRA for editing existing videos using reference guidance
   * [IC-LoRA-Cameraman v2](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v2) - v2 of the Cameraman IC-LoRA with a larger and more diverse dataset; replicates camera motion from a reference video. No trigger word required.
+  * [IC-LoRA-CrossView Prompt v0.9](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-CrossView-Prompt) - Virtual second camera IC-LoRA: give it a reference video + a short camera-angle prompt using the trigger `crossview.` and re-render the same scene from a new viewpoint. v0.9 proof-of-concept trained on synthetic multi-view data; no starting image needed.
+
 * 100percentrobot
   * [Audio-Reactive LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) - Generates audio-reactive videos with motion synchronized to musical elements (beats, rhythm)
 * LiconStudio
   * [VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) - Enhances video generation for complex reasoning tasks including multi-object interactions, physical causality, and spatial relationships
   * [VBVR-lora-I2V Special](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V)
+  * [Licon MSR V2](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference) - Multiple Subject Reference v2: IC-LoRA preserving character identity / clothing / objects across frames in multi-reference video generation. Improves consistency, stability and scene logic vs. v1. Requires the [ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR) plugin.
 
 * TheBurgstall
   * [LTX-2.3-Skin-Hair](https://huggingface.co/TheBurgstall/LTX-2.3-skin-hair) - Refines skin texture and hair rendering, reduces plastic skin artifacts, improves specular highlights 
   * [VR-360-Outpaint IC-LoRA](https://huggingface.co/TheBurgstall/VR-360-Outpaint-LTX2.3-IC-LoRA) - Outpaints standard widescreen footage into a full 360° equirectangular projection for immersive/VR viewing.
+  * [Seamless-Equirectangular LTX-2.3 LoRA](https://huggingface.co/TheBurgstall/Seamless-Equirectangular-LTX2.3-LoRA) - Rank-128 LoRA for equirectangular 360° text-to-video generation with LTX-2.3 (15k steps). Trigger `Equirectangular`. Pairs with the [ComfyUI-Seamless-Equirectangular](https://github.com/Burgstall-labs/ComfyUI-Seamless-Equirectangular) node pack and EquiRoPE / Geometric CFG / per-step roll / circular VAE / wrapped noise setup.
+
 * Nightfury16
   * [Staging IC-lora 512](https://huggingface.co/Nightfury16/ltx2.3-staging-ic-lora-512) - Staging IC-LoRA for video composition control (512 latent scale)
 * siraxe
@@ -714,6 +723,20 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * [Wan2.1 VAE Adapter](https://huggingface.co/HDHCDev/Ltx2_2_Wan2.1_VAE_Adapter)
   * Latent space adapter for converting between LTX-2 and Wan2.1 VAE representations
   * `latent_adapter_final.pt` (447 MB)
+* TenStrip
+  * [LTX2.3 JoyAI LoRA Extracted](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) - LoRA extracted from [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo); boosts prompt response and motion in LTX-2.3 (also used for NSFW/Sulphur/Eros) at strength 0.4–0.7.
+  * [LTX2.3 DMD LoRA](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora) - DMD-distillation delta extraction in [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for LTX-2.3 384-rank 1.1 sampling. Sample sigmas in the card.
+* ltx-community
+  * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
+* FuzzPuppy
+  * [LTX-2.3 Foley](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA) - Video-to-audio LoRA for LTX-2.3 that adds realistic, visually synchronized Foley / sound effects over a video (multiplier 1.0–3.0; pairs with the LTX Community License).
+* vpakarinen
+  * [Motion Stabilizer for LTX-2.3](https://huggingface.co/vpakarinen/motion-stabilizer-ltx-23) - Motion LoRA stabilises body movement and rotation in LTX-2.3.
+* Comfy-Org
+  * [ltx-2.3-22b-ic-lora-ingredients-0.9](https://huggingface.co/Comfy-Org/ltx-2.3/resolve/main/split_files/loras/ltx-2.3-22b-ic-lora-ingredients-0.9.safetensors) - Comfy-Org-distributed ingredients IC-LoRA for LTX-2.3 (the other three siblings in the same folder — `id-lora-celebvhq-3k`, `id-lora-talkvid-3k`, `distilled_1.1_lora_dynamic_fro09_avg_rank_111_bf16` — are already linked from the Checkpoints / ID-LoRA tables).
+* linoyts
+  * [ltx2.3-ic-lora-ingredients-multishot](https://huggingface.co/linoyts/ltx2.3-ic-lora-ingredients-multishot) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (2,500 training steps, LR 1e-4). Trained for multi-shot ingredient-conditioned generation.
+  * [ltx2-ic-lora-ui](https://huggingface.co/linoyts/ltx2-ic-lora-ui) - LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (20 training steps; treats UI-screen aesthetics). Inherits LTX-2.3 base license.
 
 ### ▣ ID-LoRA (Identity-Driven In-Context LoRA)
 
@@ -989,6 +1012,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-Lightricks]: https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-QuantStack]: https://img.shields.io/badge/QuantStack-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Sikaworld1990]: https://img.shields.io/badge/Sikaworld1990-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-TenStrip]: https://img.shields.io/badge/TenStrip-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Unsloth]: https://img.shields.io/badge/Unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Winnougan]: https://img.shields.io/badge/Winnougan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-drbaph]: https://img.shields.io/badge/drbaph-lightgrey?style=flat-square&logo=huggingface&logoColor=white
