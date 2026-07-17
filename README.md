@@ -806,6 +806,13 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [I2V T2V Short-Story PromptRelay-Timeline multi-sequence](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Movie-Maker/LTX-2.3_-_I2V_T2V_Short-Story_PromptRelay-Timeline_multi-sequence.json)
 * [I2V T2V Short-Story PromptRelay multi-sequence](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Movie-Maker/LTX-2.3_-_I2V_T2V_Short-Story_PromptRelay_multi-sequence.json)
 
+**Multi-ref-character-sheet:**
+
+* [I2V Multi-subject Reference Licon-MSR V1-lora (older version)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V1-lora_older_version.json)
+* [I2V Multi-subject Reference Licon-MSR V2 LTX-Ingredients OmniNTF Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-LTX-Ingredients-OmniNTF_Experimental.json)
+* [I2V Multi-subject Reference Licon-MSR V2-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-lora.json)
+* [T2V/R2V Character Sheet Best-Face-ID LoRA](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_character-sheet_Best-Face-ID-Lora.json)
+
 **Talking-Avatar-TTS:**
 
 * [I2V T2V Talking Avatar (Qwen-TTS)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Talking-Avatar-TTS/LTX-2.3_-_I2V_T2V_Talking_Avatar_(voice_clone_with_Qwen-TTS).json)
