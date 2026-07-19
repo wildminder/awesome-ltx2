@@ -159,7 +159,7 @@ Community finetuned models based on LTX-2.3 with specialized improvements and op
 
 **DaSiWa — LoRA-integrated distilled + non-distilled family**
 
-High-performance LoRA-integrated checkpoint family based on LTX 2.3. Includes distilled (4-step) and non-distilled (20-30 step) variants. Recommended sampler: Euler + Simple/Normal/Linear_Quadratic. Repo layout: `Distilled/FP8/{v01,v03}` for the distilled lineage, `Non-Distilled/{FP8,NVFP4,GGUF}/v03` for the un-distilled lineage (each leaf folder holds a single safetensors/gguf).
+High-performance LoRA-integrated checkpoint family based on LTX 2.3. Includes distilled (4-step) and non-distilled (20-30 step) variants. Recommended sampler: Euler + Simple/Normal/Linear_Quadratic.
 
 | Ver | Build | Name | Precision | Size | Download |
 | :--- | :--- | :--- | :---: | :---: | :---: |
@@ -176,7 +176,7 @@ High-performance LoRA-integrated checkpoint family based on LTX 2.3. Includes di
 
 **10Eros — TenStrip's I2V-optimised layer-scaled merge**
 
-I2V-optimised merge using layer scaled merges at different steps. Not a straight weight merge — behaves much nicer than standard LoRA loading and respects prompts. Each version (v1 → v1.4) is published as BF16 (44 GB bundled backbone + VAE + clips) and fp8mixed_learned (~28 GB). v1 also has a transformer-only fp8 split (no VAE/clips); v1.4 also has a separate `INT8 diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors` variant.
+I2V-optimised merge using layer scaled merges at different steps. Not a straight weight merge — behaves much nicer than standard LoRA loading and respects prompts.
 
 | Ver | Build | Name | Precision | Size | Download |
 | :--- | :--- | :--- | :---: | :---: | :---: |
@@ -191,9 +191,9 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4 INT8_convrot` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
 
-**10Eros GGUF — vantagewithai low-VRAM quants** (per-version sub-tables: v1, v1.2, v1.3, v1.4)
+**10Eros GGUF — vantagewithai low-VRAM quants**
 
-Repo [`vantagewithai/LTX2.3-10Eros-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-GGUF) — v1 release. 12 quants.
+[`vantagewithai/LTX2.3-10Eros-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-GGUF) — v1
 
 | Quant | Size | Download |
 | :--- | :---: | :--- |
@@ -210,7 +210,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-GGUF`](https://huggingface.co/vantagewithai/L
 | ![Q6_K][badge-Q6_K] | 16.55 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-GGUF/resolve/main/10Eros_v1-Q6_K.gguf) |
 | ![Q8_0][badge-Q8_0] | 21.19 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-GGUF/resolve/main/10Eros_v1-Q8_0.gguf) |
 
-Repo [`vantagewithai/LTX2.3-10Eros-1.2-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-GGUF) — v1.2 release. 12 quants. **Note:** upstream filename glitch — files are named `10Eros_v1.210Eros_v1.2-…gguf` (double-stamped); we link verbatim.
+[`vantagewithai/LTX2.3-10Eros-1.2-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-GGUF) — v1.2 — **Note:** files are named `10Eros_v1.210Eros_v1.2-…gguf` (upstream double-stamp glitch); we link verbatim.
 
 | Quant | Size | Download |
 | :--- | :---: | :--- |
@@ -227,7 +227,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-1.2-GGUF`](https://huggingface.co/vantagewith
 | ![Q6_K][badge-Q6_K] | 16.55 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-GGUF/resolve/main/10Eros_v1.210Eros_v1.2-Q6_K.gguf) |
 | ![Q8_0][badge-Q8_0] | 21.19 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-GGUF/resolve/main/10Eros_v1.210Eros_v1.2-Q8_0.gguf) |
 
-Repo [`vantagewithai/LTX2.3-10Eros-1.3-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-GGUF) — v1.3 release. 12 quants.
+[`vantagewithai/LTX2.3-10Eros-1.3-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-GGUF) — v1.3
 
 | Quant | Size | Download |
 | :--- | :---: | :--- |
@@ -244,7 +244,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-1.3-GGUF`](https://huggingface.co/vantagewith
 | ![Q6_K][badge-Q6_K] | 16.55 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-GGUF/resolve/main/10Eros_v1.3-Q6_K.gguf) |
 | ![Q8_0][badge-Q8_0] | 21.19 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-GGUF/resolve/main/10Eros_v1.3-Q8_0.gguf) |
 
-Repo [`vantagewithai/LTX2.3-10Eros-1.4-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF) — v1.4 (latest) release. 12 quants.
+[`vantagewithai/LTX2.3-10Eros-1.4-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF) — v1.4 (latest)
 
 | Quant | Size | Download |
 | :--- | :---: | :--- |
@@ -263,9 +263,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-1.4-GGUF`](https://huggingface.co/vantagewith
 
 **10Eros Splits — vantagewithai per-version component split for ComfyUI low-VRAM workflow**
 
-Each version gets a 5-component split: Model (bf16 or fp8mixed_learned), VAE, Audio VAE, Text encoder. The v1.2 split additionally bundles a `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors` LoRA component.
-
-Repo [`vantagewithai/LTX2.3-10Eros-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-Split) — v1 release.
+[`vantagewithai/LTX2.3-10Eros-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-Split) — v1
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | Model | ![bf16][badge-bf16] | 41.03 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-Split/resolve/main/model/10Eros_v1_bf16_model.safetensors) |
@@ -274,7 +272,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-Split`](https://huggingface.co/vantagewithai/
 | Audio VAE | — | 364.86 MB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-Split/resolve/main/audio_vae/10Eros_v1_audio_vae.safetensors) |
 | Text encoder | — | 2.26 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-Split/resolve/main/text_encoder/10Eros_v1_text_encoder.safetensors) |
 
-Repo [`vantagewithai/LTX2.3-10Eros-1.2-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-Split) — v1.2 release. Includes a bundled distilled LoRA (`lora/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors`).
+[`vantagewithai/LTX2.3-10Eros-1.2-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-Split) — v1.2
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | Model | ![bf16][badge-bf16] | 41.03 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-Split/resolve/main/model/10Eros_v1.2_bf16_model.safetensors) |
@@ -283,7 +281,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-1.2-Split`](https://huggingface.co/vantagewit
 | Audio VAE | — | 364.86 MB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-Split/resolve/main/audio_vae/10Eros_v1.2_audio_vae.safetensors) |
 | LoRA (bundled) | — | 662.07 MB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.2-Split/resolve/main/lora/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors) |
 
-Repo [`vantagewithai/LTX2.3-10Eros-1.3-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-Split) — v1.3 release.
+[`vantagewithai/LTX2.3-10Eros-1.3-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-Split) — v1.3
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | Model | ![bf16][badge-bf16] | 41.03 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-Split/resolve/main/model/10Eros_v1.3_bf16_model.safetensors) |
@@ -292,7 +290,7 @@ Repo [`vantagewithai/LTX2.3-10Eros-1.3-Split`](https://huggingface.co/vantagewit
 | Audio VAE | — | 364.86 MB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-Split/resolve/main/audio_vae/10Eros_v1.3_audio_vae.safetensors) |
 | Text encoder | — | 2.26 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.3-Split/resolve/main/text_encoder/10Eros_v1.3_text_encoder.safetensors) |
 
-Repo [`vantagewithai/LTX2.3-10Eros-1.4-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-Split) — v1.4 (latest) release.
+[`vantagewithai/LTX2.3-10Eros-1.4-Split`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-Split) — v1.4 (latest)
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :--- |
 | Model | ![bf16][badge-bf16] | 41.03 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-Split/resolve/main/model/10Eros_v1.4_bf16_model.safetensors) |
@@ -311,20 +309,37 @@ Repo [`vantagewithai/LTX2.3-10Eros-1.4-Split`](https://huggingface.co/vantagewit
 
 **10Eros Extracted LoRA — maximsobolev275 trained LoRAs**
 
-LoRA family extracted from the 10Eros merge family for use with the LTX-2.3 base + distilled LoRA. Repo authors 24 file variants (rank 768 canonical, lower-rank rerollings, v1.2 / v1.3 / v1.4 across layercut / WAN2GP / fro95 / fro99 avgrank configurations).
-
 | Variant | Description | Download |
 | :--- | :--- | :--- |
 | rank-768 family (canonical, v1.4) | Author: maximsobolev275. Training LoRAs directly extracted from the 10Eros v1.4 merge (rank 768); lower-rank rerolls for v1.2 / v1.3 / v1.4 are also published in the same repo. | [LTX-10Eros-LoRA-r768](https://huggingface.co/maximsobolev275/LTX-10Eros-LoRA-r768) |
 
 **Sulphur-2-base — community merge base / uncensored dev model**
 
-| Variant | Format | Description | Download |
-| :--- | :--- | :--- | :--- |
-| dev bf16 | safetensors | Uncensored dev LoRA-integrated backbone (T2V + I2V native). Built-in prompt enhancer. Merge base for 10Eros. | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_dev_bf16.safetensors) |
-| dev fp8mixed | safetensors | fp8mixed variant of the dev checkpoint for lower VRAM. | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_dev_fp8mixed.safetensors) |
-| distill bf16 | safetensors | Distilled (4-step) variant for fast sampling. | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_distil_bf16.safetensors) |
-| lora rank 768 | safetensors | Rank-768 LoRA extracted for use with the base LTX-2.3 model. | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_lora_rank_768.safetensors) |
+Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-base) — uncensored video generation model based on LTX 2.3 with built-in prompt enhancer. Merge base for 10Eros. T2V + I2V native.
+
+**Main video model**
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.3** | dev | ![bf16][badge-bf16] | 44.0 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_dev_bf16.safetensors) |
+| **2.3** | dev | ![fp8][badge-fp8] | 27.8 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_dev_fp8mixed.safetensors) |
+| **2.3** | distil | ![bf16][badge-bf16] | 44.0 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_distil_bf16.safetensors) |
+
+**Sulphur LoRAs**
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.3** | `sulphur_lora_rank_768` | safetensors | 9.79 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_lora_rank_768.safetensors) |
+| **2.3** (experimental) | `sulphur_experimental_lora_v1` | safetensors | 13.87 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/experimental/sulphur_experimental_lora_v1.safetensors) |
+
+**Prompt Enhancer**
+
+| Variant | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| Censored | ![bf16][badge-bf16] | 879.01 MB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer/mmproj-BF16.gguf) |
+| Censored | ![Q8_0][badge-Q8_0] | 9.09 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer/sulphur_prompt_enhancer_model-q8_0.gguf) |
+| Uncensored | ![bf16][badge-bf16] | 879.01 MB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored.gguf) |
+| Uncensored | ![Q8_0][badge-Q8_0] | 9.33 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer_uncensored/prompt_enhancer_uncensored-q8_0.gguf) |
 
 **PinkCherry NSFW — SexGod1979 community NSFW finetune**
 
