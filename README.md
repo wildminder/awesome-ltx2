@@ -464,7 +464,7 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 ◦ **Sulphur LoRAs**
 
 | Ver | Build | Size | Download |
-| :--- | :--- | :---: | :---: | :---: |
+| :--- | :--- | :---: | :---: |
 | **2.3** | `sulphur_lora_rank_768` | 9.79 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_lora_rank_768.safetensors) |
 | **2.3** (experimental) | `sulphur_experimental_lora_v1` | 13.87 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/experimental/sulphur_experimental_lora_v1.safetensors) |
 
