@@ -324,6 +324,34 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | **2.3** | dev | ![bf16][badge-bf16] | 44.0 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_dev_bf16.safetensors) |
 | **2.3** | dev | ![fp8][badge-fp8] | 27.8 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_dev_fp8mixed.safetensors) |
 | **2.3** | distil | ![bf16][badge-bf16] | 44.0 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_distil_bf16.safetensors) |
+| **2.3** | distil | ![fp8][badge-fp8] | 27.8 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/Civitai/Sulphur-2-distilled-fp8/resolve/main/sulphur_distil_fp8mixed.safetensors) |
+| **2.3** | distil | ![nvfp4][badge-nvfp4] | 18.6 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/coolthor/Sulphur-2-distilled-NVFP4/resolve/main/sulphur_distil_nvfp4.safetensors) |
+
+**vantagewithai component split** — [`vantagewithai/Sulphur-2-Base-Split`](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split)
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| model (`sulphur_dev_bf16_model`) | ![bf16][badge-bf16] | 40.06 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split/resolve/main/model/sulphur_dev_bf16_model.safetensors) |
+| model (`sulphur_dev_model_fp8mixed`) | ![fp8][badge-fp8] | 23.87 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split/resolve/main/model/sulphur_dev_model_fp8mixed.safetensors) |
+| model (`sulphur_distil_bf16_model`) | ![bf16][badge-bf16] | 40.06 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split/resolve/main/model/sulphur_distil_bf16_model.safetensors) |
+| vae | — | 1.38 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split/resolve/main/vae/sulphur_vae.safetensors) |
+| audio_vae | — | 348.0 MB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split/resolve/main/audio_vae/sulphur_audio_vae.safetensors) |
+
+**Abiray GGUF quants** — [`Abiray/Sulphur-2-base-GGUF`](https://huggingface.co/Abiray/Sulphur-2-base-GGUF)
+
+| Build | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| sulphur_dev_bf16 | ![bf16][badge-bf16] | 40.09 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev_bf16.gguf) |
+| sulphur_dev | ![Q3_K_M][badge-Q3_K_M] | 10.36 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q3_K_M.gguf) |
+| sulphur_dev | ![Q3_K_S][badge-Q3_K_S] | 9.63 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q3_K_S.gguf) |
+| sulphur_dev | ![Q4_0][badge-Q4_0] | 12.09 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q4_0.gguf) |
+| sulphur_dev | ![Q4_K_M][badge-Q4_K_M] | 13.31 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q4_K_M.gguf) |
+| sulphur_dev | ![Q4_K_S][badge-Q4_K_S] | 12.29 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q4_K_S.gguf) |
+| sulphur_dev | ![Q5_0][badge-Q5_0] | 14.21 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q5_0.gguf) |
+| sulphur_dev | ![Q5_K_M][badge-Q5_K_M] | 15.04 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q5_K_M.gguf) |
+| sulphur_dev | ![Q5_K_S][badge-Q5_K_S] | 14.01 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q5_K_S.gguf) |
+| sulphur_dev | ![Q6_K][badge-Q6_K] | 16.55 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q6_K.gguf) |
+| sulphur_dev | ![Q8_0][badge-Q8_0] | 21.19 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q8_0.gguf) |
 
 **Sulphur LoRAs**
 
@@ -1189,6 +1217,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [x-shield]: https://img.shields.io/badge/wildmindai-000000?style=for-the-badge&logo=x&logoColor=white
 [x-url]: https://x.com/wildmindai
 
+[gh-Abiray]: https://img.shields.io/badge/Abiray-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AX1Y2JP]: https://img.shields.io/badge/AX1Y2JP-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AviadDahan]: https://img.shields.io/badge/AviadDahan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
