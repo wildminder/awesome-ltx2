@@ -130,7 +130,6 @@ Experimental distilled LoRAs optimized for finetunes and I2V workflows. These Lo
 
 [Download All LoRAs](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments)
 
-
 <p id="ckpt-spatial-upscaler" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ Spatial Upscaler
@@ -301,6 +300,7 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 </details>
 
 ‣ **10Eros Splits**
+
 <details>
   <summary>per-version component split</summary>
 
@@ -403,7 +403,6 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | sulphur_dev | ![Q6_K][badge-Q6_K] | 16.55 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q6_K.gguf) |
 | sulphur_dev | ![Q8_0][badge-Q8_0] | 21.19 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q8_0.gguf) |
 
-
 </details>
 
 ‣ **Sulphur LoRAs**
@@ -431,7 +430,6 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | :--- | :--- | :--- |
 | v1.3 dev bf16 | PinkCherry uncensored NSFW LTX-2.3 finetune; v1.3 BF16 dev. Pairs with the official LTX-2.3 distilled LoRA 384. NSFW content only — do not use for clean content. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
 | v1.5 dev bf16 | PinkCherry v1.5 BF16 — newer training pass than v1.3 with updated workflow. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
-
 
 <p id="gguf" align="center">══════════════════════════════════</p>
 
@@ -643,7 +641,7 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 LTX-2 requires Gemma-3-12b variants. LTX-2.3 uses text projection layers.
 
-### ▣ **Comfy-Org Optimized Encoders**
+### ▣ Comfy-Org Optimized Encoders
 
 Official and optimized versions for ComfyUI.
 
@@ -661,22 +659,24 @@ Official and optimized versions for ComfyUI.
 
 * `gemma_3_12B_it_fpmixed`: Experimental quant. Should be better than the fp8 scaled
 * `gemma_3_12B_it_fp4_mixed`: 90% fp4 layers
+**Note:** mxfp8mixed quantization requires a custom fork of ComfyUI-Kitchen with mxfp8 support. Standard ComfyUI setups don't.
 
-**Note:** The mxfp8mixed quantization requires a custom fork of ComfyUI-Kitchen with mxfp8 support. Standard ComfyUI installations may not support this quantization format.
+<p id="enc-abliterated" align="center">· · · · · · · · · · · · · ·</p>
 
-### **Gemma-3-12b Abliterated**
+### ▣ Gemma-3-12b Abliterated
 
 #### Why Choose Abliterated Encoders?
+
 Standard Gemma models often incorporate safety alignment that "sanitizes" or weakens specific concepts within prompt embeddings. Even when the model doesn't explicitly refuse a request, this internal filtering can dilute creative intent. For LTX-2 video generation, using a standard encoder often results in:
 
-*   **Reduced Prompt Adherence:** Key stylistic or descriptive terms may be ignored or weakened.
-*   **Visual Softening:** Visual intensity and fine details are often "muted" to fit generic safety profiles.
-*   **Concept Dilution:** Complex or niche creative requests are subtly altered, leading to less faithful representations of your vision.
+* **Reduced Prompt Adherence:** Key stylistic or descriptive terms may be ignored or weakened.
+* **Visual Softening:** Visual intensity and fine details are often "muted" to fit generic safety profiles.
+* **Concept Dilution:** Complex or niche creative requests are subtly altered, leading to less faithful representations of your vision.
 
 **Abliteration** bypasses these restrictive alignment layers, allowing the encoder to translate your prompts into embeddings with maximum fidelity. This ensures LTX-2 receives the most accurate and un-filtered instructions possible.
 
 <details>
-  <summary>Gemma-3-12b-Abliterated</summary>
+  <summary>Gemma-3-12b-Abliterated (FusionCow)</summary>
 
 Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2), modified specifically for compatibility with LTX-2. The [original model](https://huggingface.co/mlabonne/gemma-3-12b-it-abliterated-v2)
 
@@ -684,33 +684,6 @@ Fixed versions of the abliterated Gemma-3-12b-it model by [FusionCow](https://hu
 | :--- | :---: | :---: | :---: |
 | `Gemma ablit fixed` | ![bf16][badge-bf16] | 23.5 GB | [![][gh-FusionCow]](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_bf16.safetensors?download=true) |
 | `Gemma ablit fixed` | ![fp8][badge-fp8] | 13.8 GB | [![][gh-FusionCow]](https://huggingface.co/FusionCow/Gemma-3-12b-Abliterated-LTX2/resolve/main/gemma_ablit_fixed_fp8.safetensors?download=true) |
-
-</details>
-
- <details>
-  <summary>Gemma 3 12B IT Heretic</summary>
-
-Models by [DreamFast](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic)
-
-#### Safetensors
-| Model | Precision | Size | Download |
-| :--- | :---: | :---: | :---: |
-| `Gemma_3_12B_it Heretic` | ![bf16][badge-bf16] | 23.5 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic.safetensors) |
-| `Gemma_3_12B_it Heretic` | ![fp8][badge-fp8] | 12.8 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors) |
-
-
-#### GGUF
-
-| Quant | Size | Quality | Recommendation  | Download |
-|-------| :---: | :---: |----------------| :---: |
-| ![F16][badge-F16] | 22GB | Lossless | Reference, same as original | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-f16.gguf) |
-| ![Q8_0][badge-Q8_0] | 12GB | Excellent | Best quality quantization | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q8_0.gguf) |
-| ![Q6_K][badge-Q6_K] | 9.0GB | Very Good | High quality, good compression | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q6_K.gguf) |
-| ![Q5_K_M][badge-Q5_K_M] | 7.9GB | Good | Balanced quality/size | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_S.gguf) |
-| ![Q5_K_S][badge-Q5_K_S] | 7.7GB | Good | Slightly smaller Q5 | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_M.gguf) |
-| ![Q4_K_M][badge-Q4_K_M] | 6.8GB | Good | Still useful | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_S.gguf) |
-| ![Q4_K_S][badge-Q4_K_S] | 6.5GB | Decent | Smaller Q4 variant | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
-| ![Q3_K_M][badge-Q3_K_M] | 5.6GB | Acceptable | For very low VRAM only | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
 
 </details>
 
@@ -730,6 +703,110 @@ NVFP4 quantization variants by [Sikaworld1990](https://huggingface.co/Sikaworld1
 * FP4-Pure: Pure FP4 quantization for maximum compression
 * HereticX: Uncensored variant with maximum prompt fidelity
 * High-Fidelity: Optimized for quality with better detail preservation
+
+</details>
+
+<p id="enc-heretic" align="center">· · · · · · · · · · · · · ·</p>
+
+### ▣ Gemma-3-12b IT Heretic
+
+Models by [DreamFast](https://huggingface.co/DreamFast). "Heretic" lineage bypasses alignment/restriction layers in the text encoder so LTX-2/2.3 receives the most faithful prompt embeddings. Two upstream versions (v1, v2) plus an AX1Y2JP ultra-uncensored fork and a 3rd-party mradermacher imatrix GGUF re-quant set.
+
+<details>
+  <summary>Heretic v1 — DreamFast (bf16 + fp8 + 8 GGUFs)</summary>
+
+#### Safetensors
+
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `Gemma_3_12B_it Heretic` | ![bf16][badge-bf16] | 23.5 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic.safetensors) |
+| `Gemma_3_12B_it Heretic` | ![fp8][badge-fp8] | 12.8 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/comfyui/gemma_3_12B_it_heretic_fp8_e4m3fn.safetensors) |
+
+#### GGUF
+
+| Quant | Size | Download |
+| :---: | :---: | :---: |
+| ![F16][badge-F16] | 22 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-f16.gguf) |
+| ![Q8_0][badge-Q8_0] | 12 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q8_0.gguf) |
+| ![Q6_K][badge-Q6_K] | 9.0 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q6_K.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 7.9 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_M.gguf) |
+| ![Q5_K_S][badge-Q5_K_S] | 7.7 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q5_K_S.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 6.8 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_M.gguf) |
+| ![Q4_K_S][badge-Q4_K_S] | 6.5 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q4_K_S.gguf) |
+| ![Q3_K_M][badge-Q3_K_M] | 5.6 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic/resolve/main/gguf/gemma-3-12b-it-heretic-Q3_K_M.gguf) |
+
+</details>
+
+<details>
+  <summary>Heretic v2 — DreamFast (5 safetensors + 8 GGUFs)</summary>
+
+#### Safetensors
+
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `gemma-3-12b-it-heretic-v2` | ![bf16][badge-bf16] | 23.25 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/comfyui/gemma-3-12b-it-heretic-v2.safetensors) |
+| `gemma-3-12b-it-heretic-v2` | ![fp8][badge-fp8] | 11.63 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/comfyui/gemma-3-12b-it-heretic-v2_fp8_e4m3fn.safetensors) |
+| `gemma-3-12b-it-heretic-v2` | ![int8tensormixed][badge-int8tensormixed] | 12.60 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/comfyui/gemma-3-12b-it-heretic-v2_int8.safetensors) |
+| `gemma-3-12b-it-heretic-v2` | ![mxfp8mixed][badge-mxfp8mixed] | 12.93 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/comfyui/gemma-3-12b-it-heretic-v2_mxfp8.safetensors) |
+| `gemma-3-12b-it-heretic-v2` | ![nvfp4][badge-nvfp4] | 7.94 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/comfyui/gemma-3-12b-it-heretic-v2_nvfp4.safetensors) |
+
+#### GGUF
+
+| Quant | Size | Download |
+| :---: | :---: | :---: |
+| ![F16][badge-F16] | 22.45 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-f16.gguf) |
+| ![Q8_0][badge-Q8_0] | 11.93 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q8_0.gguf) |
+| ![Q6_K][badge-Q6_K] | 9.21 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q6_K.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 8.05 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q5_K_M.gguf) |
+| ![Q5_K_S][badge-Q5_K_S] | 7.85 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q5_K_S.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 6.96 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q4_K_M.gguf) |
+| ![Q4_K_S][badge-Q4_K_S] | 6.61 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q4_K_S.gguf) |
+| ![Q3_K_M][badge-Q3_K_M] | 5.73 GB | [![][gh-DreamFast]](https://huggingface.co/DreamFast/gemma-3-12b-it-heretic-v2/resolve/main/gguf/gemma-3-12b-it-heretic-v2-Q3_K_M.gguf) |
+
+</details>
+
+<details>
+  <summary>AX1Y2JP Ultra-Uncensored Heretic ComfyUI fp8_scaled</summary>
+
+Ultra-uncensored fork of the Heretic encoder, fp8-scaled and ComfyUI-ready. Single safetensors by [AX1Y2JP](https://huggingface.co/AX1Y2JP).
+
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `gemma-3-12b-it-heretic` (ultra-uncensored) | ![fp8][badge-fp8] | 12.99 GB | [![][gh-AX1Y2JP]](https://huggingface.co/AX1Y2JP/Gemma-3-12B-IT-Ultra-Uncensored-Heretic-ComfyUI-fp8/resolve/main/gemma-3-12b-it-heretic-fp8_scaled.safetensors) |
+
+</details>
+
+<details>
+  <summary>mradermacher imatrix GGUF re-quant of Heretic v2 (24 quants)</summary>
+
+Third-party imatrix (importance-matrix) re-quantization of DreamFast's Heretic v2 by [mradermacher](https://huggingface.co/mradermacher). Covers the full i1-IQ* and i1-Q*_K* family for low-VRAM use. Sizes verified from the repo file list.
+
+| Quant | Size | Download |
+| :---: | :---: | :---: |
+| ![IQ1_M][badge-IQ1_M] | 3.02 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ1_M.gguf) |
+| ![IQ1_S][badge-IQ1_S] | 2.81 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ1_S.gguf) |
+| ![IQ2_M][badge-IQ2_M] | 4.11 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ2_M.gguf) |
+| ![IQ2_S][badge-IQ2_S] | 3.83 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ2_S.gguf) |
+| ![IQ2_XS][badge-IQ2_XS] | 3.66 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ2_XS.gguf) |
+| ![IQ2_XXS][badge-IQ2_XXS] | 3.36 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ2_XXS.gguf) |
+| ![IQ3_M][badge-IQ3_M] | 5.39 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ3_M.gguf) |
+| ![IQ3_S][badge-IQ3_S] | 5.21 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ3_S.gguf) |
+| ![IQ3_XS][badge-IQ3_XS] | 4.96 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ3_XS.gguf) |
+| ![IQ3_XXS][badge-IQ3_XXS] | 4.56 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ3_XXS.gguf) |
+| ![IQ4_NL][badge-IQ4_NL] | 6.57 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ4_NL.gguf) |
+| ![IQ4_XS][badge-IQ4_XS] | 6.25 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-IQ4_XS.gguf) |
+| ![Q2_K][badge-Q2_K] | 4.55 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q2_K.gguf) |
+| ![Q2_K_S][badge-Q2_K_S] | 4.24 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q2_K_S.gguf) |
+| ![Q3_K_L][badge-Q3_K_L] | 6.18 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q3_K_L.gguf) |
+| ![Q3_K_M][badge-Q3_K_M] | 5.73 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q3_K_M.gguf) |
+| ![Q3_K_S][badge-Q3_K_S] | 5.21 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q3_K_S.gguf) |
+| ![Q4_0][badge-Q4_0] | 6.59 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q4_0.gguf) |
+| ![Q4_1][badge-Q4_1] | 7.21 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q4_1.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 6.96 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q4_K_M.gguf) |
+| ![Q4_K_S][badge-Q4_K_S] | 6.61 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q4_K_S.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 8.05 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q5_K_M.gguf) |
+| ![Q5_K_S][badge-Q5_K_S] | 7.85 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q5_K_S.gguf) |
+| ![Q6_K][badge-Q6_K] | 9.21 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q6_K.gguf) |
 
 </details>
 
@@ -1274,6 +1351,18 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [x-url]: https://x.com/wildmindai
 
 [gh-Abiray]: https://img.shields.io/badge/Abiray-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square
+[badge-IQ1_S]: https://img.shields.io/badge/IQ1__S-e05d44?style=flat-square
+[badge-IQ2_M]: https://img.shields.io/badge/IQ2__M-e05d44?style=flat-square
+[badge-IQ2_S]: https://img.shields.io/badge/IQ2__S-e05d44?style=flat-square
+[badge-IQ2_XS]: https://img.shields.io/badge/IQ2__XS-e05d44?style=flat-square
+[badge-IQ2_XXS]: https://img.shields.io/badge/IQ2__XXS-e05d44?style=flat-square
+[badge-IQ3_M]: https://img.shields.io/badge/IQ3__M-fe7d37?style=flat-square
+[badge-IQ3_S]: https://img.shields.io/badge/IQ3__S-fe7d37?style=flat-square
+[badge-IQ3_XS]: https://img.shields.io/badge/IQ3__XS-fe7d37?style=flat-square
+[badge-IQ3_XXS]: https://img.shields.io/badge/IQ3__XXS-fe7d37?style=flat-square
+[badge-IQ4_NL]: https://img.shields.io/badge/IQ4__NL-dfb317?style=flat-square
+[badge-IQ4_XS]: https://img.shields.io/badge/IQ4__XS-dfb317?style=flat-square
 [gh-AX1Y2JP]: https://img.shields.io/badge/AX1Y2JP-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AviadDahan]: https://img.shields.io/badge/AviadDahan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -1282,6 +1371,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-FusionCow]: https://img.shields.io/badge/FusionCow-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Kijai]: https://img.shields.io/badge/Kijai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Lightricks]: https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-mradermacher]: https://img.shields.io/badge/mradermacher-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-QuantStack]: https://img.shields.io/badge/QuantStack-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SexGod1979]: https://img.shields.io/badge/SexGod1979-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Sikaworld1990]: https://img.shields.io/badge/Sikaworld1990-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -1296,8 +1386,10 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square
 [badge-Q2_K]: https://img.shields.io/badge/Q2__K-e05d44?style=flat-square
+[badge-Q2_K_S]: https://img.shields.io/badge/Q2__K__S-e05d44?style=flat-square
 [badge-Q3_K_M]: https://img.shields.io/badge/Q3__K__M-fe7d37?style=flat-square
 [badge-Q3_K_S]: https://img.shields.io/badge/Q3__K__S-fe7d37?style=flat-square
+[badge-Q3_K_L]: https://img.shields.io/badge/Q3__K__L-fe7d37?style=flat-square
 [badge-Q4_0]: https://img.shields.io/badge/Q4__0-dfb317?style=flat-square
 [badge-Q4_1]: https://img.shields.io/badge/Q4__1-dfb317?style=flat-square
 [badge-Q4_K_M]: https://img.shields.io/badge/Q4__K__M-dfb317?style=flat-square
