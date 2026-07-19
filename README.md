@@ -12,6 +12,54 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
 
 </div>
 
+<details>
+<summary><b>Table of Contents</b></summary>
+
+* [Apps & Tools](#apps)
+* [Models](#models)
+  * [Checkpoints](#checkpoints)
+    * [silveroxides Quantizations (mxfp8)](#ckpt-silveroxides)
+    * [Distilled LoRA](#ckpt-distilled-lora)
+    * [TenStrip Distilled LoRA Experiments](#ckpt-tenstrip-distilled-lora)
+    * [Spatial Upscaler](#ckpt-spatial-upscaler)
+    * [Temporal Upscaler](#ckpt-temporal-upscaler)
+  * [Merges](#merges)
+  * [Finetunes](#finetunes)
+    * [DaSiWa](#finetune-dasiwa)
+    * [10Eros](#finetune-10eros)
+    * [Sulphur-2-base](#finetune-sulphur)
+    * [PinkCherry NSFW](#finetune-pinkcherry)
+  * [GGUF Quantized Models](#gguf)
+* [Text Encoders](#text-encoder)
+  * [Comfy-Org Optimized Encoders](#text-encoder)
+  * [Gemma-3-12b Abliterated](#enc-abliterated)
+  * [Gemma-3-12b IT Heretic](#enc-heretic)
+* [Separated Components](#split)
+  * [Diffusion Models (Transformer Only)](#split)
+  * [VAE (Video & Audio)](#components-vae)
+  * [Embedding Connectors & Text Projection](#components-embed)
+* [LoRA](#lora)
+  * [Enchancer, special](#lora)
+  * [Styles](#lora-styles)
+  * [Special](#lora-special)
+  * [ID-LoRA (Identity-Driven In-Context LoRA)](#lora-id-lora)
+* [ComfyUI Nodes](#nodes)
+  * [Custom Node Collections](#nodes)
+* [LoRA Training](#training)
+  * [Primary Local Training Tools](#training)
+  * [Cloud Training Platforms](#training-cloud)
+  * [Essential Dataset & Captioning Tools](#training-dataset)
+  * [Training Requirements Summary](#training-requirements)
+* [Workflow & Technical Notes](#wf)
+  * [RuneXX](#wf)
+  * [Lightricks](#wf-lightricks)
+  * [vrgamedevgirl84](#wf-vrgamedevgirl84)
+  * [ComfyUI](#wf-comfyui)
+
+</details>
+
+<a id="intro"></a>
+
 ## Intro
 
 * [LTX-2: A New Chapter in Generative AI](https://website.ltx.video/blog/introducing-ltx-2)
@@ -20,7 +68,10 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
 
 * »» [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c)
 
+<a id="apps"></a>
+
 ## ▓ Apps & Tools
+
 
 ### LTX2.3-Multifunctional
 
@@ -37,9 +88,13 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
 - [HuggingFace](https://huggingface.co/dx8152/LTX2.3-Multifunctional) | [GitHub](https://github.com/hero8152/LTX2.3-Multifunctional) | [ComfyUI Node](https://github.com/supart/ComfyUI_TY_LTX_Desktop_Bridge) | [Tutorial](https://youtu.be/rM_wUogtrOU)
 
 
+<a id="models"></a>
+
 ## ▓ Models
 
 LTX-2 models are available in various formats including full weights, transformers-only, and GGUF quantizations for efficient inference.
+
+<a id="checkpoints"></a>
 
 ### ▣ Checkpoints
 
@@ -172,6 +227,8 @@ Custom merged models combining multiple control signals or specialized configura
 ### ▣ Finetunes
 
 Community finetuned models based on LTX-2.3 with specialized improvements and optimizations. Each finetune family may include a backbone checkpoint, low-VRAM component splits, GGUF quants, and merged or extracted LoRAs. Variant cell links go directly to the resolve/main safetensors/gguf file when a single canonical asset covers the row.
+
+<a id="finetune-dasiwa"></a>
 
 #### ❖ DaSiWa
 
@@ -809,6 +866,7 @@ Third-party imatrix (importance-matrix) re-quantization of DreamFast's Heretic v
 
 </details>
 
+
 <p id="split" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
 ## ▓ Separated Components
@@ -841,6 +899,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 > [!NOTE]  
 > input_scaled additionally have activation scaling, and are set to run with fp8 matmuls on supported hardware (roughly 40xx and later Nvidia GPUs).
 
+<a id="components-vae"></a>
+
 ### ▣ VAE (Video & Audio)
 
 | Ver | Component | Precision | Size | Download |
@@ -851,6 +911,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 | **2** | `Video VAE` | ![BF16][badge-bf16] | 2.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_video_vae_bf16.safetensors) |
 | **2** | `Audio VAE` | ![BF16][badge-bf16] | 218 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_audio_vae_bf16.safetensors?download=true) |
 
+
+<a id="components-embed"></a>
 
 ### ▣ Embedding Connectors & Text Projection
 
@@ -952,6 +1014,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX-2.3 Dual-Character LoRA](https://huggingface.co/SyFeee/LTX2.3-Dual-Character-en) - Image-to-video character-consistency LoRA tuned for two-character dialogue scenes and multi-shot cinematic generation. Works for ancient Chinese fantasy, modern urban, and 3D anime styles. Recommended strength 0.7-0.9 standalone, 0.3-0.5 when stacked with style LoRAs.
 * WarmBloodAban
   * [Singularity LTX-2.3 OmniCine V1](https://huggingface.co/WarmBloodAban/Singularity-LTX-2.3_OmniCine_V1) - Updated V1 of the OmniCine integrated optimization framework. Restructures LTX-Video 2.3 generation logic with focus on I2V, First/Last Frame, and Reference-to-Video workflows. Nearly 100,000 training steps. Includes `Singularity-LTX-2.3_OmniCine_V1.safetensors` (2.57 GB) and `Singularity-LTX-2.3_OmniCine_V1nsf.safetensors` (2.57 GB, NSF variant).
+
+<a id="lora-styles"></a>
 
 ### ▣ Styles
 * OmerHagawa
@@ -1063,6 +1127,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * a3xrfgb
   * [Fable 5 — Vintage Style LoRA](https://huggingface.co/a3xrfgb/Fable5_Ltx2.3_vintage_style) - Vintage-style minimal-illustration / stop-motion / typography LoRA for LTX-2.3, used in the Fable 5 intro. Trained on a personal RTX 3090 (~5 hours).
 
+<a id="lora-special"></a>
+
 ### ▣ Special
 
 * [Wan2.1 VAE Adapter](https://huggingface.co/HDHCDev/Ltx2_2_Wan2.1_VAE_Adapter)
@@ -1082,6 +1148,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * linoyts
   * [ltx2.3-ic-lora-ingredients-multishot](https://huggingface.co/linoyts/ltx2.3-ic-lora-ingredients-multishot) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (2,500 training steps, LR 1e-4). Trained for multi-shot ingredient-conditioned generation.
   * [ltx2-ic-lora-ui](https://huggingface.co/linoyts/ltx2-ic-lora-ui) - LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (20 training steps; treats UI-screen aesthetics). Inherits LTX-2.3 base license.
+
+<a id="lora-id-lora"></a>
 
 ### ▣ ID-LoRA (Identity-Driven In-Context LoRA)
 
@@ -1143,6 +1211,8 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * **SimpleTuner:** A highly optimized trainer for Linux that supports LTX-2 and is noted for its ability to handle larger datasets on limited VRAM via block swapping.
     * **Link:** [SimpleTuner Repository](https://github.com/bghira/SimpleTuner)
 
+<a id="training-cloud"></a>
+
 ### Cloud Training Platforms
 
 * **Fal.ai:** Provides a dedicated cloud trainer for custom styles and effects, though it is primarily limited to image-based training datasets.
@@ -1150,12 +1220,16 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * **RunComfy:** A cloud service that offers a pre-configured AI Toolkit setup specifically for LTX-2 training.
     * **Link:** [RunComfy LTX-2 Training](https://www.runcomfy.com/trainer/ai-toolkit/ltx-2-lora-training)
 
+<a id="training-dataset"></a>
+
 ### Essential Dataset & Captioning Tools
 
 * **Taz's Ultimate Captioning Tool:** A Hugging Face space frequently used by the community to generate the **long, detailed, cinematographic prompts** (around 200 words) that LTX-2 requires for high-quality training.
     * **Link:** [LoRA Caption Assistant (Hugging Face)](https://huggingface.co/spaces/comfyuiman/loracaptionertaz_v2)
 * **AI Video Clipper & LoRA Captioner:** A modular pipeline designed to automate local dataset creation using WhisperX and Qwen2-VL, including support for RTX 5090 Blackwell cards.
     * **Link:** [AI Video Clipper & LoRA Captioner](https://github.com/cyberbol/AI-Video-Clipper-LoRA)
+
+<a id="training-requirements"></a>
 
 ### Training Requirements Summary
 
@@ -1303,6 +1377,8 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 
 <p align="center">═══●═══●═══●═══●═══●═══●═══●═══●═══</p>
 
+<a id="wf-lightricks"></a>
+
 ### ❖ Lightricks
 
 **[LTX-2.3](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.3)**:
@@ -1320,6 +1396,8 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [Video to Video](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v.json)
 * [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v-detailer.json)
 
+<a id="wf-vrgamedevgirl84"></a>
+
 ### ❖ vrgamedevgirl84
 
 **[vrgamedevgirl84](https://huggingface.co/vrgamedevgirl84) LTX 2.3 Music Video Creator:**
@@ -1330,6 +1408,8 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
   * Image-to-Video Workflow - Uses Z-Image Turbo and LTX 2.3
   * Requirements: ComfyUI, LTX 2.3 models, Z-Image Turbo model, FFmpeg, vrgamedevgirl custom nodes
   
+<a id="wf-comfyui"></a>
+
 ### ❖ ComfyUI
 
 * [Text-to-video](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v.json)
