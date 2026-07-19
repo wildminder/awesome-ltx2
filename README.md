@@ -112,15 +112,15 @@ Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GP
 #### ❖ TenStrip Distilled LoRA Experiments
 Experimental distilled LoRAs optimized for finetunes and I2V workflows. These LoRAs avoid the issues of the massive rank 384 official LoRA which can be counterproductive with conditioned inputs and finetunes.
 
-| LoRA | Rank | Size | Description | Download |
-|:---|:---|:---:|:---|:---|
-| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil36` | 36 | 739 MB | Compact LoRA with dynamic ceiling at 36 | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil36.safetensors) |
-| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe` | 72 | 662 MB | Cond-safe version with cross-attention bridges, adaln/scale-shift tables, gate logits, and prompt scale-shift zeroed. Much better suited for I2V and input conditioned workflows. Can use 1.0 strength safely on first pass I2V. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors) |
-| `ltx-2.3-22b-distilled-lora-fro90_ceil72` | 72 | 1.4 GB | Standard version with higher dynamic ceiling | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-fro90_ceil72.safetensors) |
-| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil32_condsafe` | 32 | 363 MB | Cond-safe variant with the lowest dynamic ceiling (32) in the family. Most permissive for input-conditioned workflows; pairs with rank-32 finetune distilled bases. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil32_condsafe.safetensors) |
-| `ltx-2.3-22b-distilled-lora-1.1_fro90_ceil52_condsafe` | 52 | 464 MB | Cond-safe variant with a medium dynamic ceiling (52). Useful as an intermediate strength between ceil32 and ceil72 condsafe rows. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil52_condsafe.safetensors) |
-| `ltx-2.3-22b-distilled-lora-1.1_rank72_energy` | 72 | 1.6 GB | Standard ceiling variant tuned for energy-aware sampling (target sigma schedule for the official DMD-style distillation). Pairs with rank-72 finetune distillation. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_rank72_energy.safetensors) |
-| `ltx-2.3-22b-distilled-lora-1.1_rank96_energy` | 96 | 2.2 GB | Higher-rank energy-aware variant (96) of the rank-72 energy LoRA. Targets the same energy schedule; gives a fuller update at higher storage cost. | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_rank96_energy.safetensors) |
+| Name | Rank | Mode | Size | Download |
+|:---|:---:|:---|:---:|:---:|
+| `distilled v1.1` | `36` | — | 739 MB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil36.safetensors) |
+| `distilled v1.1` | `72` | condsafe | 662 MB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil72_condsafe.safetensors) |
+| `distilled` | `72` | — | 1.4 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-fro90_ceil72.safetensors) |
+| `distilled v1.1` | `32` | condsafe | 363 MB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil32_condsafe.safetensors) |
+| `distilled v1.1` | `52` | condsafe | 464 MB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_fro90_ceil52_condsafe.safetensors) |
+| `distilled v1.1` | `72` | energy | 1.6 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_rank72_energy.safetensors) |
+| `distilled v1.1` | `96` | energy | 2.2 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments/resolve/main/ltx-2.3-22b-distilled-lora-1.1_rank96_energy.safetensors) |
 
 **Notes:**
 - Lower rank LoRAs (72 and below) can be used at 1.0 strength safely for I2V first pass, with upscale pass at 0.4-0.5 strength
@@ -129,6 +129,7 @@ Experimental distilled LoRAs optimized for finetunes and I2V workflows. These Lo
 - The official rank 384 LoRA can actively dampen conditioning signals in I2V workflows; cond_safe versions work much better
 
 [Download All LoRAs](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments)
+
 
 <p id="ckpt-spatial-upscaler" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -189,7 +190,6 @@ High-performance LoRA-integrated checkpoint family based on LTX 2.3. Includes di
 | **2.3** | Non-Distilled GGUF | `GoldenLace V3` | ![Q6_K][badge-Q6_K] | 17.35 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Non-Distilled/GGUF/v03/DasiwaLTX23_goldenLaceV3-Q6_K.gguf) |
 | **2.3** | Non-Distilled GGUF | `GoldenLace V3` | ![Q8_0][badge-Q8_0] | 21.99 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Non-Distilled/GGUF/v03/DasiwaLTX23_goldenLaceV3-Q8_0.gguf) |
 
-
 <p id="finetune-10eros" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ 10Eros
@@ -207,9 +207,9 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.3` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.3_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![bf16][badge-bf16] | 44.0 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_bf16.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
-| **2.3** | Full | `10Eros v1.4 INT8_convrot` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
+| **2.3** | Full | `10Eros v1.4` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
 
-‣ **10Eros GGUF** — vantagewithai low-VRAM quants
+◦ **10Eros GGUF** — vantagewithai low-VRAM quants
 
 <details>
   <summary>vantagewithai/LTX2.3-10Eros-GGUF</summary>
@@ -299,8 +299,7 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 
 </details>
 
-‣ **10Eros Splits**
-
+◦ **10Eros Splits**
 <details>
   <summary>per-version component split</summary>
 
@@ -343,7 +342,7 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 
 </details>
 
-‣ **10Eros Splits** — AX1Y2JP transformer-only fork (alternative split for ComfyUI)
+◦ **10Eros Splits** — AX1Y2JP transformer-only fork (alternative split for ComfyUI)
 
 | Variant | Download |
 | :--- | :--- |
@@ -351,12 +350,11 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | v1.4 transformer_only fp8mixed_learned | [![AX1Y2JP][gh-AX1Y2JP]](https://huggingface.co/AX1Y2JP/LTX2.3-10Eros_split/resolve/main/diffusion_models/10Eros_v1.4_transformer_only_fp8mixed_learned.safetensors) |
 | v1.4 video VAE bf16 | [![AX1Y2JP][gh-AX1Y2JP]](https://huggingface.co/AX1Y2JP/LTX2.3-10Eros_split/resolve/main/vae/10Eros_v1.4_video_vae_bf16.safetensors) |
 
-‣ **10Eros Extracted LoRA** — maximsobolev275 trained LoRAs
+◦ **10Eros Extracted LoRA** — maximsobolev275 trained LoRAs
 
 | Variant | Description | Download |
 | :--- | :--- | :--- |
 | rank-768 family (canonical, v1.4) | Author: maximsobolev275. Training LoRAs directly extracted from the 10Eros v1.4 merge (rank 768); lower-rank rerolls for v1.2 / v1.3 / v1.4 are also published in the same repo. | [LTX-10Eros-LoRA-r768](https://huggingface.co/maximsobolev275/LTX-10Eros-LoRA-r768) |
-
 
 <p id="finetune-sulphur" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -364,7 +362,7 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 
 Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-base) — uncensored video generation model based on LTX 2.3 with built-in prompt enhancer. Merge base for 10Eros. T2V + I2V native.
 
-‣ **Main video model**
+◦ **Main video model**
 
 | Ver | Build | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
@@ -374,7 +372,7 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | **2.3** | distil | ![fp8][badge-fp8] | 27.8 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/Civitai/Sulphur-2-distilled-fp8/resolve/main/sulphur_distil_fp8mixed.safetensors) |
 | **2.3** | distil | ![nvfp4][badge-nvfp4] | 18.6 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/coolthor/Sulphur-2-distilled-NVFP4/resolve/main/sulphur_distil_nvfp4.safetensors) |
 
-‣ **vantagewithai component split** — [`vantagewithai/Sulphur-2-Base-Split`](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split)
+◦ **vantagewithai component split** — [`vantagewithai/Sulphur-2-Base-Split`](https://huggingface.co/vantagewithai/Sulphur-2-Base-Split)
 
 | Component | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
@@ -387,7 +385,7 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 <details>
   <summary>Abiray GGUF quants</summary>
 
-‣ **Abiray GGUF quants** — [`Abiray/Sulphur-2-base-GGUF`](https://huggingface.co/Abiray/Sulphur-2-base-GGUF)
+◦ **Abiray GGUF quants** — [`Abiray/Sulphur-2-base-GGUF`](https://huggingface.co/Abiray/Sulphur-2-base-GGUF)
 
 | Build | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
@@ -403,16 +401,17 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | sulphur_dev | ![Q6_K][badge-Q6_K] | 16.55 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q6_K.gguf) |
 | sulphur_dev | ![Q8_0][badge-Q8_0] | 21.19 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q8_0.gguf) |
 
+
 </details>
 
-‣ **Sulphur LoRAs**
+◦ **Sulphur LoRAs**
 
-| Ver | Build | Precision | Size | Download |
+| Ver | Build | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
-| **2.3** | `sulphur_lora_rank_768` | safetensors | 9.79 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_lora_rank_768.safetensors) |
-| **2.3** (experimental) | `sulphur_experimental_lora_v1` | safetensors | 13.87 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/experimental/sulphur_experimental_lora_v1.safetensors) |
+| **2.3** | `sulphur_lora_rank_768` | 9.79 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/sulphur_lora_rank_768.safetensors) |
+| **2.3** (experimental) | `sulphur_experimental_lora_v1` | 13.87 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/experimental/sulphur_experimental_lora_v1.safetensors) |
 
-‣ **Prompt Enhancer**
+◦ **Prompt Enhancer**
 
 | Variant | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
@@ -420,7 +419,6 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | Censored | ![Q8_0][badge-Q8_0] | 9.09 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer/sulphur_prompt_enhancer_model-q8_0.gguf) |
 | Uncensored | ![bf16][badge-bf16] | 879.01 MB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored.gguf) |
 | Uncensored | ![Q8_0][badge-Q8_0] | 9.33 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer_uncensored/prompt_enhancer_uncensored-q8_0.gguf) |
-
 
 <p id="finetune-pinkcherry" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -430,6 +428,7 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | :--- | :--- | :--- |
 | v1.3 dev bf16 | PinkCherry uncensored NSFW LTX-2.3 finetune; v1.3 BF16 dev. Pairs with the official LTX-2.3 distilled LoRA 384. NSFW content only — do not use for clean content. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
 | v1.5 dev bf16 | PinkCherry v1.5 BF16 — newer training pass than v1.3 with updated workflow. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
+
 
 <p id="gguf" align="center">══════════════════════════════════</p>
 
