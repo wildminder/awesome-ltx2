@@ -125,7 +125,6 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2** | `ltx-2-19b distilled` | ![fp8][badge-fp8] | 27.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors) |
 | **2** | `ltx-2-19b distilled` | ![nvfp4][badge-nvfp4] | 20 GB | [![](https://img.shields.io/badge/szwagros-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/szwagros/ltx-2-dist-nvfp4/resolve/main/ltx-2-19b-distilled-nvfp4-fixed-calibrated.safetensors) |
 
-
 Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GPUs. For WangGP in Pinokio
 
 | Ver | Name | Precision | Size | Download |
@@ -1272,10 +1271,19 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 
 **Multi-ref-character-sheet:**
 
-* [I2V Multi-subject Reference Licon-MSR V1-lora (older version)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V1-lora_older_version.json)
+* [I2V Multi-subject Reference Licon-MSR V1-lora (older version)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/Older-Version/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V1-lora_older_version.json)
 * [I2V Multi-subject Reference Licon-MSR V2 LTX-Ingredients OmniNTF Experimental](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-LTX-Ingredients-OmniNTF_Experimental.json)
 * [I2V Multi-subject Reference Licon-MSR V2-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-lora.json)
 * [T2V/R2V Character Sheet Best-Face-ID LoRA](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_character-sheet_Best-Face-ID-Lora.json)
+* [T2V/R2V Face-ref + audio-ref Best-Face-ID LoRA + ID-LoRA audio](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_face-ref-audio-ref_Best-Face-ID-Lora-ID-Lora_audio.json)
+* [T2V/R2V Face-ref + custom audio Best-Face-ID LoRA](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_face-ref-custom-audio_Best-Face-ID-Lora.json)
+* [T2V/R2V Face-ref image only Best-Face-ID LoRA](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_face-ref-image_Best-Face-ID-Lora.json)
+
+**Helper-wf:**
+
+* [Flux-Klein Character Sheet from ref image](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/Helper-wf/Flux_Klein_-_Character_Sheet_from_ref_image.json)
+* [Ideogram Reference Sheet for Ingredients LoRA](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/Helper-wf/Ideogram_-_Reference_Sheet_for_Ingredients_lora.json)
+* [Qwen-Image Character Sheet from ref image ZIT refiner](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Multi-ref-character-sheet/Helper-wf/Qwen_Image_-_Character_Sheet_from_ref_image_ZIT_refiner.json)
 
 **Talking-Avatar-TTS:**
 
