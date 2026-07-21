@@ -446,7 +446,7 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 
 | Build | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
-| sulphur_dev_bf16 | ![bf16][badge-bf16] | 40.09 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev_bf16.gguf) |
+| sulphur_dev | ![bf16][badge-bf16] | 40.09 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev_bf16.gguf) |
 | sulphur_dev | ![Q3_K_M][badge-Q3_K_M] | 10.36 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q3_K_M.gguf) |
 | sulphur_dev | ![Q3_K_S][badge-Q3_K_S] | 9.63 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q3_K_S.gguf) |
 | sulphur_dev | ![Q4_0][badge-Q4_0] | 12.09 GB | [![Abiray][gh-Abiray]](https://huggingface.co/Abiray/Sulphur-2-base-GGUF/resolve/main/sulphur_dev-Q4_0.gguf) |
@@ -486,6 +486,13 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | v1.3 dev bf16 | PinkCherry uncensored NSFW LTX-2.3 finetune; v1.3 BF16 dev. Pairs with the official LTX-2.3 distilled LoRA 384. NSFW content only — do not use for clean content. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
 | v1.5 dev bf16 | PinkCherry v1.5 BF16 — newer training pass than v1.3 with updated workflow. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
 
+#### ❖ Elastic
+
+Elastic is a TensorRT-engine distribution of a LoRA-integrated distilled FP8 T2V variant of LTX-2.3, packaged by [TheStageAI](https://huggingface.co/TheStageAI/Elastic-LTX-2.3) as `.qlip` shard files for H100 GPUs.
+
+| Build | Name | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| distil + LoRA T2V | `Elastic — H100` | fp8 | ~19 GB (49 `.qlip` shards) | [![TheStageAI][gh-TheStageAI]](https://huggingface.co/TheStageAI/Elastic-LTX-2.3/tree/main/models/H100/ltx-2.3-22b-distilled-fp8-t2v_lora) |
 
 
 <p id="gguf" align="center">══════════════════════════════════</p>
@@ -1146,6 +1153,9 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
 * Lightricks
   * [LTX-2.3-22b-LoRA-Foley-V2A](https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A) - Official Lightricks Foley V2A (video-to-audio) LoRA for LTX-2.3. Generates realistic, visually-synced Foley sound effects from video. Rank ~small (216 MB); pairs with the workflow JSON in the repo (`ltx-2.3-foley-v2a.json`).
+  * [LTX-2.3-22b-IC-LoRA-Clean-Plate](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate) - Official Lightricks Clean-Plate IC-LoRA. Removes people/objects from video frames for steady background plates. Rank 128 (312 MB); pairs with the `LTX-2.3_-_V2V_mass_remove_people_Clean-Plate-Lora.json` workflow.
+* fbjr
+  * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
   * [LTX-2.3 Foley](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA) - Video-to-audio LoRA for LTX-2.3 that adds realistic, visually synchronized Foley / sound effects over a video (multiplier 1.0–3.0; pairs with the LTX Community License).
 * vpakarinen
@@ -1176,8 +1186,6 @@ Unlike cascaded pipelines that treat audio and video separately, ID-LoRA operate
 |:---|:---|:---:|:---|
 | ID-LoRA-TalkVid-3K | 128 | 1.1 GB | [![][gh-AviadDahan]](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-TalkVid-3K) ┊ [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/ltx-2.3/resolve/main/split_files/loras/ltx-2.3-id-lora-talkvid-3k.safetensors) |
 | ID-LoRA-CelebVHQ-3K | 128 | 1.1 GB | [![][gh-AviadDahan]](https://huggingface.co/AviadDahan/LTX-2.3-ID-LoRA-CelebVHQ-3K) ┊ [![][gh-Comfy--Org]](https://huggingface.co/Comfy-Org/ltx-2.3/resolve/main/split_files/loras/ltx-2.3-id-lora-celebvhq-3k.safetensors) |
-| IC-LoRA-Audio-Only-Context (audio-only) | — | 156 MB | [![][gh-fbjr]](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context/resolve/main/audio_only_step_01000.safetensors) |
-| IC-LoRA-Audio-Only-Context (cross-modal) | — | 276 MB | [![][gh-fbjr]](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context/resolve/main/cross_modal_step_01000.safetensors) |
 
 **Resources:**
 - [Project Page](https://id-lora.github.io/) | [GitHub](https://github.com/ID-LoRA/ID-LoRA) | [Paper (arXiv: 2603.10256)](https://arxiv.org/abs/2603.10256)
@@ -1292,22 +1300,43 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 * [I2V T2V Talking Avatar (OmniVoice-TTS)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Talking-Avatar-TTS/LTX-2.3_-_I2V_T2V_Talking_Avatar_(voice_clone_with_OmniVoice-TTS).json)
 
 **Video-2-Video:**
-* [V2V Just Talk Prompt Lipsynced Voice](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just_Talk_prompt_lipsynced-voice_to_any_video.json)
-* [V2V Just Talk Prompt Lipsynced Voice Sam3](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just_Talk_prompt_lipsynced-voice_to_any_video_Sam3.json)
-* [V2V Just Talk Custom Audio Lip-synced To Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just_Talk_custom_audio_lip-synced_to_any_video.json)
-* [V2V Dub It lip-synced dubbing multilanguage](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Dub_It_lip-synced_dubbing_multilanguage.json)
-* [V2V Extend Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Extend_Any_Video.json)
-* [V2V Extend Any Video Multi-Extend Long Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Extend_Any_Video_Multi-Extend_long_video.json)
-* [V2V Extend Any Video towards Last-Frame-image](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Extend_Any_Video_towards_Last-Frame-image.json)
-* [V2V Remove Watermark Subtitles ICEdit-Insight-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_remove_watermark_subtitles_ICEdit-Insight-lora.json)
+
+Just-Talk (add voice to silent video):
+
+* [V2V Just Talk Prompt Lip-synced Voice](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Just-Talk_add_voice_to_silent_video/LTX-2.3_-_V2V_Just_Talk_prompt_lip-synced-voice_to_any_video.json)
+* [V2V Just Talk Prompt Lip-synced Voice Sam3](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Just-Talk_add_voice_to_silent_video/LTX-2.3_-_V2V_Just_Talk_prompt_lipsynced-voice_to_any_video_Sam3.json)
+* [V2V Just Talk Custom Audio Lip-synced To Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Just-Talk_add_voice_to_silent_video/LTX-2.3_-_V2V_Just_Talk_custom_audio_lip-synced_to_any_video.json)
+* [V2V Just Talk Dub Any Silent Video Multilanguage](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Just-Talk_add_voice_to_silent_video/LTX-2.3_-_V2V_Just_Talk_dub_any_silent_video_multilanguage.json)
+
+Extend-Any-Video:
+
+* [V2V Extend Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Extend-Any-Video/LTX-2.3_-_V2V_Extend_Any_Video.json)
+* [V2V Extend Any Video Multi-Extend Long Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Extend-Any-Video/LTX-2.3_-_V2V_Extend_Any_Video_Multi-Extend_long_video.json)
+* [V2V Extend Any Video towards Last-Frame-image](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Extend-Any-Video/LTX-2.3_-_V2V_Extend_Any_Video_towards_Last-Frame-image.json)
+
+Inpaint:
+
+* [V2V Inpainting Inpaint-T2V-lora Sam2-Point-Masking](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Inpaint/LTX-2.3_-_V2V_inpainting_Inpaint-T2V-lora_Sam2-Point-Masking.json)
+* [V2V Inpainting Inpaint-T2V-lora Sam3-Masking](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Inpaint/LTX-2.3_-_V2V_inpainting_Inpaint-T2V-lora_Sam3-Masking.json)
+
+Shot-to-Shot-Transition:
+
+* [V2V Shot-to-Shot Transition MergeGreen IC-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Shot-to-Shot-Transition/LTX-2.3_-_V2V_shot-to-shot-transition_MergeGreen-IC-Lora.json)
+* [V2V Shot-to-Shot Transition Re-Take Inpaint](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Shot-to-Shot-Transition/LTX-2.3_-_V2V_shot-to-shot-transition_Re-Take_inpaint.json)
+* [V2V Shot-to-Shot Transition Systms-FLW-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/Shot-to-Shot-Transition/LTX-2.3_-_V2V_shot-to-shot-transition_Systms-FLW-lora.json)
+
+Other V2V Workflows:
+
+* [V2V Change Viewpoint Angle CrossView-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Change_viewpoint_angle_CrossView-Lora.json)
 * [V2V Expand Any Video IC-Lora-Outpaint](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Expand_Any_Video_IC-Lora-Outpaint.json)
-* [V2V Foley Add Sound To Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Foley_Add_Sound_To_Any_Video.json)
-* [V2V ReTake recreate any section of any video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
-* [V2V Video-Edit remove add replace restyle EditAnything-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora.json)
+* [V2V Foley Add Sound To Any Video (Foley-Lora)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Foley_Add_Sound_To_Any_Video_Foley-Lora.json)
 * [V2V High Dynamic Range IC-HDR-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_high_dynamic_range_IC-HDR-lora.json)
-* [V2V Just-Dub-It multilanguage dubbing IC-Lora-LipDub](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just-Dub-It_multilanguage_dubbing_IC-Lora-LipDub.json)
-* [V2V Inpainting Inpaint-T2V-lora Sam3-Masking](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_inpainting_Inpaint-T2V-lora_Sam3-Masking.json)
-* [V2V Shot-to-Shot Transition Systms-FLW-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_shot-to-shot-transition_Systms-FLW-lora.json)
+* [V2V Just-Dub-It Multilanguage Dubbing IC-Lora-LipDub](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just-Dub-It_multilanguage_dubbing_IC-Lora-LipDub.json)
+* [V2V Mass Remove People Clean-Plate-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2lean-Plate-Lora.json)
+* [V2V ReTake Recreate Any Section Of Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
+* [V2V Remove Watermark Subtitles ICEdit-Insight-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_remove_watermark_subtitles_ICEdit-Insight-lora.json)
+* [V2V Upscale Any Video Pixel-Spatial-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Upscale-Any-Video-Pixel-Spatial-Lora.json)
+* [V2V Video-Edit Remove Add Replace Restyle EditAnything-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Video-Edit_remove_add_replace_restyle_EditAnything-Lora.json)
 
 **Music-Video-Creator:**
 * [I2V T2V Music-Video multi-scene full render](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Music-Video-Creator/LTX-2.3_-_I2V_T2V_Music-Video_multi-scene_full_render.json)
@@ -1476,6 +1505,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-SOLRICKS]: https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-SulphurAI]: https://img.shields.io/badge/Sulphur_2_base-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-TenStrip]: https://img.shields.io/badge/TenStrip-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-TheStageAI]: https://img.shields.io/badge/TheStageAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Unsloth]: https://img.shields.io/badge/Unsloth-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Winnougan]: https://img.shields.io/badge/Winnougan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-drbaph]: https://img.shields.io/badge/drbaph-lightgrey?style=flat-square&logo=huggingface&logoColor=white
