@@ -238,6 +238,8 @@ High-performance LoRA-integrated checkpoint family based on LTX 2.3. Includes di
 | :--- | :--- | :--- | :---: | :---: | :---: |
 | **2.3** | Distilled | `Treasurechest V1` | ![fp8][badge-fp8] | 19.58 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Distilled/FP8/v01/DasiwaLTX23Lightspeed_treasurechestV1.safetensors) |
 | **2.3** | Distilled | `Solsticecoin V2` | ![fp8][badge-fp8] | 28.06 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Distilled/FP8/v03/DasiwaLTX23_solsticecoinV2-fp8.safetensors) |
+| **2.3** | Distilled | `Dragonleap V4` | ![int4mixedtensorwise][badge-int4mixedtensorwise] | 17.10 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Distilled/DasiwaLTX23_dragonleapV4-INT4%20ConvRot.safetensors) |
+| **2.3** | Distilled | `Dragonleap V4` | ![int8tensormixed][badge-int8tensormixed] | 25.73 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Distilled/DasiwaLTX23_dragonleapV4-INT8%20ConvRot.safetensors) |
 | **2.3** | Non-Distilled | `GoldenLace V3` | ![fp8][badge-fp8] | 27.16 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Non-Distilled/FP8/v03/DasiwaLTX23_goldenLaceV3-fp8.safetensors) |
 | **2.3** | Non-Distilled | `GoldenLace V3` | ![nvfp4][badge-nvfp4] | 20.24 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Non-Distilled/NVFP4/v03/DasiwaLTX23_goldenLaceV3-fp4.safetensors) |
 | **2.3** | Non-Distilled GGUF | `GoldenLace V3` | ![Q2_K][badge-Q2_K] | 7.92 GB | [![DaSiWa][gh-DaSiWa]](https://huggingface.co/darksidewalker/DaSiWa-LTX2.3/resolve/main/Non-Distilled/GGUF/v03/DasiwaLTX23_goldenLaceV3-Q2_K.gguf) |
@@ -476,6 +478,32 @@ Repo: [`SulphurAI/Sulphur-2-base`](https://huggingface.co/SulphurAI/Sulphur-2-ba
 | Censored | ![Q8_0][badge-Q8_0] | 9.09 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer/sulphur_prompt_enhancer_model-q8_0.gguf) |
 | Uncensored | ![bf16][badge-bf16] | 879.01 MB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer_uncensored/mmproj-prompt_enhancer_uncensored.gguf) |
 | Uncensored | ![Q8_0][badge-Q8_0] | 9.33 GB | [![Sulphur][gh-SulphurAI]](https://huggingface.co/SulphurAI/Sulphur-2-base/resolve/main/prompt_enhancer_uncensored/prompt_enhancer_uncensored-q8_0.gguf) |
+
+<p id="finetune-joyai-echo-surgical" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ JoyAI-Echo Surgical
+
+Surgical finetune based on [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo) by joeygambino. Combined "echoVid + ltxAud" surgical variant — jointly fine-tuned for both video generation and audio on top of LTX-2.3. A LoRA extracted from JoyAI-Echo (TenStrip's `LTX2.3_JoyAI_Lora_Extracted`) is listed separately under `### ▣ Special`.
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.3** | unsplit (full DiT) | `echoVid-ltxAud surgical` | ![bf16][badge-bf16] | 42.97 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical/resolve/main/ltx23_echoVid-ltxAud_surgical_bf16.safetensors) |
+| **2.3** | unsplit (full DiT) | `echoVid-ltxAud surgical` | ![fp8][badge-fp8] | 23.41 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical/resolve/main/ltx23_echoVid-ltxAud_surgical_fp8.safetensors) |
+| **2.3** | unsplit (full DiT) | `echoVid-ltxAud surgical` | ![int8tensormixed][badge-int8tensormixed] | 27.15 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical-int8/resolve/main/ltx23_echoVid-ltxAud_surgical_int8_convrot.safetensors) |
+
+◦ **JoyAI-Echo Surgical — GGUF (low-VRAM quants)**
+
+<details>
+  <summary>joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical-gguf</summary>
+
+[`joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical-gguf`](https://huggingface.co/joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical-gguf) — Surgical DiT GGUF quants by joeygambino.
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.3** | GGUF | `echoVid-ltxAud surgical` | ![Q5_0][badge-Q5_0] | 15.54 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical-gguf/resolve/main/LTX23-echoVid-ltxAud-Surgical-DiT-Q5_0.gguf) |
+| **2.3** | GGUF | `echoVid-ltxAud surgical` | ![Q8_0][badge-Q8_0] | 23.13 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx23-echoVid-ltxAud-surgical-gguf/resolve/main/LTX23-echoVid-ltxAud-Surgical-DiT-Q8_0.gguf) |
+
+</details>
 
 <p id="finetune-pinkcherry" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -1158,6 +1186,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
   * [LTX-2.3 Foley](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA) - Video-to-audio LoRA for LTX-2.3 that adds realistic, visually synchronized Foley / sound effects over a video (multiplier 1.0–3.0; pairs with the LTX Community License).
+* Hoffm4nz
+  * [LTX-2.3-22b-IC-LoRA-Golden-Hour](https://huggingface.co/Hoffm4nz/LTX-2.3-22b-IC-LoRA-Golden-Hour) - IC-LoRA fine-tune that biases generation toward warm "Golden Hour" lighting aesthetics. Root canonical checkpoint `ltx-2.3-22b-ic-lora-golden-hour.safetensors` (312 MB); four per-step snapshots are also available in the `checkpoints/` folder of the repo (step_00250 → step_01000, 312 MB each).
 * vpakarinen
   * [Motion Stabilizer for LTX-2.3](https://huggingface.co/vpakarinen/motion-stabilizer-ltx-23) - Motion LoRA stabilises body movement and rotation in LTX-2.3.
 * Comfy-Org
@@ -1332,7 +1362,7 @@ Other V2V Workflows:
 * [V2V Foley Add Sound To Any Video (Foley-Lora)](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Foley_Add_Sound_To_Any_Video_Foley-Lora.json)
 * [V2V High Dynamic Range IC-HDR-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_high_dynamic_range_IC-HDR-lora.json)
 * [V2V Just-Dub-It Multilanguage Dubbing IC-Lora-LipDub](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Just-Dub-It_multilanguage_dubbing_IC-Lora-LipDub.json)
-* [V2V Mass Remove People Clean-Plate-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2lean-Plate-Lora.json)
+* [V2V Mass Remove People Clean-Plate-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_mass_remove_people_Clean-Plate-Lora.json)
 * [V2V ReTake Recreate Any Section Of Any Video](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_ReTake_recreate_any_section_of_any_video.json)
 * [V2V Remove Watermark Subtitles ICEdit-Insight-lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_remove_watermark_subtitles_ICEdit-Insight-lora.json)
 * [V2V Upscale Any Video Pixel-Spatial-Lora](https://huggingface.co/RuneXX/LTX-2.3-Workflows/resolve/main/Video-2-Video/LTX-2.3_-_V2V_Upscale-Any-Video-Pixel-Spatial-Lora.json)
@@ -1477,6 +1507,10 @@ Other V2V Workflows:
 [x-url]: https://x.com/wildmindai
 
 [gh-Abiray]: https://img.shields.io/badge/Abiray-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-joeygambino]: https://img.shields.io/badge/joeygambino-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Hoffm4nz]: https://img.shields.io/badge/Hoffm4nz-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
+
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square
 [badge-IQ1_S]: https://img.shields.io/badge/IQ1__S-e05d44?style=flat-square
 [badge-IQ2_M]: https://img.shields.io/badge/IQ2__M-e05d44?style=flat-square
