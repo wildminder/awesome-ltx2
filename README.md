@@ -1483,19 +1483,19 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 ### ❖ Lightricks
 
 **[LTX-2.3](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.3)**:
-* [ICLoRA Motion Track Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-iclora-motion-track-control.json)
-* [Union Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-ic-lora-union-control.json)
-* [Single Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-single-stage-t2v.json)
-* [Two Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/ltx-2.3-two-stage-t2v.json)
+* [ICLoRA Motion Track Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/LTX-2.3_ICLoRA_Motion_Track_Distilled.json)
+* [Union Control](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/LTX-2.3_ICLoRA_Union_Control_Distilled.json)
+* [Single Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/LTX-2.3_T2V_I2V_Single_Stage_Distilled_Full.json)
+* [Two Stage](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.3/LTX-2.3_T2V_I2V_Two_Stage_Distilled.json)
 
 **[LTX-2](https://github.com/Lightricks/ComfyUI-LTXVideo/tree/master/example_workflows/2.0)**:
-* [Text to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-t2v-full.json)
-* [Text to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-t2v-distilled.json)
-* [Image to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-i2v-full.json)
-* [Image to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-i2v-distilled.json)
-* [ICLoRA](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-iclora.json)
+* [Text to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_T2V_Full_wLora.json)
+* [Text to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_T2V_Distilled_wLora.json)
+* [Image to Video Full](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_I2V_Full_wLora.json)
+* [Image to Video Distilled](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_I2V_Distilled_wLora.json)
+* [ICLoRA](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_ICLoRA_All_Distilled.json)
 * [Video to Video](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v.json)
-* [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/ltx-2-v2v-detailer.json)
+* [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_V2V_Detailer.json)
 
 <a id="wf-vrgamedevgirl84"></a>
 
