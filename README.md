@@ -62,11 +62,10 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
 
 ## Intro
 
-* [LTX-2: A New Chapter in Generative AI](https://website.ltx.video/blog/introducing-ltx-2)
+* [LTX official Blog](https://ltx.io/blog)
 * ComfyUI official [blogpost](https://blog.comfy.org/p/ltx-2-open-source-audio-video-ai)
 * [Prompting Guide for LTX-2](https://ltx.io/model/model-blog/prompting-guide-for-ltx-2)
-
-* »» [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c)
+* [LTX-2 in ComfyUI Chattable KB](https://notebooklm.google.com/notebook/4f07f98c-75b6-4278-bde1-906f9899b60c)
 
 <a id="apps"></a>
 
@@ -966,6 +965,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 | Ver | Component | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :--- |
 | **2.3** | `Video VAE` | ![BF16][badge-bf16] | 1.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_video_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_video_vae.safetensors)|
+| **2.3** | `Cinematic Video VAE` | ![BF16][badge-bf16] | 1.38 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/LTX-2.3-Cinematic-VAE/resolve/main/LTX23_video_vae_bf16_cinematic.safetensors) |
 | **2.3** | `Audio VAE` | ![BF16][badge-bf16] | 365 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_audio_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_audio_vae.safetensors)|
 | | | | | |
 | **2** | `Video VAE` | ![BF16][badge-bf16] | 2.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_video_vae_bf16.safetensors) |
@@ -1208,6 +1208,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * Lightricks
   * [LTX-2.3-22b-LoRA-Foley-V2A](https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A) - Official Lightricks Foley V2A (video-to-audio) LoRA for LTX-2.3. Generates realistic, visually-synced Foley sound effects from video. Rank ~small (216 MB); pairs with the workflow JSON in the repo (`ltx-2.3-foley-v2a.json`).
   * [LTX-2.3-22b-IC-LoRA-Clean-Plate](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate) - Official Lightricks Clean-Plate IC-LoRA. Removes people/objects from video frames for steady background plates. Rank 128 (312 MB); pairs with the `LTX-2.3_-_V2V_mass_remove_people_Clean-Plate-Lora.json` workflow.
+  * [LTX-2.3-22b-IC-LoRA-Relight](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Relight/resolve/main/ltx-2.3-22b-ic-lora-relight-1.0.safetensors) - Official Lightricks Relight IC-LoRA (single-stage, distilled). Relights a scene using a reference sphere image that defines the target lighting direction and color. Pairs with the bundled `LTX-2.3_Relight_ICLoRA_SingleStage_Distilled.json` workflow. (312 MB)
 * fbjr
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
@@ -1222,6 +1223,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * linoyts
   * [ltx2.3-ic-lora-ingredients-multishot](https://huggingface.co/linoyts/ltx2.3-ic-lora-ingredients-multishot) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (2,500 training steps, LR 1e-4). Trained for multi-shot ingredient-conditioned generation.
   * [ltx2-ic-lora-ui](https://huggingface.co/linoyts/ltx2-ic-lora-ui) - LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (20 training steps; treats UI-screen aesthetics). Inherits LTX-2.3 base license.
+* rzgar
+  * [Motion Enhancer (N54W)](https://huggingface.co/rzgar/LTX-2.3-Motion-Enhancer-n4w/resolve/main/LTX-2.3-Motion-Enhancer-n4w.safetensors) - General-purpose N54W motion enhancer LoRA. Enhances fluidity, coherence, and motion when stacked as a companion LoRA alongside other specialized models. Extensively tested with top-rated Civitai LoRAs. (2.17 GB)
 
 
 <a id="lora-id-lora"></a>
@@ -1605,3 +1608,4 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-CoachBate]: https://img.shields.io/badge/CoachBate-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Cseti]: https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ssjenforcer191]: https://img.shields.io/badge/ssjenforcer191-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-rzgar]: https://img.shields.io/badge/rzgar-lightgrey?style=flat-square&logo=huggingface&logoColor=white
