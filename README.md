@@ -966,6 +966,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 | :--- | :--- | :---: | :---: | :--- |
 | **2.3** | `Video VAE` | ![BF16][badge-bf16] | 1.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_video_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_video_vae.safetensors)|
 | **2.3** | `Cinematic Video VAE` | ![BF16][badge-bf16] | 1.38 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/LTX-2.3-Cinematic-VAE/resolve/main/LTX23_video_vae_bf16_cinematic.safetensors) |
+| **2.3** | `Pruna Video VAE` | ![BF16][badge-bf16] | 1.27 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/pruna_ltx2.3_vae_comfy_bf16.safetensors) |
+| **2.3** | `TAE (tiny autoencoder)` | ![BF16][badge-bf16] | 22 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/taeltx2_3.safetensors) |
 | **2.3** | `Audio VAE` | ![BF16][badge-bf16] | 365 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_audio_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_audio_vae.safetensors)|
 | | | | | |
 | **2** | `Video VAE` | ![BF16][badge-bf16] | 2.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_video_vae_bf16.safetensors) |
@@ -1202,7 +1204,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * `latent_adapter_final.pt` (447 MB)
 * TenStrip
   * [LTX2.3 JoyAI LoRA Extracted](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) - LoRA extracted from [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo); boosts prompt response and motion in LTX-2.3 (also used for NSFW/Sulphur/Eros) at strength 0.4–0.7.
-  * [LTX2.3 DMD LoRA](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora) - DMD-distillation delta extraction in [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for LTX-2.3 384-rank 1.1 sampling. Sample sigmas in the card.
+  * [DMD LoRA (r256)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_reshaped_r256.safetensors) - DMD-distillation delta extraction from [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for rank-256 sampling. Use at 1.0 with 8/4-step upscale or experiment with other sigmas; any euler or LTX-compatible sampler. No custom loading needed. (4.86 GB)
 * ltx-community
   * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
 * Lightricks
@@ -1215,6 +1217,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX-2.3 Foley](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA) - Video-to-audio LoRA for LTX-2.3 that adds realistic, visually synchronized Foley / sound effects over a video (multiplier 1.0–3.0; pairs with the LTX Community License).
 * Hoffm4nz
   * [LTX-2.3-22b-IC-LoRA-Golden-Hour](https://huggingface.co/Hoffm4nz/LTX-2.3-22b-IC-LoRA-Golden-Hour) - IC-LoRA fine-tune that biases generation toward warm "Golden Hour" lighting aesthetics. Root canonical checkpoint `ltx-2.3-22b-ic-lora-golden-hour.safetensors` (312 MB); four per-step snapshots are also available in the `checkpoints/` folder of the repo (step_00250 → step_01000, 312 MB each).
+* JanKanta
+  * [LensRemover](https://huggingface.co/JanKanta/ltx-2.3-22b-ic-lora-lens_remover/resolve/main/lens-eraiser-ltx23-ic-lora.safetensors) - Video-to-video IC-LoRA that removes lens flares, veiling glare, lens dirt, and other optical artifacts from footage while keeping the underlying scene intact. Dual-encoding: works on both sRGB/Rec.709 and ARRI LogC3 inputs (selected via trigger word). Pairs with the bundled `LensRemover_comfyui_workflow.json`. (312 MB)
 
 * vpakarinen
   * [Motion Stabilizer for LTX-2.3](https://huggingface.co/vpakarinen/motion-stabilizer-ltx-23) - Motion LoRA stabilises body movement and rotation in LTX-2.3.
@@ -1536,6 +1540,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-Abiray]: https://img.shields.io/badge/Abiray-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-joeygambino]: https://img.shields.io/badge/joeygambino-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Hoffm4nz]: https://img.shields.io/badge/Hoffm4nz-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-JanKanta]: https://img.shields.io/badge/JanKanta-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square
