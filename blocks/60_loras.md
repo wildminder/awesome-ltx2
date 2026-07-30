@@ -216,7 +216,7 @@
   * `latent_adapter_final.pt` (447 MB)
 * TenStrip
   * [LTX2.3 JoyAI LoRA Extracted](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) - LoRA extracted from [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo); boosts prompt response and motion in LTX-2.3 (also used for NSFW/Sulphur/Eros) at strength 0.4–0.7.
-  * [LTX2.3 DMD LoRA](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora) - DMD-distillation delta extraction in [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for LTX-2.3 384-rank 1.1 sampling. Sample sigmas in the card.
+  * [DMD LoRA (r256)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_reshaped_r256.safetensors) - DMD-distillation delta extraction from [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for rank-256 sampling. Use at 1.0 with 8/4-step upscale or experiment with other sigmas; any euler or LTX-compatible sampler. No custom loading needed. (4.86 GB)
 * ltx-community
   * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
 * Lightricks
@@ -227,8 +227,11 @@
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
   * [LTX-2.3 Foley](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA) - Video-to-audio LoRA for LTX-2.3 that adds realistic, visually synchronized Foley / sound effects over a video (multiplier 1.0–3.0; pairs with the LTX Community License).
+  * [Black Magic](https://huggingface.co/FuzzPuppy/LTX-2.3-Black-Magic-LoRA/resolve/main/black-magic-ic-lora-450.safetensors) - Video-to-video IC-LoRA for low-light / shadow reconstruction. Restores underexposed footage to natural, well-exposed video with realistic colors and recovered shadow detail. Pairs with the bundled `ltx23-black-magic-lora-workflow.json`. (312 MB)
 * Hoffm4nz
   * [LTX-2.3-22b-IC-LoRA-Golden-Hour](https://huggingface.co/Hoffm4nz/LTX-2.3-22b-IC-LoRA-Golden-Hour) - IC-LoRA fine-tune that biases generation toward warm "Golden Hour" lighting aesthetics. Root canonical checkpoint `ltx-2.3-22b-ic-lora-golden-hour.safetensors` (312 MB); four per-step snapshots are also available in the `checkpoints/` folder of the repo (step_00250 → step_01000, 312 MB each).
+* JanKanta
+  * [LensRemover](https://huggingface.co/JanKanta/ltx-2.3-22b-ic-lora-lens_remover/resolve/main/lens-eraiser-ltx23-ic-lora.safetensors) - Video-to-video IC-LoRA that removes lens flares, veiling glare, lens dirt, and other optical artifacts from footage while keeping the underlying scene intact. Dual-encoding: works on both sRGB/Rec.709 and ARRI LogC3 inputs (selected via trigger word). Pairs with the bundled `LensRemover_comfyui_workflow.json`. (312 MB)
 
 * vpakarinen
   * [Motion Stabilizer for LTX-2.3](https://huggingface.co/vpakarinen/motion-stabilizer-ltx-23) - Motion LoRA stabilises body movement and rotation in LTX-2.3.
