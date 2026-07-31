@@ -108,6 +108,8 @@
 * bionicman69
   * [Arnold Style](https://huggingface.co/bionicman69/Arnold_LTX23) - Arnold Style LoRA for LTX 2.3. Get to the choppa!
   * [Star Trek TNG Style](https://huggingface.co/bionicman69/StarTrek_TNG_Style_LTX23) - Star Trek: The Next Generation style LoRA for LTX 2.3
+* joeygambino
+  * [Surfaces Realism](https://huggingface.co/joeygambino/ltx23-surfaces-realism-lora/resolve/main/ltx23_surfaces_v1.safetensors) - Materials/realism LoRA (rank 32, video branch) that kills the "plastic" look: cracked wet asphalt stays cracked and wet, concrete gets pores and rust streaks, floors scuff, wood grains show. No trigger word — trains as unconditional LoRA behavior. Load at 1.0 and write prompts normally. (336 MB)
 * CoachBate
   * [Abercrom-ME](https://huggingface.co/CoachBate/ltx-2.3-22b-ic-lora-abercrom-me) - Vintage A&F Quarterly americana style-transfer IC-LoRA: transforms an input photo (subject + clothing + scene) into moody monochrome / sun-drenched beach / locker-room aesthetics with full styling makeover. Image-conditioned; pairs with the bundled `ABERCROM-ME IC-LoRA by coachbate-v3_20steps_3phase_3stage3.json` workflow. (384 MB, 2000 steps)
 * ssjenforcer191
@@ -217,6 +219,8 @@
 * TenStrip
   * [LTX2.3 JoyAI LoRA Extracted](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) - LoRA extracted from [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo); boosts prompt response and motion in LTX-2.3 (also used for NSFW/Sulphur/Eros) at strength 0.4–0.7.
   * [DMD LoRA (r256)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_reshaped_r256.safetensors) - DMD-distillation delta extraction from [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for rank-256 sampling. Use at 1.0 with 8/4-step upscale or experiment with other sigmas; any euler or LTX-compatible sampler. No custom loading needed. (4.86 GB)
+  * [DMD LoRA Hybrid v1](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_hybrid_v1.safetensors) - Hybrid DMD distillation: works inside blocks 0-25 to increase movement strength above the standalone DMD without letting the LTX distilled LoRA redraw or bring negative base-model tendencies. Improves movement smoothness and consistency. (4.86 GB)
+  * [DMD LoRA Hybrid v2](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_hybrid_v2.safetensors) - v2 of the hybrid DMD distillation. (4.86 GB)
 * ltx-community
   * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
 * Lightricks
@@ -242,6 +246,8 @@
   * [ltx2-ic-lora-ui](https://huggingface.co/linoyts/ltx2-ic-lora-ui) - LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (20 training steps; treats UI-screen aesthetics). Inherits LTX-2.3 base license.
 * rzgar
   * [Motion Enhancer (N54W)](https://huggingface.co/rzgar/LTX-2.3-Motion-Enhancer-n4w/resolve/main/LTX-2.3-Motion-Enhancer-n4w.safetensors) - General-purpose N54W motion enhancer LoRA. Enhances fluidity, coherence, and motion when stacked as a companion LoRA alongside other specialized models. Extensively tested with top-rated Civitai LoRAs. (2.17 GB)
+* joeygambino
+  * [American Accent (audio)](https://huggingface.co/joeygambino/ltx23-accent-american-audio-lora/resolve/main/ltx23_accent_american_v2_rank32.safetensors) - Audio-branch LoRA (rank 32) that makes accent wording in prompts actually work. LTX-2.3's voice prior ignores accent requests in certain regions (e.g. young female characters default to Australian); this LoRA turns accent prompts into reliable control. **Requires 24 fps** — off-24 fps overrides accent wording entirely. (168 MB)
 
 
 <a id="lora-id-lora"></a>
