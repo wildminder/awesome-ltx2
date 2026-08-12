@@ -115,7 +115,7 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2.3** | `distilled` | ![nvfp4][badge-nvfp4] | 17.6 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/LTX-2.3-INT8/resolve/main/ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors) |
 | **2.3** | `distilled` | ![mxfp8mixed][badge-mxfp8mixed] | 29.7 GB | [![][gh-silveroxides]](https://huggingface.co/silveroxides/LTX-2.3-Quants/resolve/main/ltx-2.3-22b-distilled-mxfp8mixed.safetensors) |
 | **2.3** | `distilled 1.1` | ![bf16][badge-bf16] | 46.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-1.1.safetensors) |
-| **2.3** | `ltx23_srx fp8_e4m3 experimental` | ![fp8][badge-fp8] | 21.97 GB | [![][gh-SOLRICKS]](https://huggingface.co/SOLRICKS/ltx23_srx_fp8_e4m3_experimental/resolve/main/ltx23_srx_fp8_e4m3_experimental.safetensors) |
+| **2.3** | `ltx23_srx fp8_e4m3 experimental` | ![fp8][badge-fp8] | 23.1 GB | [![][gh-SOLRICKS]](https://huggingface.co/SOLRICKS/ltx23_srx_fp8_e4m3_experimental/resolve/main/ltx23_srx_fp8_e4m3_experimental.safetensors) |
 | | | | | |
 | **2** | `ltx-2-19b dev` | ![bf16][badge-bf16] | 43.3 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors) |
 | **2** | `ltx-2-19b dev` | ![fp8][badge-fp8] | 27.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors) |
@@ -272,6 +272,7 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.4` | ![bf16][badge-bf16] | 44.0 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_bf16.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
+| **2.3** | Full | `10Eros v1 INT8 ConvRot` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 23.51 GB | [![bertbobson][gh-bertbobson]](https://huggingface.co/bertbobson/LTX2.3-10Eros-INT8-ConvRot/resolve/main/10Eros_v1_bf16-int8.ConvRot.safetensors) |
 
 ◦ **10Eros GGUF** — vantagewithai low-VRAM quants
 
@@ -360,6 +361,28 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | ![Q5_K_S][badge-Q5_K_S] | 14.01 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF/resolve/main/10Eros_v1.4-Q5_K_S.gguf) |
 | ![Q6_K][badge-Q6_K] | 16.55 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF/resolve/main/10Eros_v1.4-Q6_K.gguf) |
 | ![Q8_0][badge-Q8_0] | 21.19 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF/resolve/main/10Eros_v1.4-Q8_0.gguf) |
+
+</details>
+
+<details>
+  <summary>vantagewithai/LTX2.3-10Eros-1.5-GGUF</summary>
+
+[`vantagewithai/LTX2.3-10Eros-1.5-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF) — v1.5 (latest)
+
+| Quant | Size | Download |
+| :--- | :---: | :--- |
+| ![Q3_K_M][badge-Q3_K_M] | 11.13 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q3_K_M.gguf) |
+| ![Q3_K_S][badge-Q3_K_S] | 10.34 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q3_K_S.gguf) |
+| ![Q4_0][badge-Q4_0] | 12.98 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_0.gguf) |
+| ![Q4_1][badge-Q4_1] | 13.90 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_1.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 14.30 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_K_M.gguf) |
+| ![Q4_K_S][badge-Q4_K_S] | 13.20 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_K_S.gguf) |
+| ![Q5_0][badge-Q5_0] | 15.26 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_0.gguf) |
+| ![Q5_1][badge-Q5_1] | 16.18 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_1.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 16.14 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_K_M.gguf) |
+| ![Q5_K_S][badge-Q5_K_S] | 15.04 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_K_S.gguf) |
+| ![Q6_K][badge-Q6_K] | 17.77 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q6_K.gguf) |
+| ![Q8_0][badge-Q8_0] | 22.76 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q8_0.gguf) |
 
 </details>
 
@@ -515,10 +538,37 @@ Surgical finetune based on [jdopensource/JoyAI-Echo](https://huggingface.co/jdop
 
 #### ❖ PinkCherry NSFW
 
-| Variant | Description | Download |
-| :--- | :--- | :--- |
-| v1.3 dev bf16 | PinkCherry uncensored NSFW LTX-2.3 finetune; v1.3 BF16 dev. Pairs with the official LTX-2.3 distilled LoRA 384. NSFW content only — do not use for clean content. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
-| v1.5 dev bf16 | PinkCherry v1.5 BF16 — newer training pass than v1.3 with updated workflow. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
+Repo: [`SexGod1979/PinkCherry_NSFW_LTX23`](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23) — uncensored NSFW LTX-2.3 finetune family (NSFW content only — do not use for clean content). Pairs with the official LTX-2.3 distilled LoRA 384.
+
+| Variant | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| v1.3 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
+| v1.3 dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_fp8_plain_LTX23_v1_3.safetensors) |
+| v1.5 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
+| v1.5 dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_int8_v1_5.safetensors) |
+| v1.6 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.6/SexGod_PinkCherry_dev_bf16_LTX23_v16b.safetensors) |
+| v1.6 dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.6/SexGod_PinkCherry_dev_fp8scaled_LTX23_v16b.safetensors) |
+| v1.6 dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.6/SexGod_PinkCherry_dev_int8_LTX23_v16b.safetensors) |
+| v1.7-alpha dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_bf16_v1_7-alpha.safetensors) |
+| v1.7-alpha dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_fp8scaled_v1_7-alpha.safetensors) |
+| v1.7-alpha dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_int8_v1_7-alpha.safetensors) |
+| v1.8 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_bf16_v1_8_LTX23.safetensors) |
+| v1.8 dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_fp8scaled_v1_8_LTX23.safetensors) |
+| v1.8 dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_int8_v1_8_LTX23.safetensors) |
+
+◦ **PinkCherry GGUF** — low-VRAM quants by SexGod1979
+
+<details>
+  <summary>v1.7-alpha / v1.8 GGUF</summary>
+
+| Quant | Build | Size | Download |
+| :--- | :---: | :---: | :--- |
+| ![Q5_K_M][badge-Q5_K_M] | v1.7-alpha | 15.93 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_Q5_K_M_v1_7-alpha.gguf) |
+| ![Q6_K][badge-Q6_K] | v1.7-alpha | 17.77 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_Q6_K_v1_7-alpha.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | v1.8 | 15.93 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_Q5_K_M_v18_LTX23.gguf) |
+| ![Q8_0][badge-Q8_0] | v1.8 | 22.76 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_Q8_0_v1_8_LTX23.gguf) |
+
+</details>
 
 #### ❖ Elastic
 
@@ -1082,6 +1132,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 <a id="lora-styles"></a>
 
 ### ▣ Styles
+* elismasilva
+  * [Latin Dance](https://huggingface.co/elismasilva/LTX-2.3-LoRa-Latin-Dance/resolve/main/LTX-2.3-Latin%20dance.safetensors) - Latin dance motion/style LoRA for LTX-2.3 (rank ~128). (214 MB)
 * OmerHagawa
   * [LTX2 UME PixelArt LoRA](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) - Pixel art style LoRA for LTX-2
 * Playtime-AI
@@ -1171,6 +1223,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [ltx2.3-fpv-motion](https://huggingface.co/chsengni/ltx2.3-fpv-motion) - Smoother FPV (First Person View) camera movements and improved low-speed flight shots.
 * EllaPriest45
   * [LTX2.3-characters](https://huggingface.co/EllaPriest45/LTX2.3-characters) - Massive collection of 70+ per-character LoRAs (Abigail Spencer, Adam Driver, Alexandra Daddario, Ana de Armas, Anne Hathaway, Brad Pitt, Cate Blanchett, Chris Evans, Emma Stone, Emma Watson, Eva Green, Gal Gadot, etc.) for LTX-2.3 (Apache 2.0). Each `Name - LTX2.3.safetensors` ~327 MB.
+  * [LTX2.3-actions](https://huggingface.co/EllaPriest45/LTX2.3_actions) - Massive NSFW action/motion LoRA collection for LTX-2.3 (400+ files): blowjob, cowgirl, doggy, deepthroat, missionary, twerking, ASMR, futanari, cunnilingus, titfuck, facials, vaginal/anal, and more. Pairs with 10Eros / Sulphur-2.
 * TheBurgstall
   * [LTX-2.3-Body-Positivity](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora)
   * [LTX-2.3-Googly-Eyes](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
@@ -1211,10 +1264,23 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [DMD LoRA Hybrid v2](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_hybrid_v2.safetensors) - v2 of the hybrid DMD distillation. (4.86 GB)
 * ltx-community
   * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
+* zzmicer
+  * [Sax](https://huggingface.co/zzmicer/ltx2-sax-lora-noaudio/resolve/main/lora_weights_step_04000.safetensors) - Saxophone audio LoRA (video-only, no-audio conditioning) at 4000 steps. (403 MB)
+  * [Violin (8s)](https://huggingface.co/zzmicer/ltx2-violin8s-lora/resolve/main/lora_weights_step_03000.safetensors) - Violin audio LoRA trained on 8-second clips at 3000 steps. (856 MB)
+  * [Guitar](https://huggingface.co/zzmicer/ltx2.3-22b-guitar-lora/resolve/main/lora_weights_step_03000.safetensors) - Acoustic guitar audio LoRA at 3000 steps. (1.71 GB)
+  * [DJ](https://huggingface.co/zzmicer/ltx2-dj-lora-lr5e4-rank128/resolve/main/lora_weights_step_01800.safetensors) - DJ/electronic-music audio LoRA (rank 128, LR 5e-4) at 1800 steps. (1.71 GB)
 * Lightricks
   * [LTX-2.3-22b-LoRA-Foley-V2A](https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A) - Official Lightricks Foley V2A (video-to-audio) LoRA for LTX-2.3. Generates realistic, visually-synced Foley sound effects from video. Rank ~small (216 MB); pairs with the workflow JSON in the repo (`ltx-2.3-foley-v2a.json`).
   * [LTX-2.3-22b-IC-LoRA-Clean-Plate](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate) - Official Lightricks Clean-Plate IC-LoRA. Removes people/objects from video frames for steady background plates. Rank 128 (312 MB); pairs with the `LTX-2.3_-_V2V_mass_remove_people_Clean-Plate-Lora.json` workflow.
   * [LTX-2.3-22b-IC-LoRA-Relight](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Relight/resolve/main/ltx-2.3-22b-ic-lora-relight-1.0.safetensors) - Official Lightricks Relight IC-LoRA (single-stage, distilled). Relights a scene using a reference sphere image that defines the target lighting direction and color. Pairs with the bundled `LTX-2.3_Relight_ICLoRA_SingleStage_Distilled.json` workflow. (312 MB)
+  * [LTX-2.3-22b-IC-LoRA-Cross-Eyed](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) - Official Lightricks Cross-Eyed IC-LoRA v0.9. Converts standard video into side-by-side 3D stereo output (cross-eyed viewing). (327 MB)
+  * [LTX-2.3-22b-IC-LoRA-Colorization](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Colorization/resolve/main/ltx-2.3-22b-ic-lora-colorization-0.9.safetensors) - Official Lightricks Colorization IC-LoRA v0.9. Adds realistic color to B&W or desaturated input video. (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Deblur](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Deblur/resolve/main/ltx-2.3-22b-ic-lora-deblur-0.9.safetensors) - Official Lightricks Deblur IC-LoRA v0.9. Removes blur and restores sharp, focused video. (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Decompression](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Decompression/resolve/main/ltx-2.3-22b-ic-lora-decompression-0.9.safetensors) - Official Lightricks Decompression IC-LoRA v0.9. Removes MP4 compression artifacts (banding, mosquito noise) and restores clean video. (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Water-Simulation](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation/resolve/main/ltx-2.3-22b-ic-lora-water-simulation-0.9.safetensors) - Official Lightricks Water-Simulation IC-LoRA v0.9. Adds physically-plausible fluid/water dynamics to reference video (reflections, ripples, splashes). (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Instant-Shave](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Instant-Shave/resolve/main/ltx-2.3-22b-ic-lora-instant-shave-0.9.safetensors) - Official Lightricks Instant-Shave IC-LoRA v0.9. Removes facial hair in video-to-video. (654 MB)
+  * [LTX-2.3-22b-IC-LoRA-In-Outpainting](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting/resolve/main/ltx-2.3-22b-ic-lora-in-outpainting-0.9.safetensors) - Official Lightricks In-Outpainting IC-LoRA v0.9. Extends canvas in any direction from reference video, filling new regions with consistent scene content. (1.31 GB)
+  * [LTX-2.3-22b-IC-LoRA-Day-To-Night](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Day-To-Night/resolve/main/ltx-2.3-22b-ic-lora-day-to-night-0.9.safetensors) - Official Lightricks Day-To-Night IC-LoRA v0.9. Converts daytime footage to nighttime with matched lighting/shadows. (327 MB)
 * fbjr
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
@@ -1563,6 +1629,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [badge-IQ4_NL]: https://img.shields.io/badge/IQ4__NL-dfb317?style=flat-square
 [badge-IQ4_XS]: https://img.shields.io/badge/IQ4__XS-dfb317?style=flat-square
 [gh-AX1Y2JP]: https://img.shields.io/badge/AX1Y2JP-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-bertbobson]: https://img.shields.io/badge/bertbobson-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AviadDahan]: https://img.shields.io/badge/AviadDahan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-DaSiWa]: https://img.shields.io/badge/DaSiWa-lightgrey?style=flat-square&logo=huggingface&logoColor=white
