@@ -149,6 +149,57 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 </details>
 
+<details>
+  <summary>Abiray LTX-2.5 Distilled GGUF</summary>
+
+#### [Abiray/LTX-2.5-Distilled-GGUF](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 10.73 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 14.05 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 12.90 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 15.66 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 17.38 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 22.01 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
+
+</details>
+
+<details>
+  <summary>Abiray LTX-2.5 GGUF</summary>
+
+#### [Abiray/LTX-2.5-GGUF](https://huggingface.co/Abiray/LTX-2.5-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b | ![Q3_K_M][badge-Q3_K_M] | 9.89 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q3_K_M.gguf) |
+| ltx-2.5-22b | ![Q3_K_S][badge-Q3_K_S] | 9.07 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q3_K_S.gguf) |
+| ltx-2.5-22b | ![Q4_K_M][badge-Q4_K_M] | 13.21 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q4_K_M.gguf) |
+| ltx-2.5-22b | ![Q4_K_S][badge-Q4_K_S] | 12.07 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q4_K_S.gguf) |
+| ltx-2.5-22b | ![Q5_K_M][badge-Q5_K_M] | 14.83 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q5_K_M.gguf) |
+| ltx-2.5-22b | ![Q5_K_S][badge-Q5_K_S] | 14.01 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q5_K_S.gguf) |
+| ltx-2.5-22b | ![Q6_K][badge-Q6_K] | 16.55 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q6_K.gguf) |
+| ltx-2.5-22b | ![Q8_0][badge-Q8_0] | 21.19 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q8_0.gguf) |
+
+</details>
+
+<details>
+  <summary>realrebelai LTX-2.5 GGUFs</summary>
+
+#### [realrebelai/LTX-2.5_GGUFs](https://huggingface.co/realrebelai/LTX-2.5_GGUFs)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-distilled | ![Q2_K][badge-Q2_K] | 8.23 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q2_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 10.73 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 14.05 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 12.90 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 15.66 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 17.38 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 22.01 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
+
+</details>
+
 #### Special Quantization: PolarQuant Q5
 
 **LTX-2.3 (22B) — PolarQuant Q5** is a bit-packed quantization method using Hadamard-Rotated Lloyd-Max Quantization. It achieves optimal Gaussian weight quantization via Hadamard rotation, delivering near-lossless quality with significant size reduction.

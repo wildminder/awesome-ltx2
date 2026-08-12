@@ -2,7 +2,7 @@
 
 ## ▓ Text Encoders
 
-LTX-2 requires Gemma-3-12b variants. LTX-2.3 uses text projection layers.
+LTX-2/2.3 require Gemma-3-12b variants with text projection layers. **LTX-2.5 ships with a Gemma-4-12B** text encoder — see the ▣ Gemma-4-12b section below.
 
 ### ▣ Comfy-Org Optimized Encoders
 
@@ -172,4 +172,16 @@ Third-party imatrix (importance-matrix) re-quantization of DreamFast's Heretic v
 | ![Q6_K][badge-Q6_K] | 9.21 GB | [![][gh-mradermacher]](https://huggingface.co/mradermacher/DreamFast-gemma-3-12b-it-heretic-v2-i1-GGUF/resolve/main/DreamFast-gemma-3-12b-it-heretic-v2.i1-Q6_K.gguf) |
 
 </details>
+
+<a id="enc-gemma4"></a>
+
+### ▣ Gemma-4-12b (LTX-2.5 Text Encoders)
+
+LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Community "heretic" / uncensored forks bypass alignment layers for maximum prompt fidelity in downstream video generation.
+
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `gemma4-12b-heretic-ltx-2.5` | ![bf16][badge-bf16] | 24.46 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/gemma4-12b-heretic-ltx-2.5-bf16/resolve/main/gemma4-12b-heretic-ltx-2.5-bf16.safetensors) |
+| `Gemma-4-12B-it-uncensored-heretic` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 12.26 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-int8convrot.safetensors) |
+| `gemma4-12b-ltx2.5-int4int8-mix` | ![int4int8mix](https://img.shields.io/badge/int4_int8_mix-17a2b8?style=flat-square) | 7.52 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Gemma4-12B-int4-int8mix-TextEncoder/resolve/main/gemma4-12b-ltx2.5-int4int8-mix.safetensors) |
 

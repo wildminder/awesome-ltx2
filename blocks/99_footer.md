@@ -48,6 +48,16 @@
 [gh-drbaph]: https://img.shields.io/badge/drbaph-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-silveroxides]: https://img.shields.io/badge/silveroxides-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-vantagewithai]: https://img.shields.io/badge/vantagewithai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-rockerBOO]: https://img.shields.io/badge/rockerBOO-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-realrebelai]: https://img.shields.io/badge/realrebelai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-vonkaiser]: https://img.shields.io/badge/vonkaiser-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-BennyDaBall]: https://img.shields.io/badge/BennyDaBall-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-tsolful]: https://img.shields.io/badge/tsolful-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-guillaume127]: https://img.shields.io/badge/guillaume127-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ChrisColeTech]: https://img.shields.io/badge/ChrisColeTech-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-pyros-vault]: https://img.shields.io/badge/pyros--vault-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ibyteohdear]: https://img.shields.io/badge/ibyteohdear-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-DeepNeuralNerd]: https://img.shields.io/badge/DeepNeuralNerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square

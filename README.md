@@ -2,7 +2,7 @@
 
 A curated list of models, text encoders, and tools for the LTX-2 video generation suite.
 
-![ltx-logo](https://github.com/user-attachments/assets/ee73cbc3-648b-47fa-9346-c4299919a060)
+![ltx-logo](https://github.com/user-attachments/assets/3e5471d1-8f0c-4cce-96a5-f487919878ed)
 
 
 <div align="center">
@@ -102,6 +102,20 @@ LTX-2 models are available in various formats including full weights, transforme
 
 | Ver | Name | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | `dev` | ![bf16][badge-bf16] | 39.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-bf16.safetensors) |
+| **2.5** | `dev` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 20.0 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors) |
+| **2.5** | `distilled` | ![bf16][badge-bf16] | 39.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-bf16.safetensors) |
+| **2.5** | `distilled` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 20.0 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors) |
+| **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 17.4 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors) |
+| **2.5** | `pt` (pre-trained) | ![bf16][badge-bf16] | 43.0 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5-Pre-Trained/resolve/main/ltx-2.5-22b-pt-bf16.safetensors) |
+| **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 20.6 GB | [![][gh-rockerBOO]](https://huggingface.co/rockerBOO/ltx-2.5-nvfp4-convrot/resolve/main/ltx-2.5-22b-distilled-transformer_nvfp4_convrot_int8.safetensors) |
+| **2.5** | `distilled` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 11.7 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/ltx-2.5-w4a8-convrot-int4-convrot-Winnougan-Blessing/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-w4a8_convrot.safetensors) |
+| **2.5** | `distilled` | ![fp8][badge-fp8] | 19.6 GB | [![][gh-vonkaiser]](https://huggingface.co/vonkaiser/LTX-2.5-FP8-NVFP4/resolve/main/transformer/ltx-2.5-22b-distilled-fp8.safetensors) |
+| **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 17.4 GB | [![][gh-BennyDaBall]](https://huggingface.co/BennyDaBall/LTX-2.5-22b-distilled-nvfp4-comfy/resolve/main/ltx-2.5-22b-distilled-transformer-nvfp4-comfy.safetensors) |
+| **2.5** | `dev` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 14.4 GB | [![][gh-tsolful]](https://huggingface.co/tsolful/LTX_2.5_INT4_W4A8_ConvRot/resolve/main/ltx-2.5-22b-dev-transformer_W4A8_Mixed.safetensors) |
+| **2.5** | `distilled` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 14.4 GB | [![][gh-tsolful]](https://huggingface.co/tsolful/LTX_2.5_INT4_W4A8_ConvRot/resolve/main/ltx-2.5-22b-distilled-transformer_W4A8_Mixed.safetensors) |
+| **2.5** | `distilled` | ![fp8][badge-fp8] | 21.9 GB | [![][gh-guillaume127]](https://huggingface.co/guillaume127/LTX-2.5-FP8/resolve/main/ltx-2.5-22b-distilled-transformer-fp8_e4m3fn.safetensors) |
+| | | | | |
 | **2.3** | `dev` | ![bf16][badge-bf16] | 46.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-dev.safetensors) |
 | **2.3** | `dev` | ![fp8][badge-fp8] | 29.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors) |
 | **2.3** | `dev` | ![fp8][badge-fp8] | 29.9 GB | [![][gh-drbaph]](https://huggingface.co/drbaph/LTX-2.3-FP8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors) |
@@ -193,6 +207,7 @@ Required for current two-stage pipeline implementations in this repository. Down
 
 | Ver | Name | Size | Download |
 | :--- | :--- | :--- | :--- |
+| **2.5** | `spatial-upscaler x2 1.0` | 0.93 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors) ┊ [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors) |
 | **2.3** | `spatial-upscaler x2 1.0` | 996 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors) |
 | **2.3** | `spatial-upscaler x1.5 1.0` | 1.09 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors) |
 | | | | |
@@ -207,6 +222,7 @@ Required for current two-stage pipeline implementations in this repository. Down
 
 | Ver | Name | Size | Download |
 | :--- | :--- | :--- | :--- |
+| **2.5** | `temporal-upscaler x2 1.0` | 0.24 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors) ┊ [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/latent_upscale_models/ltx-2.5-latent-temporal-upscaler-x2-bf16-1.0.safetensors) |
 | **2.3** | `temporal-upscaler x2 1.0` | 262 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-temporal-upscaler-x2-1.0.safetensors) |
 | | | | |
 | **2** | `temporal-upscaler x2 1.0` | 262 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-temporal-upscaler-x2-1.0.safetensors) |
@@ -742,6 +758,57 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 </details>
 
+<details>
+  <summary>Abiray LTX-2.5 Distilled GGUF</summary>
+
+#### [Abiray/LTX-2.5-Distilled-GGUF](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 10.73 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 14.05 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 12.90 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 15.66 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 17.38 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 22.01 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
+
+</details>
+
+<details>
+  <summary>Abiray LTX-2.5 GGUF</summary>
+
+#### [Abiray/LTX-2.5-GGUF](https://huggingface.co/Abiray/LTX-2.5-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b | ![Q3_K_M][badge-Q3_K_M] | 9.89 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q3_K_M.gguf) |
+| ltx-2.5-22b | ![Q3_K_S][badge-Q3_K_S] | 9.07 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q3_K_S.gguf) |
+| ltx-2.5-22b | ![Q4_K_M][badge-Q4_K_M] | 13.21 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q4_K_M.gguf) |
+| ltx-2.5-22b | ![Q4_K_S][badge-Q4_K_S] | 12.07 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q4_K_S.gguf) |
+| ltx-2.5-22b | ![Q5_K_M][badge-Q5_K_M] | 14.83 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q5_K_M.gguf) |
+| ltx-2.5-22b | ![Q5_K_S][badge-Q5_K_S] | 14.01 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q5_K_S.gguf) |
+| ltx-2.5-22b | ![Q6_K][badge-Q6_K] | 16.55 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q6_K.gguf) |
+| ltx-2.5-22b | ![Q8_0][badge-Q8_0] | 21.19 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-GGUF/resolve/main/ltx-2.5-Q8_0.gguf) |
+
+</details>
+
+<details>
+  <summary>realrebelai LTX-2.5 GGUFs</summary>
+
+#### [realrebelai/LTX-2.5_GGUFs](https://huggingface.co/realrebelai/LTX-2.5_GGUFs)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-distilled | ![Q2_K][badge-Q2_K] | 8.23 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q2_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 10.73 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 14.05 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 12.90 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 15.66 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 17.38 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 22.01 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
+
+</details>
+
 #### Special Quantization: PolarQuant Q5
 
 **LTX-2.3 (22B) — PolarQuant Q5** is a bit-packed quantization method using Hadamard-Rotated Lloyd-Max Quantization. It achieves optimal Gaussian weight quantization via Hadamard rotation, delivering near-lossless quality with significant size reduction.
@@ -801,7 +868,7 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 ## ▓ Text Encoders
 
-LTX-2 requires Gemma-3-12b variants. LTX-2.3 uses text projection layers.
+LTX-2/2.3 require Gemma-3-12b variants with text projection layers. **LTX-2.5 ships with a Gemma-4-12B** text encoder — see the ▣ Gemma-4-12b section below.
 
 ### ▣ Comfy-Org Optimized Encoders
 
@@ -972,6 +1039,18 @@ Third-party imatrix (importance-matrix) re-quantization of DreamFast's Heretic v
 
 </details>
 
+<a id="enc-gemma4"></a>
+
+### ▣ Gemma-4-12b (LTX-2.5 Text Encoders)
+
+LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Community "heretic" / uncensored forks bypass alignment layers for maximum prompt fidelity in downstream video generation.
+
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `gemma4-12b-heretic-ltx-2.5` | ![bf16][badge-bf16] | 24.46 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/gemma4-12b-heretic-ltx-2.5-bf16/resolve/main/gemma4-12b-heretic-ltx-2.5-bf16.safetensors) |
+| `Gemma-4-12B-it-uncensored-heretic` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 12.26 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-int8convrot.safetensors) |
+| `gemma4-12b-ltx2.5-int4int8-mix` | ![int4int8mix](https://img.shields.io/badge/int4_int8_mix-17a2b8?style=flat-square) | 7.52 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Gemma4-12B-int4-int8mix-TextEncoder/resolve/main/gemma4-12b-ltx2.5-int4int8-mix.safetensors) |
+
 
 <p id="split" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -1014,6 +1093,10 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 
 | Ver | Component | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :--- |
+| **2.5** | `Video VAE` | ![BF16][badge-bf16] | 1.37 GB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/vae/ltx-2.5-video-vae-bf16.safetensors) |
+| **2.5** | `Video VAE (conv)` | ![BF16][badge-bf16] | 1.35 GB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/vae/ltx-2.5-video-vae-conv-bf16.safetensors) |
+| **2.5** | `Audio VAE` | ![BF16][badge-bf16] | 0.34 GB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/vae/ltx-2.5-audio-vae-bf16.safetensors) |
+| | | | | |
 | **2.3** | `Video VAE` | ![BF16][badge-bf16] | 1.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_video_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_video_vae.safetensors)|
 | **2.3** | `Cinematic Video VAE` | ![BF16][badge-bf16] | 1.38 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/LTX-2.3-Cinematic-VAE/resolve/main/LTX23_video_vae_bf16_cinematic.safetensors) |
 | **2.3** | `Pruna Video VAE` | ![BF16][badge-bf16] | 1.27 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/pruna_ltx2.3_vae_comfy_bf16.safetensors) |
@@ -1035,6 +1118,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 | | | | | |
 | **2** | `Connector dev` | ![bf16][badge-bf16] | 2.86 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/text_encoders/ltx-2-19b-embeddings_connector_dev_bf16.safetensors) |
 | **2** | `Connector distilled` | ![bf16][badge-bf16] | 2.86 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/text_encoders/ltx-2-19b-embeddings_connector_distill_bf16.safetensors) |
+
 
 <p id="lora" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -1284,6 +1368,9 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX-2.3-22b-IC-LoRA-Instant-Shave](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Instant-Shave/resolve/main/ltx-2.3-22b-ic-lora-instant-shave-0.9.safetensors) - Official Lightricks Instant-Shave IC-LoRA v0.9. Removes facial hair in video-to-video. (654 MB)
   * [LTX-2.3-22b-IC-LoRA-In-Outpainting](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting/resolve/main/ltx-2.3-22b-ic-lora-in-outpainting-0.9.safetensors) - Official Lightricks In-Outpainting IC-LoRA v0.9. Extends canvas in any direction from reference video, filling new regions with consistent scene content. (1.31 GB)
   * [LTX-2.3-22b-IC-LoRA-Day-To-Night](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Day-To-Night/resolve/main/ltx-2.3-22b-ic-lora-day-to-night-0.9.safetensors) - Official Lightricks Day-To-Night IC-LoRA v0.9. Converts daytime footage to nighttime with matched lighting/shadows. (327 MB)
+  * [LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors) - Official Lightricks Pixel-Spatial-Upscaler IC-LoRA for LTX-2.5. Adds x2 pixel-level spatial upscaling to a video pass. (0.30 GB)
+* pyros-vault
+  * [ltx-2.5-distilled-lora-450-reduced](https://huggingface.co/pyros-vault/ltx-2.5-distilled-lora-450-reduced/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil128.safetensors) - Reduced-rank rerolls of the official LTX-2.5 distilled LoRA 450 for lower VRAM: `ceil128` (2.15 GB) and `ceil72` (1.29 GB). Use at strength 0.4–0.65.
 * fbjr
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
@@ -1656,6 +1743,16 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-drbaph]: https://img.shields.io/badge/drbaph-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-silveroxides]: https://img.shields.io/badge/silveroxides-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-vantagewithai]: https://img.shields.io/badge/vantagewithai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-rockerBOO]: https://img.shields.io/badge/rockerBOO-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-realrebelai]: https://img.shields.io/badge/realrebelai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-vonkaiser]: https://img.shields.io/badge/vonkaiser-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-BennyDaBall]: https://img.shields.io/badge/BennyDaBall-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-tsolful]: https://img.shields.io/badge/tsolful-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-guillaume127]: https://img.shields.io/badge/guillaume127-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ChrisColeTech]: https://img.shields.io/badge/ChrisColeTech-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-pyros-vault]: https://img.shields.io/badge/pyros--vault-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ibyteohdear]: https://img.shields.io/badge/ibyteohdear-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-DeepNeuralNerd]: https://img.shields.io/badge/DeepNeuralNerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square
