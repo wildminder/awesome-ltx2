@@ -25,6 +25,7 @@
 [badge-IQ4_NL]: https://img.shields.io/badge/IQ4__NL-dfb317?style=flat-square
 [badge-IQ4_XS]: https://img.shields.io/badge/IQ4__XS-dfb317?style=flat-square
 [gh-AX1Y2JP]: https://img.shields.io/badge/AX1Y2JP-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-bertbobson]: https://img.shields.io/badge/bertbobson-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-AviadDahan]: https://img.shields.io/badge/AviadDahan-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Comfy--Org]: https://img.shields.io/badge/Comfy--Org-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-DaSiWa]: https://img.shields.io/badge/DaSiWa-lightgrey?style=flat-square&logo=huggingface&logoColor=white
@@ -32,6 +33,7 @@
 [gh-FusionCow]: https://img.shields.io/badge/FusionCow-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-fbjr]: https://img.shields.io/badge/fbjr-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Kijai]: https://img.shields.io/badge/Kijai-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Levmar]: https://img.shields.io/badge/Levmar-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Lightricks]: https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-mradermacher]: https://img.shields.io/badge/mradermacher-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-QuantStack]: https://img.shields.io/badge/QuantStack-lightgrey?style=flat-square&logo=huggingface&logoColor=white

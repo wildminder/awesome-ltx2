@@ -27,7 +27,7 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2.3** | `distilled` | ![nvfp4][badge-nvfp4] | 17.6 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/LTX-2.3-INT8/resolve/main/ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors) |
 | **2.3** | `distilled` | ![mxfp8mixed][badge-mxfp8mixed] | 29.7 GB | [![][gh-silveroxides]](https://huggingface.co/silveroxides/LTX-2.3-Quants/resolve/main/ltx-2.3-22b-distilled-mxfp8mixed.safetensors) |
 | **2.3** | `distilled 1.1` | ![bf16][badge-bf16] | 46.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-1.1.safetensors) |
-| **2.3** | `ltx23_srx fp8_e4m3 experimental` | ![fp8][badge-fp8] | 21.97 GB | [![][gh-SOLRICKS]](https://huggingface.co/SOLRICKS/ltx23_srx_fp8_e4m3_experimental/resolve/main/ltx23_srx_fp8_e4m3_experimental.safetensors) |
+| **2.3** | `ltx23_srx fp8_e4m3 experimental` | ![fp8][badge-fp8] | 23.1 GB | [![][gh-SOLRICKS]](https://huggingface.co/SOLRICKS/ltx23_srx_fp8_e4m3_experimental/resolve/main/ltx23_srx_fp8_e4m3_experimental.safetensors) |
 | | | | | |
 | **2** | `ltx-2-19b dev` | ![bf16][badge-bf16] | 43.3 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors) |
 | **2** | `ltx-2-19b dev` | ![fp8][badge-fp8] | 27.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors) |
@@ -184,6 +184,7 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.4` | ![bf16][badge-bf16] | 44.0 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_bf16.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
+| **2.3** | Full | `10Eros v1 INT8 ConvRot` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 23.51 GB | [![bertbobson][gh-bertbobson]](https://huggingface.co/bertbobson/LTX2.3-10Eros-INT8-ConvRot/resolve/main/10Eros_v1_bf16-int8.ConvRot.safetensors) |
 
 ◦ **10Eros GGUF** — vantagewithai low-VRAM quants
 
@@ -272,6 +273,28 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | ![Q5_K_S][badge-Q5_K_S] | 14.01 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF/resolve/main/10Eros_v1.4-Q5_K_S.gguf) |
 | ![Q6_K][badge-Q6_K] | 16.55 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF/resolve/main/10Eros_v1.4-Q6_K.gguf) |
 | ![Q8_0][badge-Q8_0] | 21.19 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.4-GGUF/resolve/main/10Eros_v1.4-Q8_0.gguf) |
+
+</details>
+
+<details>
+  <summary>vantagewithai/LTX2.3-10Eros-1.5-GGUF</summary>
+
+[`vantagewithai/LTX2.3-10Eros-1.5-GGUF`](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF) — v1.5 (latest)
+
+| Quant | Size | Download |
+| :--- | :---: | :--- |
+| ![Q3_K_M][badge-Q3_K_M] | 11.13 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q3_K_M.gguf) |
+| ![Q3_K_S][badge-Q3_K_S] | 10.34 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q3_K_S.gguf) |
+| ![Q4_0][badge-Q4_0] | 12.98 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_0.gguf) |
+| ![Q4_1][badge-Q4_1] | 13.90 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_1.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 14.30 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_K_M.gguf) |
+| ![Q4_K_S][badge-Q4_K_S] | 13.20 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q4_K_S.gguf) |
+| ![Q5_0][badge-Q5_0] | 15.26 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_0.gguf) |
+| ![Q5_1][badge-Q5_1] | 16.18 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_1.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 16.14 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_K_M.gguf) |
+| ![Q5_K_S][badge-Q5_K_S] | 15.04 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q5_K_S.gguf) |
+| ![Q6_K][badge-Q6_K] | 17.77 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q6_K.gguf) |
+| ![Q8_0][badge-Q8_0] | 22.76 GB | [![vantagewithai][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX2.3-10Eros-1.5-GGUF/resolve/main/10Eros_v1.5-Q8_0.gguf) |
 
 </details>
 
@@ -427,10 +450,37 @@ Surgical finetune based on [jdopensource/JoyAI-Echo](https://huggingface.co/jdop
 
 #### ❖ PinkCherry NSFW
 
-| Variant | Description | Download |
-| :--- | :--- | :--- |
-| v1.3 dev bf16 | PinkCherry uncensored NSFW LTX-2.3 finetune; v1.3 BF16 dev. Pairs with the official LTX-2.3 distilled LoRA 384. NSFW content only — do not use for clean content. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
-| v1.5 dev bf16 | PinkCherry v1.5 BF16 — newer training pass than v1.3 with updated workflow. | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
+Repo: [`SexGod1979/PinkCherry_NSFW_LTX23`](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23) — uncensored NSFW LTX-2.3 finetune family (NSFW content only — do not use for clean content). Pairs with the official LTX-2.3 distilled LoRA 384.
+
+| Variant | Precision | Size | Download |
+| :--- | :---: | :---: | :--- |
+| v1.3 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_bf16_LTX23_v1_3.safetensors) |
+| v1.3 dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.3/SexGod_PinkCherry_dev_fp8_plain_LTX23_v1_3.safetensors) |
+| v1.5 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_bf16_LTX23_v1_5.safetensors) |
+| v1.5 dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.5/SexGod_PinkCherry_dev_int8_v1_5.safetensors) |
+| v1.6 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.6/SexGod_PinkCherry_dev_bf16_LTX23_v16b.safetensors) |
+| v1.6 dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.6/SexGod_PinkCherry_dev_fp8scaled_LTX23_v16b.safetensors) |
+| v1.6 dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.6/SexGod_PinkCherry_dev_int8_LTX23_v16b.safetensors) |
+| v1.7-alpha dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_bf16_v1_7-alpha.safetensors) |
+| v1.7-alpha dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_fp8scaled_v1_7-alpha.safetensors) |
+| v1.7-alpha dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_int8_v1_7-alpha.safetensors) |
+| v1.8 dev | ![bf16][badge-bf16] | 46.14 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_bf16_v1_8_LTX23.safetensors) |
+| v1.8 dev | ![fp8](https://img.shields.io/badge/fp8-17a2b8?style=flat-square) | 27.62 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_fp8scaled_v1_8_LTX23.safetensors) |
+| v1.8 dev | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 27.64 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_int8_v1_8_LTX23.safetensors) |
+
+◦ **PinkCherry GGUF** — low-VRAM quants by SexGod1979
+
+<details>
+  <summary>v1.7-alpha / v1.8 GGUF</summary>
+
+| Quant | Build | Size | Download |
+| :--- | :---: | :---: | :--- |
+| ![Q5_K_M][badge-Q5_K_M] | v1.7-alpha | 15.93 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_Q5_K_M_v1_7-alpha.gguf) |
+| ![Q6_K][badge-Q6_K] | v1.7-alpha | 17.77 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.7-alpha/PinkCherry_FineTune_Q6_K_v1_7-alpha.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | v1.8 | 15.93 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_Q5_K_M_v18_LTX23.gguf) |
+| ![Q8_0][badge-Q8_0] | v1.8 | 22.76 GB | [![PinkCherry][gh-SexGod1979]](https://huggingface.co/SexGod1979/PinkCherry_NSFW_LTX23/resolve/main/v1.8/PinkCherry_FineTune_Q8_0_v1_8_LTX23.gguf) |
+
+</details>
 
 #### ❖ Elastic
 

@@ -94,6 +94,8 @@
 <a id="lora-styles"></a>
 
 ### ▣ Styles
+* elismasilva
+  * [Latin Dance](https://huggingface.co/elismasilva/LTX-2.3-LoRa-Latin-Dance/resolve/main/LTX-2.3-Latin%20dance.safetensors) - Latin dance motion/style LoRA for LTX-2.3 (rank ~128). (214 MB)
 * OmerHagawa
   * [LTX2 UME PixelArt LoRA](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) - Pixel art style LoRA for LTX-2
 * Playtime-AI
@@ -181,8 +183,10 @@
   * [Formula1-Cockpit-T-Cam-LTX2.3](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) - LoRA trained on 1.6L V6 Turbo Hybrid Era F1 T-Cam onboard footage. Generates cockpit/T-cam onboard video. Trigger: `16LV6HybridF1` (car type); follow the "T-cam onboard view..." / "AT-cam onboard view..." prompt style.
 * chsengni
   * [ltx2.3-fpv-motion](https://huggingface.co/chsengni/ltx2.3-fpv-motion) - Smoother FPV (First Person View) camera movements and improved low-speed flight shots.
-* EllaPriest45
-  * [LTX2.3-characters](https://huggingface.co/EllaPriest45/LTX2.3-characters) - Massive collection of 70+ per-character LoRAs (Abigail Spencer, Adam Driver, Alexandra Daddario, Ana de Armas, Anne Hathaway, Brad Pitt, Cate Blanchett, Chris Evans, Emma Stone, Emma Watson, Eva Green, Gal Gadot, etc.) for LTX-2.3 (Apache 2.0). Each `Name - LTX2.3.safetensors` ~327 MB.
+* EllaPriest45 — three large LTX-2.3 LoRA collections (NSFW / characters / styles); open each repo for the full file list
+  * [LTX2.3_Actions](https://huggingface.co/EllaPriest45/LTX2.3_Actions) — **Huge collection of NSFW LoRAs** for LTX-2.3 (179 `.safetensors`, ~137 GB): explicit action / motion / pose LoRAs. Pairs with 10Eros / Sulphur-2.
+  * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: massive per-celebrity likeness collection for LTX-2.3 (394 `.safetensors`, ~130 GB; each `Name - LTX2.3.safetensors` ~327 MB).
+  * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs**: large visual-style collection for LTX-2.3 (35 `.safetensors`, ~20 GB): anime, claymation, cyberpunk, post-apocalyptic, cozy felt, and more.
 * TheBurgstall
   * [LTX-2.3-Body-Positivity](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora)
   * [LTX-2.3-Googly-Eyes](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
@@ -191,6 +195,8 @@
   * [GroupPhoto](https://huggingface.co/TheBurgstall/GroupPhoto-LoRA-LTX-2-19b)
   * [WHATUSEE](https://huggingface.co/TheBurgstall/WHATUSEE_LTX-2-19B_LoRA)
 * [Black Venom](https://huggingface.co/siraxe/black_venom_ltx2)
+* Levmar
+  * [ltx2-lora](https://huggingface.co/Levmar/ltx2-lora) — Image-to-Video LoRA fine-tuned from `ltx-2.3-22b-dev.safetensors` with the LTX LoRA Trainer (6000 steps, LR 1e-4, batch 1). Two checkpoints: `lora_weights_step_02000.safetensors` and `lora_weights_step_06000.safetensors` (~428 MB each). License: other.
 * Lightricks
   * [Camera Control: dolly-in](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-In/blob/main/ltx-2-19b-lora-camera-control-dolly-in.safetensors)
   * [Camera Control: dolly-left](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left/blob/main/ltx-2-19b-lora-camera-control-dolly-left.safetensors)
@@ -223,10 +229,23 @@
   * [DMD LoRA Hybrid v2](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_hybrid_v2.safetensors) - v2 of the hybrid DMD distillation. (4.86 GB)
 * ltx-community
   * [ltx2-compile-keytest](https://huggingface.co/ltx-community/ltx2-compile-keytest) - IC-LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (300 training steps, batch size 1, LR 2e-4). Trained with the [LTX LoRA Trainer](https://huggingface.co/spaces/ltx-community/ltx2-lora-trainer).
+* zzmicer
+  * [Sax](https://huggingface.co/zzmicer/ltx2-sax-lora-noaudio/resolve/main/lora_weights_step_04000.safetensors) - Saxophone audio LoRA (video-only, no-audio conditioning) at 4000 steps. (403 MB)
+  * [Violin (8s)](https://huggingface.co/zzmicer/ltx2-violin8s-lora/resolve/main/lora_weights_step_03000.safetensors) - Violin audio LoRA trained on 8-second clips at 3000 steps. (856 MB)
+  * [Guitar](https://huggingface.co/zzmicer/ltx2.3-22b-guitar-lora/resolve/main/lora_weights_step_03000.safetensors) - Acoustic guitar audio LoRA at 3000 steps. (1.71 GB)
+  * [DJ](https://huggingface.co/zzmicer/ltx2-dj-lora-lr5e4-rank128/resolve/main/lora_weights_step_01800.safetensors) - DJ/electronic-music audio LoRA (rank 128, LR 5e-4) at 1800 steps. (1.71 GB)
 * Lightricks
   * [LTX-2.3-22b-LoRA-Foley-V2A](https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A) - Official Lightricks Foley V2A (video-to-audio) LoRA for LTX-2.3. Generates realistic, visually-synced Foley sound effects from video. Rank ~small (216 MB); pairs with the workflow JSON in the repo (`ltx-2.3-foley-v2a.json`).
   * [LTX-2.3-22b-IC-LoRA-Clean-Plate](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Clean-Plate) - Official Lightricks Clean-Plate IC-LoRA. Removes people/objects from video frames for steady background plates. Rank 128 (312 MB); pairs with the `LTX-2.3_-_V2V_mass_remove_people_Clean-Plate-Lora.json` workflow.
   * [LTX-2.3-22b-IC-LoRA-Relight](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Relight/resolve/main/ltx-2.3-22b-ic-lora-relight-1.0.safetensors) - Official Lightricks Relight IC-LoRA (single-stage, distilled). Relights a scene using a reference sphere image that defines the target lighting direction and color. Pairs with the bundled `LTX-2.3_Relight_ICLoRA_SingleStage_Distilled.json` workflow. (312 MB)
+  * [LTX-2.3-22b-IC-LoRA-Cross-Eyed](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) - Official Lightricks Cross-Eyed IC-LoRA v0.9. Converts standard video into side-by-side 3D stereo output (cross-eyed viewing). (327 MB)
+  * [LTX-2.3-22b-IC-LoRA-Colorization](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Colorization/resolve/main/ltx-2.3-22b-ic-lora-colorization-0.9.safetensors) - Official Lightricks Colorization IC-LoRA v0.9. Adds realistic color to B&W or desaturated input video. (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Deblur](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Deblur/resolve/main/ltx-2.3-22b-ic-lora-deblur-0.9.safetensors) - Official Lightricks Deblur IC-LoRA v0.9. Removes blur and restores sharp, focused video. (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Decompression](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Decompression/resolve/main/ltx-2.3-22b-ic-lora-decompression-0.9.safetensors) - Official Lightricks Decompression IC-LoRA v0.9. Removes MP4 compression artifacts (banding, mosquito noise) and restores clean video. (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Water-Simulation](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Water-Simulation/resolve/main/ltx-2.3-22b-ic-lora-water-simulation-0.9.safetensors) - Official Lightricks Water-Simulation IC-LoRA v0.9. Adds physically-plausible fluid/water dynamics to reference video (reflections, ripples, splashes). (906 MB)
+  * [LTX-2.3-22b-IC-LoRA-Instant-Shave](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Instant-Shave/resolve/main/ltx-2.3-22b-ic-lora-instant-shave-0.9.safetensors) - Official Lightricks Instant-Shave IC-LoRA v0.9. Removes facial hair in video-to-video. (654 MB)
+  * [LTX-2.3-22b-IC-LoRA-In-Outpainting](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting/resolve/main/ltx-2.3-22b-ic-lora-in-outpainting-0.9.safetensors) - Official Lightricks In-Outpainting IC-LoRA v0.9. Extends canvas in any direction from reference video, filling new regions with consistent scene content. (1.31 GB)
+  * [LTX-2.3-22b-IC-LoRA-Day-To-Night](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Day-To-Night/resolve/main/ltx-2.3-22b-ic-lora-day-to-night-0.9.safetensors) - Official Lightricks Day-To-Night IC-LoRA v0.9. Converts daytime footage to nighttime with matched lighting/shadows. (327 MB)
 * fbjr
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy
@@ -246,6 +265,7 @@
   * [ltx2-ic-lora-ui](https://huggingface.co/linoyts/ltx2-ic-lora-ui) - LoRA fine-tune from `ltx-2.3-22b-dev.safetensors` (20 training steps; treats UI-screen aesthetics). Inherits LTX-2.3 base license.
 * rzgar
   * [Motion Enhancer (N54W)](https://huggingface.co/rzgar/LTX-2.3-Motion-Enhancer-n4w/resolve/main/LTX-2.3-Motion-Enhancer-n4w.safetensors) - General-purpose N54W motion enhancer LoRA. Enhances fluidity, coherence, and motion when stacked as a companion LoRA alongside other specialized models. Extensively tested with top-rated Civitai LoRAs. (2.17 GB)
+  * [Distilled LoRA 384-1.1 "n4w"](https://huggingface.co/rzgar/ltx-2.3-22b-distilled-lora-384-1.1-n4w) — Modified official 384-1.1 distilled LoRA that *cooperates* with N54W LoRAs (instead of fighting them), improving motion and appearance. Two variants: full rank ~7.08 GB (`ltx-2.3-22b-distilled-lora-384-1.1_n4w.safetensors`) and low-VRAM rank-128 ~2.40 GB (`ltx-2.3-22b-distilled-lora-384-1.1_rank_128_n4w.safetensors`). Use at strength 0.5–0.65 stacked with your N54W LoRA. Apache-2.0.
 * joeygambino
   * [American Accent (audio)](https://huggingface.co/joeygambino/ltx23-accent-american-audio-lora/resolve/main/ltx23_accent_american_v2_rank32.safetensors) - Audio-branch LoRA (rank 32) that makes accent wording in prompts actually work. LTX-2.3's voice prior ignores accent requests in certain regions (e.g. young female characters default to Australian); this LoRA turns accent prompts into reliable control. **Requires 24 fps** — off-24 fps overrides accent wording entirely. (168 MB)
 
