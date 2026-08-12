@@ -200,6 +200,42 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 </details>
 
+<details>
+  <summary>vantagewithai LTX-2.5 GGUF</summary>
+
+#### [vantagewithai/LTX-2.5-GGUF](https://huggingface.co/vantagewithai/LTX-2.5-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-dev | ![Q2_K][badge-Q2_K] | 12.13 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q2_K.gguf) |
+| ltx-2.5-22b-dev | ![Q3_K_M][badge-Q3_K_M] | 12.92 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q3_K_M.gguf) |
+| ltx-2.5-22b-dev | ![Q3_K_S][badge-Q3_K_S] | 12.65 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q3_K_S.gguf) |
+| ltx-2.5-22b-dev | ![Q4_0][badge-Q4_0] | 15.24 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_0.gguf) |
+| ltx-2.5-22b-dev | ![Q4_1][badge-Q4_1] | 15.53 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_1.gguf) |
+| ltx-2.5-22b-dev | ![Q4_K_M][badge-Q4_K_M] | 15.69 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_K_M.gguf) |
+| ltx-2.5-22b-dev | ![Q4_K_S][badge-Q4_K_S] | 15.33 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_K_S.gguf) |
+| ltx-2.5-22b-dev | ![Q5_0][badge-Q5_0] | 15.98 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_0.gguf) |
+| ltx-2.5-22b-dev | ![Q5_1][badge-Q5_1] | 16.26 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_1.gguf) |
+| ltx-2.5-22b-dev | ![Q5_K_M][badge-Q5_K_M] | 18.12 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_K_M.gguf) |
+| ltx-2.5-22b-dev | ![Q5_K_S][badge-Q5_K_S] | 15.89 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_K_S.gguf) |
+| ltx-2.5-22b-dev | ![Q6_K][badge-Q6_K] | 18.62 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q6_K.gguf) |
+| ltx-2.5-22b-dev | ![Q8_0][badge-Q8_0] | 23.60 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q8_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q2_K][badge-Q2_K] | 12.13 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q2_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 12.92 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_S][badge-Q3_K_S] | 12.65 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q3_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_0][badge-Q4_0] | 15.24 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_1][badge-Q4_1] | 15.53 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_1.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 15.69 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 15.33 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_0][badge-Q5_0] | 15.98 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_1][badge-Q5_1] | 16.26 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_1.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 18.12 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_S][badge-Q5_K_S] | 15.89 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 18.62 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 23.60 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q8_0.gguf) |
+
+</details>
+
 #### Special Quantization: PolarQuant Q5
 
 **LTX-2.3 (22B) — PolarQuant Q5** is a bit-packed quantization method using Hadamard-Rotated Lloyd-Max Quantization. It achieves optimal Gaussian weight quantization via Hadamard rotation, delivering near-lossless quality with significant size reduction.

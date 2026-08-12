@@ -102,19 +102,26 @@ LTX-2 models are available in various formats including full weights, transforme
 
 | Ver | Name | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
-| **2.5** | `dev` | ![bf16][badge-bf16] | 39.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-bf16.safetensors) |
-| **2.5** | `dev` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 20.0 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors) |
-| **2.5** | `distilled` | ![bf16][badge-bf16] | 39.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-bf16.safetensors) |
-| **2.5** | `distilled` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 20.0 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors) |
-| **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 17.4 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors) |
+| **2.5** | `dev` | ![bf16][badge-bf16] | 42.02 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-bf16.safetensors) |
+| **2.5** | `dev` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.50 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-comfy-int8-convrot.safetensors) |
+| **2.5** | `distilled` | ![bf16][badge-bf16] | 42.02 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-bf16.safetensors) |
+| **2.5** | `distilled` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.50 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors) |
+| **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 18.72 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors) |
 | **2.5** | `pt` (pre-trained) | ![bf16][badge-bf16] | 43.0 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5-Pre-Trained/resolve/main/ltx-2.5-22b-pt-bf16.safetensors) |
 | **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 20.6 GB | [![][gh-rockerBOO]](https://huggingface.co/rockerBOO/ltx-2.5-nvfp4-convrot/resolve/main/ltx-2.5-22b-distilled-transformer_nvfp4_convrot_int8.safetensors) |
-| **2.5** | `distilled` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 11.7 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/ltx-2.5-w4a8-convrot-int4-convrot-Winnougan-Blessing/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-w4a8_convrot.safetensors) |
+| **2.5** | `dev` | ![w4a8_convrot](https://img.shields.io/badge/w4a8_ConvRot-17a2b8?style=flat-square) | 12.52 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/ltx-2.5-w4a8-convrot-int4-convrot-Winnougan-Blessing/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-w4a8_convrot.safetensors) |
+| **2.5** | `distilled` | ![w4a8_convrot](https://img.shields.io/badge/w4a8_ConvRot-17a2b8?style=flat-square) | 12.52 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/ltx-2.5-w4a8-convrot-int4-convrot-Winnougan-Blessing/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-w4a8_convrot.safetensors) |
 | **2.5** | `distilled` | ![fp8][badge-fp8] | 19.6 GB | [![][gh-vonkaiser]](https://huggingface.co/vonkaiser/LTX-2.5-FP8-NVFP4/resolve/main/transformer/ltx-2.5-22b-distilled-fp8.safetensors) |
 | **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 17.4 GB | [![][gh-BennyDaBall]](https://huggingface.co/BennyDaBall/LTX-2.5-22b-distilled-nvfp4-comfy/resolve/main/ltx-2.5-22b-distilled-transformer-nvfp4-comfy.safetensors) |
 | **2.5** | `dev` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 14.4 GB | [![][gh-tsolful]](https://huggingface.co/tsolful/LTX_2.5_INT4_W4A8_ConvRot/resolve/main/ltx-2.5-22b-dev-transformer_W4A8_Mixed.safetensors) |
 | **2.5** | `distilled` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 14.4 GB | [![][gh-tsolful]](https://huggingface.co/tsolful/LTX_2.5_INT4_W4A8_ConvRot/resolve/main/ltx-2.5-22b-distilled-transformer_W4A8_Mixed.safetensors) |
 | **2.5** | `distilled` | ![fp8][badge-fp8] | 21.9 GB | [![][gh-guillaume127]](https://huggingface.co/guillaume127/LTX-2.5-FP8/resolve/main/ltx-2.5-22b-distilled-transformer-fp8_e4m3fn.safetensors) |
+| **2.5** | `dev` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 21.64 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-int8.safetensors) |
+| **2.5** | `dev` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 21.50 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-int8_lean_convrot.safetensors) |
+| **2.5** | `dev` | ![nvfp4][badge-nvfp4] | 13.57 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-nvfp4.safetensors) |
+| **2.5** | `distilled` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 21.64 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-int8.safetensors) |
+| **2.5** | `distilled` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 21.50 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-int8_lean_convrot.safetensors) |
+| **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 13.57 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors) |
 | | | | | |
 | **2.3** | `dev` | ![bf16][badge-bf16] | 46.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-dev.safetensors) |
 | **2.3** | `dev` | ![fp8][badge-fp8] | 29.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors) |
@@ -161,8 +168,12 @@ Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GP
 <p id="ckpt-distilled-lora" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ Distilled LoRA
+
 | Ver | Rank | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | `450` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 5.06 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/loras/ltx-2.5-22b-distilled-lora-450-int8.safetensors) |
+| **2.5** | `450` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 4.53 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/loras/ltx-2.5-22b-distilled-lora-450-int8_lean_convrot.safetensors) |
+| **2.5** | `450` | ![nvfp4][badge-nvfp4] | 2.66 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/loras/ltx-2.5-22b-distilled-lora-450-nvfp4.safetensors) |
 | **2.3** | `384` | ![bf16][badge-bf16] | 7.61 GB | [![](https://img.shields.io/badge/Lightricks_v1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384.safetensors) ┊ [![](https://img.shields.io/badge/Lightricks_v1.1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384-1.1.safetensors) |
 | **2.3** | `208` | ![bf16][badge-bf16] | 4.97 GB | [![][gh-drbaph]](https://huggingface.co/drbaph/LTX-2.3-FP8/resolve/main/LoRA/ltx-2.3-22b-distilled-lora-resized_dynamic_rank_208_fro095_bf16.safetensors) |
 | **2.3** | `159` | ![bf16][badge-bf16] | 3.83 GB | [![][gh-drbaph]](https://huggingface.co/drbaph/LTX-2.3-FP8/resolve/main/LoRA/ltx-2.3-22b-distilled-lora-resized_dynamic_rank_159_fro09_bf16.safetensors) |
@@ -809,6 +820,42 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 </details>
 
+<details>
+  <summary>vantagewithai LTX-2.5 GGUF</summary>
+
+#### [vantagewithai/LTX-2.5-GGUF](https://huggingface.co/vantagewithai/LTX-2.5-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-dev | ![Q2_K][badge-Q2_K] | 12.13 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q2_K.gguf) |
+| ltx-2.5-22b-dev | ![Q3_K_M][badge-Q3_K_M] | 12.92 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q3_K_M.gguf) |
+| ltx-2.5-22b-dev | ![Q3_K_S][badge-Q3_K_S] | 12.65 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q3_K_S.gguf) |
+| ltx-2.5-22b-dev | ![Q4_0][badge-Q4_0] | 15.24 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_0.gguf) |
+| ltx-2.5-22b-dev | ![Q4_1][badge-Q4_1] | 15.53 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_1.gguf) |
+| ltx-2.5-22b-dev | ![Q4_K_M][badge-Q4_K_M] | 15.69 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_K_M.gguf) |
+| ltx-2.5-22b-dev | ![Q4_K_S][badge-Q4_K_S] | 15.33 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q4_K_S.gguf) |
+| ltx-2.5-22b-dev | ![Q5_0][badge-Q5_0] | 15.98 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_0.gguf) |
+| ltx-2.5-22b-dev | ![Q5_1][badge-Q5_1] | 16.26 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_1.gguf) |
+| ltx-2.5-22b-dev | ![Q5_K_M][badge-Q5_K_M] | 18.12 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_K_M.gguf) |
+| ltx-2.5-22b-dev | ![Q5_K_S][badge-Q5_K_S] | 15.89 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q5_K_S.gguf) |
+| ltx-2.5-22b-dev | ![Q6_K][badge-Q6_K] | 18.62 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q6_K.gguf) |
+| ltx-2.5-22b-dev | ![Q8_0][badge-Q8_0] | 23.60 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/dev/ltx-2.5-22b-dev-transformer-Q8_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q2_K][badge-Q2_K] | 12.13 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q2_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 12.92 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_S][badge-Q3_K_S] | 12.65 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q3_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_0][badge-Q4_0] | 15.24 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_1][badge-Q4_1] | 15.53 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_1.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 15.69 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 15.33 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_0][badge-Q5_0] | 15.98 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_1][badge-Q5_1] | 16.26 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_1.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 18.12 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_S][badge-Q5_K_S] | 15.89 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q5_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 18.62 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 23.60 GB | [![][gh-vantagewithai]](https://huggingface.co/vantagewithai/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-transformer-Q8_0.gguf) |
+
+</details>
+
 #### Special Quantization: PolarQuant Q5
 
 **LTX-2.3 (22B) — PolarQuant Q5** is a bit-packed quantization method using Hadamard-Rotated Lloyd-Max Quantization. It achieves optimal Gaussian weight quantization via Hadamard rotation, delivering near-lossless quality with significant size reduction.
@@ -1048,8 +1095,12 @@ LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Co
 | Model | Precision | Size | Download |
 | :--- | :---: | :---: | :---: |
 | `gemma4-12b-heretic-ltx-2.5` | ![bf16][badge-bf16] | 24.46 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/gemma4-12b-heretic-ltx-2.5-bf16/resolve/main/gemma4-12b-heretic-ltx-2.5-bf16.safetensors) |
-| `Gemma-4-12B-it-uncensored-heretic` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 12.26 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-int8convrot.safetensors) |
+| `Gemma-4-12B-it-uncensored-heretic` | ![bf16][badge-bf16] | 26.26 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-bf16.safetensors) |
+| `Gemma-4-12B-it-uncensored-heretic` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 13.17 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-int8convrot.safetensors) |
 | `gemma4-12b-ltx2.5-int4int8-mix` | ![int4int8mix](https://img.shields.io/badge/int4_int8_mix-17a2b8?style=flat-square) | 7.52 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Gemma4-12B-int4-int8mix-TextEncoder/resolve/main/gemma4-12b-ltx2.5-int4int8-mix.safetensors) |
+| `gemma4-12b-with-proj-ltx-2.5` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 15.50 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-int8.safetensors) |
+| `gemma4-12b-with-proj-ltx-2.5` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 15.37 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-int8_lean_convrot.safetensors) |
+| `gemma4-12b-with-proj-ltx-2.5` | ![nvfp4][badge-nvfp4] | 11.20 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-nvfp4.safetensors) |
 
 
 <p id="split" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
@@ -1753,6 +1804,7 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 [gh-pyros-vault]: https://img.shields.io/badge/pyros--vault-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ibyteohdear]: https://img.shields.io/badge/ibyteohdear-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-DeepNeuralNerd]: https://img.shields.io/badge/DeepNeuralNerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-DmitryDB]: https://img.shields.io/badge/DmitryDB-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square

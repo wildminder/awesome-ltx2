@@ -58,6 +58,7 @@
 [gh-pyros-vault]: https://img.shields.io/badge/pyros--vault-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ibyteohdear]: https://img.shields.io/badge/ibyteohdear-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-DeepNeuralNerd]: https://img.shields.io/badge/DeepNeuralNerd-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-DmitryDB]: https://img.shields.io/badge/DmitryDB-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square
