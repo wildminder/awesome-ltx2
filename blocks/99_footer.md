@@ -96,3 +96,4 @@
 [gh-Cseti]: https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ssjenforcer191]: https://img.shields.io/badge/ssjenforcer191-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-rzgar]: https://img.shields.io/badge/rzgar-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-TheDivergentAI]: https://img.shields.io/badge/TheDivergentAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white

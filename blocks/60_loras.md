@@ -187,6 +187,7 @@
   * [LTX2.3_Actions](https://huggingface.co/EllaPriest45/LTX2.3_Actions) — **Huge collection of NSFW LoRAs** for LTX-2.3 (179 `.safetensors`, ~137 GB): explicit action / motion / pose LoRAs. Pairs with 10Eros / Sulphur-2.
   * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: massive per-celebrity likeness collection for LTX-2.3 (394 `.safetensors`, ~130 GB; each `Name - LTX2.3.safetensors` ~327 MB).
   * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs**: large visual-style collection for LTX-2.3 (35 `.safetensors`, ~20 GB): anime, claymation, cyberpunk, post-apocalyptic, cozy felt, and more.
+* [Se0ulSeeker LTX-2.3 i2v NSFW LoRAs](https://huggingface.co/Se0ulSeeker/ltx_2.3_i2v_nsfw_loras) — A collection / list of NSFW i2v (image-to-video) LoRAs for LTX-2.3 (NSFW content only — do not use for clean content).
 * TheBurgstall
   * [LTX-2.3-Body-Positivity](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora)
   * [LTX-2.3-Googly-Eyes](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
@@ -247,8 +248,6 @@
   * [LTX-2.3-22b-IC-LoRA-In-Outpainting](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting/resolve/main/ltx-2.3-22b-ic-lora-in-outpainting-0.9.safetensors) - Official Lightricks In-Outpainting IC-LoRA v0.9. Extends canvas in any direction from reference video, filling new regions with consistent scene content. (1.31 GB)
   * [LTX-2.3-22b-IC-LoRA-Day-To-Night](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Day-To-Night/resolve/main/ltx-2.3-22b-ic-lora-day-to-night-0.9.safetensors) - Official Lightricks Day-To-Night IC-LoRA v0.9. Converts daytime footage to nighttime with matched lighting/shadows. (327 MB)
   * [LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors) - Official Lightricks Pixel-Spatial-Upscaler IC-LoRA for LTX-2.5. Adds x2 pixel-level spatial upscaling to a video pass. (0.30 GB)
-* pyros-vault
-  * [ltx-2.5-distilled-lora-450-reduced](https://huggingface.co/pyros-vault/ltx-2.5-distilled-lora-450-reduced/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil128.safetensors) - Reduced-rank rerolls of the official LTX-2.5 distilled LoRA 450 for lower VRAM: `ceil128` (2.15 GB) and `ceil72` (1.29 GB). Use at strength 0.4–0.65.
 * fbjr
   * [LTX-2.3-22b-IC-LoRA-Audio-Only-Context](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context) - Two IC-LoRA checkpoints for audio-only and cross-modal audio-video context conditioning on LTX-2.3. Audio-only checkpoint (156 MB, `audio_only_step_01000.safetensors`) preserves a reference audio identity through a generation pass; cross-modal checkpoint (276 MB, `cross_modal_step_01000.safetensors`) extends that to joint audio-video conditioning.
 * FuzzPuppy

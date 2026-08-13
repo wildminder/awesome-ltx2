@@ -156,12 +156,13 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 | Model | Quant | Size | Download |
 | :--- | :---: | :---: | :---: |
-| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 10.73 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
-| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 14.05 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
-| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 12.90 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
-| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 15.66 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
-| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 17.38 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
-| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 22.01 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 12.92 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_S][badge-Q3_K_S] | 12.65 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q3_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 15.69 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 15.33 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 18.12 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 18.62 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 23.60 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Distilled-GGUF/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
 
 </details>
 
