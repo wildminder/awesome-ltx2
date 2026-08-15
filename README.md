@@ -1231,6 +1231,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) - Enhances video generation for complex reasoning tasks including multi-object interactions, physical causality, and spatial relationships
   * [VBVR-lora-I2V Special](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V)
   * [Licon MSR V2](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference) - Multiple Subject Reference v2: IC-LoRA preserving character identity / clothing / objects across frames in multi-reference video generation. Improves consistency, stability and scene logic vs. v1. Requires the [ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR) plugin.
+  * [Licon MSR V1 (LTX-2.5)](https://huggingface.co/LiconStudio/LTX-2.5-Multiple-Subject-Reference) - Multiple Subject Reference v1 for LTX-2.5: IC-LoRA preserving character identity / clothing / objects across frames in multi-reference video generation (1.31 GB, `LTX-2.5-Licon-MSR-V1.safetensors`). Requires the [ComfyUI-Licon-MSR](https://github.com/liconstudio/ComfyUI-Licon-MSR) plugin.
 
 * TheBurgstall
   * [LTX-2.3-Skin-Hair](https://huggingface.co/TheBurgstall/LTX-2.3-skin-hair) - Refines skin texture and hair rendering, reduces plastic skin artifacts, improves specular highlights 
@@ -1355,11 +1356,13 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [Sci-Fi Cinema](https://huggingface.co/SOLRICKS/ltx-2.3-sci-fi-cinema) - a cinematic science-fiction style LoRA for LTXV / LTX-2.3. Trigger word: `srx_scifilm`.
   * [LTX-2.3 Product Ad Style](https://huggingface.co/SOLRICKS/ltx-2.3-product-ad-style) - Cinematic product-commercial style for luxury / cosmetics / tech / fashion ads. Trigger `srx_commercial`, recommended strength 0.85.
   * [LTX-2.3 The Art of Marbling](https://huggingface.co/SOLRICKS/ltx-2.3-the-art-of-marbling) - Marbling / ebru ink-flow style (paper, pigment, fluid art, Turkish ebru). Trigger `srx_ebrumotion`, recommended strength 0.85.
-* SyFeee Chinese Drama Pack
+* SyFeee
   * [ltx2.3-chinese-drama-charlora](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-charlora) - Character LoRA trained on 78 episodes of Chinese historical drama; specialises base model for live-action, photoreal cinematic generation in Han dynasty / wuxia settings. Trigger words: `char_0_person` through `char_9_person`. Recommended strength 0.8–0.9.
   * [ltx2.3-chinese-drama-iclora-canny](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-canny) - IC-LoRA conditioning on Canny edge/line-art video; controls scene composition and architectural layout from reference outlines. Use with `char_0_person` for character reference.
   * [ltx2.3-chinese-drama-iclora-depth](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-depth) - IC-LoRA conditioning on monocular depth video (Depth-Anything-3); transfers 3D geometric structure from reference to generated video. Strong on interior scenes.
   * [ltx2.3-chinese-drama-iclora-pose](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-pose) - IC-LoRA conditioning on DWPose 133-keypoint skeleton render; transfers pose from reference video while preserving Chinese drama style. Stackable with character LoRA.
+  * [LTX-2.3-SyFe-ID-LoRA](https://huggingface.co/SyFeee/LTX-2.3-SyFe-ID-LoRA) - Identity (ID) LoRA for LTX-2.3 that preserves subject likeness / identity across frames. Two checkpoints (`id_lora_ours_768`, `id_lora_ours_704`), 1.16 GB each.
+  * [LTX-2.3-SyFe-Plain-AV-LoRA](https://huggingface.co/SyFeee/LTX-2.3-SyFe-Plain-AV-LoRA) - Plain audio/video LoRA for LTX-2.3. Multiple checkpoints: production v1/v2 and bilingual (704) at ~0.86/0.43 GB, plus a unified v5 at 0.11 GB.
 * mxturbo
   * [Formula1-Cockpit-T-Cam-LTX2.3](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) - LoRA trained on 1.6L V6 Turbo Hybrid Era F1 T-Cam onboard footage. Generates cockpit/T-cam onboard video. Trigger: `16LV6HybridF1` (car type); follow the "T-cam onboard view..." / "AT-cam onboard view..." prompt style.
 * chsengni
@@ -1369,6 +1372,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: massive per-celebrity likeness collection for LTX-2.3 (394 `.safetensors`, ~130 GB; each `Name - LTX2.3.safetensors` ~327 MB).
   * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs**: large visual-style collection for LTX-2.3 (35 `.safetensors`, ~20 GB): anime, claymation, cyberpunk, post-apocalyptic, cozy felt, and more.
 * [Se0ulSeeker LTX-2.3 i2v NSFW LoRAs](https://huggingface.co/Se0ulSeeker/ltx_2.3_i2v_nsfw_loras) — A collection / list of NSFW i2v (image-to-video) LoRAs for LTX-2.3 (NSFW content only — do not use for clean content).
+* [lynaNSFW DR34ML4Y AIO NSFW LTX-2.3](https://huggingface.co/lynaNSFW/DR34ML4Y_AIO_NSFW_LTX23) — AIO (all-in-one) NSFW LoRA collection for LTX-2.3 with three versions (V1 / V2 / V3), 1.94 GB each (NSFW content only — do not use for clean content).
 * TheBurgstall
   * [LTX-2.3-Body-Positivity](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora)
   * [LTX-2.3-Googly-Eyes](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
