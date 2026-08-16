@@ -43,6 +43,7 @@
   * [IC-LoRA-Cameraman v2](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v2) - v2 of the Cameraman IC-LoRA with a larger and more diverse dataset; replicates camera motion from a reference video. No trigger word required.
   * [IC-LoRA-CrossView Prompt v0.9](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-CrossView-Prompt) - Virtual second camera IC-LoRA: give it a reference video + a short camera-angle prompt using the trigger `crossview.` and re-render the same scene from a new viewpoint. v0.9 proof-of-concept trained on synthetic multi-view data; no starting image needed.
   * [IC-LoRA-CrossView Warp v0.9](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-CrossView-Warp) - Depth-warp novel-view IC-LoRA for LTX-Video 2.3 (22B). Given a video + a depth-warp of the same video (from the CrossViewWarp ComfyUI node, Depth Anything V2 input) and an azimuth/elevation/distance offset, renders the scene from that new viewpoint. Sibling of CrossView-Prompt v0.9. (192 MB)
+  * [IC-LoRA-CrossView Warp v2](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-CrossView-Warp_v2) - v2 of the depth-warp novel-view IC-LoRA for LTX-2.3 (22B): given a video + a depth-warp of the same video (CrossViewWarp ComfyUI node, Depth Anything V2 input) and an azimuth/elevation/distance offset, renders the scene from a new viewpoint. Checkpoint at 6000 steps. (330 MB)
 
 * 100percentrobot
   * [Audio-Reactive LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) - Generates audio-reactive videos with motion synchronized to musical elements (beats, rhythm)
