@@ -47,6 +47,9 @@
 
 * 100percentrobot
   * [Audio-Reactive LORA](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) - Generates audio-reactive videos with motion synchronized to musical elements (beats, rhythm)
+* KoshiMazaki
+  * [akuspace-ltx25 v0.5](https://huggingface.co/KoshiMazaki/akuspace-ltx25) - Audio / acoustic-space LoRA for LTX-2.5 (v0.5, 162 MB). Conditions generation on room acoustics and reverb environments using reference audio; the repo ships paired dry vs. treated samples (cathedral, small-room, club, outdoor, empty-club, medium-room) for beats and voices. See the repo README for trigger words / workflow.
+
 * LiconStudio
   * [VBVR-lora-I2V](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V) - Enhances video generation for complex reasoning tasks including multi-object interactions, physical causality, and spatial relationships
   * [VBVR-lora-I2V Special](https://huggingface.co/LiconStudio/Ltx2.3-VBVR-lora-I2V)
