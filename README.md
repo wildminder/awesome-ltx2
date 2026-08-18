@@ -1371,10 +1371,11 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [Formula1-Cockpit-T-Cam-LTX2.3](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) - LoRA trained on 1.6L V6 Turbo Hybrid Era F1 T-Cam onboard footage. Generates cockpit/T-cam onboard video. Trigger: `16LV6HybridF1` (car type); follow the "T-cam onboard view..." / "AT-cam onboard view..." prompt style.
 * chsengni
   * [ltx2.3-fpv-motion](https://huggingface.co/chsengni/ltx2.3-fpv-motion) - Smoother FPV (First Person View) camera movements and improved low-speed flight shots.
-* EllaPriest45 — three large LTX-2.3 LoRA collections (NSFW / characters / styles); open each repo for the full file list
+* EllaPriest45 — large LTX-2.3 / LTX-2.5 LoRA collections (NSFW actions / characters / styles / face-swap); open each repo for the full file list
   * [LTX2.3_Actions](https://huggingface.co/EllaPriest45/LTX2.3_Actions) — **Huge collection of NSFW LoRAs** for LTX-2.3 (179 `.safetensors`, ~137 GB): explicit action / motion / pose LoRAs. Pairs with 10Eros / Sulphur-2.
-  * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: massive per-celebrity likeness collection for LTX-2.3 (394 `.safetensors`, ~130 GB; each `Name - LTX2.3.safetensors` ~327 MB).
-  * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs**: large visual-style collection for LTX-2.3 (35 `.safetensors`, ~20 GB): anime, claymation, cyberpunk, post-apocalyptic, cozy felt, and more.
+  * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: massive per-celebrity likeness collection for LTX-2.3 (394 `.safetensors`, ~139 GB; each `Name - LTX2.3.safetensors` ~353 MB).
+  * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs**: large visual-style collection for LTX-2.3 (38 `.safetensors`, ~23 GB): anime, claymation, cyberpunk, post-apocalyptic, cozy felt, and more.
+  * [LTX2.5_actions (Best Face Swap)](https://huggingface.co/EllaPriest45/LTX2.5_actions) — LTX-2.5 **face-swap** LoRA collection (repo is a Civitai backup; credits to original authors). Two ranks: `BFS - Best Face Swap R128` and `BFS - Best Face Swap R64`, 0.65 GB each (~1.3 GB total).
 * [Se0ulSeeker LTX-2.3 i2v NSFW LoRAs](https://huggingface.co/Se0ulSeeker/ltx_2.3_i2v_nsfw_loras) — A collection / list of NSFW i2v (image-to-video) LoRAs for LTX-2.3 (NSFW content only — do not use for clean content).
 * [lynaNSFW DR34ML4Y AIO NSFW LTX-2.3](https://huggingface.co/lynaNSFW/DR34ML4Y_AIO_NSFW_LTX23) — AIO (all-in-one) NSFW LoRA collection for LTX-2.3 with three versions (V1 / V2 / V3), 1.94 GB each (NSFW content only — do not use for clean content).
 * TheBurgstall
@@ -1412,6 +1413,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 * [Wan2.1 VAE Adapter](https://huggingface.co/HDHCDev/Ltx2_2_Wan2.1_VAE_Adapter)
   * Latent space adapter for converting between LTX-2 and Wan2.1 VAE representations
   * `latent_adapter_final.pt` (447 MB)
+* [infosave LTX-2.5-cmf](https://huggingface.co/infosave/LTX-2.5-cmf) — The **entire LTX-2.5 pipeline** (21 B audio-video DiT + Gemma-4 12 B prompt encoder + 3-D video VAE + audio VAE + both latent upscalers + duration head) packed into **one 22.07 GB 4-bit (`q4tp`) CMF file**, rendered by the `cortiq` Rust binary (no PyTorch / CUDA / Python). All nine modes (text→video, video→sound, sound→video, etc.) run from this single memory-mapped file. Download `ltx25-q4tp.cmf`; see the repo README for install + usage.
 * TenStrip
   * [LTX2.3 JoyAI LoRA Extracted](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) - LoRA extracted from [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo); boosts prompt response and motion in LTX-2.3 (also used for NSFW/Sulphur/Eros) at strength 0.4–0.7.
   * [DMD LoRA (r256)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_reshaped_r256.safetensors) - DMD-distillation delta extraction from [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for rank-256 sampling. Use at 1.0 with 8/4-step upscale or experiment with other sigmas; any euler or LTX-compatible sampler. No custom loading needed. (4.86 GB)
