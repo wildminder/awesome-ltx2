@@ -568,6 +568,58 @@ Surgical finetune based on [jdopensource/JoyAI-Echo](https://huggingface.co/jdop
 
 </details>
 
+<p id="finetune-joyai-echo-ltx25" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ JoyAI-Echo (LTX-2.5)
+
+Surgical merge of [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo) into the **LTX-2.5** `dev` transformer by joeygambino — JoyAI-Echo's video attention / feed-forward delta transplanted in, with nothing distilled baked on top. Three builds: `dev` (bring-your-own distill LoRA), `comfy-native` (few-step, distill baked at 0.5 — RTX 50), and GGUF (few-step — RTX 30/40). Two doses per build: `070T30` (0.7× delta / 0.3× modulation) and `100T50` (1.0× / 0.5×). Workflows: [ComfyUI-JoyLTX25](https://github.com/jlucasmcrell/ComfyUI-JoyLTX25).
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | dev | `echoVid 070T30` | ![bf16][badge-bf16] | 42.02 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-dev/resolve/main/LTX25dev-echoVid-070T30-DiT-bf16.safetensors) |
+| **2.5** | dev | `echoVid 070T30` | ![fp8][badge-fp8] | 21.48 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-dev/resolve/main/LTX25dev-echoVid-070T30-DiT-comfy-fp8.safetensors) |
+| **2.5** | dev | `echoVid 070T30` | ![int8tensormixed][badge-int8tensormixed] | 21.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-dev/resolve/main/LTX25dev-echoVid-070T30-DiT-comfy-int8.safetensors) |
+| **2.5** | dev | `echoVid 100T50` | ![bf16][badge-bf16] | 42.02 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-dev/resolve/main/LTX25dev-echoVid-100T50-DiT-bf16.safetensors) |
+| **2.5** | dev | `echoVid 100T50` | ![fp8][badge-fp8] | 21.48 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-dev/resolve/main/LTX25dev-echoVid-100T50-DiT-comfy-fp8.safetensors) |
+| **2.5** | dev | `echoVid 100T50` | ![int8tensormixed][badge-int8tensormixed] | 21.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-dev/resolve/main/LTX25dev-echoVid-100T50-DiT-comfy-int8.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30` | ![int8tensormixed][badge-int8tensormixed] | 21.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-comfy-int8.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30` | ![mix4x8](https://img.shields.io/badge/mix4x8-17a2b8?style=flat-square) | 17.01 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-comfy-mix4x8-17.0GB.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30` | ![nvfp4][badge-nvfp4] | 12.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-comfy-nvfp4.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30` | ![w4a4](https://img.shields.io/badge/w4a4-17a2b8?style=flat-square) | 11.24 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-comfy-w4a4.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 12.52 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-comfy-w4a8.safetensors) |
+| **2.5** | comfy-native | `echoVid 100T50` | ![int8tensormixed][badge-int8tensormixed] | 21.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-int8.safetensors) |
+| **2.5** | comfy-native | `echoVid 100T50` | ![mix4x8](https://img.shields.io/badge/mix4x8-17a2b8?style=flat-square) | 13.81 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-mix4x8-13.8GB.safetensors) |
+| **2.5** | comfy-native | `echoVid 100T50` | ![mix4x8](https://img.shields.io/badge/mix4x8-17a2b8?style=flat-square) | 17.01 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-mix4x8-17.0GB.safetensors) |
+| **2.5** | comfy-native | `echoVid 100T50` | ![nvfp4][badge-nvfp4] | 12.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-nvfp4.safetensors) |
+| **2.5** | comfy-native | `echoVid 100T50` | ![w4a4](https://img.shields.io/badge/w4a4-17a2b8?style=flat-square) | 11.24 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-w4a4.safetensors) |
+| **2.5** | comfy-native | `echoVid 100T50` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 12.52 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-w4a8.safetensors) |
+
+◦ **JoyAI-Echo (LTX-2.5) — GGUF (low-VRAM quants)**
+
+<details>
+  <summary>joeygambino/joyai-echo-ltx25-echoVid-gguf</summary>
+
+[`joeygambino/joyai-echo-ltx25-echoVid-gguf`](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf) — echoVid GGUF quants by joeygambino (few-step, distill baked at 0.5; RTX 30/40).
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q2_K][badge-Q2_K] | 7.91 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q2_K.gguf) |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q3_K_M][badge-Q3_K_M] | 10.60 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q3_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q4_K_M][badge-Q4_K_M] | 14.17 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q4_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q4_K_S][badge-Q4_K_S] | 12.93 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q4_K_S.gguf) |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q5_K_M][badge-Q5_K_M] | 15.90 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q5_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q6_K][badge-Q6_K] | 17.75 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q6_K.gguf) |
+| **2.5** | GGUF | `echoVid 070T30` | ![Q8_0][badge-Q8_0] | 22.73 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-DiT-Q8_0.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q2_K][badge-Q2_K] | 7.91 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q2_K.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q3_K_M][badge-Q3_K_M] | 10.60 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q3_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q4_K_M][badge-Q4_K_M] | 14.17 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q4_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q4_K_S][badge-Q4_K_S] | 12.93 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q4_K_S.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q5_K_M][badge-Q5_K_M] | 15.90 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q5_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q6_K][badge-Q6_K] | 17.75 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q6_K.gguf) |
+| **2.5** | GGUF | `echoVid 100T50` | ![Q8_0][badge-Q8_0] | 22.73 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-gguf/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-Q8_0.gguf) |
+
+</details>
+
 <p id="finetune-pinkcherry" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ PinkCherry NSFW
@@ -1405,6 +1457,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX-2.3 IC-LoRA — 3D Render to Photoreal](https://huggingface.co/fal/LTX-2.3-3DREAL-LoRA) - IC-LoRA turning rough 3D viewport / Blender blockouts into photoreal cinematic video while preserving composition and camera. Trigger `3DREAL`. v2 (`3DREAL-strong-v2`) is the newest and is also exposed on fal.ai as `render-to-real`.
 * a3xrfgb
   * [Fable 5 — Vintage Style LoRA](https://huggingface.co/a3xrfgb/Fable5_Ltx2.3_vintage_style) - Vintage-style minimal-illustration / stop-motion / typography LoRA for LTX-2.3, used in the Fable 5 intro. Trained on a personal RTX 3090 (~5 hours).
+* AhsanHareem
+  * [ReelBids — LTX-2.5 dolly-in camera LoRA](https://huggingface.co/AhsanHareem/reelbids-ltx25-camera-lora) - Single rank-32 LoRA that drives a **dolly-in** camera move at seven selectable speeds for LTX-2.5 22B image-to-video. Speed is chosen by a trigger token in the prompt (`sp05`–`sp50`; e.g. `sp20` ≈ 1.59× zoom over 97 frames), so one adapter covers the whole range. Best checkpoint at step 1250. (0.20 GB)
 
 <a id="lora-special"></a>
 
@@ -1414,6 +1468,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * Latent space adapter for converting between LTX-2 and Wan2.1 VAE representations
   * `latent_adapter_final.pt` (447 MB)
 * [infosave LTX-2.5-cmf](https://huggingface.co/infosave/LTX-2.5-cmf) — The **entire LTX-2.5 pipeline** (21 B audio-video DiT + Gemma-4 12 B prompt encoder + 3-D video VAE + audio VAE + both latent upscalers + duration head) packed into **one 22.07 GB 4-bit (`q4tp`) CMF file**, rendered by the `cortiq` Rust binary (no PyTorch / CUDA / Python). All nine modes (text→video, video→sound, sound→video, etc.) run from this single memory-mapped file. Download `ltx25-q4tp.cmf`; see the repo README for install + usage.
+* [CQdesign LTX-2.5 CQ Enhancer LoRAs](https://huggingface.co/CQdesign/LTX-2.5-CQ-Video-and-Image-Enhancer-LoRAs) — LTX-2.5 **video & image enhancer** LoRAs (two rank-128 adapters: one for images, one for video) that improve, enhance, and restore the quality of old / low-res / poor-quality images and videos. Generative enhancement (not a regular upscaler); faster than many commercial models. Use the `ltx-2.5-video-vae-conv-bf16` VAE for best results. Each 1.32 GB.
 * TenStrip
   * [LTX2.3 JoyAI LoRA Extracted](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) - LoRA extracted from [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo); boosts prompt response and motion in LTX-2.3 (also used for NSFW/Sulphur/Eros) at strength 0.4–0.7.
   * [DMD LoRA (r256)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_reshaped_r256.safetensors) - DMD-distillation delta extraction from [JoyAI-Echo](https://huggingface.co/jdopensource/JoyAI-Echo), reshaped for rank-256 sampling. Use at 1.0 with 8/4-step upscale or experiment with other sigmas; any euler or LTX-compatible sampler. No custom loading needed. (4.86 GB)
