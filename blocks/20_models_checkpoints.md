@@ -217,7 +217,8 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.3` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.3_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![bf16][badge-bf16] | 44.0 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_bf16.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
-| **2.3** | Full | `10Eros v1.4` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
+| **2.3** | Full | `10Eros v1.4 DMD int8 ConvRot` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
+| **2.3** | Full — testing/beta | `10Eros Max h3 TURBO-hybrid beta3` (gated repo) | ![bf16][badge-bf16] | 40.23 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing) |
 | **2.3** | Full | `10Eros v1 INT8 ConvRot` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 23.51 GB | [![bertbobson][gh-bertbobson]](https://huggingface.co/bertbobson/LTX2.3-10Eros-INT8-ConvRot/resolve/main/10Eros_v1_bf16-int8.ConvRot.safetensors) |
 
 ◦ **10Eros GGUF** — vantagewithai low-VRAM quants
@@ -575,6 +576,32 @@ Elastic is a TensorRT-engine distribution of a LoRA-integrated distilled FP8 T2V
 | Build | Name | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
 | distil + LoRA T2V | `Elastic — H100` | fp8 | ~19 GB (49 `.qlip` shards) | [![TheStageAI][gh-TheStageAI]](https://huggingface.co/TheStageAI/Elastic-LTX-2.3/tree/main/models/H100/ltx-2.3-22b-distilled-fp8-t2v_lora) |
+
+#### ❖ ChrisColeTech Uncensored Turbo
+
+Pre-merged **LTX-2.3 Uncensored Turbo v1.4** DiT by [ChrisColeTech](https://huggingface.co/ChrisColeTech) with three fine-tunes baked into the weights: 10Eros NSFW LoRA (1.0), DMD distilled LoRA (1.0, 4-step capable — 8 steps recommended), and the official LTXV ICLoRA Detailer (0.6). Modes: T2AV / I2AV / V2V / A2V / REF2VA; example workflows bundled in the repo.
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.3** | v1.4 fp8mixed | ![fp8][badge-fp8] | 29.16 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_fp8mixed.safetensors) |
+| **2.3** | v1.4 GGUF | ![Q4_K_M][badge-Q4_K_M] | 14.18 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_Q4_K_M.gguf) |
+| **2.3** | v1.4 GGUF | ![Q6_K][badge-Q6_K] | 17.76 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_Q6_K.gguf) |
+| **2.3** | v1.4 GGUF | ![Q8_0][badge-Q8_0] | 22.74 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_Q8_0.gguf) |
+
+◦ **Component splits** (uncensored v1.4 text encoder / projections / VAEs, plus the older **v1.0** uncensored build and stock LTX-2.3 distilled fp8) live in the same repo under `split/` — see the repo tree for the full list.
+
+<details>
+  <summary>v1.0 builds (older, also in this repo)</summary>
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.3** | v1.0 fp8 | ![fp8][badge-fp8] | 29.16 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-fp8.safetensors) |
+| **2.3** | v1.0 int8 | ![int8tensormixed][badge-int8tensormixed] | 29.16 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-int8.safetensors) |
+| **2.3** | v1.0 GGUF | ![Q4_K_M][badge-Q4_K_M] | 14.30 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q4_K_M.gguf) |
+| **2.3** | v1.0 GGUF | ![Q6_K][badge-Q6_K] | 17.77 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q6_K.gguf) |
+| **2.3** | v1.0 GGUF | ![Q8_0][badge-Q8_0] | 22.76 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q8_0.gguf) |
+
+</details>
 
 <p id="finetune-spatialav2av" align="center">· · · · · · · · · · · · · ·</p>
 
