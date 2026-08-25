@@ -10,6 +10,7 @@
 [gh-joeygambino]: https://img.shields.io/badge/joeygambino-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Hoffm4nz]: https://img.shields.io/badge/Hoffm4nz-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JanKanta]: https://img.shields.io/badge/JanKanta-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-EllaPriest45]: https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

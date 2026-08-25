@@ -507,6 +507,38 @@ Surgical merge of [jdopensource/JoyAI-Echo](https://huggingface.co/jdopensource/
 | **2.5** | comfy-native | `echoVid 100T50` | ![w4a4](https://img.shields.io/badge/w4a4-17a2b8?style=flat-square) | 11.24 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-w4a4.safetensors) |
 | **2.5** | comfy-native | `echoVid 100T50` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 12.52 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-echoVid-comfy-native/resolve/main/LTX25dist-echoVid-100T50-v2-DiT-comfy-w4a8.safetensors) |
 
+**Z-Image surface-graft variant (`× Z-Image`)** — same `echoVid 070T30 v2` engine with [Z-Image](https://huggingface.co/Tongyi-MAI/Z-Image)'s spatial attention profile grafted in as per-block `q_norm` rescaling (dose 0.5, no retraining, no Z-Image weights at inference). Targets surface/texture rendering: fine detail on foliage, straw, gravel, fabric and skin. Drop-in replacement for any stock v2 workflow — same loaders, settings and seeds.
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![bf16][badge-bf16] | 42.02 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-bf16.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![fp8][badge-fp8] | 21.48 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-fp8.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![int8tensormixed][badge-int8tensormixed] | 21.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-int8.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![mix4x8](https://img.shields.io/badge/mix4x8-17a2b8?style=flat-square) | 13.81 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-mix4x8-13.8GB.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![mix4x8](https://img.shields.io/badge/mix4x8-17a2b8?style=flat-square) | 17.01 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-mix4x8-17.0GB.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![nvfp4][badge-nvfp4] | 12.50 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-nvfp4.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![w4a4](https://img.shields.io/badge/w4a4-17a2b8?style=flat-square) | 11.24 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-w4a4.safetensors) |
+| **2.5** | comfy-native | `echoVid 070T30 × Z-Image zgraft05` | ![w4a8](https://img.shields.io/badge/w4a8-17a2b8?style=flat-square) | 12.52 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-native/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-comfy-w4a8.safetensors) |
+
+◦ **JoyAI-Echo × Z-Image — GGUF (RTX 30/40; K-quants run 4–8× faster than emulated 4-bit there)**
+
+<details>
+  <summary>joeygambino/joyai-echo-ltx25-x-Z-Image-gguf</summary>
+
+[`joeygambino/joyai-echo-ltx25-x-Z-Image-gguf`](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf) — Z-Image-grafted echoVid `070T30 v2` GGUF quants by joeygambino (Q4_K_M/Q4_K_S are the RTX 30/40 sweet spot).
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q2_K][badge-Q2_K] | 7.91 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q2_K.gguf) |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q3_K_M][badge-Q3_K_M] | 10.60 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q3_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q4_K_M][badge-Q4_K_M] | 14.17 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q4_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q4_K_S][badge-Q4_K_S] | 12.93 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q4_K_S.gguf) |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q5_K_M][badge-Q5_K_M] | 15.90 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q5_K_M.gguf) |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q6_K][badge-Q6_K] | 17.75 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q6_K.gguf) |
+| **2.5** | GGUF | `echoVid 070T30 × Z-Image zgraft05` | ![Q8_0][badge-Q8_0] | 22.73 GB | [![joeygambino][gh-joeygambino]](https://huggingface.co/joeygambino/joyai-echo-ltx25-x-Z-Image-gguf/resolve/main/LTX25dist-echoVid-070T30-v2-zgraft05-DiT-Q8_0.gguf) |
+
+</details>
+
 ◦ **JoyAI-Echo (LTX-2.5) — GGUF (low-VRAM quants)**
 
 <details>
@@ -602,6 +634,18 @@ Pre-merged **LTX-2.3 Uncensored Turbo v1.4** DiT by [ChrisColeTech](https://hugg
 | **2.3** | v1.0 GGUF | ![Q8_0][badge-Q8_0] | 22.76 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q8_0.gguf) |
 
 </details>
+
+<p id="finetune-redgraft" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ REDGraft (NSFW)
+
+Uncensored NSFW **LTX-2.5** checkpoint by [EllaPriest45](https://huggingface.co/EllaPriest45) ("REDGraft"), shipped as a single INT8 full checkpoint together with a bundled two-stage i2V workflow JSON (ManualSigmas ×2 + LoRA loader).
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | REDGraft NSFW (full ckpt) | ![int8tensormixed][badge-int8tensormixed] | 17.03 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/REDGraft%20%28NSFW%29%20INT8%20-%20LTX2.5.safetensors) |
+
+◦ Bundled workflow: [`REDGraft (NSFW) INT8 - LTX2.5.json`](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/REDGraft%20%28NSFW%29%20INT8%20-%20LTX2.5.json).
 
 <p id="finetune-spatialav2av" align="center">· · · · · · · · · · · · · ·</p>
 
