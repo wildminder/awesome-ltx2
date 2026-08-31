@@ -157,6 +157,19 @@ Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GP
 | **2** | `ltx-2-19b dev` | ![fp8_e5m2](https://img.shields.io/badge/fp8__e5m2-fe7d37?style=flat-square) | 27.1 GB | [![](https://img.shields.io/badge/progmars-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/progmars/ltx-2-19b-dev-fp8_e5m2) |
 
 
+<p id="ckpt-image-ltx23" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ Image-only LTX-2.3 (text-to-image)
+
+Image-only **LTX-2.3** checkpoints by [elismasilva](https://huggingface.co/elismasilva) — the 13B LTX-2.3 family pruned to the still-image generation path (video/audio weights removed), packaged as unified ComfyUI safetensors. Inherits the LTX Video 2 Open Source License.
+
+| Ver | Name | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.3** | `image dev` | ![bf16][badge-bf16] | 33.61 GB | [![elismasilva][gh-elismasilva]](https://huggingface.co/elismasilva/ltx2.3-image-comfyui/resolve/main/ltx-2.3-13b-image-dev.safetensors) |
+| **2.3** | `image distilled` | ![bf16][badge-bf16] | 33.61 GB | [![elismasilva][gh-elismasilva]](https://huggingface.co/elismasilva/ltx2.3-image-comfyui/resolve/main/ltx-2.3-13b-image-distilled.safetensors) |
+| **2.3** | `image dev` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.81 GB | [![elismasilva][gh-elismasilva]](https://huggingface.co/elismasilva/ltx2.3-image-comfyui/resolve/main/ltx-2.3-13b-image-dev-convrot-int8.safetensors) |
+| **2.3** | `image distilled` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.81 GB | [![elismasilva][gh-elismasilva]](https://huggingface.co/elismasilva/ltx2.3-image-comfyui/resolve/main/ltx-2.3-13b-image-distilled-convrot-int8.safetensors) |
+
 <p id="ckpt-silveroxides" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ silveroxides Quantizations (mxfp8)
@@ -755,6 +768,18 @@ Publicly-released audio→audio-video training checkpoints from [BingoG/LTX-2-Sp
 | E6 Full                  | 1000 | 36.22 GB | [![BingoG][gh-BingoG]](https://huggingface.co/BingoG/LTX-2-SpatialAV2AV-Checkpoints/resolve/main/E6/step_01000/model_weights_step_01000.safetensors) |
 
 *Note: these are intermediate training checkpoints, not inference-ready models — useful for fine-tuning experiments and reproducibility only.*
+
+<p id="finetune-onestep-refiner" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ One-Step Refiner (Owen777)
+
+One-step **LTX-2.5** video refiner by [Owen777](https://huggingface.co/Owen777) — a DMD/GAN-style one-step refinement model (EMA step 835) that sharpens/refines generated video in a single pass. **Access is gated** — request access on the repo before downloading.
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | one-step refiner (EMA step 835) | ![bf16][badge-bf16] | 26.25 GB | [![Owen777][gh-Owen777]](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/step_00000835_ema_bf16.safetensors) |
+
+◦ Reinforcement-learning LoRA also in repo: [`rl_lora/step_000400.pt`](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/rl_lora/step_000400.pt) (~0.81 GB).
 
 <p id="gguf" align="center">══════════════════════════════════</p>
 
@@ -1498,6 +1523,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | LensRemover IC-LoRA | 2.3 | 0.31 GB | Remove lens / glass artifacts | [![JanKanta](https://img.shields.io/badge/JanKanta-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/JanKanta/ltx-2.3-22b-ic-lora-lens_remover/resolve/main/lens-eraiser-ltx23-ic-lora.safetensors) |
 | LTX-2 IC-LoRA-Ungrade | 2 | — | Upscale / ungrade (LTX-2) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2-19b-IC-LoRA-Ungrade) |
 | LTX-2.3 IC-LoRA-Ungrade | 2.3 | — | Upscale / ungrade (LTX-2.3) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade) |
+| RoadReady IC-LoRA | 2.3 | 0.33 GB | Road-surface cleanup (removes cracks/stains; LTX LoRA Jam) | [![DriveEK](https://img.shields.io/badge/DriveEK-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/DriveEK/roadready-ltx23-iclora/resolve/main/roadready_iclora_ltx23_step2000_rank32.safetensors) |
 
 #### ❖ IC-LoRA · Outpaint
 
@@ -1529,6 +1555,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| Cel-Character IC-LoRA | 2.5 | 0.33 GB | Live-action → 2D cel character (rank 32; bg stays photographic) | [![Baberg](https://img.shields.io/badge/Baberg-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Baberg/ltx-2.5-22b-ic-lora-cel-character/resolve/main/ltx25-iclora-cartoon-cum3250.safetensors) |
 | Cross-Eyed (stereo) IC-LoRA | 2.3 | 0.33 GB | Stereoscopic / cross-eyed | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) |
 | FXIC LTX2 IC-LoRA | 2 | — | VFX / FX effect control | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/fxic-ltx2-iclora) |
 | IC-LoRA-UI (linoyts) | 2.3 | — | UI / screen overlay | [![linoyts](https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/linoyts/ltx2-ic-lora-ui) |
@@ -1978,6 +2005,8 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 [gh-Hoffm4nz]: https://img.shields.io/badge/Hoffm4nz-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JanKanta]: https://img.shields.io/badge/JanKanta-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-EllaPriest45]: https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Owen777]: https://img.shields.io/badge/Owen777-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-elismasilva]: https://img.shields.io/badge/elismasilva-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

@@ -187,6 +187,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | LensRemover IC-LoRA | 2.3 | 0.31 GB | Remove lens / glass artifacts | [![JanKanta](https://img.shields.io/badge/JanKanta-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/JanKanta/ltx-2.3-22b-ic-lora-lens_remover/resolve/main/lens-eraiser-ltx23-ic-lora.safetensors) |
 | LTX-2 IC-LoRA-Ungrade | 2 | — | Upscale / ungrade (LTX-2) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2-19b-IC-LoRA-Ungrade) |
 | LTX-2.3 IC-LoRA-Ungrade | 2.3 | — | Upscale / ungrade (LTX-2.3) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade) |
+| RoadReady IC-LoRA | 2.3 | 0.33 GB | Road-surface cleanup (removes cracks/stains; LTX LoRA Jam) | [![DriveEK](https://img.shields.io/badge/DriveEK-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/DriveEK/roadready-ltx23-iclora/resolve/main/roadready_iclora_ltx23_step2000_rank32.safetensors) |
 
 #### ❖ IC-LoRA · Outpaint
 
@@ -218,6 +219,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| Cel-Character IC-LoRA | 2.5 | 0.33 GB | Live-action → 2D cel character (rank 32; bg stays photographic) | [![Baberg](https://img.shields.io/badge/Baberg-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Baberg/ltx-2.5-22b-ic-lora-cel-character/resolve/main/ltx25-iclora-cartoon-cum3250.safetensors) |
 | Cross-Eyed (stereo) IC-LoRA | 2.3 | 0.33 GB | Stereoscopic / cross-eyed | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) |
 | FXIC LTX2 IC-LoRA | 2 | — | VFX / FX effect control | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/fxic-ltx2-iclora) |
 | IC-LoRA-UI (linoyts) | 2.3 | — | UI / screen overlay | [![linoyts](https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/linoyts/ltx2-ic-lora-ui) |
