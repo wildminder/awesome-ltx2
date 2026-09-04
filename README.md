@@ -781,6 +781,18 @@ One-step **LTX-2.5** video refiner by [Owen777](https://huggingface.co/Owen777) 
 
 ◦ Reinforcement-learning LoRA also in repo: [`rl_lora/step_000400.pt`](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/rl_lora/step_000400.pt) (~0.81 GB).
 
+<p id="finetune-solarwm" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ SolarWM (World Model)
+
+Research **LTX-2.5 world model** by [junchaoh-cs](https://huggingface.co/junchaoh-cs) (arXiv:[2609.02886](https://arxiv.org/abs/2609.02886)) — a long-horizon, camera-controllable video world model finetuned from LTX-2.5 22B. The repo re-ships the LTX-2.5 22B base (dev transformer + gemma4-12b text encoder + VAE) plus a finetuned stage, `SolarWM-ltx-22B-bid-stage0p5-153f` (EMA weights, `ema/model.safetensors`). **Access is gated** — request access before downloading; exact artifact formats are unconfirmed (gated).
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | SolarWM bid-stage0p5-153f (finetuned stage) | — | 3.93 GB | [![junchaoh-cs][gh-junchaoh-cs]](https://huggingface.co/junchaoh-cs/SolarWM-LTX-22B/resolve/main/SolarWM-ltx-22B-bid-stage0p5-153f/ema/model.safetensors) |
+
+◦ Base LTX-2.5 22B (dev transformer + gemma4-12b encoder + VAE) also in repo. Paper: [arXiv:2609.02886](https://arxiv.org/abs/2609.02886).
+
 <p id="gguf" align="center">══════════════════════════════════</p>
 
 
@@ -1343,6 +1355,8 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 ### ▣ Styles
 * elismasilva
   * [Latin Dance](https://huggingface.co/elismasilva/LTX-2.3-LoRa-Latin-Dance/resolve/main/LTX-2.3-Latin%20dance.safetensors) - Latin dance motion/style LoRA for LTX-2.3 (rank ~128). (214 MB)
+* EllaPriest45
+  * [3D Animation Style](https://huggingface.co/EllaPriest45/LTX2.5_styles/resolve/main/3D%20Animation%20Style%20-%20LTX2.5%20-%203dsrx%2Ctxttovideo%200.8str%2Cimagetovideo%200.4str.safetensors) - 3D-rendered animation look for LTX-2.5 (t2v 0.8 str / i2v 0.4 str per filename). (674 MB)
 * OmerHagawa
   * [LTX2 UME PixelArt LoRA](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) - Pixel art style LoRA for LTX-2
 * Playtime-AI
@@ -2007,6 +2021,7 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 [gh-EllaPriest45]: https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Owen777]: https://img.shields.io/badge/Owen777-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-elismasilva]: https://img.shields.io/badge/elismasilva-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-junchaoh-cs]: https://img.shields.io/badge/junchaoh--cs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

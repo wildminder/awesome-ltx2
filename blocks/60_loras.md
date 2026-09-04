@@ -7,6 +7,8 @@
 ### ▣ Styles
 * elismasilva
   * [Latin Dance](https://huggingface.co/elismasilva/LTX-2.3-LoRa-Latin-Dance/resolve/main/LTX-2.3-Latin%20dance.safetensors) - Latin dance motion/style LoRA for LTX-2.3 (rank ~128). (214 MB)
+* EllaPriest45
+  * [3D Animation Style](https://huggingface.co/EllaPriest45/LTX2.5_styles/resolve/main/3D%20Animation%20Style%20-%20LTX2.5%20-%203dsrx%2Ctxttovideo%200.8str%2Cimagetovideo%200.4str.safetensors) - 3D-rendered animation look for LTX-2.5 (t2v 0.8 str / i2v 0.4 str per filename). (674 MB)
 * OmerHagawa
   * [LTX2 UME PixelArt LoRA](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) - Pixel art style LoRA for LTX-2
 * Playtime-AI

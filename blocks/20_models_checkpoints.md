@@ -685,3 +685,15 @@ One-step **LTX-2.5** video refiner by [Owen777](https://huggingface.co/Owen777) 
 | **2.5** | one-step refiner (EMA step 835) | ![bf16][badge-bf16] | 26.25 GB | [![Owen777][gh-Owen777]](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/step_00000835_ema_bf16.safetensors) |
 
 ◦ Reinforcement-learning LoRA also in repo: [`rl_lora/step_000400.pt`](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/rl_lora/step_000400.pt) (~0.81 GB).
+
+<p id="finetune-solarwm" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ SolarWM (World Model)
+
+Research **LTX-2.5 world model** by [junchaoh-cs](https://huggingface.co/junchaoh-cs) (arXiv:[2609.02886](https://arxiv.org/abs/2609.02886)) — a long-horizon, camera-controllable video world model finetuned from LTX-2.5 22B. The repo re-ships the LTX-2.5 22B base (dev transformer + gemma4-12b text encoder + VAE) plus a finetuned stage, `SolarWM-ltx-22B-bid-stage0p5-153f` (EMA weights, `ema/model.safetensors`). **Access is gated** — request access before downloading; exact artifact formats are unconfirmed (gated).
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | SolarWM bid-stage0p5-153f (finetuned stage) | — | 3.93 GB | [![junchaoh-cs][gh-junchaoh-cs]](https://huggingface.co/junchaoh-cs/SolarWM-LTX-22B/resolve/main/SolarWM-ltx-22B-bid-stage0p5-153f/ema/model.safetensors) |
+
+◦ Base LTX-2.5 22B (dev transformer + gemma4-12b encoder + VAE) also in repo. Paper: [arXiv:2609.02886](https://arxiv.org/abs/2609.02886).
