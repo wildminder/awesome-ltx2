@@ -189,3 +189,18 @@ LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Co
 | `gemma4-12b-with-proj-ltx-2.5` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 15.37 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-int8_lean_convrot.safetensors) |
 | `gemma4-12b-with-proj-ltx-2.5` | ![nvfp4][badge-nvfp4] | 11.20 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-nvfp4.safetensors) |
 
+◦ **Gemma-4-12b GGUF** — elix3r low-VRAM quants
+
+<details>
+  <summary>elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF</summary>
+
+[`elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF`](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF) — GGUF quants of the LTX-2.5 gemma4-12b text encoder (Q2_K / Q4_K_M / Q5_K_M) for ComfyUI-GGUF loading.
+
+| Quant | Size | Download |
+| :---: | :---: | :---: |
+| ![Q2_K][badge-Q2_K] | 5.96 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q2_K.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 8.41 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q4_K_M.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 9.51 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q5_K_M.gguf) |
+
+</details>
+

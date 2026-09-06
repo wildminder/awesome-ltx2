@@ -14,6 +14,7 @@
 [gh-Owen777]: https://img.shields.io/badge/Owen777-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-elismasilva]: https://img.shields.io/badge/elismasilva-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-junchaoh-cs]: https://img.shields.io/badge/junchaoh--cs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-elix3r]: https://img.shields.io/badge/elix3r-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

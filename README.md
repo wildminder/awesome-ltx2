@@ -498,6 +498,18 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | :--- | :--- | :--- |
 | rank-768 family (canonical, v1.4) | Author: maximsobolev275. Training LoRAs directly extracted from the 10Eros v1.4 merge (rank 768); lower-rank rerolls for v1.2 / v1.3 / v1.4 are also published in the same repo. | [LTX-10Eros-LoRA-r768](https://huggingface.co/maximsobolev275/LTX-10Eros-LoRA-r768) |
 
+◦ **10Eros distilled-baked collection** — ibyteohdear
+
+Massive 10Eros **distilled-baked** checkpoint collection by [ibyteohdear](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros) — full LTX distilled checkpoints with the 10Eros style baked in. Spans **LTX-2.3** (`DISTILLED_BAKED_LTX_SULPHUR_STYLE_IS_10Eros` v1–v15, ranks r64 / r128 / r256 / r512 / r768, plus r768_0.85; ~46.1 GB each) and **LTX-2.5** (below). Also bundles a `JoyAI-Echo_r256` LoRA and reasoning I2V LoRAs (`LTX2.3_reasoning_I2V_V3/V4`).
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | distilled-baked 10Eros v15 | `r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r512.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 | `r512 0.85` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r512_0.85.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 | `r768` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r768.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 | `r768 0.85` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r768_0.85.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 (audio + Sulphur style) | `r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_AUDIO_SULPHUR_STYLE_10Eros_15_r512.safetensors) |
+
 <p id="finetune-sulphur" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ Sulphur-2-base
@@ -1277,6 +1289,21 @@ LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Co
 | `gemma4-12b-with-proj-ltx-2.5` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 15.37 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-int8_lean_convrot.safetensors) |
 | `gemma4-12b-with-proj-ltx-2.5` | ![nvfp4][badge-nvfp4] | 11.20 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-nvfp4.safetensors) |
 
+◦ **Gemma-4-12b GGUF** — elix3r low-VRAM quants
+
+<details>
+  <summary>elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF</summary>
+
+[`elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF`](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF) — GGUF quants of the LTX-2.5 gemma4-12b text encoder (Q2_K / Q4_K_M / Q5_K_M) for ComfyUI-GGUF loading.
+
+| Quant | Size | Download |
+| :---: | :---: | :---: |
+| ![Q2_K][badge-Q2_K] | 5.96 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q2_K.gguf) |
+| ![Q4_K_M][badge-Q4_K_M] | 8.41 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q4_K_M.gguf) |
+| ![Q5_K_M][badge-Q5_K_M] | 9.51 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q5_K_M.gguf) |
+
+</details>
+
 
 <p id="split" align="center">◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆◇◆</p>
 
@@ -1591,6 +1618,8 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Formula1 Cockpit T-Cam LoRA | 2.3 | — | F1 onboard T-cam view | [![mxturbo](https://img.shields.io/badge/mxturbo-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) |
 | FPV motion LoRA | 2.3 | — | Smooth FPV drone motion | [![chsengni](https://img.shields.io/badge/chsengni-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/chsengni/ltx2.3-fpv-motion) |
 | ReelBids dolly-in camera LoRA | 2.5 | 0.20 GB | Dolly-in (speed token) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-camera-lora) |
+| ReelBids orbit camera LoRA | 2.5 | 0.20 GB | Orbit camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-orbit-lora) |
+| ReelBids orbit camera LoRA v4mixed | 2.5 | 0.20 GB | Orbit camera move (v4 mixed blend; steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-orbit-lora-v4mixed) |
 
 #### ❖ Audio / Foley
 
@@ -2022,6 +2051,7 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 [gh-Owen777]: https://img.shields.io/badge/Owen777-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-elismasilva]: https://img.shields.io/badge/elismasilva-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-junchaoh-cs]: https://img.shields.io/badge/junchaoh--cs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-elix3r]: https://img.shields.io/badge/elix3r-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

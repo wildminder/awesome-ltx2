@@ -243,6 +243,8 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Formula1 Cockpit T-Cam LoRA | 2.3 | — | F1 onboard T-cam view | [![mxturbo](https://img.shields.io/badge/mxturbo-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) |
 | FPV motion LoRA | 2.3 | — | Smooth FPV drone motion | [![chsengni](https://img.shields.io/badge/chsengni-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/chsengni/ltx2.3-fpv-motion) |
 | ReelBids dolly-in camera LoRA | 2.5 | 0.20 GB | Dolly-in (speed token) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-camera-lora) |
+| ReelBids orbit camera LoRA | 2.5 | 0.20 GB | Orbit camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-orbit-lora) |
+| ReelBids orbit camera LoRA v4mixed | 2.5 | 0.20 GB | Orbit camera move (v4 mixed blend; steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-orbit-lora-v4mixed) |
 
 #### ❖ Audio / Foley
 

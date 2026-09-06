@@ -403,6 +403,18 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | :--- | :--- | :--- |
 | rank-768 family (canonical, v1.4) | Author: maximsobolev275. Training LoRAs directly extracted from the 10Eros v1.4 merge (rank 768); lower-rank rerolls for v1.2 / v1.3 / v1.4 are also published in the same repo. | [LTX-10Eros-LoRA-r768](https://huggingface.co/maximsobolev275/LTX-10Eros-LoRA-r768) |
 
+◦ **10Eros distilled-baked collection** — ibyteohdear
+
+Massive 10Eros **distilled-baked** checkpoint collection by [ibyteohdear](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros) — full LTX distilled checkpoints with the 10Eros style baked in. Spans **LTX-2.3** (`DISTILLED_BAKED_LTX_SULPHUR_STYLE_IS_10Eros` v1–v15, ranks r64 / r128 / r256 / r512 / r768, plus r768_0.85; ~46.1 GB each) and **LTX-2.5** (below). Also bundles a `JoyAI-Echo_r256` LoRA and reasoning I2V LoRAs (`LTX2.3_reasoning_I2V_V3/V4`).
+
+| Ver | Build | Name | Precision | Size | Download |
+| :--- | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | distilled-baked 10Eros v15 | `r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r512.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 | `r512 0.85` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r512_0.85.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 | `r768` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r768.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 | `r768 0.85` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_10Eros_15_r768_0.85.safetensors) |
+| **2.5** | distilled-baked 10Eros v15 (audio + Sulphur style) | `r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_AUDIO_SULPHUR_STYLE_10Eros_15_r512.safetensors) |
+
 <p id="finetune-sulphur" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ Sulphur-2-base
