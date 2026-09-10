@@ -92,6 +92,13 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
 **Downloads & Resources:**
 - [Node pack (GitHub)](https://github.com/A4ax/comfyui-LTX-2.5-Tile-train-LoRa--On-multi-Gpus-low-VRAM-18-gb-Beta) | [Model weights (HF)](https://huggingface.co/o2noor/comfyui-LTX-2.5-Tile-train-LoRa-On-multi-Gpus-low-VRAM-18-gb-Beta) — includes `ltx-2.5-22b-distilled-bnb-nf4` (10.45 GB), `embeddings_processor_bf16` (6.34 GB), `gemma4-12b-with-proj-ltx-2.5-bf16` (26.26 GB), video + audio VAEs, plus int2 experimental variants
 
+### elismasilva LTX 2 Image Custom Blocks (Modular Diffusers)
+
+Custom [Modular Diffusers](https://huggingface.co/docs/diffusers/main/en/modular_diffusers/overview) blocks that extend **LTX 2 Image** (elismasilva's image-only LTX-2.3) with **image-to-image**, plus a unified **`AutoBlocks`** pipeline that folds t2i and i2i into one — the workflow is chosen automatically from the inputs you pass (`prompt` → text-to-image; `prompt + image` → image-to-image with optional `strength`). Code-only repo (`trust_remote_code`); loads components from the [`ltx2.3-image-base`](https://huggingface.co/elismasilva/ltx2.3-image-base) weights repo. Apache-2.0.
+
+**Downloads & Resources:**
+- [Custom blocks (HF)](https://huggingface.co/elismasilva/ltx2.3_image_custom_blocks) | Image-only checkpoints: [ltx2.3-image-comfyui](https://huggingface.co/elismasilva/ltx2.3-image-comfyui) (ComfyUI) · [ltx2.3-image-base](https://huggingface.co/elismasilva/ltx2.3-image-base) (diffusers)
+
 
 <a id="models"></a>
 
@@ -1598,6 +1605,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | :--- | :---: | :---: | :--- | :--- |
 | Cel-Character IC-LoRA | 2.5 | 0.33 GB | Live-action → 2D cel character (rank 32; bg stays photographic) | [![Baberg](https://img.shields.io/badge/Baberg-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Baberg/ltx-2.5-22b-ic-lora-cel-character/resolve/main/ltx25-iclora-cartoon-cum3250.safetensors) |
 | Cross-Eyed (stereo) IC-LoRA | 2.3 | 0.33 GB | Stereoscopic / cross-eyed | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) |
+| Exploded-View XPLDV LoRA | 2.5 | 0.40 GB | Product exploded-view disassembly (i2v, v5) | [![DigitalByte](https://img.shields.io/badge/DigitalByte-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/DigitalByte/LTX-2.5-Exploded-View-XPLDV/resolve/main/ltx-2.5-xpldv_v5-lora.safetensors) |
 | FXIC LTX2 IC-LoRA | 2 | — | VFX / FX effect control | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/fxic-ltx2-iclora) |
 | IC-LoRA-UI (linoyts) | 2.3 | — | UI / screen overlay | [![linoyts](https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/linoyts/ltx2-ic-lora-ui) |
 | Seamless-Equirectangular LoRA | 2.3 | — | Seamless 360 deg equirect | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/Seamless-Equirectangular-LTX2.3-LoRA) |
@@ -1630,6 +1638,8 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Audio-Only-Context IC-LoRA (audio-only) | 2.3 | 0.16 GB | Audio-only context gen | [![fbjr](https://img.shields.io/badge/fbjr-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context/resolve/main/audio_only_step_01000.safetensors) |
 | Audio-Only-Context IC-LoRA (cross-modal) | 2.3 | 0.29 GB | Audio + video context gen | [![fbjr](https://img.shields.io/badge/fbjr-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/fbjr/LTX-2.3-22b-IC-LoRA-Audio-Only-Context/resolve/main/cross_modal_step_01000.safetensors) |
 | DJ LoRA | 2.3 | 1.71 GB | DJ / mixing visuals | [![zzmicer](https://img.shields.io/badge/zzmicer-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/zzmicer/ltx2-dj-lora-lr5e4-rank128/resolve/main/lora_weights_step_01800.safetensors) |
+| DramaBox TTS IC-LoRA (r128) | 2.3 | 0.67 GB | Expressive TTS extracted from Resemble AI DramaBox (audio branch; r64 also in repo) | [![guey-khala-mari](https://img.shields.io/badge/guey--khala--mari-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/guey-khala-mari/LTX-2.3-Resemble-Ai-Dramabox-IC-LoRa/resolve/main/lora/resemble_ai_dramabox_ic_lora_r128_comfyui.safetensors) |
+| DramaBox TTS IC-LoRA (r64) | 2.3 | 0.34 GB | Expressive TTS extracted from Resemble AI DramaBox (audio branch; smaller rank) | [![guey-khala-mari](https://img.shields.io/badge/guey--khala--mari-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/guey-khala-mari/LTX-2.3-Resemble-Ai-Dramabox-IC-LoRa/resolve/main/lora/resemble_ai_dramabox_ic_lora_r64_comfyui.safetensors) |
 | Foley LoRA | 2.3 | — | Foley sound synthesis | [![FuzzPuppy](https://img.shields.io/badge/FuzzPuppy-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/FuzzPuppy/LTX-2.3-Foley-LoRA) |
 | Foley-V2A LoRA | 2.3 | 0.22 GB | Video to audio (foley) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-LoRA-Foley-V2A) |
 | Guitar LoRA | 2.3 | 1.71 GB | Guitar-playing visuals | [![zzmicer](https://img.shields.io/badge/zzmicer-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/zzmicer/ltx2.3-22b-guitar-lora/resolve/main/lora_weights_step_03000.safetensors) |
