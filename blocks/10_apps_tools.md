@@ -30,4 +30,18 @@ Custom [Modular Diffusers](https://huggingface.co/docs/diffusers/main/en/modular
 **Downloads & Resources:**
 - [Custom blocks (HF)](https://huggingface.co/elismasilva/ltx2.3_image_custom_blocks) | Image-only checkpoints: [ltx2.3-image-comfyui](https://huggingface.co/elismasilva/ltx2.3-image-comfyui) (ComfyUI) · [ltx2.3-image-base](https://huggingface.co/elismasilva/ltx2.3-image-base) (diffusers)
 
+### WanGP LTX-2 Model Pack (DeepBeepMeep)
+
+The complete set of **LTX-2 / 2.3 / 2.5 weights used by [WanGP](https://github.com/deepbeepmeep/Wan2GP)** — DeepBeepMeep's low-VRAM video app (down to ~6 GB VRAM, old-GPU friendly, auto-downloads the model variant matching your architecture). ~896 GB total, pre-packaged so no manual ComfyUI file layout is needed.
+
+**What's inside:**
+- **LTX-2.5 22B transformers** — `dev` and `distilled` in bf16 (38.0 GB), int8-convrot (19.5 GB) and nvfp4 (14.7 GB), plus the optional `distilled-lora-450` (8.9 GB)
+- **LTX-2.5 components** — video/audio VAEs, video + audio embeddings connectors (bf16 / int8-convrot / nvfp4), text embedding projection, vocoder, spatial + temporal upscalers x2, and the Gemma-4-12b LTX text encoder (23.8 GB)
+- **LTX-2 / 2.3 equivalents** — incl. `Q4_K_M` / `Q6_K` / `Q8_0` "light" GGUFs (13.0–20.6 GB) and quanto bf16-int8 builds
+- **LoRAs** — IC-LoRAs (control, ingredients, in-outpainting, uncompress, refocus, HDR, pixel upscale), ID-LoRAs (celebvhq), Licon-MSR / VBVR, OmniNFT RL-LoRAs
+- **Bundled third-party audio models** — DramaBox, Scenema, JoyAI-Echo, plus Kokoro TTS, Seed-VC, Whisper, HuBERT, BigVGAN, Sherpa
+
+**Downloads & Resources:**
+- [WanGP (GitHub)](https://github.com/deepbeepmeep/Wan2GP) | [Model pack (HF)](https://huggingface.co/DeepBeepMeep/LTX-2)
+
 
