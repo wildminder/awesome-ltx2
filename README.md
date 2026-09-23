@@ -162,6 +162,8 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2.3** | `distilled` | ![nvfp4][badge-nvfp4] | 17.6 GB | [![][gh-Winnougan]](https://huggingface.co/Winnougan/LTX-2.3-INT8/resolve/main/ltx-2.3-22b-distilled_transformer_only_NVFP4.safetensors) |
 | **2.3** | `distilled` | ![mxfp8mixed][badge-mxfp8mixed] | 29.7 GB | [![][gh-silveroxides]](https://huggingface.co/silveroxides/LTX-2.3-Quants/resolve/main/ltx-2.3-22b-distilled-mxfp8mixed.safetensors) |
 | **2.3** | `distilled 1.1` | ![bf16][badge-bf16] | 46.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-1.1.safetensors) |
+| **2.3** | `distilled 1.1` | ![w4a8_convrot](https://img.shields.io/badge/w4a8_ConvRot-17a2b8?style=flat-square) | 16.65 GB | [![][gh-JoaoZaokk]](https://huggingface.co/JoaoZaokk/LTX-2.3-22B-distilled-1.1-W4A8-ConvRot/resolve/main/ltx-2.3-22b-distilled-1.1_w4a8.safetensors) |
+| **2.3** | `distilled 1.1` | ![w4a4_convrot](https://img.shields.io/badge/w4a4_ConvRot-17a2b8?style=flat-square) | 15.37 GB | [![][gh-JoaoZaokk]](https://huggingface.co/JoaoZaokk/LTX-2.3-22B-distilled-1.1-W4A8-ConvRot/resolve/main/w4a4/ltx-2.3-22b-distilled-1.1_w4a4.safetensors) |
 | **2.3** | `ltx23_srx fp8_e4m3 experimental` | ![fp8][badge-fp8] | 23.1 GB | [![][gh-SOLRICKS]](https://huggingface.co/SOLRICKS/ltx23_srx_fp8_e4m3_experimental/resolve/main/ltx23_srx_fp8_e4m3_experimental.safetensors) |
 | | | | | |
 | **2** | `ltx-2-19b dev` | ![bf16][badge-bf16] | 43.3 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors) |
@@ -1547,6 +1549,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | BBox-Control IC-LoRA | 2.5 | 0.33 GB | Bounding-box / regional prompting control (rank 32, step 3000; workflow + node pack in repo) | [![yuvraj108c](https://img.shields.io/badge/yuvraj108c-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/yuvraj108c/LTX-2.5-22b-IC-LoRA-BBox-Control) |
 | Canny Control IC-LoRA | 2 | — | Canny edge conditioning | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Canny-Control) |
 | Depth Control IC-LoRA | 2 | — | Depth-map conditioning | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Depth-Control) |
+| Depth Control IC-LoRA (RunningHub mirror) | 2 | 0.65 GB | Depth-map conditioning (624 MiB single-file mirror) | [![RunningHubAI](https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/RunningHubAI/rh-ltx-2-19b-ic-lora-depth-control.safetensors-lora/resolve/main/ltx-2-19b-ic-lora-depth-control.safetensors) |
 | Greenscreen Avatar IC-LoRA | 2.3 | — | Greenscreen avatar compositing | [![OmerHagawa](https://img.shields.io/badge/OmerHagawa-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/OmerHagawa/ltx2-greenscreen-avatar-ic-lora-vertical-v1) |
 | IC luminance map | 2 | — | Luminance / particle-map control | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/ltx-2_IC_LUMIPARTICLES) |
 | IC-LoRA-Cameraman v1 | 2.3 | — | Cameraman framing control | [![Cseti](https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-Cameraman_v1) |
@@ -1648,6 +1651,8 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Camera Control: static (LTX-2) | 2 | — | Locked / static camera | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Static) |
 | Formula1 Cockpit T-Cam LoRA | 2.3 | — | F1 onboard T-cam view | [![mxturbo](https://img.shields.io/badge/mxturbo-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) |
 | FPV motion LoRA | 2.3 | — | Smooth FPV drone motion | [![chsengni](https://img.shields.io/badge/chsengni-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/chsengni/ltx2.3-fpv-motion) |
+| ReelBids crane-down camera LoRA | 2.5 | 0.20 GB | Crane-down camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-cranedown-lora) |
+| ReelBids crane-down camera LoRA v2 | 2.5 | 0.20 GB | Crane-down camera move (v2, with dataset samples; steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-cranedown-lora-v2) |
 | ReelBids crane-up camera LoRA | 2.5 | 0.20 GB | Crane-up camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-craneup-lora) |
 | ReelBids dolly-in camera LoRA | 2.5 | 0.20 GB | Dolly-in (speed token) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-camera-lora) |
 | ReelBids orbit camera LoRA | 2.5 | 0.20 GB | Orbit camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-orbit-lora) |
@@ -1710,19 +1715,24 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Best Face Swap — head_swap_v2 multimodes (LTX-2) | 2 | 1.32 GB | Head swap (multi-mode) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/ltx-2/head_swap_v2_multimodes.safetensors) |
 | Best Face Swap — head_swap_v3 r-adaptive (LTX-2.3) | 2.3 | 1.36 GB | Head swap (adaptive rank) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/ltx-2.3/head_swap_v3_rank_adaptive_fro_098.safetensors) |
 | Best Face Swap — head_swap_v3 r64 (LTX-2.3) | 2.3 | 0.65 GB | Head swap (rank 64) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/ltx-2.3/head_swap_v3_rank_64.safetensors) |
+| Euni (portrait, cometa21) | 2.5 | 0.43 GB | Character identity — Euni portrait LoRA (rank 32, 1500 steps, trigger `euni`) | [![cometa21](https://img.shields.io/badge/cometa21-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/cometa21/euni-lora-ltx25/resolve/main/lora_weights_step_01500.safetensors) |
 | Iara v2 (identity) | 2.5 | 0.62 GB | Character identity — Iara v2 (step 1000; 750 also in repo) | [![aztro](https://img.shields.io/badge/aztro-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/aztro/ltx-2.5-iara-v2-lora/resolve/main/checkpoints/lora_weights_step_01000.safetensors) |
-| Licon MSR V1 (LTX-2.5, Multiple Subject Ref) | 2.5 | 1.31 GB | Multi-subject reference | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.5-Multiple-Subject-Reference) |
+| Licon MSR V1 (LTX-2.5, Multiple Subject Ref) | 2.5 | 1.31 GB | Multi-subject reference | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.5-Multiple-Subject-Reference/resolve/main/LTX-2.5-Licon-MSR-V1.safetensors) |
+| Licon MSR V2 (LTX-2.5, Multiple Subject Ref) | 2.5 | 2.21 GB | Multi-subject reference (v2; V1 + per-scene validation sets also in repo) | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.5-Multiple-Subject-Reference/resolve/main/LTX-2.5-Licon-MSR-V2.safetensors) |
 | Licon MSR V2 (Multiple Subject Ref) | 2.3 | — | Multi-subject reference | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference) |
 | LTX-2.3 Dual-Character LoRA | 2.3 | — | Two-character scene | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/LTX2.3-Dual-Character-en) |
 | Tessy (identity) | 2.5 | 0.43 GB | Character identity — Tessy (step 1500; 250–1250 also in repo) | [![aztro](https://img.shields.io/badge/aztro-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/aztro/ltx-2.5-tessy-lora/resolve/main/checkpoints/lora_weights_step_01500.safetensors) |
+| Tessy (identity, cometa21) | 2.5 | 0.86 GB | Character identity — Tessy in TV / podcast settings (rank 64, 500 steps, trigger `tessy`) | [![cometa21](https://img.shields.io/badge/cometa21-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/cometa21/tessy-lora-ltx25/resolve/main/lora_weights_step_00500.safetensors) |
 
 #### ❖ Motion
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
 | Audio-Reactive LoRA | 2.3 | — | Audio-reactive motion | [![100percentrobot](https://img.shields.io/badge/100percentrobot-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) |
+| Audio-Reactive LoRA v2 (RunningHub mirror) | 2.3 | 1.35 GB | Audio-reactive motion (v2) | [![RunningHubAI](https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/RunningHubAI/rh-ltx2.3-audio-reactive-lora-v2.safetensors-lora/resolve/main/ltx2.3_audio_reactive_lora_v2.safetensors) |
 | Motion Enhancer (N54W) | 2.3 | 2.27 GB | Boost motion dynamics | [![rzgar](https://img.shields.io/badge/rzgar-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/rzgar/LTX-2.3-Motion-Enhancer-n4w/resolve/main/LTX-2.3-Motion-Enhancer-n4w.safetensors) |
 | Motion Stabilizer | 2.3 | — | Stabilize shaky footage | [![vpakarinen](https://img.shields.io/badge/vpakarinen-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vpakarinen/motion-stabilizer-ltx-23) |
+| Slow-Motion Control LoRA (i2v) | 2.5 | 0.65 GB | Slow-motion / speed control for i2v (auto-gated — sign in to download; repo ships a speed-control workflow and a distilled demo script) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-LoRA-Slow-Motion-Control/resolve/main/ltx-2.5-22b-lora-slow-motion-control-1.0.safetensors) |
 
 #### ❖ Adapter / Pipeline
 
@@ -2013,10 +2023,11 @@ For training **LTX LoRAs**, the community uses a variety of official scripts, co
 
 T2V + I2V with audio support, controlled from a simplified main node (switch T2V/I2V, custom audio, duration, resolution, FPS, seed, prompt enhancement). Uses a two-stage generation-and-refinement setup for higher quality. The repo also bundles the two IC-LoRAs used (`ltx-2.3-22b-ic-lora-ingredients-0.9` and `union-control-ref0.5`).
 
-* [LTX-2.5 T2V I2V Audio](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5_T2V_I2V_Audio.json)
+* [LTX-2.5 T2V I2V Audio — Dev](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5_T2V_I2V_Audio-Dev.json)
+* [LTX-2.5 T2V I2V Audio — V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5_T2V_I2V_Audio-V2.json)
 * [LTX-2.5 Audio IC-LoRA](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-Audio-IC-LoRA.json)
-* [LTX-2.5 ICLoRA Ingredients Two Stage](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ICLoRA-Ingredients-Two-Stage.json)
-* [LTX-2.5 ReTake Green Screen Composite](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ReTake-Green-Screen-Composite.json)
+* [LTX-2.5 ICLoRA Ingredients Two Stage V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ICLoRA-Ingredients-Two-Stage-V2.json)
+* [LTX-2.5 ReTake Green Screen Composite V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ReTake-Green-Screen-Composite-V2.json)
 * [LTX-2.5 V2V Upscaler](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-V2V-Upscaler.json)
 
 ### ❖ embriotapir
@@ -2089,6 +2100,7 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 [gh-elismasilva]: https://img.shields.io/badge/elismasilva-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-junchaoh-cs]: https://img.shields.io/badge/junchaoh--cs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-elix3r]: https://img.shields.io/badge/elix3r-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-JoaoZaokk]: https://img.shields.io/badge/JoaoZaokk-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

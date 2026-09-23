@@ -180,10 +180,11 @@
 
 T2V + I2V with audio support, controlled from a simplified main node (switch T2V/I2V, custom audio, duration, resolution, FPS, seed, prompt enhancement). Uses a two-stage generation-and-refinement setup for higher quality. The repo also bundles the two IC-LoRAs used (`ltx-2.3-22b-ic-lora-ingredients-0.9` and `union-control-ref0.5`).
 
-* [LTX-2.5 T2V I2V Audio](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5_T2V_I2V_Audio.json)
+* [LTX-2.5 T2V I2V Audio — Dev](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5_T2V_I2V_Audio-Dev.json)
+* [LTX-2.5 T2V I2V Audio — V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5_T2V_I2V_Audio-V2.json)
 * [LTX-2.5 Audio IC-LoRA](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-Audio-IC-LoRA.json)
-* [LTX-2.5 ICLoRA Ingredients Two Stage](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ICLoRA-Ingredients-Two-Stage.json)
-* [LTX-2.5 ReTake Green Screen Composite](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ReTake-Green-Screen-Composite.json)
+* [LTX-2.5 ICLoRA Ingredients Two Stage V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ICLoRA-Ingredients-Two-Stage-V2.json)
+* [LTX-2.5 ReTake Green Screen Composite V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ReTake-Green-Screen-Composite-V2.json)
 * [LTX-2.5 V2V Upscaler](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-V2V-Upscaler.json)
 
 ### ❖ embriotapir
