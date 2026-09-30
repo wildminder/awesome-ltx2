@@ -816,6 +816,34 @@ One-step **LTX-2.5** video refiner by [Owen777](https://huggingface.co/Owen777) 
 
 ◦ Reinforcement-learning LoRA also in repo: [`rl_lora/step_000400.pt`](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/rl_lora/step_000400.pt) (~0.81 GB).
 
+#### ❖ SoL-Refiner — one-step 1080p/2K upscaler (szwagros, int8 ConvRot)
+
+Generic one-step refiner from NVlabs' [SoL-Refiner](https://nvlabs.github.io/Sana/Sol-Refiner/) project (SANA / SANA-Video): a cheap low-res draft (SANA-Video, WAN, MiniMax-H3, …) is encoded, **2x latent-upscaled with AdaIN**, re-noised and denoised in a **single** transformer forward, turning the draft into 1080p/2K output. Repackaged by [szwagros](https://huggingface.co/szwagros) from the `Efficient-Large-Model` originals into the **image-server `ltx_core` layout** (`diffusion_models/` + `text_encoders/` + `vae/` + `latent_upscale_models/`) — the transformer and text encoder are int8 ConvRot and expect the `image_server_kernels.int8_linear` backend, so these are **not** drop-in ComfyUI checkpoints.
+
+**LTX-2.3 One-Step** — [szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot) · **41.93 GB** total · re-noised to sigma 0.725
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `sol-refiner-ltx-2.3-one-step-transformer-comfy-int8-convrot` (DiT) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 23.51 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/diffusion_models/sol-refiner-ltx-2.3-one-step-transformer-comfy-int8-convrot.safetensors) |
+| `gemma3-12b-with-proj-…-comfy-int8-convrot` (text encoder) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 15.97 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/text_encoders/gemma3-12b-with-proj-sol-refiner-ltx-2.3-one-step-comfy-int8-convrot.safetensors) |
+| `ltx-2.3-22b_vae` (video VAE) | ![bf16][badge-bf16] | 1.45 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/vae/ltx-2.3-22b_vae.safetensors) |
+| `ltx-2.3-spatial-upscaler-x2-1.1` (x2 latent upsampler) | ![bf16][badge-bf16] | 1.00 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors) |
+
+⚠️ Always condition with **`frame_rate=16`**, whatever the input fps (encode the output at the real fps) — the model was trained on 16 fps drafts and a 24 fps value mis-scales the temporal RoPE and ghosts moving objects. Uses the **v1.1** x2 upsampler, not v1.0.
+
+**LTX-2.5 for MiniMax-H3** — [szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot) · **41.35 GB** total · re-noised to sigma 0.909375
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `sol-refiner-ltx-2.5-h3-transformer-comfy-int8-convrot` (DiT) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 23.51 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/diffusion_models/sol-refiner-ltx-2.5-h3-transformer-comfy-int8-convrot.safetensors) |
+| `gemma4-12b-with-proj-…-comfy-int8-convrot` (text encoder) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 15.37 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/text_encoders/gemma4-12b-with-proj-sol-refiner-ltx-2.5-h3-comfy-int8-convrot.safetensors) |
+| `sol-refiner-ltx-2.5-h3-video-vae-bf16` (VAE + diffusion decoder) | ![bf16][badge-bf16] | 1.47 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/vae/sol-refiner-ltx-2.5-h3-video-vae-bf16.safetensors) |
+| `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0` (x2 latent upsampler) | ![bf16][badge-bf16] | 1.00 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors) |
+
+◦ Conditioning `frame_rate` = the input fps (H3 drafts are 24 fps). One step, no CFG. **Video output only — no audio.** The text encoder is the refiner's shipped Gemma 4, i.e. the **pre-2026-08-17** Lightricks encoder rather than the current one.
+
+◦ Both are finetunes of LTX-2.x, so the **LTX-2.x Community License** (Lightricks) applies — check it before commercial use. Source repos: [2.3 One-Step](https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.3-One-Step) · [2.5 for MiniMax-H3](https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3).
+
 <p id="finetune-solarwm" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ SolarWM (World Model)
@@ -1594,6 +1622,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | LensRemover IC-LoRA | 2.3 | 0.31 GB | Remove lens / glass artifacts | [![JanKanta](https://img.shields.io/badge/JanKanta-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/JanKanta/ltx-2.3-22b-ic-lora-lens_remover/resolve/main/lens-eraiser-ltx23-ic-lora.safetensors) |
 | LTX-2 IC-LoRA-Ungrade | 2 | — | Upscale / ungrade (LTX-2) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2-19b-IC-LoRA-Ungrade) |
 | LTX-2.3 IC-LoRA-Ungrade | 2.3 | — | Upscale / ungrade (LTX-2.3) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Ungrade) |
+| Restore IC-LoRA | 2.5 | 1.71 GB | Archival footage restoration (v2v) — decayed/damaged historical video | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Restore/resolve/main/ltx-2.5-22b-ic-lora-restore-1.0.safetensors) |
 | RoadReady IC-LoRA | 2.3 | 0.33 GB | Road-surface cleanup (removes cracks/stains; LTX LoRA Jam) | [![DriveEK](https://img.shields.io/badge/DriveEK-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/DriveEK/roadready-ltx23-iclora/resolve/main/roadready_iclora_ltx23_step2000_rank32.safetensors) |
 
 #### ❖ IC-LoRA · Outpaint
@@ -1632,6 +1661,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Cross-Eyed (stereo) IC-LoRA | 2.3 | 0.33 GB | Stereoscopic / cross-eyed | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) |
 | Exploded-View XPLDV LoRA | 2.5 | 0.40 GB | Product exploded-view disassembly (i2v, v5) | [![DigitalByte](https://img.shields.io/badge/DigitalByte-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/DigitalByte/LTX-2.5-Exploded-View-XPLDV/resolve/main/ltx-2.5-xpldv_v5-lora.safetensors) |
 | FXIC LTX2 IC-LoRA | 2 | — | VFX / FX effect control | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/fxic-ltx2-iclora) |
+| GameTwirl turntable LoRA | 2.5 | 0.43 GB | i2v turntable — spins a game asset 360° in place, camera fixed (trigger `gametwirl`; step 3000) | [![NanoMathias](https://img.shields.io/badge/NanoMathias-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/NanoMathias/ltx-2.5-gametwirl/resolve/main/lora_weights_step_03000.safetensors) |
 | IC-LoRA-UI (linoyts) | 2.3 | — | UI / screen overlay | [![linoyts](https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/linoyts/ltx2-ic-lora-ui) |
 | Seamless-Equirectangular LoRA | 2.3 | — | Seamless 360 deg equirect | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/Seamless-Equirectangular-LTX2.3-LoRA) |
 | TTM IC-LoRA | 2.3 | — | Texture / transition morph | [![siraxe](https://img.shields.io/badge/siraxe-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/siraxe/TTM_IC-lora_ltx2.3) |
@@ -1701,6 +1731,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Enhancer2 | 2.3 | — | General enhancer | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX2.3_enhancer2) |
 | HDR IC-LoRA | 2.3 | — | HDR tone mapping | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-HDR) |
 | Pixel-Spatial-Upscaler IC-LoRA | 2.5 | 0.30 GB | Spatial upscale x2 | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors) |
+| Refine-Details IC-LoRA | 2.5 | 1.31 GB | Detail refinement / micro-contrast boost (v2v, upscaling) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Refine-Details/resolve/main/ltx-2.5-22b-ic-lora-refine-details-1.0.safetensors) |
 | Skin-Hair LoRA | 2.3 | — | Skin / hair refinement | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/LTX-2.3-skin-hair) |
 | Upscale IC-LoRA | 2.3 | — | Upscale resolution | [![Zlikwid](https://img.shields.io/badge/Zlikwid-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora) |
 
@@ -2101,6 +2132,7 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 [gh-junchaoh-cs]: https://img.shields.io/badge/junchaoh--cs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-elix3r]: https://img.shields.io/badge/elix3r-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-JoaoZaokk]: https://img.shields.io/badge/JoaoZaokk-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-szwagros]: https://img.shields.io/badge/szwagros-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 
 [badge-IQ1_M]: https://img.shields.io/badge/IQ1__M-e05d44?style=flat-square

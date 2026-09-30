@@ -700,6 +700,34 @@ One-step **LTX-2.5** video refiner by [Owen777](https://huggingface.co/Owen777) 
 
 ◦ Reinforcement-learning LoRA also in repo: [`rl_lora/step_000400.pt`](https://huggingface.co/Owen777/LTX2.5-One-Step-Refiner-Step835/resolve/main/rl_lora/step_000400.pt) (~0.81 GB).
 
+#### ❖ SoL-Refiner — one-step 1080p/2K upscaler (szwagros, int8 ConvRot)
+
+Generic one-step refiner from NVlabs' [SoL-Refiner](https://nvlabs.github.io/Sana/Sol-Refiner/) project (SANA / SANA-Video): a cheap low-res draft (SANA-Video, WAN, MiniMax-H3, …) is encoded, **2x latent-upscaled with AdaIN**, re-noised and denoised in a **single** transformer forward, turning the draft into 1080p/2K output. Repackaged by [szwagros](https://huggingface.co/szwagros) from the `Efficient-Large-Model` originals into the **image-server `ltx_core` layout** (`diffusion_models/` + `text_encoders/` + `vae/` + `latent_upscale_models/`) — the transformer and text encoder are int8 ConvRot and expect the `image_server_kernels.int8_linear` backend, so these are **not** drop-in ComfyUI checkpoints.
+
+**LTX-2.3 One-Step** — [szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot) · **41.93 GB** total · re-noised to sigma 0.725
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `sol-refiner-ltx-2.3-one-step-transformer-comfy-int8-convrot` (DiT) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 23.51 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/diffusion_models/sol-refiner-ltx-2.3-one-step-transformer-comfy-int8-convrot.safetensors) |
+| `gemma3-12b-with-proj-…-comfy-int8-convrot` (text encoder) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 15.97 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/text_encoders/gemma3-12b-with-proj-sol-refiner-ltx-2.3-one-step-comfy-int8-convrot.safetensors) |
+| `ltx-2.3-22b_vae` (video VAE) | ![bf16][badge-bf16] | 1.45 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/vae/ltx-2.3-22b_vae.safetensors) |
+| `ltx-2.3-spatial-upscaler-x2-1.1` (x2 latent upsampler) | ![bf16][badge-bf16] | 1.00 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.3-One-Step-int8-convrot/resolve/main/latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors) |
+
+⚠️ Always condition with **`frame_rate=16`**, whatever the input fps (encode the output at the real fps) — the model was trained on 16 fps drafts and a 24 fps value mis-scales the temporal RoPE and ghosts moving objects. Uses the **v1.1** x2 upsampler, not v1.0.
+
+**LTX-2.5 for MiniMax-H3** — [szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot) · **41.35 GB** total · re-noised to sigma 0.909375
+
+| Component | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `sol-refiner-ltx-2.5-h3-transformer-comfy-int8-convrot` (DiT) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 23.51 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/diffusion_models/sol-refiner-ltx-2.5-h3-transformer-comfy-int8-convrot.safetensors) |
+| `gemma4-12b-with-proj-…-comfy-int8-convrot` (text encoder) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 15.37 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/text_encoders/gemma4-12b-with-proj-sol-refiner-ltx-2.5-h3-comfy-int8-convrot.safetensors) |
+| `sol-refiner-ltx-2.5-h3-video-vae-bf16` (VAE + diffusion decoder) | ![bf16][badge-bf16] | 1.47 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/vae/sol-refiner-ltx-2.5-h3-video-vae-bf16.safetensors) |
+| `ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0` (x2 latent upsampler) | ![bf16][badge-bf16] | 1.00 GB | [![][gh-szwagros]](https://huggingface.co/szwagros/SoL-Refiner-LTX-2.5-H3-int8-convrot/resolve/main/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors) |
+
+◦ Conditioning `frame_rate` = the input fps (H3 drafts are 24 fps). One step, no CFG. **Video output only — no audio.** The text encoder is the refiner's shipped Gemma 4, i.e. the **pre-2026-08-17** Lightricks encoder rather than the current one.
+
+◦ Both are finetunes of LTX-2.x, so the **LTX-2.x Community License** (Lightricks) applies — check it before commercial use. Source repos: [2.3 One-Step](https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.3-One-Step) · [2.5 for MiniMax-H3](https://huggingface.co/Efficient-Large-Model/SoL-Refiner-LTX-2.5-for-MiniMax-H3).
+
 <p id="finetune-solarwm" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ SolarWM (World Model)
