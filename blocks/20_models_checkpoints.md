@@ -233,8 +233,12 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.4` | ![bf16][badge-bf16] | 44.0 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_bf16.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4 DMD int8 ConvRot` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
-| **2.3** | Full — testing/beta | `10Eros Max h3 TURBO-hybrid beta3` (gated repo) | ![bf16][badge-bf16] | 40.23 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing) |
+| **2.3** | Full — testing/beta | `10Eros Max FAST-H3 fl2va beta6` (notokenizer, TEST mix35-cap 029 floor 009) | ![bf16][badge-bf16] | 44.08 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_FAST-H3_fl2va_beta6_TEST-mix35-cap_029_floor_009-notokenizer.safetensors) |
+| **2.3** | Full — testing/beta | `10Eros Max FAST-H3 fl2va beta6` w6a8 g32 | ![w6a8](https://img.shields.io/badge/w6a8-17a2b8?style=flat-square) | 18.26 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_FAST-H3_fl2va_beta6_TEST-mix35-cap_029_floor_009-notokenizer_direct_w6a8_g32.safetensors) |
+| **2.3** | Full — testing/beta | `10Eros Max FAST-H3 fl2va beta6` int8 ConvRot | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 24.82 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_FAST-H3_fl2va_beta6_int8_convrot.safetensors) |
 | **2.3** | Full | `10Eros v1 INT8 ConvRot` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 23.51 GB | [![bertbobson][gh-bertbobson]](https://huggingface.co/bertbobson/LTX2.3-10Eros-INT8-ConvRot/resolve/main/10Eros_v1_bf16-int8.ConvRot.safetensors) |
+
+◦ **Version-Testing repo is gated `manual`** — [`TenStrip/LTX2.3-10Eros_Version-Testing`](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing) needs an approved access request (not instant auto-approve), and the README is locked. The `beta6` builds above supersede the earlier `beta3` / "TURBO-hybrid" entry; the repo also bundles a `b6_Rq_Sampling_Nodes.png` reference for its RQ sampling nodes.
 
 ◦ **10Eros GGUF** — vantagewithai low-VRAM quants
 

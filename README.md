@@ -349,8 +349,12 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 | **2.3** | Full | `10Eros v1.4` | ![bf16][badge-bf16] | 44.0 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_bf16.safetensors) |
 | **2.3** | Full | `10Eros v1.4` | ![fp8][badge-fp8] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/10Eros_v1.4_fp8mixed_learned.safetensors) |
 | **2.3** | Full | `10Eros v1.4 DMD int8 ConvRot` | ![int8tensormixed][badge-int8tensormixed] | 27.8 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros/resolve/main/INT8%20diffusion_models/10Eros_v1.4_DMD_int8_convrot.safetensors) |
-| **2.3** | Full — testing/beta | `10Eros Max h3 TURBO-hybrid beta3` (gated repo) | ![bf16][badge-bf16] | 40.23 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing) |
+| **2.3** | Full — testing/beta | `10Eros Max FAST-H3 fl2va beta6` (notokenizer, TEST mix35-cap 029 floor 009) | ![bf16][badge-bf16] | 44.08 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_FAST-H3_fl2va_beta6_TEST-mix35-cap_029_floor_009-notokenizer.safetensors) |
+| **2.3** | Full — testing/beta | `10Eros Max FAST-H3 fl2va beta6` w6a8 g32 | ![w6a8](https://img.shields.io/badge/w6a8-17a2b8?style=flat-square) | 18.26 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_FAST-H3_fl2va_beta6_TEST-mix35-cap_029_floor_009-notokenizer_direct_w6a8_g32.safetensors) |
+| **2.3** | Full — testing/beta | `10Eros Max FAST-H3 fl2va beta6` int8 ConvRot | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 24.82 GB | [![TenStrip][gh-TenStrip]](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing/resolve/main/10Eros_Max_FAST-H3_fl2va_beta6_int8_convrot.safetensors) |
 | **2.3** | Full | `10Eros v1 INT8 ConvRot` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 23.51 GB | [![bertbobson][gh-bertbobson]](https://huggingface.co/bertbobson/LTX2.3-10Eros-INT8-ConvRot/resolve/main/10Eros_v1_bf16-int8.ConvRot.safetensors) |
+
+◦ **Version-Testing repo is gated `manual`** — [`TenStrip/LTX2.3-10Eros_Version-Testing`](https://huggingface.co/TenStrip/LTX2.3-10Eros_Version-Testing) needs an approved access request (not instant auto-approve), and the README is locked. The `beta6` builds above supersede the earlier `beta3` / "TURBO-hybrid" entry; the repo also bundles a `b6_Rq_Sampling_Nodes.png` reference for its RQ sampling nodes.
 
 ◦ **10Eros GGUF** — vantagewithai low-VRAM quants
 
@@ -1656,6 +1660,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| Alpha-Gen IC-LoRA | 2.5 | 1.31 GB | Alpha-matte generation / background removal (v2v) — hair, smoke, fur, fire, sheer fabric | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Alpha-Gen/resolve/main/ltx-2.5-22b-ic-lora-alpha-gen-0.9.safetensors) |
 | Cel-Character IC-LoRA | 2.5 | 0.33 GB | Live-action → 2D cel character (rank 32; bg stays photographic) | [![Baberg](https://img.shields.io/badge/Baberg-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Baberg/ltx-2.5-22b-ic-lora-cel-character/resolve/main/ltx25-iclora-cartoon-cum3250.safetensors) |
 | Cinemagraph LoRA | 2.5 | 0.20 GB | Selective-motion cinemagraph (i2v) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-LoRA-Cinemagraph/resolve/main/ltx-2.5-22b-lora-cinemagraph-0.9.safetensors) |
 | Cross-Eyed (stereo) IC-LoRA | 2.3 | 0.33 GB | Stereoscopic / cross-eyed | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) |
@@ -1732,8 +1737,11 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | HDR IC-LoRA | 2.3 | — | HDR tone mapping | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-HDR) |
 | Pixel-Spatial-Upscaler IC-LoRA | 2.5 | 0.30 GB | Spatial upscale x2 | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors) |
 | Refine-Details IC-LoRA | 2.5 | 1.31 GB | Detail refinement / micro-contrast boost (v2v, upscaling) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Refine-Details/resolve/main/ltx-2.5-22b-ic-lora-refine-details-1.0.safetensors) |
+| SDR-To-HDR IC-LoRA | 2.5 | 1.31 GB | SDR → HDR conversion (v2v) — paper [arXiv:2604.11788](https://arxiv.org/abs/2604.11788) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-SDR-To-HDR/resolve/main/ltx-2.5-22b-ic-lora-sdr-to-hdr-1.0.safetensors) |
 | Skin-Hair LoRA | 2.3 | — | Skin / hair refinement | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/LTX-2.3-skin-hair) |
 | Upscale IC-LoRA | 2.3 | — | Upscale resolution | [![Zlikwid](https://img.shields.io/badge/Zlikwid-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora) |
+
+◦ The SDR-To-HDR IC-LoRA ships a small companion scene embedding that must be loaded alongside the main weights: [`ltx-2.5-22b-ic-lora-sdr-to-hdr-scene-emb.safetensors`](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-SDR-To-HDR/resolve/main/ltx-2.5-22b-ic-lora-sdr-to-hdr-scene-emb.safetensors) (13.4 MB).
 
 #### ❖ Character / Face-Swap
 

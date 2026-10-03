@@ -230,6 +230,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| Alpha-Gen IC-LoRA | 2.5 | 1.31 GB | Alpha-matte generation / background removal (v2v) — hair, smoke, fur, fire, sheer fabric | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Alpha-Gen/resolve/main/ltx-2.5-22b-ic-lora-alpha-gen-0.9.safetensors) |
 | Cel-Character IC-LoRA | 2.5 | 0.33 GB | Live-action → 2D cel character (rank 32; bg stays photographic) | [![Baberg](https://img.shields.io/badge/Baberg-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Baberg/ltx-2.5-22b-ic-lora-cel-character/resolve/main/ltx25-iclora-cartoon-cum3250.safetensors) |
 | Cinemagraph LoRA | 2.5 | 0.20 GB | Selective-motion cinemagraph (i2v) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-LoRA-Cinemagraph/resolve/main/ltx-2.5-22b-lora-cinemagraph-0.9.safetensors) |
 | Cross-Eyed (stereo) IC-LoRA | 2.3 | 0.33 GB | Stereoscopic / cross-eyed | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Cross-Eyed/resolve/main/ltx-2.3-22b-ic-lora-cross-eyed-0.9.safetensors) |
@@ -306,8 +307,11 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | HDR IC-LoRA | 2.3 | — | HDR tone mapping | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-HDR) |
 | Pixel-Spatial-Upscaler IC-LoRA | 2.5 | 0.30 GB | Spatial upscale x2 | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Pixel-Spatial-Upscaler/resolve/main/ltx-2.5-22b-ic-lora-pixel-spatial-upscaler-x2-1.0.safetensors) |
 | Refine-Details IC-LoRA | 2.5 | 1.31 GB | Detail refinement / micro-contrast boost (v2v, upscaling) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Refine-Details/resolve/main/ltx-2.5-22b-ic-lora-refine-details-1.0.safetensors) |
+| SDR-To-HDR IC-LoRA | 2.5 | 1.31 GB | SDR → HDR conversion (v2v) — paper [arXiv:2604.11788](https://arxiv.org/abs/2604.11788) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-SDR-To-HDR/resolve/main/ltx-2.5-22b-ic-lora-sdr-to-hdr-1.0.safetensors) |
 | Skin-Hair LoRA | 2.3 | — | Skin / hair refinement | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/LTX-2.3-skin-hair) |
 | Upscale IC-LoRA | 2.3 | — | Upscale resolution | [![Zlikwid](https://img.shields.io/badge/Zlikwid-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Zlikwid/LTX_2.3_Upscale_IC_Lora) |
+
+◦ The SDR-To-HDR IC-LoRA ships a small companion scene embedding that must be loaded alongside the main weights: [`ltx-2.5-22b-ic-lora-sdr-to-hdr-scene-emb.safetensors`](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-SDR-To-HDR/resolve/main/ltx-2.5-22b-ic-lora-sdr-to-hdr-scene-emb.safetensors) (13.4 MB).
 
 #### ❖ Character / Face-Swap
 
