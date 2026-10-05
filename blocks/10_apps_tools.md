@@ -32,14 +32,15 @@ Custom [Modular Diffusers](https://huggingface.co/docs/diffusers/main/en/modular
 
 ### WanGP LTX-2 Model Pack (DeepBeepMeep)
 
-The complete set of **LTX-2 / 2.3 / 2.5 weights used by [WanGP](https://github.com/deepbeepmeep/Wan2GP)** — DeepBeepMeep's low-VRAM video app (down to ~6 GB VRAM, old-GPU friendly, auto-downloads the model variant matching your architecture). ~896 GB total, pre-packaged so no manual ComfyUI file layout is needed.
+The complete set of **LTX-2 / 2.3 / 2.5 weights used by [WanGP](https://github.com/deepbeepmeep/Wan2GP)** — DeepBeepMeep's low-VRAM video app (down to ~6 GB VRAM, old-GPU friendly, auto-downloads the model variant matching your architecture). **169 files, ~984 GB total**, pre-packaged so no manual ComfyUI file layout is needed.
 
 **What's inside:**
-- **LTX-2.5 22B transformers** — `dev` and `distilled` in bf16 (38.0 GB), int8-convrot (19.5 GB) and nvfp4 (14.7 GB), plus the optional `distilled-lora-450` (8.9 GB)
-- **LTX-2.5 components** — video/audio VAEs, video + audio embeddings connectors (bf16 / int8-convrot / nvfp4), text embedding projection, vocoder, spatial + temporal upscalers x2, and the Gemma-4-12b LTX text encoder (23.8 GB)
-- **LTX-2 / 2.3 equivalents** — incl. `Q4_K_M` / `Q6_K` / `Q8_0` "light" GGUFs (13.0–20.6 GB) and quanto bf16-int8 builds
-- **LoRAs** — IC-LoRAs (control, ingredients, in-outpainting, uncompress, refocus, HDR, pixel upscale), ID-LoRAs (celebvhq), Licon-MSR / VBVR, OmniNFT RL-LoRAs
-- **Bundled third-party audio models** — DramaBox, Scenema, JoyAI-Echo, plus Kokoro TTS, Seed-VC, Whisper, HuBERT, BigVGAN, Sherpa
+- **Main transformers (repo root)** — LTX-2.5 22B `dev` / `distilled` in bf16 (38.0 GB), int8-convrot (19.5 GB) and nvfp4 (14.7 GB); LTX-2.3 22B `dev` / `distilled` / `distilled-1.1` bf16 (38.0 GB) plus quanto bf16-int8 (19.5 GB) and nvfp4 (13.5 GB); LTX-2 19B `dev` / `distilled` full (43.3 GB), fp8 (27.1 GB), fp4 (20.0 GB) and diffusion-model variants; `Q4_K_M` / `Q6_K` / `Q8_0` "light" GGUFs (13.0–20.6 GB)
+- **Third-party audio models** — JoyAI-Echo (bf16 + quanto), Scenema, DramaBox, `ltx23_echoVid-ltxAud_surgical_fp8`, plus Kokoro TTS, Seed-VC, Whisper, HuBERT, BigVGAN, Sherpa
+- **Shared / offloadable components** — video + audio embeddings connectors (bf16 / int8-convrot / nvfp4), text embedding projection, video + audio VAEs, vocoder, spatial **and** temporal upscalers x2
+- **Text encoders** — **both** `gemma4-12b-ltx-v1` for LTX-2.5 (bf16 23.8 GB / int8-convrot 12.9 GB) and `gemma-3-12b-it-qat-q4_0` for LTX-2 / 2.3 (24.4 GB + quanto 13.2 GB)
+- **LoRAs** — LTX-2.5 IC-LoRAs (refine-details, ingredients, **SDR-To-HDR** + its `scene-emb`, deblur, decompression, pixel-spatial-upscaler), LTX-2.3 IC-LoRAs (ingredients, in-outpainting, outpaint, refocus, uncompress, ungrade, HDR + `scene-emb`, union-control, pixel-spatial-upscaler, detailer), LTX-2 IC-LoRAs (detailer, union-control, canny/depth/pose control), `distilled-lora-450` / `-384`, celebvhq **ID-LoRAs** (LTX-2 and 2.3), Edit-Anything reference, Licon-MSR (2.3 V1/V2, 2.5 V1 + slot embeddings), VBVR-I2V, OmniNFT RL-LoRAs
+- **Manifest** — [`LTX-2.5-MANIFEST.md`](https://huggingface.co/DeepBeepMeep/LTX-2/blob/main/LTX-2.5-MANIFEST.md) documents the LTX-2.5 runtime set, incl. the note that Dev/Distilled connectors are shared only after equality verification and the official NVFP4 transformer needs its own BF16 connector pair
 
 **Downloads & Resources:**
 - [WanGP (GitHub)](https://github.com/deepbeepmeep/Wan2GP) | [Model pack (HF)](https://huggingface.co/DeepBeepMeep/LTX-2)
