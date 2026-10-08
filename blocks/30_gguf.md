@@ -237,6 +237,36 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 </details>
 
+<details>
+  <summary>Other single-file GGUFs (ApolloRaines, EllaPriest45)</summary>
+
+Single-quant GGUFs that don't fit the multi-quant sets above: a merged fine-tune, a paired text encoder, and community re-pack mirrors of quants already listed in [Checkpoints](#ckpt).
+
+#### [ApolloRaines/LTX-2.5-22b-OmniGen-v12](https://huggingface.co/ApolloRaines/LTX-2.5-22b-OmniGen-v12)
+
+Gated `auto` merge of **OmniGen v12** on LTX-2.5 (7 likes, t2v pipeline tag, `base_model: Lightricks/LTX-2.5` + `quantized`). Ships one quant only.
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| ltx-2.5-22b-omnigen-v12 | ![Q6_K][badge-Q6_K] | 18.62 GB | [![][gh-ApolloRaines]](https://huggingface.co/ApolloRaines/LTX-2.5-22b-OmniGen-v12/resolve/main/ltx-2.5-22b-omnigen-v12-Q6_K.gguf) |
+
+◦ **Gated `auto`** — sign in to download; the file tree above is public, the weights are not. Use the tree API (`/api/models/ApolloRaines/LTX-2.5-22b-OmniGen-v12/tree/main`) to verify filenames on gated repos — a `401` from a resolve link proves nothing about the path (HF checks auth before the filename).
+
+#### EllaPriest45 single-quant mirrors
+
+Re-pack mirrors of quants that are already listed from their primary sources, plus one paired text encoder and one Joy-LTX derivative.
+
+| Model | Quant | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `LTX-2.5-Distilled` | ![Q4_K_M][badge-Q4_K_M] | 15.09 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/diffusionmodels_LTX-2.5-Distilled-Q4_K_M.gguf) |
+| `Gemma-4-12b-with-proj-ltx-2.5` (text encoder) | ![Q5_K_M][badge-Q5_K_M] | 9.51 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/textencoder_gemma4-12b-with-proj-ltx-2.5-Q5_K_M.gguf) |
+| `LTX 2.5` (Joy-LTX Distilled derivative) | ![Q4_KS][badge-Q4_KS] | 12.63 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/Joy-LTX%202.5%20Distilled%20Q4KS%20-%20LTX%202.5.gguf) |
+| `LTX2.5` | ![Q3_K_M][badge-Q3_K_M] | 10.35 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/LTX2.5%20Q3KM%20-%20LTX%202.5.gguf) |
+
+◦ **EllaPriest45's LTX repos are split into sub-repos**, not one monorepo — see the [EllaPriest45 (model mirror)](#finetune-ellapriest45) subsection in Finetunes for the full map.
+
+</details>
+
 #### Special Quantization: PolarQuant Q5
 
 **LTX-2.3 (22B) — PolarQuant Q5** is a bit-packed quantization method using Hadamard-Rotated Lloyd-Max Quantization. It achieves optimal Gaussian weight quantization via Hadamard rotation, delivering near-lossless quality with significant size reduction.

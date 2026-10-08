@@ -29,6 +29,8 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
     * [10Eros](#finetune-10eros)
     * [Sulphur-2-base](#finetune-sulphur)
     * [PinkCherry NSFW](#finetune-pinkcherry)
+    * [Stubelius Remix (Stuubs)](#finetune-stubelius)
+    * [EllaPriest45 (model mirror)](#finetune-ellapriest45)
   * [GGUF Quantized Models](#gguf)
 * [Text Encoders](#text-encoder)
   * [Comfy-Org Optimized Encoders](#text-encoder)

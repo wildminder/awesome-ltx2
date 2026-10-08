@@ -6,6 +6,8 @@ LTX-2 models are available in various formats including full weights, transforme
 
 <a id="checkpoints"></a>
 
+<a id="ckpt"></a>
+
 ### ▣ Checkpoints
 
 * **[Lightricks/LTX-2](https://huggingface.co/Lightricks/LTX-2)** - Official repository.
@@ -181,6 +183,9 @@ Custom merged models combining multiple control signals or specialized configura
 | Ver | Name | Description | Download |
 | :--- | :--- | :--- | :--- |
 | **2.3** | `ltx-2.3-22b-distilled-1.1-fused-union-control` | Merged model combining Canny, Depth, and Pose control signals for unified control | [![](https://img.shields.io/badge/linoyts-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/linoyts/ltx-2.3-22b-distilled-1.1-fused-union-control) |
+| **2.5** | `Alpha-Gen VideoOnly48 NVFP4` | Official Alpha-Gen IC-LoRA **merged into the base weights** at strength 1.0, then structurally pruned to 48 blocks and quantized to NVFP4 with dynamic activation scales. Ships no LoRA — the matting behaviour is in the checkpoint. Ships a `provenance.json` with base/alpha SHA-256 and a full quality-vs-teacher report. | [![](https://img.shields.io/badge/mskim8584-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/mskim8584/LTX-2.5-Alpha-Gen-VideoOnly-NVFP4/resolve/main/ltx25-alpha-gen-videoonly48-merged-nvfp4-dynamic.safetensors) |
+
+◦ **mskim8584 caveats — read `provenance.json` before trusting it.** The producer's own audit reports `"quality_accepted": false` and `"accepted": false`: whole-frame MAE 0.0059, PSNR 30.8 dB, SSIM 0.972, gradient MAE 0.0042, temporal flicker MAE 0.0034, temporal-boundary MAE 0.0416. `catastrophic_inversion_frame_count` is 0, so nothing blew up, but both the BF16 intermediate and the NVFP4 pass were explicitly marked as *not* accepted quality. The BF16 merge also required `cached_final_empty_prompt_required` conditioning and was fused on CPU. Treat as an experiment, not a drop-in replacement for the LoRA.
 
 <p id="finetunes" align="center">══════════════════════════════════</p>
 
@@ -743,3 +748,63 @@ Research **LTX-2.5 world model** by [junchaoh-cs](https://huggingface.co/junchao
 | **2.5** | SolarWM bid-stage0p5-153f (finetuned stage) | — | 3.93 GB | [![junchaoh-cs][gh-junchaoh-cs]](https://huggingface.co/junchaoh-cs/SolarWM-LTX-22B/resolve/main/SolarWM-ltx-22B-bid-stage0p5-153f/ema/model.safetensors) |
 
 ◦ Base LTX-2.5 22B (dev transformer + gemma4-12b encoder + VAE) also in repo. Paper: [arXiv:2609.02886](https://arxiv.org/abs/2609.02886).
+
+<p id="finetune-stubelius" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ Stubelius Remix (Stuubs)
+
+**LTX-2.5** merged finetune by [Stuubs](https://huggingface.co/Stuubs) (12 likes) — the **distilled LoRA baked in**, plus (from v1) **OmniNFT** RL-finetune merged at its trained strength. Mainly aimed at NSFW but works SFW (name clothing explicitly in SFW prompts or you may get unwanted nudity). Ships three v1 builds plus two beta builds; **use v1**.
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | `v1` (recommended, ComfyUI int8) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.50 GB | [![Stuubs][gh-Stuubs]](https://huggingface.co/Stuubs/Stubelius_Remix_Ltx2.5/resolve/main/ltx2.5-Stubelius_remix_v1_int8_convrot.safetensors) |
+| **2.5** | `v1` (merging / own conversions) | ![bf16][badge-bf16] | 42.01 GB | [![Stuubs][gh-Stuubs]](https://huggingface.co/Stuubs/Stubelius_Remix_Ltx2.5/resolve/main/ltx2.5-Stubelius_remix_v1_bf16.safetensors) |
+| **2.5** | `v1` NVFP4 (RTX 50-series only, **experimental**) | ![nvfp4][badge-nvfp4] | 14.40 GB | [![Stuubs][gh-Stuubs]](https://huggingface.co/Stuubs/Stubelius_Remix_Ltx2.5/resolve/main/ltx2.5-Stubelius_remix_v1_nvfp4.safetensors) |
+| **2.5** | `beta2` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.50 GB | [![Stuubs][gh-Stuubs]](https://huggingface.co/Stuubs/Stubelius_Remix_Ltx2.5/resolve/main/ltx2.5-Stubelius_remix_beta2_int8_convrot.safetensors) |
+| **2.5** | `beta2` | ![bf16][badge-bf16] | 42.01 GB | [![Stuubs][gh-Stuubs]](https://huggingface.co/Stuubs/Stubelius_Remix_Ltx2.5/resolve/main/ltx2.5-Stubelius_remix_beta2_bf16.safetensors) |
+| **2.5** | `beta1` | ![bf16][badge-bf16] | 42.01 GB | [![Stuubs][gh-Stuubs]](https://huggingface.co/Stuubs/Stubelius_Remix_Ltx2.5/resolve/main/ltx2.5-Stubelius_remix_beta1.safetensors) |
+
+◦ **Run it:** drop the int8 file in `ComfyUI/models/diffusion_models`, load with **Load Diffusion Model** (or pick it in the Models node of *Stubelius Ultimate LTX 2.5*). **CFG 1, 8 steps** (+3–4 if you run an upscale pass). Do **not** add a distilled LoRA or OmniNFT on top — both are already baked in. Needs `gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors` (Lightricks re-uploaded it in mid-August — re-download if yours is older) plus `ltx-2.5-video-vae-bf16` and `ltx-2.5-audio-vae-bf16`.
+
+◦ **v1 vs beta2, per the author:** +55% sharper fine detail (faces, hair, fabric, backgrounds), +15% more motion, same remix / prompt-following / loudness, dialogue still verbatim. Blind AI-judged A/B of full-res frames: OmniNFT at v1's strength won **29–9** with 10 ties. A few scenes come out less saturated on average. VBVR was tested and **rejected** — it cost motion without improving prompt following.
+
+◦ **NVFP4 is experimental:** transformer blocks 0–41 in NVFP4, last 6 blocks + text connectors in int8 (Lightricks' own layer choice). Fast only on RTX 50-series (Blackwell) with ComfyUI ≥ 0.32 and PyTorch built for CUDA 13; older cards run it but slower than int8. Renders haven't been fully compared against int8 yet.
+
+◦ The int8 build needs a recent enough ComfyUI to load Comfy-Org's int8 LTX-2.5 files. LTX-2.5 LoRAs load on it the same way as on stock LTX-2.5. Credits: Lightricks (LTX-2.5 + distilled LoRA), FusionCow / Sulp.
+
+<p id="finetune-ellapriest45" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ EllaPriest45 (model mirror)
+
+> **Note:** the EllaPriest45 LTX collection is **split across sub-repos**, not one monorepo. Older revisions of this list linked a single `EllaPriest45/LTX2.5_checkpoints`; the same author also mirrors LTX weights under 11 sibling repos.
+
+| Sub-repo | Contents | Size |
+| :--- | :--- | ---: |
+| [`LTX2.5_checkpoints`](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints) | Full checkpoints — REDGraft NSFW int8, plus Joy-LTX / Q3_K_M GGUFs | 40.6 GB |
+| [`LTX2.5_base`](https://huggingface.co/EllaPriest45/LTX2.5_base) | Base runtime — turbo distill LoRAs (r450/r256/r128), VAEs, upscalers, MSR LoRA, Q4_K_M + Gemma-4 Q5_K_M GGUFs, ComfyUI node zips | 45.7 GB |
+| [`LTX2.5_actions`](https://huggingface.co/EllaPriest45/LTX2.5_actions) | Face-swap (BFS r128/r64), EditAnything v2.0, Alpha Gen, BTS Movie Set, NSFW action LoRAs + bundled workflow JSONs | 7.9 GB |
+| [`LTX2.5_styles`](https://huggingface.co/EllaPriest45/LTX2.5_styles) | **3D Animation Style** (0.674 GB) — the only weight left in this sub-repo | 0.7 GB |
+| [`LTX2.3_checkpoints`](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints) | 10Eros v1.4 Bob int8-ConvRot, PinkCherry v1.8 Q5_KM, DaSiWa DragonLeap Q4_K_M, JoyAI-Echo surgical Q5, INT4-Quality dev, GGUF Companion | 122.3 GB |
+| [`LTX2.3_base`](https://huggingface.co/EllaPriest45/LTX2.3_base) | LTX-2.3 dev int8-ConvRot, Sulphur dev fp8mixed, Gemma-3 encoder variants, connectors, VAEs, upscalers, ID/OmniNFT/distill LoRAs | 187.9 GB |
+| [`LTX2.3_Actions`](https://huggingface.co/EllaPriest45/LTX2.3_Actions) | NSFW action / motion LoRAs, EditAnything v1.1, Best-FaceID, OmniCine | 154.9 GB |
+| [`LTX2.3_Characters`](https://huggingface.co/EllaPriest45/LTX2.3_Characters) | Per-celebrity / per-character likeness LoRAs (394 files) | 139.3 GB |
+| [`LTX2.3_Styles`](https://huggingface.co/EllaPriest45/LTX2.3_Styles) | Visual-style LoRAs — anime, claymation, cyberpunk, post-apocalyptic, Dispatch, GalaxyAce, furry | 25.7 GB |
+| [`LTX2.3_Dramabox`](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox) | DramaBox audio DiT + audio components (unsplit pair) | 8.5 GB |
+| [`LTX2.3_workflows`](https://huggingface.co/EllaPriest45/LTX2.3_workflows) | 155 ComfyUI workflow JSONs | 0.7 GB |
+
+The `LTX2.5_styles` and `LTX2.5_actions` LoRAs are listed individually under [`▣ Styles`](#lora-styles) and [`▣ Special`](#lora-special); the GGUFs under [GGUF Quantized Models](#gguf); REDGraft under [`REDGraft (NSFW)`](#finetune-redgraft).
+
+**Selected non-LoRA weights worth calling out** (all links verified; most are re-packs of models listed from their primary sources elsewhere on this page):
+
+| Weights | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `LTX 2.3 dev INT8 ConvRot` (standalone, not in LTX-2.3/Comfy) | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 23.51 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_base/resolve/main/LTX%202.3%20dev%20INT8%20ConvRot%20-%20LTX2.3.safetensors) |
+| `Diffusion Models - Sulphur_dev_model_fp8mixed` | ![fp8][badge-fp8] | 25.03 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_base/resolve/main/Diffusion%20Models%20-%20Sulphur_dev_model_fp8mixed.safetensors) |
+| `LTX 2.3 INT8 Dev Transformer INT4 Quality` | ![int4][badge-int4] | 18.98 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints/resolve/main/LTX%202.3%20INT8%20Dev%20Transformer%20INT4%20Quality%20-%20LTX2.3.safetensors) |
+| `LTX-2.3 GGUF Companion` (transformer-only split for GGUF loading) | ![bf16][badge-bf16] | 9.02 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints/resolve/main/LTX-2.3%20GGUF%20Companion%20-%20LTX2.3.safetensors) |
+| `DramaBox audio DiT v1` | ![bf16][badge-bf16] | 6.58 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox/resolve/main/models_dramabox-dit-v1.safetensors) |
+| `DramaBox audio components` (vocoder / Mel-band / TAE bundle) | ![bf16][badge-bf16] | 1.94 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox/resolve/main/dramabox-audio-components.safetensors) |
+
+◦ **Not all mirrors add anything.** The `10eros v1.4 Q6_K`, `DaSiWa DragonLeap v4.0 Q4KM`, `SexGod PinkCherry v1.8 Q5_KM` and `JoyAI-Echo × LTX-2.3 Surgical Merge Q5` GGUFs are re-packs of quants already listed from SexGod1979 / DaSiWa / joeygambino / vantagewithai — linked from those sections.
+
+◦ `LTX2.5_base` also bundles the **ComfyUI node zips** it expects (`ComfyUI-JoyLTX25`, `ComfyUI-KJNodes`, `ComfyUI-LTX2.5-MSR`, `ComfyUI-Sage-EasyInstall`) — the repo is usable as a one-stop 2.5 drop folder.

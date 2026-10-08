@@ -229,6 +229,43 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
   
 <a id="wf-comfyui"></a>
 
+### ❖ EllaPriest45
+
+**[EllaPriest45](https://huggingface.co/EllaPriest45) LTX-2.3 / LTX-2.5 ComfyUI Workflows:**
+
+> **Note:** the author's LTX assets are **split across sub-repos** (see [`EllaPriest45 (model mirror)`](#finetune-ellapriest45)). Workflows live in their own `LTX2.3_workflows` repo, and several `LTX2.5_actions` / `LTX2.5_base` weights ship with a matching workflow JSON alongside them.
+
+**[`EllaPriest45/LTX2.3_workflows`](https://huggingface.co/EllaPriest45/LTX2.3_workflows)** — 155 ComfyUI workflow JSONs for LTX-2.3 (~0.7 GB total). A representative selection:
+
+* [LTX 2.3 All-In-One](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/1.%20LTX%202.3%20All-In-One-1%20260606-1.json)
+* [LTX 2.3 Replace Anyone in Video](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/1.%20LTX%202.3%20Replace%20Anyone%20in%20Video%20260523-4.json)
+* [LTX 2.3 Camera Man](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/LTX%202.3%20Camera%20Man.json)
+* [LTX 2.3 Head Swap V3](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/LTX%202.3%20Head%20Swap%20V3.json)
+* [LTX 2.3 Day To Night V1](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/LTX%202.3%20Day%20To%20Night%20V1.json)
+* [LTX 2.3 Edit Anything Distill V1](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/LTX%202.3%20Edit%20Anything%20Distill%20V1.json)
+* [LTX 2.3 HDR IC LoRA WORKFLOW](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/LTX%202.3%20HDR%20IC%20LoRA%20WORKFLOW.json)
+* [10Eros 10-SNodes I2V Basic v4](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/10Eros_10SNodes_I2VBasic_v4.json)
+* [10Eros LikenessGuideHelper I2V v3.2](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/10Eros_10SNodes_LikenessGuideHelper_I2V_v3.2.json)
+* [FFLF Seed Hunter Multiroll Workflow](https://huggingface.co/EllaPriest45/LTX2.3_workflows/resolve/main/FFLF%20Seed%20Hunter%20Multiroll%20Workflow%20-%20LTX2.3.json)
+
+**Workflows bundled with `LTX2.5_actions` weights** (each sits next to its LoRA in the repo):
+
+* [EditAnything v2.0 — LTX 2.5](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/EditAnything%20v2.0%20-%20LTX%202.5%20-%20remove%2C%20replace%2C%20add%2C%20restyle.json)
+* [Alpha Gen — LTX2.5](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/Alpha%20Gen%20-%20LTX2.5%20-%20145frames%20max%2C1920x1080%20max%2C1str.json)
+* [BFS Best Face Swap R64 — LTX2.5](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/BFS%20-%20Best%20Face%20Swap%20R64%20-%20LTX2.5.json)
+* [ALittleMoreSharpness R32 — LTX2.5](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/ALittleMoreSharpness%20R32%20-%20LTX2.5%20-%20Enhance%20this%20video%20with%20sharp%2Ccrisp%20details%20while%20preserving%20a%20natural%20photorealistic%20appearance.json)
+
+**Workflows bundled with `LTX2.5_base`:**
+
+* [Multiple Subject Reference — Image 1, 2, 3](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/Multiple%20Subject%20Reference%20LORA%20-%20LTX%202.5%20-%20Image%201%2CImage%202%2CImage%203.json)
+* [Multiple Subject Reference — Subject 1, 2, 3](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/Multiple%20Subject%20Reference%20LORA%20-%20LTX%202.5%20-%20Subject%201%2C2%2C3.json)
+
+### ❖ CQdesign
+
+**[CQdesign](https://huggingface.co/CQdesign) LTX-2.5 LoRA workflows:**
+
+* [LTX2.5 — CQ Freeform Motion Transfer LoRA](https://huggingface.co/CQdesign/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/workflow/LTX2.5%20-%20CQ%20freeform%20motion%20transfer%20lora.json) — companion workflow for the freeform motion-transfer LoRA (see [`❖ Motion`](#lora-special)).
+
 ### ❖ ComfyUI
 
 * [Text-to-video](https://raw.githubusercontent.com/Comfy-Org/workflow_templates/refs/heads/main/templates/video_ltx2_t2v.json)
