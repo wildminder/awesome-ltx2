@@ -19,6 +19,7 @@
 [gh-szwagros]: https://img.shields.io/badge/szwagros-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Stuubs]: https://img.shields.io/badge/Stuubs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ApolloRaines]: https://img.shields.io/badge/ApolloRaines-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-colinb83]: https://img.shields.io/badge/colinb83-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 [badge-int4]: https://img.shields.io/badge/INT4_Quality-17a2b8?style=flat-square
 

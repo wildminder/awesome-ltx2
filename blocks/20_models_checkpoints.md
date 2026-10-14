@@ -683,6 +683,26 @@ Uncensored NSFW **LTX-2.5** checkpoint by [EllaPriest45](https://huggingface.co/
 
 ◦ Bundled workflow: [`REDGraft (NSFW) INT8 - LTX2.5.json`](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/REDGraft%20%28NSFW%29%20INT8%20-%20LTX2.5.json).
 
+<p id="finetune-colinb83-nsfw" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ colinb83 NSFW (LTX-2.5 full FT)
+
+A **full bf16 fine-tune of the LTX-2.5 22B DiT** on a 54,702-clip NSFW corpus (1280×704, 10 s + 5 s clips) by [colinb83](https://huggingface.co/colinb83) — the final checkpoint of the completed 7,000-step run. All **48 transformer blocks** were trained (18.56B params, 4,032 tensors) with a streaming dense full fine-tune using stochastic-BF16 Adafactor; connectors and non-block tensors are the original base weights. Single RTX PRO 6000 Blackwell with ring offload (8 blocks swapped / 2-block double buffer), ~38 h total.
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | NSFW full FT (step 7000) | ![bf16][badge-bf16] | 42.01 GB | [![colinb83][gh-colinb83]](https://huggingface.co/colinb83/ltx-2.5-nsfw-step7000/resolve/main/ltx-2.5-nsfw-step7000.safetensors) |
+
+◦ **Base / requirements:** LTX-2.5 22B dev (`AVTransformer3DModel`, `model_version: 2.5.0`). The card declares an **abliterated Gemma 4 12B text encoder (`gemma4-12b-ltx-v1`)** — use that encoder plus the standard LTX-2.5 video/audio VAEs. Load with **UNETLoader** as a standard LTX-2.5 checkpoint in any ComfyUI workflow.
+
+◦ **Training recipe:** 2,000 steps @ 1e-5 then 5,000 steps @ 3e-6 (constant per phase), batch 1, gradient checkpointing on. Trained at 1280×704 × 97 frames (~10 s); captions are long-form, camera-first, present-tense descriptions.
+
+◦ ⚠️ **Distill LoRAs do not transfer cleanly.** Distillation LoRAs made for the unmodified dev model (e.g. `ltx-2.5-22b-distilled-lora-450`) apply a weight delta ~**44%** the magnitude of this fine-tune and are calibrated against the original base — use them at reduced strength or retrain one against this checkpoint.
+
+◦ **No model card in the repo itself** (the tree holds only the weights file + `.gitattributes`); the documentation above comes from the author's sibling repo [`colinb83/ltx-2.5-nsfw`](https://huggingface.co/colinb83/ltx-2.5-nsfw), which ships the same final checkpoint plus an earlier `dense_weights_step_00250.safetensors` (28.24 GB) snapshot.
+
+◦ **License:** subject to the **LTX-2.x Community License Agreement** (full text embedded in the safetensors metadata); derivatives of LTX-2.x must be distributed under that agreement. Content is NSFW/adult — the repo carries the `not-for-all-audiences` tag.
+
 <p id="finetune-spatialav2av" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ SpatialAV2AV (BingoG)
@@ -784,7 +804,7 @@ Research **LTX-2.5 world model** by [junchaoh-cs](https://huggingface.co/junchao
 | [`LTX2.5_base`](https://huggingface.co/EllaPriest45/LTX2.5_base) | Base runtime — turbo distill LoRAs (r450/r256/r128), VAEs, upscalers, MSR LoRA, Q4_K_M + Gemma-4 Q5_K_M GGUFs, ComfyUI node zips | 45.7 GB |
 | [`LTX2.5_actions`](https://huggingface.co/EllaPriest45/LTX2.5_actions) | Face-swap (BFS r128/r64), EditAnything v2.0, Alpha Gen, BTS Movie Set, NSFW action LoRAs + bundled workflow JSONs | 7.9 GB |
 | [`LTX2.5_styles`](https://huggingface.co/EllaPriest45/LTX2.5_styles) | **3D Animation Style** (0.674 GB) — the only weight left in this sub-repo | 0.7 GB |
-| [`LTX2.3_checkpoints`](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints) | 10Eros v1.4 Bob int8-ConvRot, PinkCherry v1.8 Q5_KM, DaSiWa DragonLeap Q4_K_M, JoyAI-Echo surgical Q5, INT4-Quality dev, GGUF Companion | 122.3 GB |
+| [`LTX2.3_checkpoints`](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints) | 10Eros v1.4 Bob int8-ConvRot, PinkCherry v1.8 Q5_KM, DaSiWa DragonLeap Q4_K_M, JoyAI-Echo surgical Q5, INT4-Quality dev, GGUF Companion, plus two `fro99-AVGRank104` averaged LoRA merges (listed below) | 122.3 GB |
 | [`LTX2.3_base`](https://huggingface.co/EllaPriest45/LTX2.3_base) | LTX-2.3 dev int8-ConvRot, Sulphur dev fp8mixed, Gemma-3 encoder variants, connectors, VAEs, upscalers, ID/OmniNFT/distill LoRAs | 187.9 GB |
 | [`LTX2.3_Actions`](https://huggingface.co/EllaPriest45/LTX2.3_Actions) | NSFW action / motion LoRAs, EditAnything v1.1, Best-FaceID, OmniCine | 154.9 GB |
 | [`LTX2.3_Characters`](https://huggingface.co/EllaPriest45/LTX2.3_Characters) | Per-celebrity / per-character likeness LoRAs (394 files) | 139.3 GB |
@@ -805,6 +825,8 @@ The `LTX2.5_styles` and `LTX2.5_actions` LoRAs are listed individually under [`�
 | `DramaBox audio DiT v1` | ![bf16][badge-bf16] | 6.58 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox/resolve/main/models_dramabox-dit-v1.safetensors) |
 | `DramaBox audio components` (vocoder / Mel-band / TAE bundle) | ![bf16][badge-bf16] | 1.94 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox/resolve/main/dramabox-audio-components.safetensors) |
 
-◦ **Not all mirrors add anything.** The `10eros v1.4 Q6_K`, `DaSiWa DragonLeap v4.0 Q4KM`, `SexGod PinkCherry v1.8 Q5_KM` and `JoyAI-Echo × LTX-2.3 Surgical Merge Q5` GGUFs are re-packs of quants already listed from SexGod1979 / DaSiWa / joeygambino / vantagewithai — linked from those sections.
+◦ **Not all mirrors add anything.** The `10eros v1.4 Q6_K`, `DaSiWa DragonLeap v4.0 Q4KM`, `SexGod PinkCherry v1.8 Q5_KM` and `JoyAI-Echo × LTX-2.3 Surgical Merge Q5` GGUFs are re-packs of quants already listed from SexGod1979 / DaSiWa / joeygambino / vantagewithai — linked from those sections. `LTX2.3_base`'s `Sulphur_dev-Q3_K_M.gguf` and `LTX-2.3-22b-distilled-Q4_K_M.gguf` are likewise re-packs of quants already listed (Abiray / unsloth), so they are not duplicated here.
+
+◦ **Re-verified 2026-10-13:** every sub-repo above has a **single commit** (all dated 2026-10-08) — the file counts and totals in this table are unchanged, so nothing new has landed since the audit. The `LTX2.5_actions` bullet under [`▣ Special`](#lora-special) names its LoRAs individually.
 
 ◦ `LTX2.5_base` also bundles the **ComfyUI node zips** it expects (`ComfyUI-JoyLTX25`, `ComfyUI-KJNodes`, `ComfyUI-LTX2.5-MSR`, `ComfyUI-Sage-EasyInstall`) — the repo is usable as a one-stop 2.5 drop folder.

@@ -29,6 +29,7 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
     * [10Eros](#finetune-10eros)
     * [Sulphur-2-base](#finetune-sulphur)
     * [PinkCherry NSFW](#finetune-pinkcherry)
+    * [colinb83 NSFW (LTX-2.5 full FT)](#finetune-colinb83-nsfw)
     * [Stubelius Remix (Stuubs)](#finetune-stubelius)
     * [EllaPriest45 (model mirror)](#finetune-ellapriest45)
   * [GGUF Quantized Models](#gguf)
@@ -802,6 +803,26 @@ Uncensored NSFW **LTX-2.5** checkpoint by [EllaPriest45](https://huggingface.co/
 
 ◦ Bundled workflow: [`REDGraft (NSFW) INT8 - LTX2.5.json`](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/REDGraft%20%28NSFW%29%20INT8%20-%20LTX2.5.json).
 
+<p id="finetune-colinb83-nsfw" align="center">· · · · · · · · · · · · · ·</p>
+
+#### ❖ colinb83 NSFW (LTX-2.5 full FT)
+
+A **full bf16 fine-tune of the LTX-2.5 22B DiT** on a 54,702-clip NSFW corpus (1280×704, 10 s + 5 s clips) by [colinb83](https://huggingface.co/colinb83) — the final checkpoint of the completed 7,000-step run. All **48 transformer blocks** were trained (18.56B params, 4,032 tensors) with a streaming dense full fine-tune using stochastic-BF16 Adafactor; connectors and non-block tensors are the original base weights. Single RTX PRO 6000 Blackwell with ring offload (8 blocks swapped / 2-block double buffer), ~38 h total.
+
+| Ver | Build | Precision | Size | Download |
+| :--- | :--- | :---: | :---: | :---: |
+| **2.5** | NSFW full FT (step 7000) | ![bf16][badge-bf16] | 42.01 GB | [![colinb83][gh-colinb83]](https://huggingface.co/colinb83/ltx-2.5-nsfw-step7000/resolve/main/ltx-2.5-nsfw-step7000.safetensors) |
+
+◦ **Base / requirements:** LTX-2.5 22B dev (`AVTransformer3DModel`, `model_version: 2.5.0`). The card declares an **abliterated Gemma 4 12B text encoder (`gemma4-12b-ltx-v1`)** — use that encoder plus the standard LTX-2.5 video/audio VAEs. Load with **UNETLoader** as a standard LTX-2.5 checkpoint in any ComfyUI workflow.
+
+◦ **Training recipe:** 2,000 steps @ 1e-5 then 5,000 steps @ 3e-6 (constant per phase), batch 1, gradient checkpointing on. Trained at 1280×704 × 97 frames (~10 s); captions are long-form, camera-first, present-tense descriptions.
+
+◦ ⚠️ **Distill LoRAs do not transfer cleanly.** Distillation LoRAs made for the unmodified dev model (e.g. `ltx-2.5-22b-distilled-lora-450`) apply a weight delta ~**44%** the magnitude of this fine-tune and are calibrated against the original base — use them at reduced strength or retrain one against this checkpoint.
+
+◦ **No model card in the repo itself** (the tree holds only the weights file + `.gitattributes`); the documentation above comes from the author's sibling repo [`colinb83/ltx-2.5-nsfw`](https://huggingface.co/colinb83/ltx-2.5-nsfw), which ships the same final checkpoint plus an earlier `dense_weights_step_00250.safetensors` (28.24 GB) snapshot.
+
+◦ **License:** subject to the **LTX-2.x Community License Agreement** (full text embedded in the safetensors metadata); derivatives of LTX-2.x must be distributed under that agreement. Content is NSFW/adult — the repo carries the `not-for-all-audiences` tag.
+
 <p id="finetune-spatialav2av" align="center">· · · · · · · · · · · · · ·</p>
 
 #### ❖ SpatialAV2AV (BingoG)
@@ -903,7 +924,7 @@ Research **LTX-2.5 world model** by [junchaoh-cs](https://huggingface.co/junchao
 | [`LTX2.5_base`](https://huggingface.co/EllaPriest45/LTX2.5_base) | Base runtime — turbo distill LoRAs (r450/r256/r128), VAEs, upscalers, MSR LoRA, Q4_K_M + Gemma-4 Q5_K_M GGUFs, ComfyUI node zips | 45.7 GB |
 | [`LTX2.5_actions`](https://huggingface.co/EllaPriest45/LTX2.5_actions) | Face-swap (BFS r128/r64), EditAnything v2.0, Alpha Gen, BTS Movie Set, NSFW action LoRAs + bundled workflow JSONs | 7.9 GB |
 | [`LTX2.5_styles`](https://huggingface.co/EllaPriest45/LTX2.5_styles) | **3D Animation Style** (0.674 GB) — the only weight left in this sub-repo | 0.7 GB |
-| [`LTX2.3_checkpoints`](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints) | 10Eros v1.4 Bob int8-ConvRot, PinkCherry v1.8 Q5_KM, DaSiWa DragonLeap Q4_K_M, JoyAI-Echo surgical Q5, INT4-Quality dev, GGUF Companion | 122.3 GB |
+| [`LTX2.3_checkpoints`](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints) | 10Eros v1.4 Bob int8-ConvRot, PinkCherry v1.8 Q5_KM, DaSiWa DragonLeap Q4_K_M, JoyAI-Echo surgical Q5, INT4-Quality dev, GGUF Companion, plus two `fro99-AVGRank104` averaged LoRA merges (listed below) | 122.3 GB |
 | [`LTX2.3_base`](https://huggingface.co/EllaPriest45/LTX2.3_base) | LTX-2.3 dev int8-ConvRot, Sulphur dev fp8mixed, Gemma-3 encoder variants, connectors, VAEs, upscalers, ID/OmniNFT/distill LoRAs | 187.9 GB |
 | [`LTX2.3_Actions`](https://huggingface.co/EllaPriest45/LTX2.3_Actions) | NSFW action / motion LoRAs, EditAnything v1.1, Best-FaceID, OmniCine | 154.9 GB |
 | [`LTX2.3_Characters`](https://huggingface.co/EllaPriest45/LTX2.3_Characters) | Per-celebrity / per-character likeness LoRAs (394 files) | 139.3 GB |
@@ -924,7 +945,9 @@ The `LTX2.5_styles` and `LTX2.5_actions` LoRAs are listed individually under [`�
 | `DramaBox audio DiT v1` | ![bf16][badge-bf16] | 6.58 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox/resolve/main/models_dramabox-dit-v1.safetensors) |
 | `DramaBox audio components` (vocoder / Mel-band / TAE bundle) | ![bf16][badge-bf16] | 1.94 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.3_Dramabox/resolve/main/dramabox-audio-components.safetensors) |
 
-◦ **Not all mirrors add anything.** The `10eros v1.4 Q6_K`, `DaSiWa DragonLeap v4.0 Q4KM`, `SexGod PinkCherry v1.8 Q5_KM` and `JoyAI-Echo × LTX-2.3 Surgical Merge Q5` GGUFs are re-packs of quants already listed from SexGod1979 / DaSiWa / joeygambino / vantagewithai — linked from those sections.
+◦ **Not all mirrors add anything.** The `10eros v1.4 Q6_K`, `DaSiWa DragonLeap v4.0 Q4KM`, `SexGod PinkCherry v1.8 Q5_KM` and `JoyAI-Echo × LTX-2.3 Surgical Merge Q5` GGUFs are re-packs of quants already listed from SexGod1979 / DaSiWa / joeygambino / vantagewithai — linked from those sections. `LTX2.3_base`'s `Sulphur_dev-Q3_K_M.gguf` and `LTX-2.3-22b-distilled-Q4_K_M.gguf` are likewise re-packs of quants already listed (Abiray / unsloth), so they are not duplicated here.
+
+◦ **Re-verified 2026-10-13:** every sub-repo above has a **single commit** (all dated 2026-10-08) — the file counts and totals in this table are unchanged, so nothing new has landed since the audit. The `LTX2.5_actions` bullet under [`▣ Special`](#lora-special) names its LoRAs individually.
 
 ◦ `LTX2.5_base` also bundles the **ComfyUI node zips** it expects (`ComfyUI-JoyLTX25`, `ComfyUI-KJNodes`, `ComfyUI-LTX2.5-MSR`, `ComfyUI-Sage-EasyInstall`) — the repo is usable as a one-stop 2.5 drop folder.
 
@@ -1631,7 +1654,7 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
   * [LTX2.3_Actions](https://huggingface.co/EllaPriest45/LTX2.3_Actions) — **Huge collection of NSFW action / motion / pose LoRAs** for LTX-2.3 (188 `.safetensors`, ~155 GB), plus EditAnything v1.1 (2-stage), Best-FaceID and OmniCine. Pairs with 10Eros / Sulphur-2.
   * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: per-celebrity / per-character likeness collection for LTX-2.3 (394 `.safetensors`, ~139 GB).
   * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs** for LTX-2.3 (42 `.safetensors`, ~26 GB): anime, claymation, cyberpunk, post-apocalyptic, Dispatch, GalaxyAce, furry.
-  * [LTX2.5_actions](https://huggingface.co/EllaPriest45/LTX2.5_actions) — LTX-2.5 collection (9 `.safetensors`, ~7.9 GB; Civitai backup, credits to original authors): **BFS** Best Face Swap (`R128` / `R64`, 0.65 GB each), **EditAnything v2.0** (2.47 GB), **Alpha Gen** (1.31 GB), **BTS Movie Set** (0.34 GB), plus two NSFW action LoRAs. Each ships its own workflow `.json`.
+  * [LTX2.5_actions](https://huggingface.co/EllaPriest45/LTX2.5_actions) — LTX-2.5 collection (9 `.safetensors`, ~7.9 GB; Civitai backup, credits to original authors): **BFS** Best Face Swap (`R128` / `R64`, 0.65 GB each), **EditAnything v2.0** (2.47 GB), **Alpha Gen** (1.31 GB), **BTS Movie Set** (0.34 GB), **ALittleMoreSharpness R32** (0.16 GB), plus **three** NSFW action LoRAs — `(POV)Tittyfucking` (1.23 GB, tagged **LTX2.0**), `Intense Fullbody Finishes` (0.67 GB) and `Warped Funbags I2V` (0.35 GB). Each ships its own workflow `.json`.
   * [LTX2.5_styles](https://huggingface.co/EllaPriest45/LTX2.5_styles) — now down to a **single** weight, *3D Animation Style* (0.674 GB), listed above under [`▣ Styles`](#lora-styles).
 * [Se0ulSeeker LTX-2.3 i2v NSFW LoRAs](https://huggingface.co/Se0ulSeeker/ltx_2.3_i2v_nsfw_loras) — A collection / list of NSFW i2v (image-to-video) LoRAs for LTX-2.3 (NSFW content only — do not use for clean content).
 * [lynaNSFW DR34ML4Y AIO NSFW LTX-2.3](https://huggingface.co/lynaNSFW/DR34ML4Y_AIO_NSFW_LTX23) — AIO (all-in-one) NSFW LoRA collection for LTX-2.3 with three versions (V1 / V2 / V3), 1.94 GB each (NSFW content only — do not use for clean content).
@@ -1831,6 +1854,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | CQ Enhancer — images (r128) | 2.5 | 1.32 GB | Image enhancer (r128) | [![CQdesign](https://img.shields.io/badge/CQdesign-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/CQdesign/LTX-2.5-CQ-Video-and-Image-Enhancer-LoRAs/resolve/main/ltx2.5-CQ-enhancer-lora-for-images-rank128.safetensors) |
 | CQ Enhancer — videos (r128) | 2.5 | 1.32 GB | Video enhancer (r128) | [![CQdesign](https://img.shields.io/badge/CQdesign-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/CQdesign/LTX-2.5-CQ-Video-and-Image-Enhancer-LoRAs/resolve/main/ltx2.5-CQ-enhancer-lora-for-videos-rank128.safetensors) |
 | CQ Enhancer V2 (video) | 2.5 | 1.34 GB | Generative video enhance/restore — more natural, ghost-free (use the V2 workflow) | [![CQdesign](https://img.shields.io/badge/CQdesign-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/CQdesign/LTX-2.5-CQ-Video-and-Image-Enhancer-LoRAs/resolve/main/ltx2.5-CQ-enhancer-lora-V2.safetensors) |
+| CQ Enhancer V2 (video) — RunningHub mirror | 2.5 | 1.34 GB | Same V2 video weights as above (1,278 MiB), mirrored by RunningHub for one-click online runs | [![RunningHubAI](https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/RunningHubAI/rh-ltx2.5-cq-enhancer-lora-v2.safetensors-lora/resolve/main/ltx2.5-CQ-enhancer-lora-V2.safetensors) |
 | CrispLora | 2.3 | — | Sharpen / detail boost | [![VetoBugger](https://img.shields.io/badge/VetoBugger-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/VetoBugger/LTX2.3-CrispLora) |
 | Detailer IC-LoRA | 2 | — | Add fine detail | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Detailer) |
 | Enhancer1 | 2.3 | — | General enhancer | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX2.3_Enhancer1) |
@@ -1871,6 +1895,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| Better NSFW motion v2.0 vSulphur | 2.3 | 0.65 GB | NSFW motion/physics boost (Sulphur-2 tuned) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_base/resolve/main/Better%20NSFW%20motion%20v2.0%20vSulphur%20-%20LTX2.3.safetensors) |
 | Audio-Reactive LoRA | 2.3 | — | Audio-reactive motion | [![100percentrobot](https://img.shields.io/badge/100percentrobot-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) |
 | Audio-Reactive LoRA v2 (RunningHub mirror) | 2.3 | 1.35 GB | Audio-reactive motion (v2) | [![RunningHubAI](https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/RunningHubAI/rh-ltx2.3-audio-reactive-lora-v2.safetensors-lora/resolve/main/ltx2.3_audio_reactive_lora_v2.safetensors) |
 | CQ Freeform Motion Transfer LoRA | 2.5 | 0.81 GB | Transfer any motion to a different character or object — prompt strongly affects the result; consistency fades past ~30 s | [![CQdesign](https://img.shields.io/badge/CQdesign-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/CQdesign/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/ltx2.5-CQ-freeform-motion-transfer-lora.safetensors) |
@@ -1895,6 +1920,9 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | DMD LoRA Hybrid v1 | 2.3 | 4.86 GB | DMD hybrid distillation | [![TenStrip](https://img.shields.io/badge/TenStrip-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_hybrid_v1.safetensors) |
 | DMD LoRA Hybrid v2 | 2.3 | 4.86 GB | DMD hybrid distillation | [![TenStrip](https://img.shields.io/badge/TenStrip-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora/resolve/main/LTX2.3_DMD_hybrid_v2.safetensors) |
 | JoyAI LoRA Extracted | 2.3 | — | Extracted JoyAI distill | [![TenStrip](https://img.shields.io/badge/TenStrip-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TenStrip/LTX2.3_JoyAI_Lora_Extracted) |
+| 10Eros v1.4 fro99-AVGRank104 (averaged merge) | 2.3 | 3.48 GB | Averaged multi-source LoRA merge for 10Eros v1.4 — verified by header: 5,172 tensors / 3,448 `lora_A`+`lora_B` pairs, per-layer dynamic rank (~104 avg), bf16 | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints/resolve/main/10Eros%20v1.4%20fro99-AVGRank104%20-%20LTX2.3.safetensors) |
+| 10Eros v1.4 Wan2GP fro99-AVGRank104 | 2.3 | 3.48 GB | Wan2GP-oriented build of the same averaged merge (4,302 tensors / 2,868 LoRA pairs — a reduced tensor set) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_checkpoints/resolve/main/10Eros%20v1.4%20Wan2GP%20fro99-AVGRank104%20-%20LTX2.3.safetensors) |
+| DMD Distill 72energy | 2.3 | 1.73 GB | DMD few-step distillation (72energy build) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_base/resolve/main/DMD%20Distill%2072energy%20-%20LTX2.3.safetensors) |
 
 <a id="lora-id-lora"></a>
 
@@ -2285,6 +2313,7 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 [gh-szwagros]: https://img.shields.io/badge/szwagros-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-Stuubs]: https://img.shields.io/badge/Stuubs-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-ApolloRaines]: https://img.shields.io/badge/ApolloRaines-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-colinb83]: https://img.shields.io/badge/colinb83-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [badge-int4mixedtensorwise]: https://img.shields.io/badge/int4mixedtensor-17a2b8?style=flat-square
 [badge-int4]: https://img.shields.io/badge/INT4_Quality-17a2b8?style=flat-square
 
