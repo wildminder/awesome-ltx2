@@ -94,6 +94,10 @@
 [badge-UD-Q4_K_M]: https://img.shields.io/badge/UD-Q4__K__M-dfb317?style=flat-square
 [badge-UD-Q4_K_S]: https://img.shields.io/badge/UD-Q4__K__S-dfb317?style=flat-square
 [badge-UD-Q5_K_M]: https://img.shields.io/badge/UD-Q5__K__M-97c00f?style=flat-square
+[badge-UD-Q2_K_XL]: https://img.shields.io/badge/UD-Q2__K__XL-e05d44?style=flat-square
+[badge-UD-Q3_K_XL]: https://img.shields.io/badge/UD-Q3__K__XL-fe7d37?style=flat-square
+[badge-UD-Q4_K_XL]: https://img.shields.io/badge/UD-Q4__K__XL-dfb317?style=flat-square
+[badge-UD-Q5_K_XL]: https://img.shields.io/badge/UD-Q5__K__XL-97c00f?style=flat-square
 [badge-bf16]: https://img.shields.io/badge/bf16-0077cc?style=flat-square
 [badge-fp4]: https://img.shields.io/badge/fp4-ffc107?style=flat-square
 [badge-fp8]: https://img.shields.io/badge/fp8-28a745?style=flat-square

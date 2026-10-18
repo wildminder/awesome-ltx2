@@ -13,6 +13,7 @@ LTX-2 models are available in various formats including full weights, transforme
 * **[Lightricks/LTX-2](https://huggingface.co/Lightricks/LTX-2)** - Official repository.
 * **[Lightricks/LTX-2.3](https://huggingface.co/Lightricks/LTX-2.3)** - Official repository (latest version).
 * **[Drbaph](https://huggingface.co/drbaph/LTX-2.3-FP8)** - Quantization
+* **[unsloth](https://huggingface.co/unsloth)** - Quantized dev / distilled DiTs (FP8, INT8, INT8-ConvRot) + GGUF quants
 
 | Ver | Name | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
@@ -34,6 +35,9 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2.5** | `dev` | ![nvfp4][badge-nvfp4] | 13.57 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-dev-transformer-nvfp4.safetensors) |
 | **2.5** | `distilled` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 21.64 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-int8-convrot.safetensors) |
 | **2.5** | `distilled` | ![nvfp4][badge-nvfp4] | 13.57 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/diffusion_models/ltx-2.5-22b-distilled-transformer-nvfp4.safetensors) |
+| **2.5** | `distilled` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 25.11 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.5-FP8/resolve/main/LTX-2.5-INT8-ConvRot.safetensors) |
+| **2.5** | `distilled` | ![fp8][badge-fp8] | 19.06 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.5-FP8/resolve/main/LTX-2.5-FP8.safetensors) |
+| **2.5** | `distilled` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 25.11 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.5-FP8/resolve/main/LTX-2.5-INT8.safetensors) |
 | | | | | |
 | **2.3** | `dev` | ![bf16][badge-bf16] | 46.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-dev.safetensors) |
 | **2.3** | `dev` | ![fp8][badge-fp8] | 29.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3-fp8/resolve/main/ltx-2.3-22b-dev-fp8.safetensors) |
@@ -51,6 +55,8 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2.3** | `distilled 1.1` | ![w4a8_convrot](https://img.shields.io/badge/w4a8_ConvRot-17a2b8?style=flat-square) | 16.65 GB | [![][gh-JoaoZaokk]](https://huggingface.co/JoaoZaokk/LTX-2.3-22B-distilled-1.1-W4A8-ConvRot/resolve/main/ltx-2.3-22b-distilled-1.1_w4a8.safetensors) |
 | **2.3** | `distilled 1.1` | ![w4a4_convrot](https://img.shields.io/badge/w4a4_ConvRot-17a2b8?style=flat-square) | 15.37 GB | [![][gh-JoaoZaokk]](https://huggingface.co/JoaoZaokk/LTX-2.3-22B-distilled-1.1-W4A8-ConvRot/resolve/main/w4a4/ltx-2.3-22b-distilled-1.1_w4a4.safetensors) |
 | **2.3** | `ltx23_srx fp8_e4m3 experimental` | ![fp8][badge-fp8] | 23.1 GB | [![][gh-SOLRICKS]](https://huggingface.co/SOLRICKS/ltx23_srx_fp8_e4m3_experimental/resolve/main/ltx23_srx_fp8_e4m3_experimental.safetensors) |
+| **2.3** | `distilled` | ![fp8][badge-fp8] | 19.06 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-FP8/resolve/main/LTX-2.3-FP8.safetensors) |
+| **2.3** | `distilled` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 19.32 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-FP8/resolve/main/LTX-2.3-INT8.safetensors) |
 | | | | | |
 | **2** | `ltx-2-19b dev` | ![bf16][badge-bf16] | 43.3 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev.safetensors) |
 | **2** | `ltx-2-19b dev` | ![fp8][badge-fp8] | 27.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-dev-fp8.safetensors) |
@@ -58,6 +64,10 @@ LTX-2 models are available in various formats including full weights, transforme
 | **2** | `ltx-2-19b distilled` | ![bf16][badge-bf16] | 43.3 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled.safetensors) |
 | **2** | `ltx-2-19b distilled` | ![fp8][badge-fp8] | 27.1 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-19b-distilled-fp8.safetensors) |
 | **2** | `ltx-2-19b distilled` | ![nvfp4][badge-nvfp4] | 20 GB | [![](https://img.shields.io/badge/szwagros-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/szwagros/ltx-2-dist-nvfp4/resolve/main/ltx-2-19b-distilled-nvfp4-fixed-calibrated.safetensors) |
+| **2** | `ltx-2-19b dev` | ![fp8][badge-fp8] | 18.91 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2-FP8/resolve/main/LTX-2-FP8.safetensors) |
+| **2** | `ltx-2-19b dev` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 19.09 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2-FP8/resolve/main/LTX-2-INT8.safetensors) |
+
+◦ **unsloth quant rows** — pre-quantized DiTs built from the diffusers-format releases (torchao layout; loaded strictly by diffusers / Unsloth Studio — *not* ComfyUI single-file `diffusion_models/` weights). Each file is bit-identical to quantizing the dense bf16 weights on the fly, so it skips the dense load + quantize step. Repos: [LTX-2-FP8](https://huggingface.co/unsloth/LTX-2-FP8) (dev + pre-cast fp8 text encoder) · [LTX-2.3-FP8](https://huggingface.co/unsloth/LTX-2.3-FP8) (distilled + bf16 originals) · [LTX-2.5-FP8](https://huggingface.co/unsloth/LTX-2.5-FP8) (distilled; **INT8-ConvRot recommended**).
 
 Quantized to fp8_e5m2 to support older Triton with older Pytorch on 30 series GPUs. For WangGP in Pinokio
 
@@ -155,7 +165,8 @@ Required for current two-stage pipeline implementations in this repository. Down
 | Ver | Name | Size | Download |
 | :--- | :--- | :--- | :--- |
 | **2.5** | `spatial-upscaler x2 1.0` | 0.93 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors) ┊ [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/latent_upscale_models/ltx-2.5-latent-spatial-upscaler-x2-bf16-1.0.safetensors) |
-| **2.3** | `spatial-upscaler x2 1.0` | 996 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors) |
+| **2.3** | `spatial-upscaler x2 1.0` | 996 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x2-1.0.safetensors) ┊ [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.0.safetensors) |
+| **2.3** | `spatial-upscaler x2 1.1` | 996 MB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/latent_upscale_models/ltx-2.3-spatial-upscaler-x2-1.1.safetensors) |
 | **2.3** | `spatial-upscaler x1.5 1.0` | 1.09 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-spatial-upscaler-x1.5-1.0.safetensors) |
 | | | | |
 | **2** | `spatial-upscaler x2 1.0` | 1.05 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2/resolve/main/ltx-2-spatial-upscaler-x2-1.0.safetensors) |
@@ -647,16 +658,17 @@ Elastic is a TensorRT-engine distribution of a LoRA-integrated distilled FP8 T2V
 
 #### ❖ ChrisColeTech Uncensored Turbo
 
-Pre-merged **LTX-2.3 Uncensored Turbo v1.4** DiT by [ChrisColeTech](https://huggingface.co/ChrisColeTech) with three fine-tunes baked into the weights: 10Eros NSFW LoRA (1.0), DMD distilled LoRA (1.0, 4-step capable — 8 steps recommended), and the official LTXV ICLoRA Detailer (0.6). Modes: T2AV / I2AV / V2V / A2V / REF2VA; example workflows bundled in the repo.
+Pre-merged **LTX-2.3 Uncensored Turbo** DiT by [ChrisColeTech](https://huggingface.co/ChrisColeTech) with three fine-tunes baked into the weights: 10Eros NSFW LoRA (1.0), DMD distilled LoRA (1.0, 4-step capable — 8 steps recommended), and the official LTXV ICLoRA Detailer (0.6). Modes: T2AV / I2AV / V2V / A2V / REF2VA; example workflows bundled in the repo. **v1.4** is the build documented in the card; the repo tree has since gained a **v1.5 fp8_scaled** DiT (21.12 GB) that the card does not describe yet.
 
 | Ver | Build | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
 | **2.3** | v1.4 fp8mixed | ![fp8][badge-fp8] | 29.16 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_fp8mixed.safetensors) |
+| **2.3** | v1.5 fp8_scaled | ![fp8][badge-fp8] | 21.12 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.5/ltxv23_uncensored_v1.5-fp8_scaled.safetensors) |
 | **2.3** | v1.4 GGUF | ![Q4_K_M][badge-Q4_K_M] | 14.18 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_Q4_K_M.gguf) |
 | **2.3** | v1.4 GGUF | ![Q6_K][badge-Q6_K] | 17.76 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_Q6_K.gguf) |
 | **2.3** | v1.4 GGUF | ![Q8_0][badge-Q8_0] | 22.74 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/ltxv23_uncensored_v1.4_Q8_0.gguf) |
 
-◦ **Component splits** (uncensored v1.4 text encoder / projections / VAEs, plus the older **v1.0** uncensored build and stock LTX-2.3 distilled fp8) live in the same repo under `split/` — see the repo tree for the full list.
+◦ **Component splits** live in the same repo under `split/`: the uncensored **v1.4 projections** (`ltxv23_uncensored_v1.4_projections.safetensors`, 2.31 GB — required, goes in `text_encoders/`), an abliterated **Gemma-3-12b Q4_K_M** encoder with bi-projections (7.30 GB), the uncensored v1.4 audio / video VAEs, the older **v1.0** uncensored build, a stock **LTX-2.3 distilled fp8** under `v1.0/distilled_base/`, and LTX-2.3 spatial upscalers x2 1.0 / 1.1 — see the repo tree for the full list.
 
 <details>
   <summary>v1.0 builds (older, also in this repo)</summary>
@@ -668,6 +680,7 @@ Pre-merged **LTX-2.3 Uncensored Turbo v1.4** DiT by [ChrisColeTech](https://hugg
 | **2.3** | v1.0 GGUF | ![Q4_K_M][badge-Q4_K_M] | 14.30 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q4_K_M.gguf) |
 | **2.3** | v1.0 GGUF | ![Q6_K][badge-Q6_K] | 17.77 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q6_K.gguf) |
 | **2.3** | v1.0 GGUF | ![Q8_0][badge-Q8_0] | 22.76 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/ltx-2.3-22b-uncensored-Q8_0.gguf) |
+| **2.3** | v1.0 distilled fp8 (stock base) | ![fp8][badge-fp8] | 29.53 GB | [![ChrisColeTech][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/split/diffusion_models/v1.0/distilled_base/ltx-2.3-22b-distilled-fp8.safetensors) |
 
 </details>
 

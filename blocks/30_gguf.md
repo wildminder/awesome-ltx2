@@ -39,7 +39,30 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 </details>
 
 <details>
-  <summary>Unsloth </summary>
+  <summary>Unsloth LTX-2.5</summary>
+
+#### [Unsloth LTX-2.5 GGUF](https://huggingface.co/unsloth/LTX-2.5-GGUF)
+
+| Model | Quant | Size | Download |
+| :--- | :--- | :--- | :--- |
+| ltx-2.5-22b | ![BF16][badge-BF16] | 42.03 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-BF16.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-BF16.gguf) |
+| ltx-2.5-22b | ![Q2_K][badge-Q2_K] | 8.46 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-Q2_K.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-Q2_K.gguf) |
+| ltx-2.5-22b | ![Q3_K_M][badge-Q3_K_M] | 11.30 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-Q3_K_M.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b | ![Q4_K_M][badge-Q4_K_M] | 13.58 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-Q4_K_M.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b | ![Q5_K_M][badge-Q5_K_M] | 15.63 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-Q5_K_M.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b | ![Q6_K][badge-Q6_K] | 17.81 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-Q6_K.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-Q6_K.gguf) |
+| ltx-2.5-22b | ![Q8_0][badge-Q8_0] | 22.78 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-Q8_0.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-Q8_0.gguf) |
+| ltx-2.5-22b | ![UD-Q2_K_XL][badge-UD-Q2_K_XL] | 9.5 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-UD-Q2_K_XL.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-UD-Q2_K_XL.gguf) |
+| ltx-2.5-22b | ![UD-Q3_K_XL][badge-UD-Q3_K_XL] | 12 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-UD-Q3_K_XL.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-UD-Q3_K_XL.gguf) |
+| ltx-2.5-22b | ![UD-Q4_K_XL][badge-UD-Q4_K_XL] | 14 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-UD-Q4_K_XL.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-UD-Q4_K_XL.gguf) |
+| ltx-2.5-22b | ![UD-Q5_K_XL][badge-UD-Q5_K_XL] | 16 GB | [dev](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/ltx-2.5-22b-dev-UD-Q5_K_XL.gguf) ┊ [distilled](https://huggingface.co/unsloth/LTX-2.5-GGUF/resolve/main/distilled/ltx-2.5-22b-distilled-UD-Q5_K_XL.gguf) |
+
+◦ Unsloth **Dynamic 2.0** quants: the `UD-` files are mixed precision (per-layer type from a measured sensitivity scan) and beat the uniform files at the same size — recommended pick is **`UD-Q4_K_XL`** (14 GB, clearly better than `Q4_K_M`, on par with `Q5_K_M` at 1.6 GB less). `BF16` is a lossless repack (bit-identical to the bf16 safetensors through the GGUF path). Same layout as the LTX-2.3 repo: dev at the root, distilled in `distilled/`. The repo also hosts bf16 dev / distilled transformer safetensors (42.02 GB each) plus a Gemma4 12B text encoder, VAEs and the latent upscaler; text encoder, VAEs and upscaler come from [Lightricks/LTX-2.5](https://huggingface.co/Lightricks/LTX-2.5).
+
+</details>
+
+<details>
+  <summary>Unsloth LTX-2.3</summary>
 
 #### [Unsloth LTX-2.3 GGUF](https://huggingface.co/unsloth/LTX-2.3-GGUF)
 
@@ -89,6 +112,11 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | ltx-2.3-22b | ![UD-Q4_K_S][badge-UD-Q4_K_S] | 14.1 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q4_K_S.gguf) |
 | ltx-2.3-22b | ![UD-Q5_K_M][badge-UD-Q5_K_M] | 18.2 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q5_K_M.gguf) |
 
+</details>
+
+<details>
+  <summary>Unsloth LTX-2</summary>
+
 #### [Unsloth LTX-2 GGUF](https://huggingface.co/unsloth/LTX-2-GGUF)
 
 | Model | Quant | Size | Download |
@@ -111,7 +139,6 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | ltx-2-19b-dev | ![Q5_K_S][badge-Q5_K_S] | 13.6 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q5_K_S.gguf) |
 | ltx-2-19b-dev | ![Q6_K][badge-Q6_K] | 16 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q6_K.gguf) |
 | ltx-2-19b-dev | ![Q8_0][badge-Q8_0] | 20.4 GB | [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2-GGUF/resolve/main/ltx-2-19b-dev-Q8_0.gguf) |
-
 
 </details>
 
