@@ -1596,137 +1596,76 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 <a id="lora-styles"></a>
 
 ### ▣ Styles
-* elismasilva
-  * [Latin Dance](https://huggingface.co/elismasilva/LTX-2.3-LoRa-Latin-Dance/resolve/main/LTX-2.3-Latin%20dance.safetensors) - Latin dance motion/style LoRA for LTX-2.3 (rank ~128). (214 MB)
-* EllaPriest45
-  * [3D Animation Style](https://huggingface.co/EllaPriest45/LTX2.5_styles/resolve/main/3D%20Animation%20Style%20-%20LTX2.5%20-%203dsrx%2Ctxttovideo%200.8str%2Cimagetovideo%200.4str.safetensors) - 3D-rendered animation look for LTX-2.5 (t2v 0.8 str / i2v 0.4 str per filename). (674 MB)
-* OmerHagawa
-  * [LTX2 UME PixelArt LoRA](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) - Pixel art style LoRA for LTX-2
-* Playtime-AI
-  * [Commission LTX-2.3 MtF Transformation](https://huggingface.co/Playtime-AI/Commission_LTX-2.3-MtF_Transformation_v2.1) - MtF transformation style LoRA for LTX 2.3
-* Andro0s
-  * [Pixar Toon Style LoRA](https://huggingface.co/Andro0s/LTX_2.3_Pixar_Toon_Style_LoRa) - Pixar-style CGI toon cinematic look with trigger word `P1x4r`
-* Cseti
-  * [Arcane-Jinx v1](https://huggingface.co/Cseti/LTX2.3-22B_Arcane-Jinx_v1) - Style LoRA inspired by Arcane's Jinx character design
-  * [ReStyle IC-LoRA](https://huggingface.co/Cseti/LTX2.3-22B_ReStyle_IC-LoRA) - Image-guided style transfer IC-LoRA that re-renders videos in a target style while preserving original content and motion
-* lopho
-  * [Gantz O v1.0.0](https://huggingface.co/lopho/ltx2-movie-loras) - Movie-style LoRA (654 MB, 10000 steps)
-* bionicman69
-  * [Arnold Style](https://huggingface.co/bionicman69/Arnold_LTX23) - Arnold Style LoRA for LTX 2.3. Get to the choppa!
-  * [Star Trek TNG Style](https://huggingface.co/bionicman69/StarTrek_TNG_Style_LTX23) - Star Trek: The Next Generation style LoRA for LTX 2.3
-* joeygambino
-  * [Surfaces Realism](https://huggingface.co/joeygambino/ltx23-surfaces-realism-lora/resolve/main/ltx23_surfaces_v1.safetensors) - Materials/realism LoRA (rank 32, video branch) that kills the "plastic" look: cracked wet asphalt stays cracked and wet, concrete gets pores and rust streaks, floors scuff, wood grains show. No trigger word — trains as unconditional LoRA behavior. Load at 1.0 and write prompts normally. (336 MB)
-* CoachBate
-  * [Abercrom-ME](https://huggingface.co/CoachBate/ltx-2.3-22b-ic-lora-abercrom-me) - Vintage A&F Quarterly americana style-transfer IC-LoRA: transforms an input photo (subject + clothing + scene) into moody monochrome / sun-drenched beach / locker-room aesthetics with full styling makeover. Image-conditioned; pairs with the bundled `ABERCROM-ME IC-LoRA by coachbate-v3_20steps_3phase_3stage3.json` workflow. (384 MB, 2000 steps)
-* ssjenforcer191
-  * [Homelander](https://huggingface.co/ssjenforcer191/Homelander_LTX2.3) - Character IC-LoRA for The Boys' Homelander. Triggerword `HeroHomelander` (optionally append `wearing red leather gloves` / `dark blue cape and ornate red-and-gold collar`). Rank 64, 1500 steps, no regularization. Note: occasional letterbox black bars from training data. (~1.25 GB)
-* oumoumad
-  * [LTX-2-19b-LoRA-SPROUT](https://huggingface.co/oumoumad/LTX-2-19b-LoRA-SPROUT)
-  * [Clay Stop Motion](https://huggingface.co/oumoumad/clay-stop-motion-lora-ngtvspc)
-* kabachuha
-  * [Hydraulic press](https://huggingface.co/kabachuha/ltx2-hydraulic-press)
-  * [Cakeify](https://huggingface.co/kabachuha/ltx2-cakeify)
-  * [Big Anime Breasts](https://huggingface.co/kabachuha/ltx2-big-anime-breasts)
-  * [Eat](https://huggingface.co/kabachuha/ltx2-eat)
-  * [Squish – One Hand Only](https://huggingface.co/kabachuha/ltx2-squish-one-hand)
-  * [POP! Inflatable Animation](https://huggingface.co/kabachuha/ltx23-pop) - Comically inflate and pop cartoon/anime characters into confetti and fabric scraps (I2V focused)
-* [CRT Animation Terminal](https://huggingface.co/lovis93/crt-animation-terminal-ltx-2.3-lora) by [lovis93](https://huggingface.co/lovis93) - Real late-80s/early-90s CRT monitor look with scanlines, phosphor glow, chromatic aberration, and dithering. Trigger word: `crtanim,`. Available in 4000 and 10000 training steps variants
-* vrgamedevgirl84 Style LoRAs
-  * [ClayMationStyle](https://huggingface.co/vrgamedevgirl84/LTX2.3_ClayMationStyle) - Clay animation style LoRA for LTX-2.3
-  * [Wild West Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Wild_West_Style_LoRa)
-  * [Paper Cut Out Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Paper_Cut_Out_Style_LoRa)
-  * [Post Apocalyptic Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Post_Apocalyptic_Style_LoRa)
-  * [Pixar Toon Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Pixar_Toon_Style_LoRa)
-  * [Luxe Sensual Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Luxe_Sensual_Style_LoRa)
-  * [Soft Enhance Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Soft_Enhance_Style_LoRa)
-  * [Crisp Enhance Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Crisp_Enhance_Style_LoRa)
-  * [Fantasy Puppet Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Puppet_Style_LoRa)
-  * [Fantasy Realism Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Realism_Style_LoRa)
-  * [Fantasy Painterly Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Painterly_Style_LoRa)
-  * [Fantasy Anime Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Anime_Style_LoRa)
-  * [Cozy Felt Style](https://huggingface.co/vrgamedevgirl84/LTX2.3_Cozy_Felt_Style_LoRa)
-  * [Clay Mation Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Clay_Mation_Style_LoRa)
-  * [90s Animation Style](https://huggingface.co/vrgamedevgirl84/LTX_2.3_90s_Animation_Style_LoRa)
-* [Alissonerdx LTX-LoRAs Collection](https://huggingface.co/Alissonerdx/LTX-LoRAs) - Comprehensive collection including:
-  * Anime2Half-Real - Converts anime-style content to half-realistic aesthetic (4500 steps, rank64)
-  * Edit-Anything Global - Global editing LoRA variants (6000-9000 steps, rank128)
-  * Inpaint Masked R2V/T2V - Region-based inpainting LoRAs for masked video editing
-  * Real2Anime/Anime2Real - Style conversion LoRAs (rank64)
-* Nebsh
-  * [Outfit Switch](https://huggingface.co/Nebsh/LTX2_Outfitswitch)
-  * [Handheld run](https://huggingface.co/Nebsh/LTX2_Handheld_run)
-  * [Atomic Explosion](https://huggingface.co/Nebsh/LTX2_AtomicExplosion)
-  * [HERO CAM](https://huggingface.co/Nebsh/LTX2_Herocam_Lora)
-  * [Animatediff V1](https://huggingface.co/Nebsh/LTX2_Animatediff_style)
-  * [PUSH TO GLASS](https://huggingface.co/Nebsh/LTX2_Pushtoglass)
-  * [Object POV](https://huggingface.co/Nebsh/POVObject)
-* [Squish](https://huggingface.co/ovi054/LTX-2-19b-Squish-LoRA)
-* [Yoshiaki Kawajiri Retro Anime](https://huggingface.co/tarn59/Yoshiaki_Kawajiri_Retro_Anime_LTX2) - LoRA trained on Yoshiaki Kawajiri's distinctive retro anime art style
-* Playtime-AI
-  * [DonaldTrump](https://huggingface.co/Playtime-AI/LTX-2.DonaldTrump)
-  * [Rick_and_Morty](https://huggingface.co/Playtime-AI/LTX-2.3-Rick_and_Morty-BETA) - BETA LoRA for Rick and Morty animated style
-  * [LTX-2.3-Rick_And_Morty_v2](https://huggingface.co/Playtime-AI/LTX-2.3-Rick_And_Morty_v2) - Updated Rick and Morty v2 LoRA trained on the Smith and Rick Sanchez characters (undertrained; voices/clothing can be off; v3 in training)
-  * [LTX-2.3-Wednesday_Addams](https://huggingface.co/Playtime-AI/LTX-2.3-Wednesday_Addams)
-  * [LTX-2.3-Kermit_the_Frog](https://huggingface.co/Playtime-AI/LTX-2.3-Kermit_the_Frog)
-  * [LTX-2.3-Jenna_Coleman](https://huggingface.co/Playtime-AI/LTX-2.3-Jenna_Coleman)
-  * [LTX-2.3-Marge_Simpson](https://huggingface.co/Playtime-AI/LTX-2.3-Marge_Simpson) - Marge Simpson character LoRA trained on the base LTX-2.3 Dev model. Trigger words: `2d animation`, `Marge Simpson` (use `2d animation` to avoid getting 3D animation)
-  * [LTX-2.3-Bender](https://huggingface.co/Playtime-AI/LTX-2.3-Bender) - Bender (Futurama) character LoRA. Trigger words: `2d animation`, `Bender the bending robot`
-  * [LTX-2.3 Sulphur Gyrating Hips](https://huggingface.co/Playtime-AI/LTX-2.3_Sulphur-Gyrating_Hips) - Motion LoRA driven by the trigger `She thrusts her hips in a sexual manner`
-* SOLRICKS
-  * [LTX-2.3-Yesilcam-Turkish-Cinema](https://huggingface.co/SOLRICKS/LTX-2.3-Yesilcam-Turkish-Cinema) - Nostalgic Yeşilçam Turkish cinema visual style with warm cinematic tones and classic film atmosphere. Recommended strength 0.7.
-  * [ltx-2-3-ue5-style-lora](https://huggingface.co/SOLRICKS/ltx-2-3-ue5-style-lora) - Unreal Engine 5 (UE5) cinematic style LoRA. Trigger word: `ue5_style`.
-  * [Sci-Fi Cinema](https://huggingface.co/SOLRICKS/ltx-2.3-sci-fi-cinema) - a cinematic science-fiction style LoRA for LTXV / LTX-2.3. Trigger word: `srx_scifilm`.
-  * [LTX-2.3 Product Ad Style](https://huggingface.co/SOLRICKS/ltx-2.3-product-ad-style) - Cinematic product-commercial style for luxury / cosmetics / tech / fashion ads. Trigger `srx_commercial`, recommended strength 0.85.
-  * [LTX-2.3 The Art of Marbling](https://huggingface.co/SOLRICKS/ltx-2.3-the-art-of-marbling) - Marbling / ebru ink-flow style (paper, pigment, fluid art, Turkish ebru). Trigger `srx_ebrumotion`, recommended strength 0.85.
-  * [LTX-2.5 BTS Movie Set](https://huggingface.co/SOLRICKS/LTX-2.5-BTS-Movie-Set) - Cinematic **behind-the-scenes movie-set** atmosphere for LTX-2.5: professional camera rigs, cranes, dolly tracks, studio lighting, green/blue screens, practical sets and working film crews. T2V + I2V. (0.34 GB)
-* SyFeee
-  * [ltx2.3-chinese-drama-charlora](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-charlora) - Character LoRA trained on 78 episodes of Chinese historical drama; specialises base model for live-action, photoreal cinematic generation in Han dynasty / wuxia settings. Trigger words: `char_0_person` through `char_9_person`. Recommended strength 0.8–0.9.
-  * [ltx2.3-chinese-drama-iclora-canny](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-canny) - IC-LoRA conditioning on Canny edge/line-art video; controls scene composition and architectural layout from reference outlines. Use with `char_0_person` for character reference.
-  * [ltx2.3-chinese-drama-iclora-depth](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-depth) - IC-LoRA conditioning on monocular depth video (Depth-Anything-3); transfers 3D geometric structure from reference to generated video. Strong on interior scenes.
-  * [ltx2.3-chinese-drama-iclora-pose](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-pose) - IC-LoRA conditioning on DWPose 133-keypoint skeleton render; transfers pose from reference video while preserving Chinese drama style. Stackable with character LoRA.
-  * [LTX-2.3-SyFe-ID-LoRA](https://huggingface.co/SyFeee/LTX-2.3-SyFe-ID-LoRA) - Identity (ID) LoRA for LTX-2.3 that preserves subject likeness / identity across frames. Two checkpoints (`id_lora_ours_768`, `id_lora_ours_704`), 1.16 GB each.
-  * [LTX-2.3-SyFe-Plain-AV-LoRA](https://huggingface.co/SyFeee/LTX-2.3-SyFe-Plain-AV-LoRA) - Plain audio/video LoRA for LTX-2.3. Multiple checkpoints: production v1/v2 and bilingual (704) at ~0.86/0.43 GB, plus a unified v5 at 0.11 GB.
-* mxturbo
-  * [Formula1-Cockpit-T-Cam-LTX2.3](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) - LoRA trained on 1.6L V6 Turbo Hybrid Era F1 T-Cam onboard footage. Generates cockpit/T-cam onboard video. Trigger: `16LV6HybridF1` (car type); follow the "T-cam onboard view..." / "AT-cam onboard view..." prompt style.
-* chsengni
-  * [ltx2.3-fpv-motion](https://huggingface.co/chsengni/ltx2.3-fpv-motion) - Smoother FPV (First Person View) camera movements and improved low-speed flight shots.
-* EllaPriest45 — very large LTX-2.3 / LTX-2.5 LoRA collections, now **split across sub-repos** (NSFW actions / characters / styles, plus face-swap, EditAnything, Alpha Gen, BTS Movie Set). Mirrored weights are catalogued under [`EllaPriest45 (model mirror)`](#finetune-ellapriest45); open each repo for the full file list.
-  * [LTX2.3_Actions](https://huggingface.co/EllaPriest45/LTX2.3_Actions) — **Huge collection of NSFW action / motion / pose LoRAs** for LTX-2.3 (188 `.safetensors`, ~155 GB), plus EditAnything v1.1 (2-stage), Best-FaceID and OmniCine. Pairs with 10Eros / Sulphur-2.
-  * [LTX2.3_Characters](https://huggingface.co/EllaPriest45/LTX2.3_Characters) — **Character LoRAs**: per-celebrity / per-character likeness collection for LTX-2.3 (394 `.safetensors`, ~139 GB).
-  * [LTX2.3_Styles](https://huggingface.co/EllaPriest45/LTX2.3_Styles) — **Style LoRAs** for LTX-2.3 (42 `.safetensors`, ~26 GB): anime, claymation, cyberpunk, post-apocalyptic, Dispatch, GalaxyAce, furry.
-  * [LTX2.5_actions](https://huggingface.co/EllaPriest45/LTX2.5_actions) — LTX-2.5 collection (9 `.safetensors`, ~7.9 GB; Civitai backup, credits to original authors): **BFS** Best Face Swap (`R128` / `R64`, 0.65 GB each), **EditAnything v2.0** (2.47 GB), **Alpha Gen** (1.31 GB), **BTS Movie Set** (0.34 GB), **ALittleMoreSharpness R32** (0.16 GB), plus **three** NSFW action LoRAs — `(POV)Tittyfucking` (1.23 GB, tagged **LTX2.0**), `Intense Fullbody Finishes` (0.67 GB) and `Warped Funbags I2V` (0.35 GB). Each ships its own workflow `.json`.
-  * [LTX2.5_styles](https://huggingface.co/EllaPriest45/LTX2.5_styles) — now down to a **single** weight, *3D Animation Style* (0.674 GB), listed above under [`▣ Styles`](#lora-styles).
-* [Se0ulSeeker LTX-2.3 i2v NSFW LoRAs](https://huggingface.co/Se0ulSeeker/ltx_2.3_i2v_nsfw_loras) — A collection / list of NSFW i2v (image-to-video) LoRAs for LTX-2.3 (NSFW content only — do not use for clean content).
-* [lynaNSFW DR34ML4Y AIO NSFW LTX-2.3](https://huggingface.co/lynaNSFW/DR34ML4Y_AIO_NSFW_LTX23) — AIO (all-in-one) NSFW LoRA collection for LTX-2.3 with three versions (V1 / V2 / V3), 1.94 GB each (NSFW content only — do not use for clean content).
-* TheBurgstall
-  * [LTX-2.3-Body-Positivity](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora)
-  * [LTX-2.3-Googly-Eyes](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora)
-* TheBurgstall (LTX-2)
-  * [EarthZoomOut](https://huggingface.co/TheBurgstall/EarthZoomOut-LoRA-LTX-2-19b)
-  * [GroupPhoto](https://huggingface.co/TheBurgstall/GroupPhoto-LoRA-LTX-2-19b)
-  * [WHATUSEE](https://huggingface.co/TheBurgstall/WHATUSEE_LTX-2-19B_LoRA)
-* [Black Venom](https://huggingface.co/siraxe/black_venom_ltx2)
-* Levmar
-  * [ltx2-lora](https://huggingface.co/Levmar/ltx2-lora) — Image-to-Video LoRA fine-tuned from `ltx-2.3-22b-dev.safetensors` with the LTX LoRA Trainer (6000 steps, LR 1e-4, batch 1). Two checkpoints: `lora_weights_step_02000.safetensors` and `lora_weights_step_06000.safetensors` (~428 MB each). License: other.
-* Lightricks
-  * [Camera Control: dolly-in](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-In/blob/main/ltx-2-19b-lora-camera-control-dolly-in.safetensors)
-  * [Camera Control: dolly-left](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Left/blob/main/ltx-2-19b-lora-camera-control-dolly-left.safetensors)
-  * [Camera Control: dolly-out](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Out/blob/main/ltx-2-19b-lora-camera-control-dolly-out.safetensors)
-  * [Camera Control: dolly-right](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Dolly-Right/blob/main/ltx-2-19b-lora-camera-control-dolly-right.safetensors)
-  * [Camera Control: jib-down](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Down/blob/main/ltx-2-19b-lora-camera-control-jib-down.safetensors)
-  * [Camera Control: jib-up](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Up/blob/main/ltx-2-19b-lora-camera-control-jib-up.safetensors)
-  * [Camera Control: static](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Static/blob/main/ltx-2-19b-lora-camera-control-static.safetensors)
-  * [Union-Control](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Union-Control/resolve/main/ltx-2-19b-ic-lora-union-control-ref0.5.safetensors)
-* eraRelentless
-  * [LTXreal](https://huggingface.co/eraRelentless/ltx23REALISM) - Realism stylization for LTX-2.3; trigger `realism`
-* nnndite
-  * [ltx2.3 Foot Model](https://huggingface.co/nnndite/ltx2.3foot) - Foot / lower-limb LoRA for LTX-2.3
-* fal
-  * [LTX-2.3 IC-LoRA — 3D Render to Photoreal](https://huggingface.co/fal/LTX-2.3-3DREAL-LoRA) - IC-LoRA turning rough 3D viewport / Blender blockouts into photoreal cinematic video while preserving composition and camera. Trigger `3DREAL`. v2 (`3DREAL-strong-v2`) is the newest and is also exposed on fal.ai as `render-to-real`.
-* a3xrfgb
-  * [Fable 5 — Vintage Style LoRA](https://huggingface.co/a3xrfgb/Fable5_Ltx2.3_vintage_style) - Vintage-style minimal-illustration / stop-motion / typography LoRA for LTX-2.3, used in the Fable 5 intro. Trained on a personal RTX 3090 (~5 hours).
-* AhsanHareem
-  * [ReelBids — LTX-2.5 dolly-in camera LoRA](https://huggingface.co/AhsanHareem/reelbids-ltx25-camera-lora) - Single rank-32 LoRA that drives a **dolly-in** camera move at seven selectable speeds for LTX-2.5 22B image-to-video. Speed is chosen by a trigger token in the prompt (`sp05`–`sp50`; e.g. `sp20` ≈ 1.59× zoom over 97 frames), so one adapter covers the whole range. Best checkpoint at step 1250. (0.20 GB)
+
+Look-and-feel LoRAs — style, medium, period and concept adapters that give the model a distinctive aesthetic. (`Ver` = target LTX version: 2 / 2.3 / 2.5.)
+
+| LoRA | Ver | Size | Description | Download |
+| :--- | :---: | :---: | :--- | :--- |
+| 3D Animation Style (EllaPriest45) | 2.5 | 0.67 GB | 3D-rendered animation look (t2v 0.8 str / i2v 0.4 str per filename) — now the only weight in `LTX2.5_styles` | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.5_styles/resolve/main/3D%20Animation%20Style%20-%20LTX2.5%20-%203dsrx%2Ctxttovideo%200.8str%2Cimagetovideo%200.4str.safetensors) |
+| 90s Animation Style | 2.3 | 0.35 GB | 90s Saturday-morning cartoon look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_90s_Animation_Style_LoRa) |
+| Abercrom-ME IC-LoRA | 2.3 | 0.40 GB | Vintage A&F Quarterly americana style transfer — monochrome / sun-drenched beach / locker-room makeover (image-conditioned, 2000 steps; bundled workflow) | [![CoachBate](https://img.shields.io/badge/CoachBate-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/CoachBate/ltx-2.3-22b-ic-lora-abercrom-me) |
+| Animatediff V1 | 2 | 0.86 GB | AnimateDiff-style motion (step 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/LTX2_Animatediff_style) |
+| Anime2Half-Real | 2.3 | 0.65 GB | Anime → half-realistic conversion (rank 64, 4500 steps) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_anime2real_rank64_v1_4500.safetensors) |
+| Arnold Style | 2.3 | 2.70 GB | Schwarzenegger action-hero look — "Get to the choppa!" | [![bionicman69](https://img.shields.io/badge/bionicman69-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/bionicman69/Arnold_LTX23) |
+| Atomic Explosion | 2 | 0.43 GB | Nuclear-blast VFX (step 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/LTX2_AtomicExplosion) |
+| Big Anime Breasts | 2 | 1.11 GB | Anime anatomy exaggeration | [![kabachuha](https://img.shields.io/badge/kabachuha-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/kabachuha/ltx2-big-anime-breasts) |
+| Black Venom | 2 | 0.65 GB | Dark comic-book antihero look | [![siraxe](https://img.shields.io/badge/siraxe-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/siraxe/black_venom_ltx2) |
+| Body Positivity | 2.3 | 0.33 GB | Body-inclusive realism (rank 32, step 2750) | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/ltx-2.3-bodypositivity-lora) |
+| BTS Movie Set | 2.5 | 0.34 GB | Behind-the-scenes movie-set atmosphere — rigs, cranes, crews, green screens (T2V + I2V) | [![SOLRICKS](https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SOLRICKS/LTX-2.5-BTS-Movie-Set) |
+| Cakeify | 2 | 0.83 GB | Turns subjects into cake (v2) | [![kabachuha](https://img.shields.io/badge/kabachuha-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/kabachuha/ltx2-cakeify) |
+| Clay Mation Style | 2.3 | 0.35 GB | Clay-animation look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Clay_Mation_Style_LoRa) |
+| Clay Stop Motion | 2 | 3.42 GB | Clay stop-motion look (trigger `NGTVSPC`, step 7500) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/clay-stop-motion-lora-ngtvspc) |
+| ClayMationStyle | 2.3 | — | Clay animation style (gated repo) | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX2.3_ClayMationStyle) |
+| Cozy Felt Style | 2.3 | 0.35 GB | Cozy felt-puppet look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX2.3_Cozy_Felt_Style_LoRa) |
+| CRT Animation Terminal | 2.3 | 0.43 GB | CRT-monitor look — scanlines, phosphor glow, chromatic aberration, dithering (trigger `crtanim,`; 4000 / 10000-step checkpoints) | [![lovis93](https://img.shields.io/badge/lovis93-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/lovis93/crt-animation-terminal-ltx-2.3-lora) |
+| Crisp Enhance Style | 2.3 | 0.71 GB | Crisp detail-enhance look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Crisp_Enhance_Style_LoRa) |
+| Eat | 2 | 1.11 GB | Eating animation (v2) | [![kabachuha](https://img.shields.io/badge/kabachuha-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/kabachuha/ltx2-eat) |
+| Fable 5 — Vintage Style | 2.3 | 0.43 GB | Vintage minimal-illustration / stop-motion / typography (Fable 5 intro; 12 fp8 + comfy checkpoints, 5.14 GB total) | [![a3xrfgb](https://img.shields.io/badge/a3xrfgb-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/a3xrfgb/Fable5_Ltx2.3_vintage_style) |
+| Fantasy Anime Style | 2.3 | 0.35 GB | Fantasy anime look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Anime_Style_LoRa) |
+| Fantasy Painterly Style | 2.3 | 0.35 GB | Fantasy painterly look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Painterly_Style_LoRa) |
+| Fantasy Puppet Style | 2.3 | 0.35 GB | Fantasy puppet look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Puppet_Style_LoRa) |
+| Fantasy Realism Style | 2.3 | 0.35 GB | Fantasy realism look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Fantasy_Realism_Style_LoRa) |
+| Foot Model | 2.3 | 0.20 GB | Foot / lower-limb detail | [![nnndite](https://img.shields.io/badge/nnndite-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/nnndite/ltx2.3foot) |
+| Gantz O | 2 | 0.65 GB | Movie-style look (10 000 steps) | [![lopho](https://img.shields.io/badge/lopho-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/lopho/ltx2-movie-loras) |
+| Googly Eyes | 2.3 | 0.33 GB | Cartoon googly-eyes look (rank 32, step 3000) | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/ltx-2.3-googlyeyes-lora) |
+| Hydraulic press | 2 | 0.64 GB | Crushes objects flat (step 864) | [![kabachuha](https://img.shields.io/badge/kabachuha-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/kabachuha/ltx2-hydraulic-press) |
+| Kawajiri Retro Anime | 2 | 0.31 GB | Yoshiaki Kawajiri retro-anime style | [![tarn59](https://img.shields.io/badge/tarn59-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/tarn59/Yoshiaki_Kawajiri_Retro_Anime_LTX2) |
+| Latin Dance | 2.3 | 0.21 GB | Latin-dance motion / style (rank ~128) | [![elismasilva](https://img.shields.io/badge/elismasilva-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/elismasilva/LTX-2.3-LoRa-Latin-Dance/resolve/main/LTX-2.3-Latin%20dance.safetensors) |
+| Levmar lora | 2.3 | 0.43 GB | I2V realism fine-tuned from `ltx-2.3-22b-dev` with the LTX LoRA Trainer (6000 steps, LR 1e-4; 2000 / 6000-step checkpoints; license: other) | [![Levmar](https://img.shields.io/badge/Levmar-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Levmar/ltx2-lora) |
+| LTX-2.3 Styles (EllaPriest45 collection) | 2.3 | 25 GB | Style collection — anime, claymation, cyberpunk, post-apocalyptic, Dispatch, GalaxyAce, furry (42 weights) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_Styles) |
+| LTXreal | 2.3 | 0.33 GB | Realism stylization (trigger `realism`) | [![eraRelentless](https://img.shields.io/badge/eraRelentless-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/eraRelentless/ltx23REALISM) |
+| Luxe Sensual Style | 2.3 | 0.35 GB | Luxe sensual look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Luxe_Sensual_Style_LoRa) |
+| Marbling / Ebru | 2.3 | 0.34 GB | Ink-flow marbling / ebru fluid art (trigger `srx_ebrumotion`, 0.85 str) | [![SOLRICKS](https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SOLRICKS/ltx-2.3-the-art-of-marbling) |
+| MtF Transformation | 2.3 | 1.35 GB | Male-to-female transformation style (v2.1) | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/Commission_LTX-2.3-MtF_Transformation_v2.1) |
+| Outfit Switch | 2 | 0.43 GB | Outfit change (V2, step 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/LTX2_Outfitswitch) |
+| Paper Cut Out Style | 2.3 | 0.35 GB | Paper cut-out look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Paper_Cut_Out_Style_LoRa) |
+| Pixar Toon Style (Scrappy-Doo) | 2.3 | 0.35 GB | Pixar-style CGI toon look (trigger `P1x4r`; repo renamed from Andro0s) | [![Scrappy-Doo](https://img.shields.io/badge/Scrappy--Doo-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Scrappy-Doo/LTX_2.3_Pixar_Toon_Style_LoRa) |
+| Pixar Toon Style (vrgamedevgirl84) | 2.3 | 0.35 GB | Pixar-style CGI toon look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Pixar_Toon_Style_LoRa) |
+| PixelArt UME | 2 | — | Pixel-art style (gated repo) | [![OmerHagawa](https://img.shields.io/badge/OmerHagawa-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/OmerHagawa/ltx2-ume-pixelart-lora) |
+| POP! Inflatable Animation | 2.3 | 0.65 GB | Comical inflate-and-pop into confetti and fabric scraps (I2V focused) | [![kabachuha](https://img.shields.io/badge/kabachuha-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/kabachuha/ltx23-pop) |
+| Post Apocalyptic Style | 2.3 | 0.35 GB | Post-apocalyptic look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Post_Apocalyptic_Style_LoRa) |
+| Product Ad Style | 2.3 | 0.34 GB | Cinematic product-commercial look — luxury / cosmetics / tech / fashion ads (trigger `srx_commercial`, 0.85 str) | [![SOLRICKS](https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SOLRICKS/ltx-2.3-product-ad-style) |
+| PUSH TO GLASS | 2 | 0.86 GB | Push-through-glass transition VFX (steps 1500 / 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/LTX2_Pushtoglass) |
+| Real2Anime | 2.3 | 0.65 GB | Real → anime conversion (rank 64, 5000 steps) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_real2anime_rank64_v1_5000.safetensors) |
+| ReStyle IC-LoRA | 2.3 | 0.81 GB | Image-guided style transfer — re-renders video in a target style while preserving content and motion (step 8000) | [![Cseti](https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Cseti/LTX2.3-22B_ReStyle_IC-LoRA) |
+| Sci-Fi Cinema | 2.3 | 0.34 GB | Cinematic science-fiction look (trigger `srx_scifilm`) | [![SOLRICKS](https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SOLRICKS/ltx-2.3-sci-fi-cinema) |
+| Soft Enhance Style | 2.3 | 0.35 GB | Soft detail-enhance look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Soft_Enhance_Style_LoRa) |
+| SPROUT | 2 | 3.42 GB | Plants / foliage growing from objects (trigger `SPROUT`, step 2000) | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2-19b-LoRA-SPROUT) |
+| Star Trek TNG Style | 2.3 | 2.70 GB | Star Trek: The Next Generation look | [![bionicman69](https://img.shields.io/badge/bionicman69-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/bionicman69/StarTrek_TNG_Style_LTX23) |
+| Surfaces Realism | 2.3 | 0.35 GB | Materials realism — kills the "plastic" look: wet asphalt, concrete pores, scuffs, wood grain (unconditional, no trigger; rank 32) | [![joeygambino](https://img.shields.io/badge/joeygambino-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/joeygambino/ltx23-surfaces-realism-lora/resolve/main/ltx23_surfaces_v1.safetensors) |
+| Squish – One Hand Only | 2 | 1.11 GB | One-handed squish animation | [![kabachuha](https://img.shields.io/badge/kabachuha-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/kabachuha/ltx2-squish-one-hand) |
+| Turkish Cinema (Yeşilçam) | 2.3 | 0.33 GB | Nostalgic Yeşilçam Turkish-cinema look — warm tones, classic film atmosphere (0.7 str) | [![SOLRICKS](https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SOLRICKS/LTX-2.3-Yesilcam-Turkish-Cinema) |
+| UE5 Style | 2.3 | — | Unreal Engine 5 cinematic look (trigger `ue5_style`; gated repo) | [![SOLRICKS](https://img.shields.io/badge/SOLRICKS-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SOLRICKS/ltx-2-3-ue5-style-lora) |
+| WHATUSEE | 2 | 0.86 GB | "What do you see" transition — zooms into the eye, then pulls deep (trigger `WHATUSEE`) | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/WHATUSEE_LTX-2-19B_LoRA) |
+| Wild West Style | 2.3 | 0.71 GB | Wild West look | [![vrgamedevgirl84](https://img.shields.io/badge/vrgamedevgirl84-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vrgamedevgirl84/LTX_2.3_Wild_West_Style_LoRa) |
+
+◦ **Gated repos** (sign in to Hugging Face to download; sizes unverified): OmerHagawa PixelArt, SOLRICKS UE5 Style, vrgamedevgirl84 ClayMationStyle.
+
+◦ EllaPriest45's LTX-2.3 / LTX-2.5 weights are **split across sub-repos** — the collections are indexed in block 20 under [`❖ EllaPriest45 (model mirror)`](#finetune-ellapriest45), and the individual adapters are filed in the tables matching their type (`❖ Character / Face-Swap`, `❖ IC-LoRA · Edit`, `❖ Motion`). The 10Eros / Sulphur-2 **character and action** LoRAs live in [`LTX2.3_Characters`](https://huggingface.co/EllaPriest45/LTX2.3_Characters) / [`LTX2.3_Actions`](https://huggingface.co/EllaPriest45/LTX2.3_Actions), not here.
+
+◦ The Alissonerdx [`LTX-LoRAs`](https://huggingface.co/Alissonerdx/LTX-LoRAs) repo also ships **EditAnything Global** and **Inpaint Masked** builds — filed under `❖ IC-LoRA · Edit` / `❖ IC-LoRA · Outpaint`.
+
+◦ The SyFeee Chinese-drama set (character, canny / depth / pose IC-LoRAs, ID, plain-AV) is filed under `❖ Character / Face-Swap`, `❖ IC-LoRA · Control` and `❖ Audio / Foley` respectively.
 
 <a id="lora-special"></a>
 
@@ -1738,10 +1677,13 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
-| 3D Render to Photoreal IC-LoRA | 2.3 | — | 3D viewport to photoreal video | [![fal](https://img.shields.io/badge/fal-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/fal/LTX-2.3-3DREAL-LoRA) |
+| 3D Render to Photoreal IC-LoRA | 2.3 | 0.33 GB | 3D viewport to photoreal video (trigger `3DREAL`; `3DREAL-strong-v2` 0.33 GB, `3DREAL-light` 0.16 GB) | [![fal](https://img.shields.io/badge/fal-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/fal/LTX-2.3-3DREAL-LoRA) |
 | Any-Trajectory-Instruction IC-LoRA | 2.3 | 0.33 GB | ATI spline-trajectory control | [![yuvraj108c](https://img.shields.io/badge/yuvraj108c-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/yuvraj108c/LTX-2.3-22b-IC-LoRA-Any-Trajectory-Instruction) |
 | BBox-Control IC-LoRA | 2.5 | 0.33 GB | Bounding-box / regional prompting control (rank 32, step 3000; workflow + node pack in repo) | [![yuvraj108c](https://img.shields.io/badge/yuvraj108c-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/yuvraj108c/LTX-2.5-22b-IC-LoRA-BBox-Control) |
 | Canny Control IC-LoRA | 2 | — | Canny edge conditioning | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Canny-Control) |
+| Chinese Drama IC-LoRA — Canny | 2.3 | 1.71 GB | Canny edge / line-art conditioning — composition and architectural layout from reference outlines (step 6000; stack with the char LoRA) | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-canny) |
+| Chinese Drama IC-LoRA — Depth | 2.3 | 1.71 GB | Monocular depth conditioning (Depth-Anything-3) — transfers 3D structure, strong on interior scenes | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-depth) |
+| Chinese Drama IC-LoRA — Pose | 2.3 | 1.71 GB | DWPose 133-keypoint skeleton conditioning — transfers pose while preserving the drama style (step 6000) | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-iclora-pose) |
 | Depth Control IC-LoRA | 2 | — | Depth-map conditioning | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Depth-Control) |
 | Depth Control IC-LoRA (RunningHub mirror) | 2 | 0.65 GB | Depth-map conditioning (624 MiB single-file mirror) | [![RunningHubAI](https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/RunningHubAI/rh-ltx-2-19b-ic-lora-depth-control.safetensors-lora/resolve/main/ltx-2-19b-ic-lora-depth-control.safetensors) |
 | Greenscreen Avatar IC-LoRA | 2.3 | — | Greenscreen avatar compositing | [![OmerHagawa](https://img.shields.io/badge/OmerHagawa-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/OmerHagawa/ltx2-greenscreen-avatar-ic-lora-vertical-v1) |
@@ -1764,6 +1706,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Staging IC-LoRA 512 | 2.3 | — | Scene staging / layout control | [![Nightfury16](https://img.shields.io/badge/Nightfury16-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nightfury16/ltx2.3-staging-ic-lora-512) |
 | SYSTMS FLW IC-LoRA | 2.3 | — | Flow / curve conditioning | [![systms](https://img.shields.io/badge/systms-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/systms/SYSTMS-FLW-IC-LORA-LTX-2.3) |
 | Union Control IC-LoRA | 2.3 | — | Unified multi-condition control | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-Union-Control) |
+| Union Control IC-LoRA (LTX-2 19b) | 2 | 0.65 GB | Unified multi-condition control for LTX-2 19b (ref 0.5 variant) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-IC-LoRA-Union-Control/resolve/main/ltx-2-19b-ic-lora-union-control-ref0.5.safetensors) |
 
 #### ❖ IC-LoRA · Restore
 
@@ -1797,6 +1740,9 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | :--- | :---: | :---: | :--- | :--- |
 | IC-LoRA-Outpaint | 2.3 | — | Extend frame borders | [![oumoumad](https://img.shields.io/badge/oumoumad-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/oumoumad/LTX-2.3-22b-IC-LoRA-Outpaint) |
 | In-Outpainting IC-LoRA | 2.3 | 1.31 GB | Inpaint + outpaint | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3-22b-IC-LoRA-In-Outpainting/resolve/main/ltx-2.3-22b-ic-lora-in-outpainting-0.9.safetensors) |
+| Inpaint Masked R2V | 2.3 | 0.33 GB | Masked region-based inpainting for reference-to-video (rank 32, 3000 steps) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_inpaint_masked_r2v_rank32_v1_3000steps.safetensors) |
+| Inpaint Masked T2V — 2500 steps | 2.3 | 1.31 GB | Masked region-based inpainting for text-to-video (rank 128) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_inpaint_masked_t2v_rank128_v1_02500steps.safetensors) |
+| Inpaint Masked T2V — 10000 steps | 2.3 | 1.31 GB | Masked region-based inpainting for text-to-video (rank 128) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_inpaint_masked_t2v_rank128_v1_10000steps.safetensors) |
 | VR-360-Outpaint IC-LoRA | 2.3 | — | 360 deg VR outpainting | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/VR-360-Outpaint-LTX2.3-IC-LoRA) |
 
 #### ❖ IC-LoRA · Relight
@@ -1813,6 +1759,8 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| EditAnything Global — 6000 steps (prodigy) | 2.3 | 1.31 GB | Global object editing (rank 128, 6000 steps) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_edit_anything_global_rank128_v1_6000steps_prodigy.safetensors) |
+| EditAnything Global — 9000 steps (adamw) | 2.3 | 1.31 GB | Global object editing (rank 128, 9000 steps) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/LTX-LoRAs/resolve/main/ltx23_edit_anything_global_rank128_v1_9000steps_adamw.safetensors) |
 | EditAnything v2.0 (EllaPriest45 mirror) | 2.5 | 2.47 GB | Remove / replace / add / restyle objects or people (ships its own workflow JSON) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/EditAnything%20v2.0%20-%20LTX%202.5.safetensors) |
 | IC-LoRA-EditRefVid v1 | 2.3 | — | Reference-video editing | [![Cseti](https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Cseti/LTX2.3-22B_IC-LoRA-EditRefVid_v1) |
 | LTX2.3-ICEdit-Insight | 2.3 | — | Insight-guided editing | [![joyfox](https://img.shields.io/badge/joyfox-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/joyfox/LTX2.3-ICEdit-Insight) |
@@ -1848,8 +1796,11 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Camera Control: jib-down (LTX-2) | 2 | — | Jib-down move | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Down) |
 | Camera Control: jib-up (LTX-2) | 2 | — | Jib-up move | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Jib-Up) |
 | Camera Control: static (LTX-2) | 2 | — | Locked / static camera | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2-19b-LoRA-Camera-Control-Static) |
+| EarthZoomOut | 2 | 0.86 GB | Zoom-out from the subject all the way to outer space (trigger `EARTHZO`; steps 1000–2000) | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/EarthZoomOut-LoRA-LTX-2-19b) |
 | Formula1 Cockpit T-Cam LoRA | 2.3 | — | F1 onboard T-cam view | [![mxturbo](https://img.shields.io/badge/mxturbo-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/mxturbo/Formula1-Cockpit-T-Cam-LTX2.3) |
-| FPV motion LoRA | 2.3 | — | Smooth FPV drone motion | [![chsengni](https://img.shields.io/badge/chsengni-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/chsengni/ltx2.3-fpv-motion) |
+| FPV motion LoRA | 2.3 | 0.31 GB | Smooth FPV drone motion | [![chsengni](https://img.shields.io/badge/chsengni-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/chsengni/ltx2.3-fpv-motion) |
+| HERO CAM | 2 | 0.86 GB | Hero-cam framing (steps 1500 / 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/LTX2_Herocam_Lora) |
+| Object POV | 2 | 0.86 GB | Object point-of-view shot (step 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/POVObject) |
 | ReelBids crane-down camera LoRA | 2.5 | 0.20 GB | Crane-down camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-cranedown-lora) |
 | ReelBids crane-down camera LoRA v2 | 2.5 | 0.20 GB | Crane-down camera move (v2, with dataset samples; steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-cranedown-lora-v2) |
 | ReelBids crane-up camera LoRA | 2.5 | 0.20 GB | Crane-up camera move (steps 100–2000) | [![AhsanHareem](https://img.shields.io/badge/AhsanHareem-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/AhsanHareem/reelbids-ltx25-craneup-lora) |
@@ -1877,6 +1828,7 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | OmniNFT RL-LoRA (LTX-2) | 2 | 1.23 GB | Audio-driven RL (LTX-2) | [![zghhui](https://img.shields.io/badge/zghhui-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/zghhui/OmniNFT/resolve/main/LTX-2-RL-Lora/adapter_model.safetensors) |
 | OmniNFT RL-LoRA (LTX-2.3) | 2.3 | 1.23 GB | Audio-driven RL (LTX-2.3) | [![zghhui](https://img.shields.io/badge/zghhui-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/zghhui/OmniNFT/resolve/main/LTX-2.3-RL-Lora/adapter_model.safetensors) |
 | Sax (audio) LoRA | 2 | 0.40 GB | Saxophone-playing visuals | [![zzmicer](https://img.shields.io/badge/zzmicer-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/zzmicer/ltx2-sax-lora-noaudio/resolve/main/lora_weights_step_04000.safetensors) |
+| SyFe Plain-AV LoRA | 2.3 | 0.86 GB | Plain audio/video LoRA — six checkpoints: production v1 / v2 (0.86 GB), bilingual and cuval builds (0.43 GB), a tv run (0.86 GB) and a unified v5 (0.11 GB) | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/LTX-2.3-SyFe-Plain-AV-LoRA) |
 | Violin (8s) LoRA | 2.3 | 0.86 GB | Violin-playing visuals | [![zzmicer](https://img.shields.io/badge/zzmicer-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/zzmicer/ltx2-violin8s-lora/resolve/main/lora_weights_step_03000.safetensors) |
 
 ◦ **AVC-Reward LoRA** ([Tsuki0512](https://huggingface.co/Tsuki0512/LTX-2-AVCReward-LoRA)) is the **LTX-2 dev** adapter optimized against AVC-Reward, an event-centric audio-video consistency reward model ([arXiv:2610.22321](https://arxiv.org/abs/2610.22321) · [project page](https://tsuki0512.github.io/AVC-Reward.github.io/) · [code](https://github.com/Tsuki0512/AVC-Reward)) that scores event-level temporal synchronization and attribute alignment between the audio and video tracks. Research usage: merge into `ltx-2-19b-dev.safetensors` with the repo's `merge_lora.py`, then run the author's inference script — not a drop-in ComfyUI LoRA.
@@ -1915,6 +1867,8 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 
 | LoRA | Ver | Size | Description | Download |
 | :--- | :---: | :---: | :--- | :--- |
+| Arcane-Jinx v1 | 2.3 | 1.71 GB | Jinx character design inspired by Arcane (step 21000) | [![Cseti](https://img.shields.io/badge/Cseti-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Cseti/LTX2.3-22B_Arcane-Jinx_v1) |
+| Bender (Futurama) | 2.3 | 0.67 GB | Bender character LoRA — triggers `2d animation`, `Bender the bending robot` | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3-Bender) |
 | Best Face Swap — bernini r64 high-noise (WAN22) | 2 | 0.61 GB | Face / head swap (WAN22) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/wan22/headswap_bernini_r64_73f640_step3000_high_noise.safetensors) |
 | Best Face Swap — bernini r64 low-noise (WAN22) | 2 | 0.61 GB | Face / head swap (WAN22) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/wan22/headswap_bernini_r64_73f640_step3000_low_noise.safetensors) |
 | Best Face Swap — head_swap_v1 13500 ff (LTX-2) | 2 | 1.31 GB | Head swap (first frame) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/ltx-2/head_swap_v1_13500_first_frame.safetensors) |
@@ -1924,15 +1878,26 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Best Face Swap — head_swap_v3 r64 (LTX-2.3) | 2.3 | 0.65 GB | Head swap (rank 64) | [![Alissonerdx](https://img.shields.io/badge/Alissonerdx-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Alissonerdx/BFS-Best-Face-Swap-Video/resolve/main/ltx-2.3/head_swap_v3_rank_64.safetensors) |
 | Best Face Swap R128 (EllaPriest45 mirror) | 2.5 | 0.65 GB | Face swap (rank 128; R64 also in repo) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/BFS%20-%20Best%20Face%20Swap%20R128%20-%20LTX2.5.safetensors) |
 | Best Face Swap R64 (EllaPriest45 mirror) | 2.5 | 0.65 GB | Face swap (rank 64; R128 also in repo) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.5_actions/resolve/main/BFS%20-%20Best%20Face%20Swap%20R64%20-%20LTX2.5.safetensors) |
+| Donald Trump | 2 | 0.62 GB | Donald Trump character likeness | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.DonaldTrump) |
 | Euni (portrait, cometa21) | 2.5 | 0.43 GB | Character identity — Euni portrait LoRA (rank 32, 1500 steps, trigger `euni`) | [![cometa21](https://img.shields.io/badge/cometa21-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/cometa21/euni-lora-ltx25/resolve/main/lora_weights_step_01500.safetensors) |
+| GroupPhoto | 2 | 0.86 GB | Multi-person group-photo composition — other people gather around an input subject (trigger `GR0UP`, I2V) | [![TheBurgstall](https://img.shields.io/badge/TheBurgstall-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/TheBurgstall/GroupPhoto-LoRA-LTX-2-19b) |
+| Homelander | 2.3 | 1.35 GB | The Boys' Homelander character IC-LoRA — trigger `HeroHomelander` (+ optional `wearing red leather gloves` / `dark blue cape and ornate red-and-gold collar`); rank-64 v1 / rank-32 v2 (0.67 GB), 1500 steps; occasional letterbox bars | [![ssjenforcer191](https://img.shields.io/badge/ssjenforcer191-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/ssjenforcer191/Homelander_LTX2.3) |
 | Iara v2 (identity) | 2.5 | 0.62 GB | Character identity — Iara v2 (step 1000; 750 also in repo) | [![aztro](https://img.shields.io/badge/aztro-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/aztro/ltx-2.5-iara-v2-lora/resolve/main/checkpoints/lora_weights_step_01000.safetensors) |
 | Jesse (identity, trial) | 2.3 | 0.32 GB | Experimental character identity — Jesse (rank 32, 100-step trial on 15 stills, trigger `jesseperson`; unvalidated, no voice) | [![mckitai](https://img.shields.io/badge/mckitai-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/mckitai/jesse-ltx23-trial/resolve/main/jesse-ltx23-trial-official-prefix.safetensors) |
+| Jenna Coleman | 2.3 | 1.35 GB | Jenna Coleman character LoRA (rank 64) | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3-Jenna_Coleman) |
+| Kermit the Frog | 2.3 | 0.67 GB | Kermit the Frog character LoRA (v2.12) | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3-Kermit_the_Frog) |
 | Licon MSR V1 (LTX-2.5, Multiple Subject Ref) | 2.5 | 1.31 GB | Multi-subject reference | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.5-Multiple-Subject-Reference/resolve/main/LTX-2.5-Licon-MSR-V1.safetensors) |
 | Licon MSR V2 (LTX-2.5, Multiple Subject Ref) | 2.5 | 2.21 GB | Multi-subject reference (v2; V1 + per-scene validation sets also in repo) | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.5-Multiple-Subject-Reference/resolve/main/LTX-2.5-Licon-MSR-V2.safetensors) |
 | Licon MSR V2 (Multiple Subject Ref) | 2.3 | — | Multi-subject reference | [![LiconStudio](https://img.shields.io/badge/LiconStudio-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/LiconStudio/LTX-2.3-Multiple-Subject-Reference) |
 | LTX-2.3 Dual-Character LoRA | 2.3 | — | Two-character scene | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/LTX2.3-Dual-Character-en) |
+| LTX2.3_Characters (EllaPriest45 collection) | 2.3 | 139 GB | Per-celebrity / per-character likeness collection (394 weights; mirrors indexed in block 20) | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_Characters) |
+| Marge Simpson | 2.3 | 0.67 GB | Marge Simpson character LoRA trained on LTX-2.3 Dev — triggers `2d animation`, `Marge Simpson` (use `2d animation` to avoid 3D output) | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3-Marge_Simpson) |
+| Rick and Morty v2 | 2.3 | 1.35 GB | Rick and Morty animated style (v2, trained on the Smith and Rick Sanchez characters; 6000-step checkpoint also in repo — the older BETA repo now redirects here) | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3-Rick_And_Morty_v2) |
+| SyFeee Chinese Drama char LoRA | 2.3 | 0.86 GB | Historical-drama character trained on 78 episodes — live-action photoreal Han-dynasty / wuxia generation; triggers `char_0_person`–`char_9_person`, 0.8–0.9 str (step 3000) | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/ltx2.3-chinese-drama-charlora) |
+| SyFeee ID-LoRA | 2.3 | 1.16 GB | Identity preservation across frames — two checkpoints (`id_lora_ours_768` step 3000 / `id_lora_ours_704` step 6000) | [![SyFeee](https://img.shields.io/badge/SyFeee-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/SyFeee/LTX-2.3-SyFe-ID-LoRA) |
 | Tessy (identity) | 2.5 | 0.43 GB | Character identity — Tessy (step 1500; 250–1250 also in repo) | [![aztro](https://img.shields.io/badge/aztro-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/aztro/ltx-2.5-tessy-lora/resolve/main/checkpoints/lora_weights_step_01500.safetensors) |
 | Tessy (identity, cometa21) | 2.5 | 0.86 GB | Character identity — Tessy in TV / podcast settings (rank 64, 500 steps, trigger `tessy`) | [![cometa21](https://img.shields.io/badge/cometa21-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/cometa21/tessy-lora-ltx25/resolve/main/lora_weights_step_00500.safetensors) |
+| Wednesday Addams | 2.3 | 0.67 GB | Wednesday Addams character LoRA | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3-Wednesday_Addams) |
 
 #### ❖ Motion
 
@@ -1942,9 +1907,15 @@ Combined table of enhancer, special, control, audio, camera, restoration and pip
 | Audio-Reactive LoRA | 2.3 | — | Audio-reactive motion | [![100percentrobot](https://img.shields.io/badge/100percentrobot-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/100percentrobot/LTX-2.3-Audio-Reactive-LORA) |
 | Audio-Reactive LoRA v2 (RunningHub mirror) | 2.3 | 1.35 GB | Audio-reactive motion (v2) | [![RunningHubAI](https://img.shields.io/badge/RunningHubAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/RunningHubAI/rh-ltx2.3-audio-reactive-lora-v2.safetensors-lora/resolve/main/ltx2.3_audio_reactive_lora_v2.safetensors) |
 | CQ Freeform Motion Transfer LoRA | 2.5 | 0.81 GB | Transfer any motion to a different character or object — prompt strongly affects the result; consistency fades past ~30 s | [![CQdesign](https://img.shields.io/badge/CQdesign-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/CQdesign/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/ltx2.5-CQ-freeform-motion-transfer-lora.safetensors) |
+| EllaPriest45 LTX2.3_Actions (collection) | 2.3 | 154 GB | Huge NSFW action / motion / pose collection (188 weights), plus EditAnything v1.1 (2-stage), Best-FaceID and OmniCine — pairs with 10Eros / Sulphur-2; mirrors indexed in block 20 | [![EllaPriest45](https://img.shields.io/badge/EllaPriest45-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/EllaPriest45/LTX2.3_Actions) |
+| Handheld run | 2 | 0.43 GB | Handheld camera-run motion (step 2000) | [![Nebsh](https://img.shields.io/badge/Nebsh-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Nebsh/LTX2_Handheld_run) |
+| lynaNSFW DR34ML4Y AIO | 2.3 | 1.94 GB | AIO (all-in-one) NSFW LoRA — V1 / V2 / V3 builds (NSFW content only) | [![lynaNSFW](https://img.shields.io/badge/lynaNSFW-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/lynaNSFW/DR34ML4Y_AIO_NSFW_LTX23) |
 | Motion Enhancer (N54W) | 2.3 | 2.27 GB | Boost motion dynamics | [![rzgar](https://img.shields.io/badge/rzgar-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/rzgar/LTX-2.3-Motion-Enhancer-n4w/resolve/main/LTX-2.3-Motion-Enhancer-n4w.safetensors) |
 | Motion Stabilizer | 2.3 | — | Stabilize shaky footage | [![vpakarinen](https://img.shields.io/badge/vpakarinen-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/vpakarinen/motion-stabilizer-ltx-23) |
+| Se0ulSeeker i2v NSFW collection | 2.3 | 27.45 GB | NSFW image-to-video LoRA collection (27 weights; NSFW content only) | [![Se0ulSeeker](https://img.shields.io/badge/Se0ulSeeker-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Se0ulSeeker/ltx_2.3_i2v_nsfw_loras) |
 | Slow-Motion Control LoRA (i2v) | 2.5 | 0.65 GB | Slow-motion / speed control for i2v (auto-gated — sign in to download; repo ships a speed-control workflow and a distilled demo script) | [![Lightricks](https://img.shields.io/badge/Lightricks-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.5-22b-LoRA-Slow-Motion-Control/resolve/main/ltx-2.5-22b-lora-slow-motion-control-1.0.safetensors) |
+| Squish | 2 | 0.43 GB | Squash-and-stretch squish motion | [![ovi054](https://img.shields.io/badge/ovi054-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/ovi054/LTX-2-19b-Squish-LoRA) |
+| Sulphur Gyrating Hips | 2.3 | 0.67 GB | NSFW hip-thrust motion — trigger phrase `She thrusts her hips in a sexual manner` | [![Playtime-AI](https://img.shields.io/badge/Playtime--AI-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Playtime-AI/LTX-2.3_Sulphur-Gyrating_Hips) |
 
 #### ❖ Adapter / Pipeline
 
