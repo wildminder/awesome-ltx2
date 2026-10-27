@@ -27,6 +27,7 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
   * [Finetunes](#finetunes)
     * [DaSiWa](#finetune-dasiwa)
     * [10Eros](#finetune-10eros)
+    * [10Eros Max (MiniMax-H3 grafts)](#finetune-10eros-max-h3)
     * [Sulphur-2-base](#finetune-sulphur)
     * [PinkCherry NSFW](#finetune-pinkcherry)
     * [colinb83 NSFW (LTX-2.5 full FT)](#finetune-colinb83-nsfw)
@@ -35,6 +36,7 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
   * [GGUF Quantized Models](#gguf)
 * [Text Encoders](#text-encoder)
   * [Comfy-Org Optimized Encoders](#text-encoder)
+  * [Gemma-3-12b-it GGUF (stock encoder)](#enc-gemma3-gguf)
   * [Gemma-3-12b Abliterated](#enc-abliterated)
   * [Gemma-3-12b IT Heretic](#enc-heretic)
 * [Separated Components](#split)
@@ -57,6 +59,7 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
   * [RuneXX](#wf)
   * [Lightricks](#wf-lightricks)
   * [vrgamedevgirl84](#wf-vrgamedevgirl84)
+  * [TenStrip](#wf-tenstrip)
   * [ComfyUI](#wf-comfyui)
 
 </details>

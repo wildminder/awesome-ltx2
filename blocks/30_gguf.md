@@ -109,8 +109,9 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 | ltx-2.3-22b | ![UD-Q2_K][badge-UD-Q2_K] | 10.9 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q2_K.gguf) |
 | ltx-2.3-22b | ![UD-Q3_K_M][badge-UD-Q3_K_M] | 13.4 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q3_K_M.gguf) |
 | ltx-2.3-22b | ![UD-Q4_K_M][badge-UD-Q4_K_M] | 16.4 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q4_K_M.gguf) |
-| ltx-2.3-22b | ![UD-Q4_K_S][badge-UD-Q4_K_S] | 14.1 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q4_K_S.gguf) |
 | ltx-2.3-22b | ![UD-Q5_K_M][badge-UD-Q5_K_M] | 18.2 GB | [distilled-1.1](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/distilled-1.1/ltx-2.3-22b-distilled-1.1-UD-Q5_K_M.gguf) |
+
+> ⚠️ The `distilled-1.1/` folder ships **only** `UD-Q2_K`, `UD-Q3_K_M`, `UD-Q4_K_M` and `UD-Q5_K_M`. The `UD-Q3_K_S`, `UD-Q4_K_S` and `UD-Q5_K_S` rungs exist only in the non-1.1 [`distilled/`](https://huggingface.co/unsloth/LTX-2.3-GGUF/tree/main/distilled) folder (listed in the table above).
 
 </details>
 
@@ -218,13 +219,13 @@ These models are optimized for lower memory usage. Note that in ComfyUI, these a
 
 | Model | Quant | Size | Download |
 | :--- | :---: | :---: | :---: |
-| ltx-2.5-22b-distilled | ![Q2_K][badge-Q2_K] | 8.23 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q2_K.gguf) |
-| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 10.73 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
-| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 14.05 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
-| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 12.90 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
-| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 15.66 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
-| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 17.38 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
-| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 22.01 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
+| ltx-2.5-22b-distilled | ![Q2_K][badge-Q2_K] | 8.83 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q2_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q3_K_M][badge-Q3_K_M] | 11.53 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q3_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_M][badge-Q4_K_M] | 15.09 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q4_K_S][badge-Q4_K_S] | 13.85 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q4_K_S.gguf) |
+| ltx-2.5-22b-distilled | ![Q5_K_M][badge-Q5_K_M] | 16.82 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q5_K_M.gguf) |
+| ltx-2.5-22b-distilled | ![Q6_K][badge-Q6_K] | 18.66 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q6_K.gguf) |
+| ltx-2.5-22b-distilled | ![Q8_0][badge-Q8_0] | 23.63 GB | [![][gh-realrebelai]](https://huggingface.co/realrebelai/LTX-2.5_GGUFs/resolve/main/LTX-2.5-Distilled-Q8_0.gguf) |
 
 </details>
 
@@ -287,8 +288,8 @@ Re-pack mirrors of quants that are already listed from their primary sources, pl
 | :--- | :---: | :---: | :---: |
 | `LTX-2.5-Distilled` | ![Q4_K_M][badge-Q4_K_M] | 15.09 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/diffusionmodels_LTX-2.5-Distilled-Q4_K_M.gguf) |
 | `Gemma-4-12b-with-proj-ltx-2.5` (text encoder) | ![Q5_K_M][badge-Q5_K_M] | 9.51 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/textencoder_gemma4-12b-with-proj-ltx-2.5-Q5_K_M.gguf) |
-| `LTX 2.5` (Joy-LTX Distilled derivative) | ![Q4_KS][badge-Q4_KS] | 12.63 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/Joy-LTX%202.5%20Distilled%20Q4KS%20-%20LTX%202.5.gguf) |
-| `LTX2.5` | ![Q3_K_M][badge-Q3_K_M] | 10.35 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/LTX2.5%20Q3KM%20-%20LTX%202.5.gguf) |
+| `LTX 2.5` (Joy-LTX Distilled derivative) | ![Q4_KS][badge-Q4_KS] | 12.93 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/Joy-LTX%202.5%20Distilled%20Q4KS%20-%20LTX%202.5.gguf) |
+| `LTX2.5` | ![Q3_K_M][badge-Q3_K_M] | 10.6 GB | [![EllaPriest45][gh-EllaPriest45]](https://huggingface.co/EllaPriest45/LTX2.5_checkpoints/resolve/main/LTX2.5%20Q3KM%20-%20LTX%202.5.gguf) |
 
 ◦ **EllaPriest45's LTX repos are split into sub-repos**, not one monorepo — see the [EllaPriest45 (model mirror)](#finetune-ellapriest45) subsection in Finetunes for the full map.
 

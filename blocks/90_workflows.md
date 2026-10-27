@@ -35,7 +35,7 @@
 **Multi-ref-character-sheet:**
 
 * [I2V Multi-subject Reference Licon-MSR V1-lora (older version)](https://huggingface.co/RuneXX/LTX-2.3-2.5-Workflows/resolve/main/Multi-ref-character-sheet/Older-Version/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V1-lora_older_version.json)
-* [I2V Multi-subject Reference Licon-MSR V2 LTX-Ingredients OmniNTF Experimental](https://huggingface.co/RuneXX/LTX-2.3-2.5-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-LTX-Ingredients-OmniNTF_Experimental.json)
+* [I2V Multi-subject Reference Licon-MSR V2 LTX-Ingredients OmniNTF Experimental](https://huggingface.co/RuneXX/LTX-2.3-2.5-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-lora-combo_Experimental.json)
 * [I2V Multi-subject Reference Licon-MSR V2-lora](https://huggingface.co/RuneXX/LTX-2.3-2.5-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_I2V_multi-subject-reference_Licon-MSR-V2-lora.json)
 * [T2V/R2V Character Sheet Best-Face-ID LoRA](https://huggingface.co/RuneXX/LTX-2.3-2.5-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_character-sheet_Best-Face-ID-Lora.json)
 * [T2V/R2V Face-ref + audio-ref Best-Face-ID LoRA + ID-LoRA audio](https://huggingface.co/RuneXX/LTX-2.3-2.5-Workflows/resolve/main/Multi-ref-character-sheet/LTX-2.3_-_T2V_R2V_face-ref-audio-ref_Best-Face-ID-Lora-ID-Lora_audio.json)
@@ -164,7 +164,6 @@
 * [T2V Basic (GGUF)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20T2V%20Basic%20(GGUF).json)
 * [T2V Basic (low vram)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20T2V%20Basic%20(low%20vram).json)
 * [T2V Basic](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20T2V%20Basic.json)
-* [T2V Talking Avatar (voice clone Qwen-TTS)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20T2V%20Talking%20Avatar%20(voice%20clone%20Qwen-TTS).json)
 * [V2A Foley (add sound to any video)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20V2A%20Foley%20(add%20sound%20to%20any%20video).json)
 * [V2V (extend any video)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20V2V%20(extend%20any%20video).json)
 * [V2V Head Swap Experimental (BFS lora)](https://huggingface.co/RuneXX/LTX-2-Workflows/resolve/main/older_comfy_pre_feb2026/LTX-2%20-%20V2V%20Head%20Swap%20Experimental%20(BFS%20lora).json)
@@ -215,6 +214,22 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 * [ICLoRA](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_ICLoRA_All_Distilled.json)
 * [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_V2V_Detailer.json)
 
+<a id="wf-chriscoletech"></a>
+
+### ❖ ChrisColeTech
+
+Example workflows bundled with the ChrisColeTech Uncensored Turbo merges — [LTX-2.5 v1.1](#finetune-chriscoletech-25) and [LTX-2.3 v1.4](#finetune-chriscoletech-23). The **2.5 v1.1** set uses the `comfyui-gguf-loader` and `RTX Super Resolution` custom nodes, and the repo asks for a **nightly** `comfyui-gguf-loader` build.
+
+**[LTX-2.5 Uncensored Turbo v1.1](https://huggingface.co/ChrisColeTech/LTX-2.5-uncensored-v1.1-FP8/tree/main/workflow_examples):**
+* [I2V simple](https://huggingface.co/ChrisColeTech/LTX-2.5-uncensored-v1.1-FP8/resolve/main/workflow_examples/ltx25_i2v_simple.json)
+* [T2V simple](https://huggingface.co/ChrisColeTech/LTX-2.5-uncensored-v1.1-FP8/resolve/main/workflow_examples/ltx25_t2v_simple.json)
+* [Giga distilled](https://huggingface.co/ChrisColeTech/LTX-2.5-uncensored-v1.1-FP8/resolve/main/workflow_examples/giga_ltx25_distilled.json)
+
+**[LTX-2.3 Uncensored Turbo v1.4](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/tree/main/workflow_examples):**
+* [T2AV NSFW](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/workflow_examples/LTXV23_v1.4_T2AV_nsfw.json)
+* [I2AV NSFW](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/workflow_examples/LTXV23_v1.4_I2AV_nsfw.json)
+* [A2AV NSFW](https://huggingface.co/ChrisColeTech/LTX-2.3-uncensored-v1.4-FP8/resolve/main/workflow_examples/LTXV23_v1.4_A2AV_nsfw.json)
+
 <a id="wf-vrgamedevgirl84"></a>
 
 ### ❖ vrgamedevgirl84
@@ -227,8 +242,6 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
   * Image-to-Video Workflow - Uses Z-Image Turbo and LTX 2.3
   * Requirements: ComfyUI, LTX 2.3 models, Z-Image Turbo model, FFmpeg, vrgamedevgirl custom nodes
   
-<a id="wf-comfyui"></a>
-
 ### ❖ EllaPriest45
 
 **[EllaPriest45](https://huggingface.co/EllaPriest45) LTX-2.3 / LTX-2.5 ComfyUI Workflows:**
@@ -260,11 +273,46 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 * [Multiple Subject Reference — Image 1, 2, 3](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/Multiple%20Subject%20Reference%20LORA%20-%20LTX%202.5%20-%20Image%201%2CImage%202%2CImage%203.json)
 * [Multiple Subject Reference — Subject 1, 2, 3](https://huggingface.co/EllaPriest45/LTX2.5_base/resolve/main/Multiple%20Subject%20Reference%20LORA%20-%20LTX%202.5%20-%20Subject%201%2C2%2C3.json)
 
+<a id="wf-tenstrip"></a>
+
+### ❖ TenStrip
+
+**[TenStrip](https://huggingface.co/TenStrip) LTX-2.3 workflow packs** — from the author of the 10Eros merge family (see [`❖ 10Eros`](#finetune-10eros)). These workflows expect the **[10S-Comfy-nodes](https://github.com/TenStrip/10S-Comfy-nodes)** custom nodes, which are published on the ComfyUI registry / Manager — update them whenever a new workflow is uploaded. The author describes the pack as quality-first and time-costly: **expect 1–5 minute run times**.
+
+**[`TenStrip/LTX2.3-10Eros_Workflows`](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows):**
+
+* [I2V Basic (DMD V5)](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/10Eros_10SNodes_I2V_Basic_DMD_V5.json) — the workflow referenced by the 10Eros v1.3 model card and by the v1.5 fp8 card
+* [I2V FaceID v2](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/10Eros_10SNodes_I2V_FaceID_v2.json) — Face-ID I2V implementation, from [Alissonerdx/LTX-Best-Face-ID](https://huggingface.co/Alissonerdx/LTX-Best-Face-ID)
+
+**Legacy set** (`Old/`):
+
+* [I2V v2](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_I2V_v2.json)
+* [I2V v3 (TiledSampler)](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_I2V_v3_TiledSampler.json)
+* [9-16 Vertical (TiledSampler)](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_9-16Vertical_TiledSampler.json)
+* [InstantAction I2V](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_InstantAction_I2V.json)
+* [LikenessGuideHelper I2V v3.2](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_LikenessGuideHelper_I2V_v3.2.json)
+* [TripleSample I2V](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_TripleSample_I2V.json)
+* [TripleSample — custom audio / music video](https://huggingface.co/TenStrip/LTX2.3-10Eros_Workflows/resolve/main/Old/10Eros_10SNodes_TripleSample_Custom-Audio-Music-Video.json)
+
+**[`TenStrip/Workflows`](https://huggingface.co/TenStrip/Workflows)** — earlier, lighter setups:
+
+* [10Eros i2v / v2v](https://huggingface.co/TenStrip/Workflows/resolve/main/10Eros_i2v.json) — SDE-heavy sampling with red nodes marking the adjustment points; often better with the split sampler removed and `euler_cfg` only
+* [LTX2 simple i2v — LoRA stacking](https://huggingface.co/TenStrip/Workflows/resolve/main/10StripLTX2-i2v-Loras-simple.json) — res2s with lower distilled strength (rank-175 distilled LoRA at 0.75–0.9) and many stacked LoRAs
+* [XLP Coyottes HyperLoRA](https://huggingface.co/TenStrip/Workflows/resolve/main/XLP_CoyottesWorkflow_HyperLora.json)
+
+**Companion workflow shipped with a model** — the v1.5 fp8 build carries its own copy of the DMD V5 graph adapted to the fp8mixed weights:
+
+* [I2V Basic DMD V5 — 1.5 fp8 variant](https://huggingface.co/LokkenJP/10EROS_1.5_fp8_exp_learned/resolve/main/workflows/10Eros_10SNodes_I2V_Basic_DMD_V5_1.5fp8.json)
+
+◦ The DMD V5 graph expects the [TenStrip DMD LoRA](https://huggingface.co/TenStrip/LTX2.3_DMD_Lora) and the [Distilled LoRA v1.1 experiments](https://huggingface.co/TenStrip/LTX2.3_Distilled_Lora_1.1_Experiments) — for the fp8 transformer build the author points at [Kijai's split files](https://huggingface.co/Kijai/LTX2.3_comfy/tree/main) and notes the fp8mixed variant is preferable to plain fp8. The older FaceID workflow uses [cg-sigmas](https://github.com/chrisgoringe/cg-sigmas).
+
 ### ❖ CQdesign
 
 **[CQdesign](https://huggingface.co/CQdesign) LTX-2.5 LoRA workflows:**
 
 * [LTX2.5 — CQ Freeform Motion Transfer LoRA](https://huggingface.co/CQdesign/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/workflow/LTX2.5%20-%20CQ%20freeform%20motion%20transfer%20lora.json) — companion workflow for the freeform motion-transfer LoRA (see [`❖ Motion`](#lora-special)).
+
+<a id="wf-comfyui"></a>
 
 ### ❖ ComfyUI
 

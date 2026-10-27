@@ -21,9 +21,9 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 | **2.3** | `ltx-2.3-22b distilled 1.1` | ![bf16][badge-bf16] | 42 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_bf16.safetensors) |
 | **2.3** | `ltx-2.3-22b distilled 1.1` | ![fp8][badge-fp8] | 25.2 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_fp8_scaled.safetensors) |
 | **2.3** | `ltx-2.3-22b distilled 1.1` (experimental) | ![mxfp8][badge-mxfp8_block32] | 24.1 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_mxfp8_block32.safetensors) |
-| **2.3** | `ltx-2.3-22b dev` | ![int8tensormixed][badge-int8tensormixed] | 20.51 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-dev_transformer_only_int8_convrot.safetensors) |
-| **2.3** | `ltx-2.3-22b distilled 1.1` | ![int8tensormixed][badge-int8tensormixed] | 20.51 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_int8_convrot.safetensors) |
-| **2.3** | `ltx-2.3-22b distilled v3` | ![fp8_input_scaled][badge-fp8_input_scaled] | 23.86 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors) |
+| **2.3** | `ltx-2.3-22b dev` | ![int8tensormixed][badge-int8tensormixed] | 21.51 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-dev_transformer_only_int8_convrot.safetensors) |
+| **2.3** | `ltx-2.3-22b distilled 1.1` | ![int8tensormixed][badge-int8tensormixed] | 21.51 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled-1.1_transformer_only_int8_convrot.safetensors) |
+| **2.3** | `ltx-2.3-22b distilled v3` | ![fp8_input_scaled][badge-fp8_input_scaled] | 25.02 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/diffusion_models/ltx-2.3-22b-distilled_transformer_only_fp8_input_scaled_v3.safetensors) |
 | | | | | |
 | **2** | `ltx-2-19b dev` | ![bf16][badge-bf16] | 37.8 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/diffusion_models/ltx-2-19b-dev_transformer_only_bf16.safetensors) |
 | **2** | `ltx-2-19b dev` | ![fp8][badge-fp8] | 21.6 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/diffusion_models/ltx-2-19b-dev-fp8_transformer_only.safetensors) |
@@ -40,14 +40,16 @@ Separated LTX2 checkpoint by [Kijai](https://huggingface.co/Kijai/LTXV2_comfy) a
 
 | Ver | Component | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :--- |
-| **2.5** | `Video VAE` | ![BF16][badge-bf16] | 1.37 GB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/vae/ltx-2.5-video-vae-bf16.safetensors) |
-| **2.5** | `Video VAE (conv)` | ![BF16][badge-bf16] | 1.35 GB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/vae/ltx-2.5-video-vae-conv-bf16.safetensors) |
-| **2.5** | `Audio VAE` | ![BF16][badge-bf16] | 0.34 GB | [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-turbo-GGUF/resolve/main/split/vae/ltx-2.5-audio-vae-bf16.safetensors) |
+| **2.5** | `Video VAE` | ![BF16][badge-bf16] | 1.47 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-video-vae-bf16.safetensors) ┊ [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-uncensored-v1.1-FP8/resolve/main/split/vae/ltx25_uncensored_video_vae.safetensors) |
+| **2.5** | `Video VAE (conv)` | ![BF16][badge-bf16] | 1.45 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-video-vae-conv-bf16.safetensors) |
+| **2.5** | `Audio VAE` | ![BF16][badge-bf16] | 0.36 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/vae/ltx-2.5-audio-vae-bf16.safetensors) ┊ [![][gh-ChrisColeTech]](https://huggingface.co/ChrisColeTech/LTX-2.5-uncensored-v1.1-FP8/resolve/main/split/vae/ltx25_uncensored_audio_vae.safetensors) |
+
+> ⚠️ The LTX-2.5 VAEs used to be mirrored only under `ChrisColeTech/LTX-2.5-turbo-GGUF`; that repo was renamed to `LTX-2.5-uncensored-v1.1-FP8` and the old `ltx-2.5-*-vae-bf16.safetensors` filenames no longer exist there. The rows above now point at the **official `Lightricks/LTX-2.5`** copies, with the ChrisColeTech files kept as byte-identical mirrors (video VAE 1,472,223,346 B, audio VAE 364,866,540 B). The conv video VAE has **no** ChrisColeTech mirror.
 | | | | | |
 | **2.3** | `Video VAE` | ![BF16][badge-bf16] | 1.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_video_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_video_vae.safetensors)|
-| **2.3** | `Cinematic Video VAE` | ![BF16][badge-bf16] | 1.38 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/LTX-2.3-Cinematic-VAE/resolve/main/LTX23_video_vae_bf16_cinematic.safetensors) |
-| **2.3** | `Pruna Video VAE` | ![BF16][badge-bf16] | 1.27 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/pruna_ltx2.3_vae_comfy_bf16.safetensors) |
-| **2.3** | `TAE (tiny autoencoder)` | ![BF16][badge-bf16] | 22 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/taeltx2_3.safetensors) |
+| **2.3** | `Cinematic Video VAE` | ![BF16][badge-bf16] | 1.45 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/LTX-2.3-Cinematic-VAE/resolve/main/LTX23_video_vae_bf16_cinematic.safetensors) |
+| **2.3** | `Pruna Video VAE` | ![BF16][badge-bf16] | 1.33 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/pruna_ltx2.3_vae_comfy_bf16.safetensors) |
+| **2.3** | `TAE (tiny autoencoder)` | ![BF16][badge-bf16] | 23.53 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/taeltx2_3.safetensors) |
 | **2.3** | `Audio VAE` | ![BF16][badge-bf16] | 365 MB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTX2.3_comfy/resolve/main/vae/LTX23_audio_vae_bf16.safetensors) ┊ [![][gh-Unsloth]](https://huggingface.co/unsloth/LTX-2.3-GGUF/resolve/main/vae/ltx-2.3-22b-dev_audio_vae.safetensors)|
 | | | | | |
 | **2** | `Video VAE` | ![BF16][badge-bf16] | 2.45 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/VAE/LTX2_video_vae_bf16.safetensors) |
