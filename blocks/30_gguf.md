@@ -350,3 +350,14 @@ Re-pack mirrors of quants that are already listed from their primary sources, pl
 *Installation:* `pip install safetensors huggingface_hub scipy`
 *ArXiv Reference:* [2603.29078](https://arxiv.org/abs/2603.29078)
 
+#### Harsha001 ROCm FP4 (AMD)
+
+**ROCm-FPX / ROCm-FP4** is an AMD-specific bit-packed FP4 format for [stable-diffusion.cpp](https://github.com/leejet/stable-diffusion.cpp); the repo carries the `sdcpp-rocmfpx.patch` that teaches it the format. Both files are built from the **uncensored** LTX-2.5 dev stack (`base_model: Lightricks/LTX-2.5`) and the repo is **gated** - sign in to Hugging Face to download, and verify the paths against the tree API, not a range GET.
+
+| File | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `LTX-2.5-22B-dev-Q4_0_ROCMFP4.gguf` | ![rocmfp4][badge-rocmfp4] | 14.74 GB | [![][gh-Harsha001]](https://huggingface.co/Harsha001/LTX-2.5-22B-dev-uncensored-ROCmFPX/resolve/main/LTX-2.5-22B-dev-Q4_0_ROCMFP4.gguf) |
+| `gemma4-12b-heretic-with-proj-ltx-2.5-Q8_0_ROCMFPX.gguf` | ![rocmfpx][badge-rocmfpx] | 14.67 GB | [![][gh-Harsha001]](https://huggingface.co/Harsha001/LTX-2.5-22B-dev-uncensored-ROCmFPX/resolve/main/gemma4-12b-heretic-with-proj-ltx-2.5-Q8_0_ROCMFPX.gguf) |
+
+◦ The transformer is `Q4_0` in **ROCm-FP4**; the text encoder is `Q8_0` in **ROCm-FPX**, the higher-precision sibling format (the encoder copy is listed in block 40). The repo also keeps the `build/` scripts that produced both files and `te_delta_stats.json`, the encoder-delta report.
+

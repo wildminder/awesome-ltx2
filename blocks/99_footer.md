@@ -124,3 +124,19 @@
 [gh-ssjenforcer191]: https://img.shields.io/badge/ssjenforcer191-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-rzgar]: https://img.shields.io/badge/rzgar-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-TheDivergentAI]: https://img.shields.io/badge/TheDivergentAI-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+
+[gh-Harsha001]: https://img.shields.io/badge/Harsha001-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-diverofdark]: https://img.shields.io/badge/diverofdark-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-Rin247]: https://img.shields.io/badge/Rin247-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-mlx-community]: https://img.shields.io/badge/mlx--community-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-dgrauet]: https://img.shields.io/badge/dgrauet-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-ddalcu]: https://img.shields.io/badge/ddalcu-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-notapalindrome]: https://img.shields.io/badge/notapalindrome-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-xocialize]: https://img.shields.io/badge/xocialize-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-MLXBits]: https://img.shields.io/badge/MLXBits-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-MrMofer]: https://img.shields.io/badge/MrMofer-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[badge-mlxq4]: https://img.shields.io/badge/mlx__q4-8957e5?style=flat-square
+[badge-mlxq8]: https://img.shields.io/badge/mlx__q8-8957e5?style=flat-square
+[badge-rocmfp4]: https://img.shields.io/badge/rocmfp4-ed1c24?style=flat-square
+[badge-rocmfpx]: https://img.shields.io/badge/rocmfpx-ed1c24?style=flat-square
+[badge-int8]: https://img.shields.io/badge/int8-17a2b8?style=flat-square

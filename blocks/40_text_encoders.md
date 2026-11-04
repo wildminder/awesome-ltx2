@@ -60,6 +60,20 @@ GGUF conversion of the **stock** `google/gemma-3-12b-it` — the same weights Co
 
 ◦ **EllaPriest45 mirror** — the same Q4_K_M file is re-packed byte-for-byte (7,300,778,336 B) as [`Text Encoder - Gemma-3-12b-it-Q4_K_M.gguf`](https://huggingface.co/EllaPriest45/LTX2.3_base/resolve/main/Text%20Encoder%20-%20Gemma-3-12b-it-Q4_K_M.gguf) inside the `EllaPriest45/LTX2.3_base` drop folder — no separate download needed.
 
+<a id="enc-gemma3-qat"></a>
+
+### ▣ Gemma-3-12b-it QAT (Lightricks)
+
+The **official** Gemma-3-12B-it encoder for LTX-2 / LTX-2.3 is the Google **quantization-aware-trained** release `gemma-3-12b-it-qat-q4_0`. Lightricks publishes it here as the **unquantized** checkpoint, so the `Q4_0` quantization is applied locally. LTX-2.5 replaced this encoder with **Gemma-4-12b** (see above).
+
+| Model | Precision | Size | Download |
+| :--- | :---: | :---: | :---: |
+| `gemma-3-12b-it-qat-q4_0-unquantized` | ![bf16][badge-bf16] | 24.37 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/gemma-3-12b-it-qat-q4_0-unquantized) |
+
+◦ **Unquantized on purpose** - the model card states the checkpoint is *unquantized* and must be quantized to `Q4_0` with your own tool before use. The 5 shards total **24374793024 B** (24.37 GB); `model.safetensors.index.json` maps the parameter names across them. QAT lets the quantized build keep bfloat16-grade quality at a fraction of the memory.
+
+◦ The [WanGP LTX-2 Model Pack](#apps) ships the already-quantized variant (`gemma-3-12b-it-qat-q4_0`, 24.4 GB) plus a quanto build (13.2 GB).
+
 <p id="enc-abliterated" align="center">· · · · · · · · · · · · · ·</p>
 
 ### ▣ Gemma-3-12b Abliterated
@@ -234,6 +248,7 @@ LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Co
 | `gemma4-12b-heretic-ltx-2.5` | ![bf16][badge-bf16] | 26.26 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/gemma4-12b-heretic-ltx-2.5-bf16/resolve/main/gemma4-12b-heretic-ltx-2.5-bf16.safetensors) |
 | `Gemma-4-12B-it-uncensored-heretic` | ![bf16][badge-bf16] | 26.26 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-bf16.safetensors) |
 | `Gemma-4-12B-it-uncensored-heretic` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 13.17 GB | [![][gh-DeepNeuralNerd]](https://huggingface.co/DeepNeuralNerd/Gemma-4-12B-it-uncensored-heretic-DeepNeuralNerd-LTX_2.5_ComfyUI/resolve/main/Gemma-4-12B-it-uncensored-heretic%20-%20DeepNeuralNerd%20-LTX%202.5-ComfyUI-int8convrot.safetensors) |
+| `gemma4-12b-ltx-2.5-heretic` | ![int8convrot](https://img.shields.io/badge/int8_ConvRot-17a2b8?style=flat-square) | 15.37 GB | [![][gh-diverofdark]](https://huggingface.co/diverofdark/LTX-2.5-Gemma4-12B-heretic-int8-convrot/resolve/main/gemma4-12b-ltx-2.5-heretic-int8-convrot.safetensors) |
 | `gemma4-12b-ltx2.5-int4int8-mix` | ![int4int8mix](https://img.shields.io/badge/int4_int8_mix-17a2b8?style=flat-square) | 7.52 GB | [![][gh-Abiray]](https://huggingface.co/Abiray/LTX-2.5-Gemma4-12B-int4-int8mix-TextEncoder/resolve/main/gemma4-12b-ltx2.5-int4int8-mix.safetensors) |
 | `gemma4-12b-with-proj-ltx-2.5` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 15.50 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-int8.safetensors) |
 | `gemma4-12b-with-proj-ltx-2.5` | ![int8_lean_convrot](https://img.shields.io/badge/int8_ConvRot_lean-17a2b8?style=flat-square) | 15.37 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/text_encoders/gemma4-12b-with-proj-ltx-2.5-int8_lean_convrot.safetensors) |
@@ -268,5 +283,17 @@ LTX-2.5 replaces the Gemma-3-12B text encoder with a **Gemma-4-12B** encoder. Co
 | ![Q4_K_M][badge-Q4_K_M] | 8.41 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q4_K_M.gguf) |
 | ![Q5_K_M][badge-Q5_K_M] | 9.51 GB | [![elix3r][gh-elix3r]](https://huggingface.co/elix3r/gemma4-12b-with-proj-ltx-2.5-GGUF/resolve/main/gemma4-12b-with-proj-ltx-2.5-Q5_K_M.gguf) |
 
+</details>
+
+<details>
+  <summary>Harsha001/gemma4-12b-heretic-with-proj-ltx-2.5 (ROCm-FPX GGUF)</summary>
+
+[**Harsha001/LTX-2.5-22B-dev-uncensored-ROCmFPX**](https://huggingface.co/Harsha001/LTX-2.5-22B-dev-uncensored-ROCmFPX) - the **uncensored** (heretic / abliterated) Gemma-4-12b encoder with the LTX-2.5 projection baked in, re-quantized to `Q8_0` in **ROCm-FPX** for AMD GPUs. Gated repo (sign in to Hugging Face to download).
+
+| Quant | Size | Download |
+| :---: | :---: | :---: |
+| ![rocmfpx][badge-rocmfpx] | 14.67 GB | [![][gh-Harsha001]](https://huggingface.co/Harsha001/LTX-2.5-22B-dev-uncensored-ROCmFPX/resolve/main/gemma4-12b-heretic-with-proj-ltx-2.5-Q8_0_ROCMFPX.gguf) |
+
+◦ **GPU-only** - the ROCm-FPX format targets **AMD** devices (and stable-diffusion.cpp); it will not load on the usual CUDA path. The transformer itself is the separate `LTX-2.5-22B-dev-Q4_0_ROCMFP4.gguf` (14.74 GB), catalogued in block 30.
 </details>
 

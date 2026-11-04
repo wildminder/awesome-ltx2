@@ -214,6 +214,9 @@ Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR
 * [ICLoRA](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_ICLoRA_All_Distilled.json)
 * [Video to Video Detailer](https://raw.githubusercontent.com/Lightricks/ComfyUI-LTXVideo/refs/heads/master/example_workflows/2.0/LTX-2_V2V_Detailer.json)
 
+**[LTX-2.5 Layout-to-Render](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Layout-To-Render)**:
+* [Two Stage Distilled](https://huggingface.co/Lightricks/LTX-2.5-22b-IC-LoRA-Layout-To-Render/resolve/main/LTX-2.5_ICLoRA_Layout_To_Render_Two_Stage_Distilled.json) - companion workflow for the [Layout-to-Render IC-LoRA](#lora-special)
+
 <a id="wf-chriscoletech"></a>
 
 ### ❖ ChrisColeTech
@@ -312,6 +315,13 @@ Example workflows bundled with the ChrisColeTech Uncensored Turbo merges — [LT
 
 * [LTX2.5 — CQ Freeform Motion Transfer LoRA](https://huggingface.co/CQdesign/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/workflow/LTX2.5%20-%20CQ%20freeform%20motion%20transfer%20lora.json) — companion workflow for the freeform motion-transfer LoRA (see [`❖ Motion`](#lora-special)).
 
+<a id="wf-ydudjsb"></a>
+
+### ❖ Ydudjsb
+
+**[Ydudjsb](https://huggingface.co/Ydudjsb) LTX-2.5 LoRA workflows:**
+
+* [LTX2.5 - CQ Freeform Motion Transfer LoRA](https://huggingface.co/Ydudjsb/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/workflow/LTX2.5%20-%20CQ%20freeform%20motion%20transfer%20lora.json) - mirror of the CQdesign workflow, bundled with the mirror weights
 <a id="wf-comfyui"></a>
 
 ### ❖ ComfyUI

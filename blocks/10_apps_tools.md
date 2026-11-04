@@ -45,4 +45,19 @@ The complete set of **LTX-2 / 2.3 / 2.5 weights used by [WanGP](https://github.c
 **Downloads & Resources:**
 - [WanGP (GitHub)](https://github.com/deepbeepmeep/Wan2GP) | [Model pack (HF)](https://huggingface.co/DeepBeepMeep/LTX-2)
 
+### LTX-2 Marking (VideoSeal / PixelSeal / AudioSeal)
+
+The **weights and configs** for the opt-in, post-hoc invisible marking used by [LTX-2](https://github.com/Lightricks/LTX-2): **PixelSeal** (VideoSeal family) for video frames and **AudioSeal** for stereo PCM. MIT licensed, `pytorch` library. This is **not** a generator model - there is nothing to run or train against it, only to download.
+
+| File | Purpose | Size | Download |
+| :--- | :--- | :---: | :---: |
+| `pixelseal.pth` | PixelSeal embedder + extractor weights (256-bit payload, 256 px processing size) | 308.95 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2-Marking/resolve/main/pixelseal.pth) |
+| `audioseal_generator.pth` | AudioSeal 16-bit generator (embed) | 58.81 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2-Marking/resolve/main/audioseal_generator.pth) |
+| `audioseal_detector.pth` | AudioSeal 16-bit detector | 34.67 MB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2-Marking/resolve/main/audioseal_detector.pth) |
+
+**How it fits together** - the LTX-2 loader (`create_markers`) requires **all five model files** (the three above plus `pixelseal.yaml`, the PixelSeal model card describing the architecture, and `videoseal_attenuation.yaml`, the JND attenuation channel map) in one directory; the code that embeds and detects lives in `packages/ltx-pipelines/src/ltx_pipelines/marking` in the [LTX-2 repo](https://github.com/Lightricks/LTX-2). The `.pth` files are PyTorch pickles - verify the SHA-256 sums printed on the model card after download.
+
+**Enable it** with `--marker-root-path path/to/marking` on the generation, editing and text-to-audio CLIs; omit the flag to leave pixels and PCM unchanged. Video generation and the HDR paths mark video while the text-to-audio path marks only audio, and detection returns `MarkDetectResult(detected, bit_accuracy, p_value, payload)` - video marks are judged on every 8th decoded frame at `log10(p_value) < -6`, audio over the full stereo track.
+
+◦ The marks are a **robust invisible signal**, not a cryptographic signature: a detected mark means the clip came from an LTX-2 pipeline with marking enabled, while the absence of a mark does **not** prove a clip was not generated.
 

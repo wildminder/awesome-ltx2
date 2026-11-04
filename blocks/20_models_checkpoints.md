@@ -108,6 +108,7 @@ Image-only **LTX-2.3** checkpoints by [elismasilva](https://huggingface.co/elism
 
 | Ver | Rank | Precision | Size | Download |
 | :--- | :--- | :---: | :---: | :---: |
+| **2.5** | `450` | ![bf16][badge-bf16] | 8.90 GB | [![][gh-Lightricks]](https://huggingface.co/Lightricks/LTX-2.5/resolve/main/loras/ltx-2.5-22b-distilled-lora-450-bf16.safetensors) |
 | **2.5** | `450` | ![int8](https://img.shields.io/badge/int8-17a2b8?style=flat-square) | 5.06 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/loras/ltx-2.5-22b-distilled-lora-450-int8.safetensors) |
 | **2.5** | `450` | ![nvfp4][badge-nvfp4] | 2.66 GB | [![][gh-DmitryDB]](https://huggingface.co/DmitryDB/LTX-2.5-ComfyUI-Quants/resolve/main/loras/ltx-2.5-22b-distilled-lora-450-nvfp4.safetensors) |
 | **2.5** | `450` | ![bf16][badge-bf16] | 8.90 GB | [![][gh-rzgar]](https://huggingface.co/rzgar/ltx-2.5-22b-distilled-lora-450-enhanced-n4w/resolve/main/ltx-2.5-22b-distilled-lora-450-rank_450_n4w.safetensors) |
@@ -118,6 +119,9 @@ Image-only **LTX-2.3** checkpoints by [elismasilva](https://huggingface.co/elism
 | **2.5** | `64` | ![bf16][badge-bf16] | 1.32 GB | [![][gh-TheDivergentAI]](https://huggingface.co/TheDivergentAI/ltx25-distill-lora/resolve/main/ltx25_turbo_distill_8step_r64.safetensors) |
 | **2.5** | `128` | ![bf16][badge-bf16] | 2.31 GB | [![][gh-pyros-vault]](https://huggingface.co/pyros-vault/ltx-2.5-distilled-lora-450-reduced/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil128.safetensors) |
 | **2.5** | `72` | ![bf16][badge-bf16] | 1.38 GB | [![][gh-pyros-vault]](https://huggingface.co/pyros-vault/ltx-2.5-distilled-lora-450-reduced/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil72.safetensors) |
+| **2.5** | `256` | ![bf16][badge-bf16] | 4.01 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/ltx-2.5-distilled-lora-450-reduced-ceil256/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil256.safetensors) |
+| **2.5** | `96` | ![bf16][badge-bf16] | 1.80 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/ltx-2.5-distilled-lora-450-reduced-ceil96/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil96.safetensors) |
+| **2.5** | `32` | ![bf16][badge-bf16] | 0.66 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/ltx-2.5-distilled-lora-450-reduced-ceil32/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil32.safetensors) |
 | | | | | |
 | **2.3** | `384` | ![bf16][badge-bf16] | 7.61 GB | [![](https://img.shields.io/badge/Lightricks_v1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384.safetensors) ┊ [![](https://img.shields.io/badge/Lightricks_v1.1-lightgrey?style=flat-square&logo=huggingface&logoColor=white)](https://huggingface.co/Lightricks/LTX-2.3/resolve/main/ltx-2.3-22b-distilled-lora-384-1.1.safetensors) |
 | **2.3** | `208` | ![bf16][badge-bf16] | 4.97 GB | [![][gh-drbaph]](https://huggingface.co/drbaph/LTX-2.3-FP8/resolve/main/LoRA/ltx-2.3-22b-distilled-lora-resized_dynamic_rank_208_fro095_bf16.safetensors) |
@@ -129,6 +133,8 @@ Image-only **LTX-2.3** checkpoints by [elismasilva](https://huggingface.co/elism
 | **2** | `242` | ![bf16][badge-bf16] | 4.88 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora-resized_dynamic_fro095_avg_rank_242_bf16.safetensors) |
 | **2** | `175` | ![bf16][badge-bf16] | 3.58 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_bf16.safetensors) |
 | **2** | `175` | ![fp8][badge-fp8] | 1.79 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_fp8.safetensors) |
+
+◦ **Rank-reduced 2.5 builds** - the canonical source is the official `Lightricks/LTX-2.5/loras/ltx-2.5-22b-distilled-lora-450-bf16.safetensors` (8.90 GB, rank 450). The `ibyteohdear` **reduced** variants rerank that file with a factored SVD (`rerank_method: factored_svd`, source `lora_rank: 450`) and then cap the result at 32 / 96 / 256 - the `ceil` suffix is that ceiling and `fro90` the singular-value floor (same scheme as `pyros-vault`).
 
 
 <p id="ckpt-tenstrip-distilled-lora" align="center">· · · · · · · · · · · · · ·</p>
