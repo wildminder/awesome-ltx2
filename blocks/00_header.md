@@ -67,6 +67,9 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
   * [TenStrip](#wf-tenstrip)
   * [CQdesign](#wf)
   * [Ydudjsb](#wf-ydudjsb)
+  * [embriotapir](#wf-embriotapir)
+  * [lvladikov](#wf-lvladikov)
+  * [BennyDaBall](#wf-bennydaball)
   * [ComfyUI](#wf-comfyui)
 
 </details>

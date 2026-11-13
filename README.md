@@ -67,6 +67,9 @@ A curated list of models, text encoders, and tools for the LTX-2 video generatio
   * [TenStrip](#wf-tenstrip)
   * [CQdesign](#wf)
   * [Ydudjsb](#wf-ydudjsb)
+  * [embriotapir](#wf-embriotapir)
+  * [lvladikov](#wf-lvladikov)
+  * [BennyDaBall](#wf-bennydaball)
   * [ComfyUI](#wf-comfyui)
 
 </details>
@@ -262,6 +265,7 @@ Image-only **LTX-2.3** checkpoints by [elismasilva](https://huggingface.co/elism
 | **2.5** | `256` | ![bf16][badge-bf16] | 5.10 GB | [![][gh-TheDivergentAI]](https://huggingface.co/TheDivergentAI/ltx25-distill-lora/resolve/main/ltx25_turbo_distill_8step_r256.safetensors) |
 | **2.5** | `128` | ![bf16][badge-bf16] | 2.58 GB | [![][gh-TheDivergentAI]](https://huggingface.co/TheDivergentAI/ltx25-distill-lora/resolve/main/ltx25_turbo_distill_8step_r128.safetensors) |
 | **2.5** | `64` | ![bf16][badge-bf16] | 1.32 GB | [![][gh-TheDivergentAI]](https://huggingface.co/TheDivergentAI/ltx25-distill-lora/resolve/main/ltx25_turbo_distill_8step_r64.safetensors) |
+| **2.5** | `64` | ![bf16][badge-bf16] | 1.23 GB | [![diffusers keys][gh-lvladikov]](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_distill_2step_rank_64_lora.safetensors) ┊ [![ComfyUI keys][gh-lvladikov]](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_distill_2step_rank_64_lora_comfyui.safetensors) |
 | **2.5** | `128` | ![bf16][badge-bf16] | 2.31 GB | [![][gh-pyros-vault]](https://huggingface.co/pyros-vault/ltx-2.5-distilled-lora-450-reduced/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil128.safetensors) |
 | **2.5** | `72` | ![bf16][badge-bf16] | 1.38 GB | [![][gh-pyros-vault]](https://huggingface.co/pyros-vault/ltx-2.5-distilled-lora-450-reduced/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil72.safetensors) |
 | **2.5** | `256` | ![bf16][badge-bf16] | 4.01 GB | [![][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/ltx-2.5-distilled-lora-450-reduced-ceil256/resolve/main/ltx-2.5-22b-distilled-lora-450-bf16_fro90_ceil256.safetensors) |
@@ -280,6 +284,8 @@ Image-only **LTX-2.3** checkpoints by [elismasilva](https://huggingface.co/elism
 | **2** | `175` | ![fp8][badge-fp8] | 1.79 GB | [![][gh-Kijai]](https://huggingface.co/Kijai/LTXV2_comfy/resolve/main/loras/ltx-2-19b-distilled-lora_resized_dynamic_fro09_avg_rank_175_fp8.safetensors) |
 
 ◦ **Rank-reduced 2.5 builds** - the canonical source is the official `Lightricks/LTX-2.5/loras/ltx-2.5-22b-distilled-lora-450-bf16.safetensors` (8.90 GB, rank 450). The `ibyteohdear` **reduced** variants rerank that file with a factored SVD (`rerank_method: factored_svd`, source `lora_rank: 450`) and then cap the result at 32 / 96 / 256 - the `ceil` suffix is that ceiling and `fro90` the singular-value floor (same scheme as `pyros-vault`).
+
+◦ **2-step stage-1 distill (lvladikov)** - a **rank-64 DMD2 step-distillation LoRA** for LTX-2.5 distilled, **not** a rank-reduced copy of the official rank-450 LoRA. Header-verified: 2,688 BF16 tensors = 1,344 `lora_A`/`lora_B` pairs, `rank: 64`, `alpha = rank`, `targets: video + audio + cross-modal`, `checkpoint: 12000`. It cuts **stage 1 from 8 steps to 2** (sigmas `1.0, 0.909375, 0.0`, Euler Ancestral, CFG 1, half size) for **T2V and I2V**, and must **not** be applied to the stage-2 refiner. The two files are the same LoRA in **diffusers** (`transformer.*`) and **ComfyUI** (`diffusion_model.*`) key layouts. Release candidate (training continues), trained at 576x320 / 320x576 for 5 s; the author's [four workflows](#wf-lvladikov) pair it with NVIDIA's one-step SoL-Refiner and PrunaAI's pruned VAE decoder.
 
 
 <p id="ckpt-tenstrip-distilled-lora" align="center">· · · · · · · · · · · · · ·</p>
@@ -585,11 +591,13 @@ I2V-optimised merge using layer scaled merges at different steps. Not a straight
 
 ◦ **10Eros distilled-baked collection** — ibyteohdear
 
-Massive 10Eros **distilled-baked** checkpoint collection by [ibyteohdear](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros) — 20 safetensors of full LTX distilled checkpoints with the 10Eros style baked in. The repo was **restructured on 2026-10-26**, so the catalogue below was rebuilt from the live tree: the earlier r64 / r128 / r768 / r768_0.85 builds and the bundled `JoyAI-Echo_r256` / reasoning I2V LoRAs are gone.
+Massive 10Eros **distilled-baked** checkpoint collection by [ibyteohdear](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros) — 32 safetensors of full LTX distilled checkpoints with the 10Eros style baked in. The repo was **restructured on 2026-10-26** and **extended on 2026-11-12** with 12 more LTX-2.5 builds, so the catalogue below is rebuilt from the live tree: the earlier r64 / r128 / r768 / r768_0.85 builds and the bundled `JoyAI-Echo_r256` / reasoning I2V LoRAs are gone.
 
 ◦ **LTX-2.3** — `LTX2.3_DISTILLED_BAKED_LTX_SULPHUR_STYLE_IS_10Eros_v{1,12,13,14,15}_r{256,512}` — **full checkpoints** (DiT + `vocoder` + video/audio `vae` + `text_embedding_projection`; 5,947 tensors, all BF16, `model_version 2.3.0`, config `AVTransformer3DModel`), baked from the **Sulphur-2** base with the 10Eros style merged in.
 
 ◦ **LTX-2.5** — `LTX2.5_DISTILLED_STYLE_10Eros_{1,12,13,14,15}[_SULPHUR]_r512_audio_r256_rest_0` — **transformer-only** (`model.diffusion_model.*`; 4,349 tensors, BF16 + 290 F32 scale-shift tables, `model_version 2.5.0`, `gemma_source_checkpoint: gemma4-12b-ltx-v1`). Two-pass bake over the **LTX-2.5 dev** base: **PASS 1** = 10Eros style LoRA (rank 512, α 512) at **0.85** on the style layers; **PASS 2** = a rank-256 LoRA on the **audio** branch only (0.85 audio / 0 elsewhere — hence `audio_r256_rest_0`). The `_SULPHUR` builds swap the PASS-2 LoRA for `Sulphur_r256`.
+
+◦ **The 2026-11-12 additions** - the `audio_r512` files are the same two-pass bake with a **rank-512** PASS-2 audio LoRA instead of rank 256 (unchanged headers: 4,349 `model.diffusion_model.*` tensors, BF16 + 290 F32 scale-shift tables, `model_version 2.5.0`). The two `r256_echo_070` / `r256_echo_100` builds start from a **RIFT** base, not the plain dev transformer: `LTX-2.5 dev + 0.7 / 1.0 × (JoyAI-Echo − LTX-2.3-dev)` on 1,248 video attn/ff tensors, with the official rank-450 distilled LoRA baked in at 0.5 - recorded in the file headers as `rift_built_from` / `rift_baked_lora`. All 12 are transformer-only checkpoints, not LoRAs. The model card is largely a stale Sulphur-2 copy; these variants are documented only by their filenames and safetensors headers.
 
 | Ver | Build | Name | Precision | Size | Download |
 | :--- | :--- | :--- | :---: | :---: | :---: |
@@ -613,6 +621,19 @@ Massive 10Eros **distilled-baked** checkpoint collection by [ibyteohdear](https:
 | **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v13 r512 + audio r256` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_13_SULPHUR_r512_audio_r256_rest_0.safetensors) |
 | **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v14 r512 + audio r256` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_14_SULPHUR_r512_audio_r256_rest_0.safetensors) |
 | **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v15 r512 + audio r256` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_15_SULPHUR_r512_audio_r256_rest_0.safetensors) |
+| | | | | | |
+| **2.5** | distilled-baked 10Eros style (dev 0.85) | `v1 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_1_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros style (dev 0.85) | `v12 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_12_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros style (dev 0.85) | `v13 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_13_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros style (dev 0.85) | `v14 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_14_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros style (dev 0.85) | `v15 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_15_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v1 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_1_SULPHUR_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v12 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_12_SULPHUR_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v13 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_13_SULPHUR_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v14 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_14_SULPHUR_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros + Sulphur style (dev 0.85) | `v15 r512 + audio r512` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_15_SULPHUR_r512_audio_r512_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros style (RIFT Echo base) | `v15 r256 + Echo 0.70` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_15_r256_echo_070_audio_r256_rest_0.safetensors) |
+| **2.5** | distilled-baked 10Eros style (RIFT Echo base) | `v15 r256 + Echo 1.00` | ![bf16][badge-bf16] | 42.02 GB | [![ibyteohdear][gh-ibyteohdear]](https://huggingface.co/ibyteohdear/Lightricks-LTX-2-DISTILLED-10-Eros/resolve/main/LTX2.5_DISTILLED_STYLE_10Eros_15_r256_echo_100_audio_r256_rest_0.safetensors) |
 
 <p id="finetune-10eros-max-h3" align="center">· · · · · · · · · · · · · ·</p>
 
@@ -2870,6 +2891,8 @@ T2V + I2V with audio support, controlled from a simplified main node (switch T2V
 * [LTX-2.5 ReTake Green Screen Composite V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ReTake-Green-Screen-Composite-V2.json)
 * [LTX-2.5 V2V Upscaler](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-V2V-Upscaler.json)
 
+<a id="wf-embriotapir"></a>
+
 ### ❖ embriotapir
 
 **[embriotapir](https://huggingface.co/embriotapir/LTX-2.5-MSR-DualStage-Workflow) LTX-2.5 MSR Dual-Stage Workflow:**
@@ -2879,6 +2902,10 @@ Tidied-up ComfyUI workflow for **LTX-2.5 Multi-Subject Reference (MSR)** video g
 Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR), [ComfyUI-PromptRelay](https://github.com/kijai/ComfyUI-PromptRelay), [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes), [rgthree-comfy](https://github.com/rgthree/rgthree-comfy), [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite).
 
 * [LTX2.5 MSR — CLEAN](https://huggingface.co/embriotapir/LTX-2.5-MSR-DualStage-Workflow/resolve/main/LTX2.5-MSR%20-%20CLEAN.json)
+
+**[LTX-2.5 Dance Motion Transfer (Pose)](https://huggingface.co/embriotapir/LTX-2.5-Dance-Motion-Transfer-Pose-ComfyUI)** - workflow-only repo. Copies the body motion of a reference dance video onto the person in a single image, using the LTX-2.5 distilled model with the [Union Control IC-LoRA](#lora-special) and DWPose. A single output-resolution node drives aspect ratio and megapixels, the reference clip is loaded with frame controls (use 8n+1 frames), the first frame is locked to the dancer image, and stage-2 sigma presets are selectable from a dropdown. Tested on ComfyUI 0.42.0 / RTX 3090 24 GB at 33 frames, 9:16, 0.3 MP.
+
+* [LTX-2.5_Dance_Motion_Transfer_Pose.json](https://huggingface.co/embriotapir/LTX-2.5-Dance-Motion-Transfer-Pose-ComfyUI/resolve/main/LTX-2.5_Dance_Motion_Transfer_Pose.json)
 
 <a id="wf-lightricks"></a>
 
@@ -3006,6 +3033,27 @@ Example workflows bundled with the ChrisColeTech Uncensored Turbo merges — [LT
 **[Ydudjsb](https://huggingface.co/Ydudjsb) LTX-2.5 LoRA workflows:**
 
 * [LTX2.5 - CQ Freeform Motion Transfer LoRA](https://huggingface.co/Ydudjsb/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/workflow/LTX2.5%20-%20CQ%20freeform%20motion%20transfer%20lora.json) - mirror of the CQdesign workflow, bundled with the mirror weights
+
+<a id="wf-lvladikov"></a>
+
+### ❖ lvladikov
+
+**[LTX-2.5 Stage 1: 2-Step Distillation LoRA](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA)** - four ComfyUI workflows for the [rank-64 step-distillation LoRA](#ckpt-distilled-lora) that cuts stage 1 from 8 steps to 2. Each graph also loads NVIDIA's one-step SoL-Refiner-LTX-2.3 and PrunaAI's pruned VAE decoder; the local and Comfy Cloud pairs differ only in where those models are loaded from. Trained at 576x320 / 320x576 stage-1 resolution, giving 1152x640 / 640x1152 after refining.
+
+* [T2V - local](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_t2v_local.json)
+* [T2V - Comfy Cloud](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_t2v_comfy_cloud.json)
+* [I2V - local](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_i2v_local.json)
+* [I2V - Comfy Cloud](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_i2v_comfy_cloud.json)
+
+<a id="wf-bennydaball"></a>
+
+### ❖ BennyDaBall
+
+**[Hy-Nomas x LTX-2.5 Audio Workflows](https://huggingface.co/BennyDaBall/Hy-Nomas-x-LTX-2.5-Audio-Workflows)** - gives Tencent's audio-less **Hy-Nomas** 8B video world model a soundtrack with the stock LTX-2.5 distilled model, with **no training and no new weights**. The clip is padded to LTX's 8n+1 frame grid, encoded at half size with LTX's video VAE and then **frozen** (`LTXV Freeze Latent`, noise mask 0) so LTX can generate only the audio against the frozen video; the decoded audio is muxed onto the untouched full-resolution frames. MIT; the repo ships only workflows, example world/sound prompts and demo clips.
+
+* [Add Audio to Any Video](https://huggingface.co/BennyDaBall/Hy-Nomas-x-LTX-2.5-Audio-Workflows/resolve/main/workflows/hynomas_x_ltx25_add_audio_to_video.json) - core ComfyUI nodes only; loads a Hy-Nomas world, a saved Drive or any clip, writes a sound prompt
+* [Text to World with Audio](https://huggingface.co/BennyDaBall/Hy-Nomas-x-LTX-2.5-Audio-Workflows/resolve/main/workflows/hynomas_x_ltx25_text_to_world_with_audio.json) - writes a 2-segment Hy-Nomas world and scores it with LTX-2.5 in one run; needs the `Comfyui-HY-Nomas-T8` node pack
+
 <a id="wf-comfyui"></a>
 
 ### ❖ ComfyUI
@@ -3094,6 +3142,7 @@ Example workflows bundled with the ChrisColeTech Uncensored Turbo merges — [LT
 [gh-LokkenJP]: https://img.shields.io/badge/LokkenJP-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-cicalooo]: https://img.shields.io/badge/cicalooo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-milo01]: https://img.shields.io/badge/milo01-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-lvladikov]: https://img.shields.io/badge/lvladikov-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square

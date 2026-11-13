@@ -186,6 +186,8 @@ T2V + I2V with audio support, controlled from a simplified main node (switch T2V
 * [LTX-2.5 ReTake Green Screen Composite V2](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-ReTake-Green-Screen-Composite-V2.json)
 * [LTX-2.5 V2V Upscaler](https://huggingface.co/SOLRICKS/LTX-2-5-ComfyUI-Workflows/resolve/main/LTX-2.5-V2V-Upscaler.json)
 
+<a id="wf-embriotapir"></a>
+
 ### ❖ embriotapir
 
 **[embriotapir](https://huggingface.co/embriotapir/LTX-2.5-MSR-DualStage-Workflow) LTX-2.5 MSR Dual-Stage Workflow:**
@@ -195,6 +197,10 @@ Tidied-up ComfyUI workflow for **LTX-2.5 Multi-Subject Reference (MSR)** video g
 Requires: [ComfyUI-LTX2.5-MSR](https://github.com/liconstudio/ComfyUI-LTX2.5-MSR), [ComfyUI-PromptRelay](https://github.com/kijai/ComfyUI-PromptRelay), [ComfyUI-KJNodes](https://github.com/kijai/ComfyUI-KJNodes), [rgthree-comfy](https://github.com/rgthree/rgthree-comfy), [ComfyUI-VideoHelperSuite](https://github.com/Kosinkadink/ComfyUI-VideoHelperSuite).
 
 * [LTX2.5 MSR — CLEAN](https://huggingface.co/embriotapir/LTX-2.5-MSR-DualStage-Workflow/resolve/main/LTX2.5-MSR%20-%20CLEAN.json)
+
+**[LTX-2.5 Dance Motion Transfer (Pose)](https://huggingface.co/embriotapir/LTX-2.5-Dance-Motion-Transfer-Pose-ComfyUI)** - workflow-only repo. Copies the body motion of a reference dance video onto the person in a single image, using the LTX-2.5 distilled model with the [Union Control IC-LoRA](#lora-special) and DWPose. A single output-resolution node drives aspect ratio and megapixels, the reference clip is loaded with frame controls (use 8n+1 frames), the first frame is locked to the dancer image, and stage-2 sigma presets are selectable from a dropdown. Tested on ComfyUI 0.42.0 / RTX 3090 24 GB at 33 frames, 9:16, 0.3 MP.
+
+* [LTX-2.5_Dance_Motion_Transfer_Pose.json](https://huggingface.co/embriotapir/LTX-2.5-Dance-Motion-Transfer-Pose-ComfyUI/resolve/main/LTX-2.5_Dance_Motion_Transfer_Pose.json)
 
 <a id="wf-lightricks"></a>
 
@@ -322,6 +328,27 @@ Example workflows bundled with the ChrisColeTech Uncensored Turbo merges — [LT
 **[Ydudjsb](https://huggingface.co/Ydudjsb) LTX-2.5 LoRA workflows:**
 
 * [LTX2.5 - CQ Freeform Motion Transfer LoRA](https://huggingface.co/Ydudjsb/LTX-2.5-CQ-Freeform-Motion-Transfer-LoRAs/resolve/main/workflow/LTX2.5%20-%20CQ%20freeform%20motion%20transfer%20lora.json) - mirror of the CQdesign workflow, bundled with the mirror weights
+
+<a id="wf-lvladikov"></a>
+
+### ❖ lvladikov
+
+**[LTX-2.5 Stage 1: 2-Step Distillation LoRA](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA)** - four ComfyUI workflows for the [rank-64 step-distillation LoRA](#ckpt-distilled-lora) that cuts stage 1 from 8 steps to 2. Each graph also loads NVIDIA's one-step SoL-Refiner-LTX-2.3 and PrunaAI's pruned VAE decoder; the local and Comfy Cloud pairs differ only in where those models are loaded from. Trained at 576x320 / 320x576 stage-1 resolution, giving 1152x640 / 640x1152 after refining.
+
+* [T2V - local](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_t2v_local.json)
+* [T2V - Comfy Cloud](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_t2v_comfy_cloud.json)
+* [I2V - local](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_i2v_local.json)
+* [I2V - Comfy Cloud](https://huggingface.co/lvladikov/LTX-2.5-Stage1-Distill-2step-LoRA/resolve/main/ltx25_stage1_2step_lora_i2v_comfy_cloud.json)
+
+<a id="wf-bennydaball"></a>
+
+### ❖ BennyDaBall
+
+**[Hy-Nomas x LTX-2.5 Audio Workflows](https://huggingface.co/BennyDaBall/Hy-Nomas-x-LTX-2.5-Audio-Workflows)** - gives Tencent's audio-less **Hy-Nomas** 8B video world model a soundtrack with the stock LTX-2.5 distilled model, with **no training and no new weights**. The clip is padded to LTX's 8n+1 frame grid, encoded at half size with LTX's video VAE and then **frozen** (`LTXV Freeze Latent`, noise mask 0) so LTX can generate only the audio against the frozen video; the decoded audio is muxed onto the untouched full-resolution frames. MIT; the repo ships only workflows, example world/sound prompts and demo clips.
+
+* [Add Audio to Any Video](https://huggingface.co/BennyDaBall/Hy-Nomas-x-LTX-2.5-Audio-Workflows/resolve/main/workflows/hynomas_x_ltx25_add_audio_to_video.json) - core ComfyUI nodes only; loads a Hy-Nomas world, a saved Drive or any clip, writes a sound prompt
+* [Text to World with Audio](https://huggingface.co/BennyDaBall/Hy-Nomas-x-LTX-2.5-Audio-Workflows/resolve/main/workflows/hynomas_x_ltx25_text_to_world_with_audio.json) - writes a 2-segment Hy-Nomas world and scores it with LTX-2.5 in one run; needs the `Comfyui-HY-Nomas-T8` node pack
+
 <a id="wf-comfyui"></a>
 
 ### ❖ ComfyUI

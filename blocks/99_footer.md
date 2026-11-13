@@ -73,6 +73,7 @@
 [gh-LokkenJP]: https://img.shields.io/badge/LokkenJP-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-cicalooo]: https://img.shields.io/badge/cicalooo-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 [gh-milo01]: https://img.shields.io/badge/milo01-lightgrey?style=flat-square&logo=huggingface&logoColor=white
+[gh-lvladikov]: https://img.shields.io/badge/lvladikov-lightgrey?style=flat-square&logo=huggingface&logoColor=white
 
 [badge-BF16]: https://img.shields.io/badge/BF16-0077cc?style=flat-square
 [badge-F16]: https://img.shields.io/badge/F16-0077cc?style=flat-square
