@@ -146,6 +146,13 @@ The **weights and configs** for the opt-in, post-hoc invisible marking used by [
 
 ◦ The marks are a **robust invisible signal**, not a cryptographic signature: a detected mark means the clip came from an LTX-2 pipeline with marking enabled, while the absence of a mark does **not** prove a clip was not generated.
 
+### Phosphene (Apple Silicon, MLX)
+
+**Phosphene** is a free, open-source (MIT) Mac app that runs LTX-2.5 natively on Apple Silicon through MLX, with no CUDA or NVIDIA GPU needed. Text-to-video and image-to-video with sound, keyframes, extend and lip-sync, plus a timeline editor and MCP tools for agents. Needs an M1 or newer with 16 GB of memory; a 5-second clip with sound takes about 3 minutes on an M4 Max. Install the Mac app from the website or through Pinokio.
+
+**Downloads & Resources:**
+- [GitHub](https://github.com/mrbizarro/phosphene) | [Website](https://phosphene.video)
+
 <a id="models"></a>
 
 ## ▓ Models
